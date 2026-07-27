@@ -102,11 +102,9 @@ body {
 }
 
 .footer-logo {
-  color: var(--amplify-orange);
-  font-family: 'Benton Sans';
-  font-weight: 700;
-  font-size: 15pt;
-  white-space: nowrap;
+  height: 15pt;
+  width: auto;
+  display: block;
 }
 
 .footer-copy {
