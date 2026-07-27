@@ -1,43 +1,46 @@
 """
 Single source of truth for the Student Edition type spec (see the font-table
-screenshot the design team provided) mapped onto free substitute fonts.
+screenshot the design team provided) mapped onto real brand fonts.
+Sizes/line-heights are copied exactly from the design spec.
 
-Font names on the right are NOT the real Amplify/Castledown/Benton fonts --
-we don't have license to those files. Sizes/line-heights are copied exactly
-from the design spec. Swap in the real font files by:
-  1. Dropping the .woff2/.ttf files into templates/fonts/
-  2. Adding an @font-face block for them in templates/fonts.css
-  3. Changing the "family" values below to the real family names
-No template/layout code needs to change.
+Font files live in templates/fonts/ (see templates/fonts.css for the
+@font-face declarations). One deliberate deviation from the font-table
+screenshot: grades 2-5 header uses Benton Sans Bold rather than "Amplify
+Bold" -- no Amplify Bold file was supplied, and Benton Sans Bold was given
+as its replacement.
+
+Note the "Book" weight below is 350, not 400 -- that's Benton Sans Book's
+actual embedded OS/2 weight class, not a typo.
 """
 
 # word header ("Header" row in the spec) / definition text ("Text" row)
 GRADE_FONTS = {
     "K": {
-        "header": {"family": "Baloo 2", "weight": 800, "size_pt": 33, "line_pt": 39},
-        "text": {"family": "Nunito", "weight": 400, "size_pt": 20, "line_pt": 24},
+        "header": {"family": "Castledown Pro", "weight": 900, "size_pt": 33, "line_pt": 39},
+        "text": {"family": "Castledown Pro", "weight": 400, "size_pt": 20, "line_pt": 24},
     },
     "1": {
-        "header": {"family": "Baloo 2", "weight": 800, "size_pt": 33, "line_pt": 39.6},
-        "text": {"family": "Nunito", "weight": 400, "size_pt": 18, "line_pt": 21.6},
+        "header": {"family": "Castledown Pro", "weight": 900, "size_pt": 33, "line_pt": 39.6},
+        "text": {"family": "Castledown Pro", "weight": 400, "size_pt": 18, "line_pt": 21.6},
     },
     "2": {
-        "header": {"family": "Poppins", "weight": 700, "size_pt": 30, "line_pt": 36},
-        "text": {"family": "Source Sans 3", "weight": 400, "size_pt": 16, "line_pt": 19.2},
+        "header": {"family": "Benton Sans", "weight": 700, "size_pt": 30, "line_pt": 36},
+        "text": {"family": "Benton Sans", "weight": 350, "size_pt": 16, "line_pt": 19.2},
     },
     "3": {
-        "header": {"family": "Poppins", "weight": 700, "size_pt": 30, "line_pt": 36},
-        "text": {"family": "Source Sans 3", "weight": 400, "size_pt": 16, "line_pt": 19.2},
+        "header": {"family": "Benton Sans", "weight": 700, "size_pt": 30, "line_pt": 36},
+        "text": {"family": "Benton Sans", "weight": 350, "size_pt": 16, "line_pt": 19.2},
     },
     "4": {
-        "header": {"family": "Poppins", "weight": 700, "size_pt": 30, "line_pt": 36},
-        "text": {"family": "Source Sans 3", "weight": 400, "size_pt": 14, "line_pt": 16.8},
+        "header": {"family": "Benton Sans", "weight": 700, "size_pt": 30, "line_pt": 36},
+        "text": {"family": "Benton Sans", "weight": 350, "size_pt": 14, "line_pt": 16.8},
     },
     "5": {
-        "header": {"family": "Poppins", "weight": 700, "size_pt": 30, "line_pt": 36},
-        "text": {"family": "Source Sans 3", "weight": 400, "size_pt": 14, "line_pt": 16.8},
+        "header": {"family": "Benton Sans", "weight": 700, "size_pt": 30, "line_pt": 36},
+        "text": {"family": "Benton Sans", "weight": 350, "size_pt": 14, "line_pt": 16.8},
     },
 }
+
 
 def grade_css():
     lines = []

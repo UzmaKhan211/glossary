@@ -107,21 +107,32 @@ shrinks unless it actually needs to.
 
 ## Fonts
 
-The spreadsheet's font-table spec calls for Castledown (Heavy/Regular/Fun
-Bold), Amplify (Bold/Medium), and Benton Book — all proprietary Amplify
-fonts we don't have license to redistribute here. `scripts/grade_fonts.py`
-maps every grade band to a close free substitute at the *exact* sizes/line
-heights from the spec:
+`scripts/grade_fonts.py` maps every grade band to a real brand font at the
+*exact* sizes/line heights from the spreadsheet's font-table spec:
 
-| Band | Header substitute | Text substitute |
+| Band | Header | Text |
 |---|---|---|
-| K, 1 | Baloo 2 (800) | Nunito (400) |
-| 2-5 | Poppins (700) | Source Sans 3 (400) |
+| K, 1 | Castledown Pro Heavy (900) | Castledown Pro Regular (400) |
+| 2-5 | Benton Sans Bold (700) | Benton Sans Book (350) |
 
-**To switch to the real fonts**: drop the `.woff2`/`.ttf` files in
-`templates/fonts/`, add an `@font-face` block for them in
-`templates/fonts.css`, and change the `family` values in
-`scripts/grade_fonts.py` — no layout/template code needs to change.
+One deliberate deviation from the font-table screenshot: grades 2-5 use
+**Benton Sans Bold** for the header, not "Amplify Bold" — no Amplify Bold
+file was supplied, and Benton Sans Bold was given as its replacement. The
+footer/cut-here chrome (not part of the font-table spec) also uses Benton
+Sans, just to avoid pulling in a fifth font family for a few lines of print.
+
+Benton Sans Book's `font-weight: 350` isn't a typo — that's its actual
+embedded OS/2 weight class, not the standard 400.
+
+**These are licensed Amplify fonts, not redistributable ones** —
+`templates/fonts/*.otf` and `templates/fonts.css` are gitignored on purpose
+and never get committed to this (public) repo. Anyone re-running this
+pipeline needs to supply their own copies of Castledown Pro
+(Heavy + Regular) and Benton Sans (Bold + Book) as `.otf`/`.ttf`/`.woff2`
+files in `templates/fonts/`, matching the filenames referenced in
+`templates/fonts.css`; `scripts/fetch_fonts.py` remains as a fallback that
+downloads close free substitutes (Poppins/Source Sans 3/Baloo 2/Nunito)
+for anyone who doesn't have the licensed files.
 
 ## Design fidelity notes
 
