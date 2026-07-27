@@ -1,0 +1,35 @@
+/* Real brand fonts (not free substitutes) -- see scripts/grade_fonts.py for
+   the grade -> font mapping. Weights below match each file's embedded OS/2
+   usWeightClass exactly (Benton Sans Book is a non-standard 350, not 400). */
+
+@font-face {
+  font-family: 'Castledown Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('fonts/CastledownPro-Heavy.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Castledown Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/CastledownPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/BentonSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Benton Sans';
+  font-style: normal;
+  font-weight: 350;
+  font-display: swap;
+  src: url('fonts/BentonSans-Book.otf') format('opentype');
+}

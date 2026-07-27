@@ -124,15 +124,14 @@ Sans, just to avoid pulling in a fifth font family for a few lines of print.
 Benton Sans Book's `font-weight: 350` isn't a typo — that's its actual
 embedded OS/2 weight class, not the standard 400.
 
-**These are licensed Amplify fonts, not redistributable ones** —
-`templates/fonts/*.otf` and `templates/fonts.css` are gitignored on purpose
-and never get committed to this (public) repo. Anyone re-running this
-pipeline needs to supply their own copies of Castledown Pro
-(Heavy + Regular) and Benton Sans (Bold + Book) as `.otf`/`.ttf`/`.woff2`
-files in `templates/fonts/`, matching the filenames referenced in
-`templates/fonts.css`; `scripts/fetch_fonts.py` remains as a fallback that
-downloads close free substitutes (Poppins/Source Sans 3/Baloo 2/Nunito)
-for anyone who doesn't have the licensed files.
+**These are licensed Amplify fonts, not redistributable ones.** They're
+committed here (`templates/fonts/*.otf`, `templates/fonts.css`) only because
+this repo is **private** — if it's ever made public again, remove those two
+paths from git first (re-add them to `.gitignore`; see the note there) rather
+than relying on someone remembering to strip them by hand.
+`scripts/fetch_fonts.py` remains as a fallback that downloads close free
+substitutes (Poppins/Source Sans 3/Baloo 2/Nunito) for anyone working from a
+clone who doesn't have rights to the licensed files.
 
 ## Design fidelity notes
 

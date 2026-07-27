@@ -5,9 +5,12 @@ __pycache__/
 templates/_build.html
 .DS_Store
 
-# Regenerable build artifacts (not source): images come from extract_data.py
-# against the sheet, fonts come from fetch_fonts.py. Keeping these out of git
-# keeps the repo (and any handoff bundle of it) small -- see README.md.
+# Regenerable build artifact (not source): comes from extract_data.py
+# against the sheet. Keeping this out of git keeps the repo (and any handoff
+# bundle of it) small -- see README.md.
 assets/images/
-templates/fonts/
-templates/fonts.css
+
+# templates/fonts/*.otf and templates/fonts.css (the real, licensed
+# Castledown Pro / Benton Sans files) ARE committed -- this repo is private,
+# so that's no longer a redistribution problem. If this repo is ever made
+# public again, re-add those two paths here first.
