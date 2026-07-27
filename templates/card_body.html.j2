@@ -1,0 +1,11 @@
+<div class="card-header">{{ card.word }}</div>
+{% if card.text %}<div class="card-text">{{ card.text }}</div>{% endif %}
+{% if card.image_uri %}
+<div class="card-image-wrap">
+  <img src="{{ card.image_uri }}" alt="">
+</div>
+{% endif %}
+<div class="card-footer">
+  <div class="footer-logo">Amplify.</div>
+  <div class="footer-copy">&copy; {{ year }} Amplify Education, Inc. All trademarks and copyrights are the property of Amplify or its licensors.{{ ' ' + print_code if print_code }}</div>
+</div>

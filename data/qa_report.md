@@ -1,0 +1,423 @@
+# Word Wall data extraction QA report
+
+
+Total cards per grade: {'K': 61, '1': 50, '2': 82, '3': 89, '4': 67, '5': 69}
+
+- row 3 | grade 2 | word='centimeter' | text_source=new_entry | image_source=feedback (image15.png)
+- row 3 | grade 3 | word='centimeter' | text_source=new_entry | image_source=none
+- row 3 | grade 4 | word='centimeter' | text_source=new_entry | image_source=none
+- row 4 | grade 2 | word='foot' | text_source=new_entry | image_source=none
+- row 4 | grade 3 | word='foot' | text_source=new_entry | image_source=none
+- row 5 | grade 1 | word='fourth' | text_source=new_entry | image_source=image (image11.png)
+- row 5 | grade 2 | word='fourth' | text_source=new_entry | image_source=image (image11.png)
+- row 5 | grade 3 | word='fourth' | text_source=new_entry | image_source=image (image50.png)
+- row 6 | grade 1 | word='half' | text_source=new_entry | image_source=image (image12.png)
+- row 6 | grade 2 | word='half' | text_source=new_entry | image_source=image (image12.png)
+- row 6 | grade 3 | word='half' | text_source=new_entry | image_source=image (image12.png)
+- row 7 | grade 2 | word='hundred' | text_source=new_entry | image_source=image (image10.png)
+- row 7 | grade 3 | word='hundred' | text_source=new_entry | image_source=none
+- row 8 | grade 2 | word='meter' | text_source=new_entry | image_source=none
+- row 8 | grade 3 | word='meter' | text_source=new_entry | image_source=none
+- row 8 | grade 4 | word='meter' | text_source=new_entry | image_source=none
+- row 9 | grade 1 | word='quarter' | text_source=new_entry | image_source=image (image8.png)
+- row 9 | grade 2 | word='quarter' | text_source=new_entry | image_source=image (image8.png)
+- row 9 | grade 3 | word='quarter' | text_source=new_entry | image_source=image (image8.png)
+- row 10 | grade 3 | word='sixth' | text_source=new_entry | image_source=image (image3.png)
+- row 11 | grade 2 | word='third' | text_source=new_entry | image_source=image (image5.png)
+- row 11 | grade 3 | word='third' | text_source=new_entry | image_source=image (image30.png)
+- row 12 | grade 2 | word='a.m.' | text_source=new_entry | image_source=none
+- row 12 | grade 3 | word='a.m.' | text_source=new_entry | image_source=none
+- row 13 | grade K | word='above' | text_source=none | image_source=new_entry (image6.png)
+- row 14 | grade 4 | word='acute angle' | text_source=current | image_source=image (image14.png)
+- row 15 | grade K | word='add' | text_source=none | image_source=current (image60.png)
+- row 15 | grade 1 | word='add' | text_source=new_entry | image_source=none
+- row 15 | grade 3 | word='add' | text_source=new_entry | image_source=none
+- row 16 | grade 1 | word='addend' | text_source=current | image_source=image (image9.png)
+- row 16 | grade 3 | word='addend' | text_source=current | image_source=image (image1.png)
+- row 17 | grade 5 | word='adjacent' | text_source=new_entry | image_source=none
+- row 18 | grade 3 | word='algorithm' | text_source=current | image_source=none
+- row 18 | grade 5 | word='algorithm' | text_source=current | image_source=none
+- row 19 | grade 3 | word='eighth' | text_source=new_entry | image_source=image (image139.png)
+- row 20 | grade 2 | word='inch' | text_source=new_entry | image_source=image (image17.png)
+- row 20 | grade 3 | word='inch' | text_source=new_entry | image_source=none
+- row 21 | grade 4 | word='angle' | text_source=current | image_source=image (image27.png)
+- row 22 | grade 3 | word='area' | text_source=new_entry | image_source=image (image34.png)
+- row 22 | grade 4 | word='area' | text_source=current | image_source=none
+- row 22 | grade 5 | word='area' | text_source=current | image_source=none
+- row 23 | grade 2 | word='array' | text_source=new_entry | image_source=image (image18.png)
+- row 23 | grade 3 | word='array' | text_source=new_entry | image_source=image (image18.png)
+- row 24 | grade 2 | word='Associative Property of Addition' | text_source=new_entry | image_source=none
+- row 25 | grade 3 | word='Associative Property of Multiplication' | text_source=current | image_source=image (image25.png)
+- row 25 | grade 5 | word='Associative Property of Multiplication' | text_source=current | image_source=none
+- row 26 | grade 1 | word='attribute' | text_source=new_entry | image_source=none
+- row 26 | grade 2 | word='attribute' | text_source=new_entry | image_source=none
+- row 26 | grade 3 | word='attribute' | text_source=new_entry | image_source=none
+- row 26 | grade 4 | word='attribute' | text_source=new_entry | image_source=none
+- row 26 | grade 5 | word='attribute' | text_source=new_entry | image_source=none
+- row 27 | grade 5 | word='axis (axes)' | text_source=new_entry | image_source=image (image104.png)
+- row 28 | grade 2 | word='bar graph' | text_source=new_entry | image_source=image (image36.png)
+- row 28 | grade 3 | word='bar graph' | text_source=new_entry | image_source=image (image36.png)
+- row 29 | grade 5 | word='base' | text_source=new_entry | image_source=none
+- row 30 | grade K | word='behind' | text_source=none | image_source=new_entry (image16.png)
+- row 31 | grade K | word='below' | text_source=none | image_source=new_entry (image7.png)
+- row 32 | grade K | word='beside' | text_source=none | image_source=new_entry (image13.png)
+- row 33 | grade K | word='between' | text_source=none | image_source=new_entry (image44.png)
+- row 34 | grade 1 | word='category' | text_source=current | image_source=none
+- row 34 | grade 2 | word='category' | text_source=current | image_source=none
+- row 35 | grade 2 | word='cent' | text_source=new_entry | image_source=image (image23.png)
+- row 36 | grade K | word='circle' | text_source=none | image_source=current (image19.png)
+- row 37 | grade 2 | word='column' | text_source=new_entry | image_source=image (image78.png)
+- row 37 | grade 3 | word='column' | text_source=new_entry | image_source=image (image78.png)
+- row 37 | grade 5 | word='column' | text_source=new_entry | image_source=none
+- row 38 | grade 4 | word='common denominator' | text_source=new_entry | image_source=none
+- row 39 | grade 4 | word='common multiple' | text_source=new_entry | image_source=none
+- row 40 | grade 4 | word='common numerator' | text_source=new_entry | image_source=none
+- row 41 | grade 2 | word='Commutative Property of Addition' | text_source=current | image_source=image (image21.png)
+- row 41 | grade 5 | word='Commutative Property of Addition' | text_source=current | image_source=none
+- row 42 | grade 3 | word='Commutative Property of Multiplication' | text_source=new_entry | image_source=image (image29.png)
+- row 42 | grade 5 | word='Commutative Property of Multiplication' | text_source=current | image_source=none
+- row 43 | grade 2 | word='compose' | text_source=new_entry | image_source=image (image22.png)
+- row 43 | grade 3 | word='compose' | text_source=new_entry | image_source=none
+- row 43 | grade 5 | word='compose' | text_source=current | image_source=none
+- row 44 | grade 4 | word='composite number' | text_source=current | image_source=none
+- row 45 | grade K | word='cone' | text_source=none | image_source=current (image81.png)
+- row 45 | grade 1 | word='cone' | text_source=none | image_source=current (image81.png)
+- row 45 | grade 2 | word='cone' | text_source=new_entry | image_source=current (image81.png)
+- row 46 | grade 1 | word='conjecture' | text_source=current | image_source=none
+- row 46 | grade 2 | word='conjecture' | text_source=current | image_source=none
+- row 46 | grade 3 | word='conjecture' | text_source=current | image_source=none
+- row 46 | grade 4 | word='conjecture' | text_source=new_entry | image_source=none
+- row 46 | grade 5 | word='conjecture' | text_source=current | image_source=none
+- row 47 | grade 5 | word='coordinate grid' | text_source=new_entry | image_source=image (image86.png)
+- row 48 | grade 5 | word='coordinate' | text_source=new_entry | image_source=none
+- row 49 | grade K | word='corner' | text_source=none | image_source=current (image35.png)
+- row 49 | grade 1 | word='corner' | text_source=none | image_source=current (image35.png)
+- row 49 | grade 2 | word='corner' | text_source=none | image_source=current (image35.png)
+- row 50 | grade 2 | word='corner' | text_source=new_entry | image_source=none
+- row 51 | grade K | word='cube' | text_source=none | image_source=current (image28.png)
+- row 51 | grade 1 | word='cube' | text_source=none | image_source=current (image28.png)
+- row 51 | grade 2 | word='cube' | text_source=new_entry | image_source=current (image28.png)
+- row 52 | grade 5 | word='cubic unit' | text_source=current | image_source=none
+- row 53 | grade 5 | word='cup' | text_source=new_entry | image_source=none
+- row 54 | grade K | word='curved' | text_source=none | image_source=current (image49.png)
+- row 54 | grade 1 | word='curved' | text_source=none | image_source=current (image49.png)
+- row 55 | grade K | word='cylinder' | text_source=none | image_source=current (image26.png)
+- row 55 | grade 1 | word='cylinder' | text_source=none | image_source=current (image26.png)
+- row 55 | grade 2 | word='cylinder' | text_source=new_entry | image_source=current (image26.png)
+- row 56 | grade 1 | word='data' | text_source=current | image_source=none
+- row 56 | grade 2 | word='data' | text_source=new_entry | image_source=none
+- row 56 | grade 3 | word='data' | text_source=new_entry | image_source=none
+- row 57 | grade 4 | word='decimal' | text_source=new_entry | image_source=none
+- row 58 | grade 4 | word='decimal point' | text_source=new_entry | image_source=none
+- row 59 | grade 2 | word='decompose' | text_source=new_entry | image_source=image (image70.png)
+- row 59 | grade 3 | word='decompose' | text_source=current | image_source=none
+- row 59 | grade 5 | word='decompose' | text_source=current | image_source=none
+- row 60 | grade 5 | word='defining attribute' | text_source=current | image_source=none
+- row 61 | grade 4 | word='degree' | text_source=current | image_source=none
+- row 62 | grade 3 | word='denominator' | text_source=current | image_source=image (image32.png)
+- row 62 | grade 4 | word='denominator' | text_source=current | image_source=none
+- row 63 | grade 1 | word='difference' | text_source=current | image_source=image (image72.png)
+- row 63 | grade 2 | word='difference' | text_source=current | image_source=image (image72.png)
+- row 63 | grade 3 | word='difference' | text_source=current | image_source=none
+- row 64 | grade 1 | word='digit' | text_source=new_entry | image_source=none
+- row 64 | grade 2 | word='digit' | text_source=new_entry | image_source=none
+- row 64 | grade 3 | word='digit' | text_source=new_entry | image_source=none
+- row 65 | grade 2 | word='dime' | text_source=current | image_source=image (image31.png)
+- row 66 | grade 3 | word='Distributive Property' | text_source=new_entry | image_source=image (image123.png)
+- row 66 | grade 5 | word='Distributive Property' | text_source=new_entry | image_source=none
+- row 67 | grade 3 | word='divide' | text_source=current | image_source=none
+- row 68 | grade 3 | word='dividend' | text_source=new_entry | image_source=image (image52.png)
+- row 68 | grade 5 | word='dividend' | text_source=current | image_source=none
+- row 69 | grade 3 | word='divisor' | text_source=new_entry | image_source=image (image106.png)
+- row 69 | grade 5 | word='divisor' | text_source=new_entry | image_source=none
+- row 70 | grade 2 | word='dollar' | text_source=current | image_source=image (image40.png)
+- row 70 | grade 3 | word='dollar' | text_source=current | image_source=image (image40.png)
+- row 71 | grade 2 | word='edge' | text_source=new_entry | image_source=none
+- row 72 | grade K | word='eight' | text_source=none | image_source=current (image43.png)
+- row 73 | grade K | word='eighteen' | text_source=none | image_source=current (image107.png)
+- row 74 | grade 3 | word='elapsed time' | text_source=new_entry | image_source=none
+- row 75 | grade K | word='eleven' | text_source=none | image_source=current (image77.png)
+- row 76 | grade 1 | word='equal' | text_source=new_entry | image_source=none
+- row 76 | grade 2 | word='equal' | text_source=new_entry | image_source=none
+- row 77 | grade K | word='equation' | text_source=none | image_source=current (image33.png)
+- row 77 | grade 1 | word='equation' | text_source=new_entry | image_source=image (image33.png)
+- row 77 | grade 2 | word='equation' | text_source=new_entry | image_source=image (image33.png)
+- row 77 | grade 3 | word='equation' | text_source=new_entry | image_source=image (image53.png)
+- row 77 | grade 5 | word='equation' | text_source=new_entry | image_source=none
+- row 78 | grade 4 | word='equilateral triangle' | text_source=current | image_source=image (image74.png)
+- row 79 | grade 4 | word='equipartition' | text_source=current | image_source=none
+- row 79 | grade 5 | word='equipartition' | text_source=current | image_source=none
+- row 80 | grade 3 | word='equivalent fractions' | text_source=current | image_source=none
+- row 80 | grade 4 | word='equivalent fractions' | text_source=new_entry | image_source=none
+- row 81 | grade 1 | word='estimate' | text_source=current | image_source=none
+- row 81 | grade 2 | word='estimate' | text_source=current | image_source=none
+- row 81 | grade 3 | word='estimate' | text_source=current | image_source=none
+- row 82 | grade 2 | word='even number' | text_source=new_entry | image_source=image (image41.png)
+- row 82 | grade 3 | word='even number' | text_source=new_entry | image_source=none
+- row 83 | grade 2 | word='expanded form' | text_source=current | image_source=image (image42.png)
+- row 83 | grade 3 | word='expanded form' | text_source=current | image_source=image (image62.png)
+- row 83 | grade 4 | word='expanded form' | text_source=new_entry | image_source=none
+- row 84 | grade 5 | word='exponent' | text_source=new_entry | image_source=none
+- row 85 | grade K | word='expression' | text_source=none | image_source=current (image37.png)
+- row 85 | grade 1 | word='expression' | text_source=new_entry | image_source=image (image37.png)
+- row 85 | grade 2 | word='expression' | text_source=current | image_source=image (image39.png)
+- row 85 | grade 3 | word='expression' | text_source=current | image_source=image (image46.png)
+- row 85 | grade 5 | word='expression' | text_source=new_entry | image_source=none
+- row 86 | grade K | word='face' | text_source=none | image_source=current (image47.png)
+- row 86 | grade 1 | word='face' | text_source=new_entry | image_source=current (image47.png)
+- row 87 | grade 2 | word='face' | text_source=new_entry | image_source=none
+- row 88 | grade 4 | word='factor pair' | text_source=new_entry | image_source=none
+- row 89 | grade 3 | word='factor' | text_source=new_entry | image_source=image (image56.png)
+- row 89 | grade 5 | word='factor' | text_source=new_entry | image_source=none
+- row 90 | grade K | word='fewer' | text_source=none | image_source=current (image45.png)
+- row 90 | grade 1 | word='fewer' | text_source=none | image_source=current (image45.png)
+- row 91 | grade K | word='fifteen' | text_source=none | image_source=current (image101.png)
+- row 92 | grade K | word='five' | text_source=none | image_source=current (image48.png)
+- row 93 | grade K | word='flat shapes' | text_source=none | image_source=current (image55.png)
+- row 93 | grade 1 | word='flat shapes' | text_source=none | image_source=current (image55.png)
+- row 93 | grade 2 | word='flat shapes' | text_source=new_entry | image_source=current (image55.png)
+- row 94 | grade K | word='four' | text_source=none | image_source=current (image51.png)
+- row 95 | grade K | word='fourteen' | text_source=none | image_source=current (image127.png)
+- row 96 | grade 3 | word='fraction' | text_source=current | image_source=image (image80.png)
+- row 97 | grade 3 | word='gallon' | text_source=new_entry | image_source=none
+- row 97 | grade 5 | word='gallon' | text_source=new_entry | image_source=none
+- row 98 | grade 3 | word='gram' | text_source=new_entry | image_source=none
+- row 99 | grade 1 | word='greater than' | text_source=new_entry | image_source=image (image54.png)
+- row 99 | grade 2 | word='greater than' | text_source=new_entry | image_source=image (image54.png)
+- row 100 | grade 1 | word='half past' | text_source=new_entry | image_source=image (image57.png)
+- row 100 | grade 2 | word='half past' | text_source=new_entry | image_source=image (image57.png)
+- row 101 | grade K | word='heavier' | text_source=none | image_source=current (image65.png)
+- row 102 | grade K | word='hexagon' | text_source=none | image_source=current (image126.png)
+- row 102 | grade 2 | word='hexagon' | text_source=current | image_source=image (image132.png)
+- row 103 | grade 4 | word='horizontal' | text_source=new_entry | image_source=feedback (image105.png)
+- row 104 | grade 1 | word='hour hand' | text_source=new_entry | image_source=image (image64.png)
+- row 104 | grade 2 | word='hour hand' | text_source=new_entry | image_source=image (image64.png)
+- row 104 | grade 3 | word='hour hand' | text_source=new_entry | image_source=image (image64.png)
+- row 105 | grade 4 | word='hundred thousands' | text_source=new_entry | image_source=none
+- row 106 | grade 5 | word='hundredths' | text_source=new_entry | image_source=none
+- row 107 | grade 3 | word='Identity Property of Multiplication' | text_source=current | image_source=none
+- row 108 | grade K | word='in front of' | text_source=none | image_source=new_entry (image110.png)
+- row 109 | grade 5 | word='inequality' | text_source=new_entry | image_source=none
+- row 110 | grade 5 | word='intersect' | text_source=current | image_source=none
+- row 111 | grade 4 | word='intersecting lines' | text_source=current | image_source=image (image58.png)
+- row 112 | grade 4 | word='isosceles triangle' | text_source=new_entry | image_source=image (image63.png)
+- row 113 | grade 3 | word='key' | text_source=current | image_source=image (image99.png)
+- row 114 | grade 3 | word='kilogram' | text_source=new_entry | image_source=none
+- row 115 | grade 4 | word='kilometer' | text_source=new_entry | image_source=none
+- row 116 | grade 1 | word='length' | text_source=new_entry | image_source=image (image82.png)
+- row 116 | grade 2 | word='length' | text_source=new_entry | image_source=image (image82.png)
+- row 116 | grade 4 | word='length' | text_source=new_entry | image_source=none
+- row 117 | grade K | word='less than' | text_source=none | image_source=current (image90.png)
+- row 118 | grade 1 | word='less than' | text_source=new_entry | image_source=image (image73.png)
+- row 118 | grade 2 | word='less than' | text_source=new_entry | image_source=image (image73.png)
+- row 119 | grade K | word='lighter' | text_source=none | image_source=current (image79.png)
+- row 120 | grade 4 | word='line' | text_source=new_entry | image_source=image (image61.png)
+- row 121 | grade 4 | word='line of symmetry' | text_source=new_entry | image_source=image (image68.png)
+- row 122 | grade 2 | word='line plot' | text_source=new_entry | image_source=image (image84.png)
+- row 122 | grade 3 | word='line plot' | text_source=new_entry | image_source=image (image84.png)
+- row 122 | grade 5 | word='line plot' | text_source=new_entry | image_source=none
+- row 123 | grade 4 | word='line segment or segment' | text_source=current | image_source=image (image69.png)
+- row 124 | grade 4 | word='line symmetry' | text_source=new_entry | image_source=none
+- row 125 | grade 3 | word='liquid volume' | text_source=current | image_source=none
+- row 126 | grade 3 | word='liter' | text_source=current | image_source=none
+- row 127 | grade K | word='longer' | text_source=none | image_source=current (image67.png)
+- row 127 | grade 1 | word='longer' | text_source=none | image_source=current (image67.png)
+- row 127 | grade 2 | word='longer' | text_source=none | image_source=current (image67.png)
+- row 128 | grade 2 | word='meter stick' | text_source=current | image_source=none
+- row 129 | grade 5 | word='mile' | text_source=new_entry | image_source=none
+- row 130 | grade 5 | word='milligram' | text_source=new_entry | image_source=none
+- row 131 | grade 4 | word='millileter' | text_source=new_entry | image_source=none
+- row 132 | grade 5 | word='millimeter' | text_source=new_entry | image_source=none
+- row 133 | grade 4 | word='million' | text_source=new_entry | image_source=none
+- row 134 | grade 1 | word='minute hand' | text_source=new_entry | image_source=image (image103.png)
+- row 134 | grade 2 | word='minute hand' | text_source=new_entry | image_source=image (image103.png)
+- row 134 | grade 3 | word='minute hand' | text_source=new_entry | image_source=image (image103.png)
+- row 135 | grade 3 | word='mixed number' | text_source=current | image_source=image (image93.png)
+- row 135 | grade 4 | word='mixed number' | text_source=current | image_source=none
+- row 135 | grade 5 | word='mixed number' | text_source=current | image_source=none
+- row 136 | grade K | word='more' | text_source=none | image_source=current (image83.png)
+- row 136 | grade 1 | word='more' | text_source=none | image_source=current (image83.png)
+- row 137 | grade 4 | word='multiple' | text_source=new_entry | image_source=none
+- row 138 | grade 3 | word='multiply' | text_source=current | image_source=none
+- row 139 | grade 2 | word='nickel' | text_source=current | image_source=image (image76.png)
+- row 140 | grade K | word='nine' | text_source=none | image_source=current (image102.png)
+- row 141 | grade K | word='nineteen' | text_source=none | image_source=current (image92.png)
+- row 142 | grade 3 | word='non-unit fraction' | text_source=new_entry | image_source=image (image96.png)
+- row 142 | grade 5 | word='non-unit fraction' | text_source=new_entry | image_source=none
+- row 143 | grade 2 | word='number line' | text_source=current | image_source=image (image121.png)
+- row 144 | grade 3 | word='numerator' | text_source=current | image_source=image (image94.png)
+- row 144 | grade 4 | word='numerator' | text_source=new_entry | image_source=none
+- row 145 | grade 4 | word='obtuse angle' | text_source=current | image_source=image (image87.png)
+- row 146 | grade 4 | word='obtuse triangle' | text_source=current | image_source=image (image75.png)
+- row 147 | grade 2 | word='odd numbers' | text_source=new_entry | image_source=image (image98.png)
+- row 147 | grade 3 | word='odd numbers' | text_source=new_entry | image_source=none
+- row 148 | grade K | word='one' | text_source=none | image_source=current (image85.png)
+- row 148 | grade 1 | word='one' | text_source=new_entry | image_source=image (image111.png)
+- row 148 | grade 2 | word='one' | text_source=new_entry | image_source=image (image111.png)
+- row 148 | grade 3 | word='one' | text_source=new_entry | image_source=none
+- row 149 | grade 2 | word='open number line' | text_source=current | image_source=image (image89.png)
+- row 150 | grade 5 | word='ordered pair' | text_source=new_entry | image_source=none
+- row 151 | grade 5 | word='origin' | text_source=current | image_source=none
+- row 152 | grade 4 | word='ounce' | text_source=new_entry | image_source=none
+- row 153 | grade 2 | word='p.m.' | text_source=new_entry | image_source=none
+- row 153 | grade 3 | word='p.m.' | text_source=new_entry | image_source=none
+- row 154 | grade 4 | word='parallel lines' | text_source=new_entry | image_source=image (image97.png)
+- row 154 | grade 5 | word='parallel lines' | text_source=new_entry | image_source=image (image97.png)
+- row 155 | grade 4 | word='parallelogram' | text_source=new_entry | image_source=image (image143.png)
+- row 155 | grade 5 | word='parallelogram' | text_source=current | image_source=image (image143.png)
+- row 156 | grade 3 | word='parentheses' | text_source=new_entry | image_source=none
+- row 156 | grade 4 | word='parentheses' | text_source=new_entry | image_source=none
+- row 156 | grade 5 | word='parentheses' | text_source=new_entry | image_source=none
+- row 157 | grade 4 | word='partial product' | text_source=new_entry | image_source=none
+- row 157 | grade 5 | word='partial product' | text_source=new_entry | image_source=none
+- row 158 | grade 4 | word='partial quotient' | text_source=new_entry | image_source=none
+- row 158 | grade 5 | word='partial quotient' | text_source=new_entry | image_source=none
+- row 159 | grade 4 | word='pattern' | text_source=new_entry | image_source=none
+- row 160 | grade 2 | word='penny' | text_source=current | image_source=image (image91.png)
+- row 161 | grade 2 | word='pentagon' | text_source=current | image_source=image (image95.png)
+- row 162 | grade 3 | word='perimeter' | text_source=current | image_source=image (image112.png)
+- row 162 | grade 4 | word='perimeter' | text_source=current | image_source=none
+- row 163 | grade 4 | word='perpendicular line' | text_source=new_entry | image_source=image (image108.png)
+- row 163 | grade 5 | word='perpendicular line' | text_source=new_entry | image_source=image (image108.png)
+- row 164 | grade 2 | word='picture graph' | text_source=new_entry | image_source=image (image120.png)
+- row 164 | grade 3 | word='picture graph' | text_source=new_entry | image_source=image (image120.png)
+- row 165 | grade 3 | word='pint' | text_source=new_entry | image_source=none
+- row 165 | grade 5 | word='pint' | text_source=new_entry | image_source=none
+- row 166 | grade 5 | word='plot' | text_source=new_entry | image_source=none
+- row 167 | grade 2 | word='point' | text_source=current | image_source=image (image100.png)
+- row 167 | grade 4 | word='point' | text_source=current | image_source=image (image117.png)
+- row 168 | grade 4 | word='pound' | text_source=new_entry | image_source=none
+- row 169 | grade 4 | word='prime number' | text_source=current | image_source=none
+- row 170 | grade K | word='prism' | text_source=none | image_source=current (image134.png)
+- row 171 | grade 3 | word='product' | text_source=new_entry | image_source=image (image109.png)
+- row 171 | grade 5 | word='product' | text_source=new_entry | image_source=none
+- row 172 | grade 4 | word='protractor' | text_source=current | image_source=image (image115.png)
+- row 173 | grade 2 | word='quadrilateral' | text_source=current | image_source=image (image113.png)
+- row 173 | grade 3 | word='quadrilateral' | text_source=current | image_source=image (image113.png)
+- row 173 | grade 4 | word='quadrilateral' | text_source=current | image_source=image (image113.png)
+- row 173 | grade 5 | word='quadrilateral' | text_source=current | image_source=image (image113.png)
+- row 174 | grade 3 | word='quart' | text_source=new_entry | image_source=none
+- row 174 | grade 5 | word='quart' | text_source=new_entry | image_source=none
+- row 175 | grade 2 | word='quarter (coin)' | text_source=current | image_source=image (image146.png)
+- row 176 | grade 2 | word='quarter past' | text_source=new_entry | image_source=image (image122.png)
+- row 177 | grade 2 | word='quarter to' | text_source=new_entry | image_source=image (image119.png)
+- row 178 | grade 3 | word='quotient' | text_source=new_entry | image_source=image (image114.png)
+- row 178 | grade 5 | word='quotient' | text_source=new_entry | image_source=none
+- row 179 | grade 4 | word='ray' | text_source=current | image_source=image (image136.png)
+- row 180 | grade K | word='rectangle' | text_source=none | image_source=current (image153.png)
+- row 180 | grade 1 | word='rectangle' | text_source=none | image_source=current (image153.png)
+- row 180 | grade 2 | word='rectangle' | text_source=current | image_source=image (image133.png)
+- row 180 | grade 3 | word='rectangle' | text_source=new_entry | image_source=image (image133.png)
+- row 180 | grade 5 | word='rectangle' | text_source=current | image_source=image (image133.png)
+- row 181 | grade 1 | word='rectangular prism' | text_source=current | image_source=image (image140.png)
+- row 181 | grade 2 | word='rectangular prism' | text_source=current | image_source=image (image140.png)
+- row 181 | grade 5 | word='rectangular prism' | text_source=current | image_source=image (image140.png)
+- row 182 | grade 4 | word='remainder' | text_source=new_entry | image_source=none
+- row 182 | grade 5 | word='remainder' | text_source=new_entry | image_source=none
+- row 183 | grade 3 | word='rhombus' | text_source=new_entry | image_source=image (image118.png)
+- row 183 | grade 5 | word='rhombus' | text_source=new_entry | image_source=image (image128.png)
+- row 184 | grade 4 | word='right angle' | text_source=current | image_source=image (image145.png)
+- row 184 | grade 5 | word='right angle' | text_source=current | image_source=image (image145.png)
+- row 185 | grade 4 | word='right triangle' | text_source=current | image_source=image (image167.png)
+- row 186 | grade 3 | word='rounding' | text_source=new_entry | image_source=none
+- row 186 | grade 4 | word='rounding' | text_source=new_entry | image_source=none
+- row 186 | grade 5 | word='rounding' | text_source=new_entry | image_source=none
+- row 187 | grade 2 | word='row' | text_source=new_entry | image_source=image (image130.png)
+- row 187 | grade 3 | word='row' | text_source=new_entry | image_source=image (image130.png)
+- row 187 | grade 5 | word='row' | text_source=new_entry | image_source=none
+- row 188 | grade 2 | word='ruler' | text_source=current | image_source=none
+- row 188 | grade 3 | word='ruler' | text_source=current | image_source=none
+- row 189 | grade K | word='same' | text_source=none | image_source=current (image125.png)
+- row 190 | grade 3 | word='scale' | text_source=new_entry | image_source=image (image148.png)
+- row 191 | grade 3 | word='scaled bar graph' | text_source=current | image_source=image (image171.png)
+- row 192 | grade 3 | word='scaled picture graph' | text_source=current | image_source=image (image149.png)
+- row 193 | grade 4 | word='scalene triangle' | text_source=new_entry | image_source=image (image141.png)
+- row 194 | grade 4 | word='second' | text_source=new_entry | image_source=none
+- row 195 | grade K | word='seven' | text_source=none | image_source=current (image129.png)
+- row 196 | grade K | word='seventeen' | text_source=none | image_source=current (image137.png)
+- row 197 | grade K | word='shorter' | text_source=none | image_source=current (image160.png)
+- row 197 | grade 1 | word='shorter' | text_source=none | image_source=current (image160.png)
+- row 197 | grade 2 | word='shorter' | text_source=none | image_source=current (image160.png)
+- row 198 | grade K | word='side' | text_source=none | image_source=current (image116.png)
+- row 198 | grade 1 | word='side' | text_source=none | image_source=current (image116.png)
+- row 199 | grade K | word='six' | text_source=none | image_source=current (image152.png)
+- row 200 | grade K | word='sixteen' | text_source=none | image_source=current (image151.png)
+- row 201 | grade K | word='solid shape' | text_source=none | image_source=current (image135.png)
+- row 201 | grade 1 | word='solid shape' | text_source=none | image_source=current (image135.png)
+- row 202 | grade K | word='sort' | text_source=none | image_source=current (image131.png)
+- row 202 | grade 1 | word='sort' | text_source=none | image_source=current (image131.png)
+- row 203 | grade K | word='sphere' | text_source=none | image_source=current (image124.png)
+- row 203 | grade 1 | word='sphere' | text_source=none | image_source=current (image124.png)
+- row 203 | grade 2 | word='sphere' | text_source=new_entry | image_source=current (image124.png)
+- row 204 | grade K | word='square' | text_source=none | image_source=current (image144.png)
+- row 204 | grade 1 | word='square' | text_source=none | image_source=current (image144.png)
+- row 204 | grade 2 | word='square' | text_source=current | image_source=image (image144.png)
+- row 204 | grade 3 | word='square' | text_source=new_entry | image_source=image (image144.png)
+- row 204 | grade 5 | word='square' | text_source=current | image_source=none
+- row 205 | grade 3 | word='square centimeter' | text_source=current | image_source=none
+- row 206 | grade 1 | word='square corner' | text_source=none | image_source=current (image168.png)
+- row 206 | grade 2 | word='square corner' | text_source=new_entry | image_source=image (image175.png)
+- row 206 | grade 3 | word='square corner' | text_source=new_entry | image_source=image (image175.png)
+- row 207 | grade 3 | word='square foot' | text_source=current | image_source=none
+- row 208 | grade 3 | word='square inch' | text_source=current | image_source=none
+- row 209 | grade 3 | word='square meter' | text_source=current | image_source=none
+- row 210 | grade 2 | word='standard form' | text_source=current | image_source=none
+- row 210 | grade 3 | word='standard form' | text_source=current | image_source=none
+- row 210 | grade 4 | word='standard form' | text_source=new_entry | image_source=none
+- row 211 | grade K | word='straight' | text_source=none | image_source=current (image166.png)
+- row 211 | grade 1 | word='straight' | text_source=none | image_source=current (image166.png)
+- row 211 | grade 2 | word='straight' | text_source=none | image_source=current (image166.png)
+- row 212 | grade 4 | word='straight angle' | text_source=current | image_source=image (image170.png)
+- row 213 | grade K | word='subtract' | text_source=none | image_source=current (image142.png)
+- row 213 | grade 1 | word='subtract' | text_source=new_entry | image_source=none
+- row 214 | grade 1 | word='sum' | text_source=new_entry | image_source=image (image164.png)
+- row 214 | grade 2 | word='sum' | text_source=new_entry | image_source=image (image164.png)
+- row 214 | grade 3 | word='sum' | text_source=new_entry | image_source=none
+- row 214 | grade 5 | word='sum' | text_source=current | image_source=none
+- row 215 | grade 1 | word='survey' | text_source=current | image_source=none
+- row 216 | grade K | word='taller' | text_source=none | image_source=current (image138.png)
+- row 216 | grade 1 | word='taller' | text_source=none | image_source=current (image138.png)
+- row 216 | grade 2 | word='taller' | text_source=none | image_source=current (image138.png)
+- row 217 | grade 2 | word='tape diagram' | text_source=new_entry | image_source=image (image147.png)
+- row 217 | grade 5 | word='tape diagram' | text_source=new_entry | image_source=none
+- row 218 | grade K | word='teen number' | text_source=none | image_source=current (image176.png)
+- row 219 | grade 1 | word='teen number' | text_source=new_entry | image_source=none
+- row 220 | grade K | word='ten' | text_source=none | image_source=current (image159.png)
+- row 220 | grade 1 | word='ten' | text_source=new_entry | image_source=image (image173.png)
+- row 220 | grade 2 | word='ten' | text_source=new_entry | image_source=image (image173.png)
+- row 220 | grade 3 | word='ten' | text_source=new_entry | image_source=none
+- row 221 | grade 4 | word='ten thousands' | text_source=new_entry | image_source=none
+- row 222 | grade 5 | word='tenth' | text_source=new_entry | image_source=none
+- row 223 | grade K | word='thirteen' | text_source=none | image_source=current (image156.png)
+- row 224 | grade 3 | word='thousands' | text_source=new_entry | image_source=none
+- row 224 | grade 4 | word='thousands' | text_source=new_entry | image_source=none
+- row 225 | grade 5 | word='thousandth' | text_source=new_entry | image_source=none
+- row 226 | grade K | word='three' | text_source=none | image_source=current (image150.png)
+- row 227 | grade 2 | word='three-dimensional' | text_source=new_entry | image_source=image (image154.png)
+- row 228 | grade 5 | word='ton' | text_source=new_entry | image_source=none
+- row 229 | grade K | word='total' | text_source=none | image_source=current (image163.png)
+- row 230 | grade 5 | word='trapezoid' | text_source=current | image_source=image (image162.png)
+- row 231 | grade K | word='triangle' | text_source=none | image_source=current (image169.png)
+- row 231 | grade 1 | word='triangle' | text_source=none | image_source=current (image169.png)
+- row 231 | grade 2 | word='triangle' | text_source=current | image_source=image (image169.png)
+- row 232 | grade 1 | word='triangular prism' | text_source=current | image_source=image (image157.png)
+- row 232 | grade 2 | word='triangular prism' | text_source=new_entry | image_source=image (image157.png)
+- row 233 | grade K | word='twelve' | text_source=none | image_source=current (image172.png)
+- row 234 | grade K | word='twenty' | text_source=none | image_source=current (image180.png)
+- row 235 | grade K | word='two' | text_source=none | image_source=current (image155.png)
+- row 236 | grade 2 | word='two-dimensional' | text_source=new_entry | image_source=image (image158.png)
+- row 236 | grade 3 | word='two-dimensional' | text_source=new_entry | image_source=image (image158.png)
+- row 237 | grade 3 | word='unit fraction' | text_source=current | image_source=image (image174.png)
+- row 237 | grade 4 | word='unit fraction' | text_source=current | image_source=none
+- row 237 | grade 5 | word='unit fraction' | text_source=current | image_source=none
+- row 238 | grade 4 | word='vertex' | text_source=new_entry | image_source=image (image161.png)
+- row 238 | grade 5 | word='vertex' | text_source=new_entry | image_source=image (image179.png)
+- row 239 | grade 4 | word='vertical' | text_source=new_entry | image_source=feedback (image165.png)
+- row 240 | grade 5 | word='volume' | text_source=current | image_source=none
+- row 241 | grade 3 | word='weight' | text_source=current | image_source=none
+- row 242 | grade 4 | word='width' | text_source=new_entry | image_source=none
+- row 243 | grade K | word='written number' | text_source=none | image_source=current (image177.png)
+- row 244 | grade 5 | word='x coordinate' | text_source=new_entry | image_source=none
+- row 245 | grade 5 | word='y coordinate' | text_source=new_entry | image_source=none
+- row 246 | grade 4 | word='yard' | text_source=new_entry | image_source=none
+- row 247 | grade K | word='zero' | text_source=none | image_source=current (image178.png)

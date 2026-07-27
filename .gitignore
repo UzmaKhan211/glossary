@@ -1,0 +1,13 @@
+output/
+data/source/
+__pycache__/
+*.pyc
+templates/_build.html
+.DS_Store
+
+# Regenerable build artifacts (not source): images come from extract_data.py
+# against the sheet, fonts come from fetch_fonts.py. Keeping these out of git
+# keeps the repo (and any handoff bundle of it) small -- see README.md.
+assets/images/
+templates/fonts/
+templates/fonts.css

@@ -1,0 +1,2522 @@
+{
+  "K": [
+    {
+      "row": 13,
+      "word": "above",
+      "text": "",
+      "image": "K/13_above.png"
+    },
+    {
+      "row": 15,
+      "word": "add",
+      "text": "",
+      "image": "K/15_add.png"
+    },
+    {
+      "row": 30,
+      "word": "behind",
+      "text": "",
+      "image": "K/30_behind.png"
+    },
+    {
+      "row": 31,
+      "word": "below",
+      "text": "",
+      "image": "K/31_below.png"
+    },
+    {
+      "row": 32,
+      "word": "beside",
+      "text": "",
+      "image": "K/32_beside.png"
+    },
+    {
+      "row": 33,
+      "word": "between",
+      "text": "",
+      "image": "K/33_between.png"
+    },
+    {
+      "row": 36,
+      "word": "circle",
+      "text": "",
+      "image": "K/36_circle.png"
+    },
+    {
+      "row": 45,
+      "word": "cone",
+      "text": "",
+      "image": "K/45_cone.png"
+    },
+    {
+      "row": 49,
+      "word": "corner",
+      "text": "",
+      "image": "K/49_corner.png"
+    },
+    {
+      "row": 51,
+      "word": "cube",
+      "text": "",
+      "image": "K/51_cube.png"
+    },
+    {
+      "row": 54,
+      "word": "curved",
+      "text": "",
+      "image": "K/54_curved.png"
+    },
+    {
+      "row": 55,
+      "word": "cylinder",
+      "text": "",
+      "image": "K/55_cylinder.png"
+    },
+    {
+      "row": 72,
+      "word": "eight",
+      "text": "",
+      "image": "K/72_eight.png"
+    },
+    {
+      "row": 73,
+      "word": "eighteen",
+      "text": "",
+      "image": "K/73_eighteen.png"
+    },
+    {
+      "row": 75,
+      "word": "eleven",
+      "text": "",
+      "image": "K/75_eleven.png"
+    },
+    {
+      "row": 77,
+      "word": "equation",
+      "text": "",
+      "image": "K/77_equation.png"
+    },
+    {
+      "row": 85,
+      "word": "expression",
+      "text": "",
+      "image": "K/85_expression.png"
+    },
+    {
+      "row": 86,
+      "word": "face",
+      "text": "",
+      "image": "K/86_face.png"
+    },
+    {
+      "row": 90,
+      "word": "fewer",
+      "text": "",
+      "image": "K/90_fewer.png"
+    },
+    {
+      "row": 91,
+      "word": "fifteen",
+      "text": "",
+      "image": "K/91_fifteen.png"
+    },
+    {
+      "row": 92,
+      "word": "five",
+      "text": "",
+      "image": "K/92_five.png"
+    },
+    {
+      "row": 93,
+      "word": "flat shapes",
+      "text": "",
+      "image": "K/93_flat-shapes.png"
+    },
+    {
+      "row": 94,
+      "word": "four",
+      "text": "",
+      "image": "K/94_four.png"
+    },
+    {
+      "row": 95,
+      "word": "fourteen",
+      "text": "",
+      "image": "K/95_fourteen.png"
+    },
+    {
+      "row": 101,
+      "word": "heavier",
+      "text": "",
+      "image": "K/101_heavier.png"
+    },
+    {
+      "row": 102,
+      "word": "hexagon",
+      "text": "",
+      "image": "K/102_hexagon.png"
+    },
+    {
+      "row": 108,
+      "word": "in front of",
+      "text": "",
+      "image": "K/108_in-front-of.png"
+    },
+    {
+      "row": 117,
+      "word": "less than",
+      "text": "",
+      "image": "K/117_less-than.png"
+    },
+    {
+      "row": 119,
+      "word": "lighter",
+      "text": "",
+      "image": "K/119_lighter.png"
+    },
+    {
+      "row": 127,
+      "word": "longer",
+      "text": "",
+      "image": "K/127_longer.png"
+    },
+    {
+      "row": 136,
+      "word": "more",
+      "text": "",
+      "image": "K/136_more.png"
+    },
+    {
+      "row": 140,
+      "word": "nine",
+      "text": "",
+      "image": "K/140_nine.png"
+    },
+    {
+      "row": 141,
+      "word": "nineteen",
+      "text": "",
+      "image": "K/141_nineteen.png"
+    },
+    {
+      "row": 148,
+      "word": "one",
+      "text": "",
+      "image": "K/148_one.png"
+    },
+    {
+      "row": 170,
+      "word": "prism",
+      "text": "",
+      "image": "K/170_prism.png"
+    },
+    {
+      "row": 180,
+      "word": "rectangle",
+      "text": "",
+      "image": "K/180_rectangle.png"
+    },
+    {
+      "row": 189,
+      "word": "same",
+      "text": "",
+      "image": "K/189_same.png"
+    },
+    {
+      "row": 195,
+      "word": "seven",
+      "text": "",
+      "image": "K/195_seven.png"
+    },
+    {
+      "row": 196,
+      "word": "seventeen",
+      "text": "",
+      "image": "K/196_seventeen.png"
+    },
+    {
+      "row": 197,
+      "word": "shorter",
+      "text": "",
+      "image": "K/197_shorter.png"
+    },
+    {
+      "row": 198,
+      "word": "side",
+      "text": "",
+      "image": "K/198_side.png"
+    },
+    {
+      "row": 199,
+      "word": "six",
+      "text": "",
+      "image": "K/199_six.png"
+    },
+    {
+      "row": 200,
+      "word": "sixteen",
+      "text": "",
+      "image": "K/200_sixteen.png"
+    },
+    {
+      "row": 201,
+      "word": "solid shape",
+      "text": "",
+      "image": "K/201_solid-shape.png"
+    },
+    {
+      "row": 202,
+      "word": "sort",
+      "text": "",
+      "image": "K/202_sort.png"
+    },
+    {
+      "row": 203,
+      "word": "sphere",
+      "text": "",
+      "image": "K/203_sphere.png"
+    },
+    {
+      "row": 204,
+      "word": "square",
+      "text": "",
+      "image": "K/204_square.png"
+    },
+    {
+      "row": 211,
+      "word": "straight",
+      "text": "",
+      "image": "K/211_straight.png"
+    },
+    {
+      "row": 213,
+      "word": "subtract",
+      "text": "",
+      "image": "K/213_subtract.png"
+    },
+    {
+      "row": 216,
+      "word": "taller",
+      "text": "",
+      "image": "K/216_taller.png"
+    },
+    {
+      "row": 218,
+      "word": "teen number",
+      "text": "",
+      "image": "K/218_teen-number.png"
+    },
+    {
+      "row": 220,
+      "word": "ten",
+      "text": "",
+      "image": "K/220_ten.png"
+    },
+    {
+      "row": 223,
+      "word": "thirteen",
+      "text": "",
+      "image": "K/223_thirteen.png"
+    },
+    {
+      "row": 226,
+      "word": "three",
+      "text": "",
+      "image": "K/226_three.png"
+    },
+    {
+      "row": 229,
+      "word": "total",
+      "text": "",
+      "image": "K/229_total.png"
+    },
+    {
+      "row": 231,
+      "word": "triangle",
+      "text": "",
+      "image": "K/231_triangle.png"
+    },
+    {
+      "row": 233,
+      "word": "twelve",
+      "text": "",
+      "image": "K/233_twelve.png"
+    },
+    {
+      "row": 234,
+      "word": "twenty",
+      "text": "",
+      "image": "K/234_twenty.png"
+    },
+    {
+      "row": 235,
+      "word": "two",
+      "text": "",
+      "image": "K/235_two.png"
+    },
+    {
+      "row": 243,
+      "word": "written number",
+      "text": "",
+      "image": "K/243_written-number.png"
+    },
+    {
+      "row": 247,
+      "word": "zero",
+      "text": "",
+      "image": "K/247_zero.png"
+    }
+  ],
+  "1": [
+    {
+      "row": 5,
+      "word": "fourth",
+      "text": "each part of a shape that is partitioned into 4 equal parts (plural: fourths)",
+      "image": "1/5_fourth.png"
+    },
+    {
+      "row": 6,
+      "word": "half",
+      "text": "each part of a shape that is partitioned into 2 equal parts (plural: halves)",
+      "image": "1/6_half.png"
+    },
+    {
+      "row": 9,
+      "word": "quarter",
+      "text": "each part of a shape that is partitioned into 4 equal parts (plural: quarters)",
+      "image": "1/9_quarter.png"
+    },
+    {
+      "row": 15,
+      "word": "add",
+      "text": "to combine numbers to find their sum",
+      "image": null
+    },
+    {
+      "row": 16,
+      "word": "addend",
+      "text": "one of the numbers added together to find the sum",
+      "image": "1/16_addend.png"
+    },
+    {
+      "row": 26,
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null
+    },
+    {
+      "row": 34,
+      "word": "category",
+      "text": "a group of objects that are alike in some way",
+      "image": null
+    },
+    {
+      "row": 45,
+      "word": "cone",
+      "text": "",
+      "image": "1/45_cone.png"
+    },
+    {
+      "row": 46,
+      "word": "conjecture",
+      "text": "a statement that you believe is true based on current information",
+      "image": null
+    },
+    {
+      "row": 49,
+      "word": "corner",
+      "text": "",
+      "image": "1/49_corner.png"
+    },
+    {
+      "row": 51,
+      "word": "cube",
+      "text": "",
+      "image": "1/51_cube.png"
+    },
+    {
+      "row": 54,
+      "word": "curved",
+      "text": "",
+      "image": "1/54_curved.png"
+    },
+    {
+      "row": 55,
+      "word": "cylinder",
+      "text": "",
+      "image": "1/55_cylinder.png"
+    },
+    {
+      "row": 56,
+      "word": "data",
+      "text": "information about things or people in a group",
+      "image": null
+    },
+    {
+      "row": 63,
+      "word": "difference",
+      "text": "the amount you get when you subtract one number from another",
+      "image": "1/63_difference.png"
+    },
+    {
+      "row": 64,
+      "word": "digit",
+      "text": "a symbol used to write numbers; the digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 (42 is an example of a two-digit number)",
+      "image": null
+    },
+    {
+      "row": 76,
+      "word": "equal",
+      "text": "having the same value",
+      "image": null
+    },
+    {
+      "row": 77,
+      "word": "equation",
+      "text": "a math statement showing that the values on each side of the equal sign are the same",
+      "image": "1/77_equation.png"
+    },
+    {
+      "row": 81,
+      "word": "estimate",
+      "text": "a guess you make about a value based on what you know",
+      "image": null
+    },
+    {
+      "row": 85,
+      "word": "expression",
+      "text": "a mathematical statement with numbers and symbols",
+      "image": "1/85_expression.png"
+    },
+    {
+      "row": 86,
+      "word": "face",
+      "text": "a flat surface on a three-dimensional shape",
+      "image": "1/86_face.png"
+    },
+    {
+      "row": 90,
+      "word": "fewer",
+      "text": "",
+      "image": "1/90_fewer.png"
+    },
+    {
+      "row": 93,
+      "word": "flat shapes",
+      "text": "",
+      "image": "1/93_flat-shapes.png"
+    },
+    {
+      "row": 99,
+      "word": "greater than",
+      "text": "a phrase that means one value is more than another value",
+      "image": "1/99_greater-than.png"
+    },
+    {
+      "row": 100,
+      "word": "half past",
+      "text": "an expression that means it is 30 minutes past the hour (ex: the clock shows half past 4 o'clock, or 4:30)",
+      "image": "1/100_half-past.png"
+    },
+    {
+      "row": 104,
+      "word": "hour hand",
+      "text": "the short arrow on a clock that points to the hour and moves from hour to hour",
+      "image": "1/104_hour-hand.png"
+    },
+    {
+      "row": 116,
+      "word": "length",
+      "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
+      "image": "1/116_length.png"
+    },
+    {
+      "row": 118,
+      "word": "less than",
+      "text": "a phrase that means one value is less than another value",
+      "image": "1/118_less-than.png"
+    },
+    {
+      "row": 127,
+      "word": "longer",
+      "text": "",
+      "image": "1/127_longer.png"
+    },
+    {
+      "row": 134,
+      "word": "minute hand",
+      "text": "the long arrow on a clock that points to the tick marks around the clock to show how many minutes have passed and goes around the whole circle in an hour",
+      "image": "1/134_minute-hand.png"
+    },
+    {
+      "row": 136,
+      "word": "more",
+      "text": "",
+      "image": "1/136_more.png"
+    },
+    {
+      "row": 148,
+      "word": "one",
+      "text": "an amount that has a value of 1 (plural: ones)",
+      "image": "1/148_one.png"
+    },
+    {
+      "row": 180,
+      "word": "rectangle",
+      "text": "",
+      "image": "1/180_rectangle.png"
+    },
+    {
+      "row": 181,
+      "word": "rectangular prism",
+      "text": "a solid shape with 6 rectangular faces",
+      "image": "1/181_rectangular-prism.png"
+    },
+    {
+      "row": 197,
+      "word": "shorter",
+      "text": "",
+      "image": "1/197_shorter.png"
+    },
+    {
+      "row": 198,
+      "word": "side",
+      "text": "",
+      "image": "1/198_side.png"
+    },
+    {
+      "row": 201,
+      "word": "solid shape",
+      "text": "",
+      "image": "1/201_solid-shape.png"
+    },
+    {
+      "row": 202,
+      "word": "sort",
+      "text": "",
+      "image": "1/202_sort.png"
+    },
+    {
+      "row": 203,
+      "word": "sphere",
+      "text": "",
+      "image": "1/203_sphere.png"
+    },
+    {
+      "row": 204,
+      "word": "square",
+      "text": "",
+      "image": "1/204_square.png"
+    },
+    {
+      "row": 206,
+      "word": "square corner",
+      "text": "",
+      "image": "1/206_square-corner.png"
+    },
+    {
+      "row": 211,
+      "word": "straight",
+      "text": "",
+      "image": "1/211_straight.png"
+    },
+    {
+      "row": 213,
+      "word": "subtract",
+      "text": "to find the difference between numbers",
+      "image": null
+    },
+    {
+      "row": 214,
+      "word": "sum",
+      "text": "the value when 2 or more numbers are added",
+      "image": "1/214_sum.png"
+    },
+    {
+      "row": 215,
+      "word": "survey",
+      "text": "a tool that can be used to collect information about a group of people's answers to the same question",
+      "image": null
+    },
+    {
+      "row": 216,
+      "word": "taller",
+      "text": "",
+      "image": "1/216_taller.png"
+    },
+    {
+      "row": 219,
+      "word": "teen number",
+      "text": "a number between 11 and 19, composed of a ten and some ones",
+      "image": null
+    },
+    {
+      "row": 220,
+      "word": "ten",
+      "text": "a group of 10 ones (plural: tens)",
+      "image": "1/220_ten.png"
+    },
+    {
+      "row": 231,
+      "word": "triangle",
+      "text": "",
+      "image": "1/231_triangle.png"
+    },
+    {
+      "row": 232,
+      "word": "triangular prism",
+      "text": "a solid shape with 2 triangular faces and 3 rectangular faces",
+      "image": "1/232_triangular-prism.png"
+    }
+  ],
+  "2": [
+    {
+      "row": 3,
+      "word": "centimeter",
+      "text": "a unit of length measurement in the metric system (100 centimeters is equal to 1 meter)",
+      "image": "2/3_centimeter.png"
+    },
+    {
+      "row": 4,
+      "word": "foot",
+      "text": "a unit of length in the U.S. customary measurement system that is 12 inches long (plural: feet)",
+      "image": null
+    },
+    {
+      "row": 5,
+      "word": "fourth",
+      "text": "each part of a whole that is partitioned into 4 equal parts (plural: fourths)",
+      "image": "2/5_fourth.png"
+    },
+    {
+      "row": 6,
+      "word": "half",
+      "text": "each part of a shape that is partitioned into 2 equal parts (plural: halves)",
+      "image": "2/6_half.png"
+    },
+    {
+      "row": 7,
+      "word": "hundred",
+      "text": "a group of 10 tens or 100 ones (plural: hundreds)",
+      "image": "2/7_hundred.png"
+    },
+    {
+      "row": 8,
+      "word": "meter",
+      "text": "a unit of length in the metric measurement system (1 meter is equal to 100 centimeters)",
+      "image": null
+    },
+    {
+      "row": 9,
+      "word": "quarter",
+      "text": "each part of a shape that is partitioned into 4 equal parts (plural: quarters)",
+      "image": "2/9_quarter.png"
+    },
+    {
+      "row": 11,
+      "word": "third",
+      "text": "each part of a shape that is partitioned into 3 equal parts (plural: thirds)",
+      "image": "2/11_third.png"
+    },
+    {
+      "row": 12,
+      "word": "a.m.",
+      "text": "a phrase referring to the period of time from midnight to noon",
+      "image": null
+    },
+    {
+      "row": 20,
+      "word": "inch",
+      "text": "a unit of length in the U.S. customary measurement system (12 inches is equal to one foot)",
+      "image": "2/20_inch.png"
+    },
+    {
+      "row": 23,
+      "word": "array",
+      "text": "an arrangement of objects in equal rows and equal columns, where each column must contain the same number of objects as the other columns, and each row must have the same number of objects as the other rows",
+      "image": "2/23_array.png"
+    },
+    {
+      "row": 24,
+      "word": "Associative Property of Addition",
+      "text": "the sum of 3 or more numbers remains the same no matter how the addends are grouped",
+      "image": null
+    },
+    {
+      "row": 26,
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null
+    },
+    {
+      "row": 28,
+      "word": "bar graph",
+      "text": "a display of categorical data that uses bars to show the number of values in each category",
+      "image": "2/28_bar-graph.png"
+    },
+    {
+      "row": 34,
+      "word": "category",
+      "text": "a group of objects that are alike in some way",
+      "image": null
+    },
+    {
+      "row": 35,
+      "word": "cent",
+      "text": "a unit of money (100 cents is equal to 1 dollar)",
+      "image": "2/35_cent.png"
+    },
+    {
+      "row": 37,
+      "word": "column",
+      "text": "a part of an array that goes up and down",
+      "image": "2/37_column.png"
+    },
+    {
+      "row": 41,
+      "word": "Commutative Property of Addition",
+      "text": "the order in which numbers are added does not change the sum",
+      "image": "2/41_commutative-property-of-addition.png"
+    },
+    {
+      "row": 43,
+      "word": "compose",
+      "text": "to put together",
+      "image": "2/43_compose.png"
+    },
+    {
+      "row": 45,
+      "word": "cone",
+      "text": "a three-dimensional shape with one circular face and one vertex",
+      "image": "2/45_cone.png"
+    },
+    {
+      "row": 46,
+      "word": "conjecture",
+      "text": "a statement that you believe is true based on current information",
+      "image": null
+    },
+    {
+      "row": 49,
+      "word": "corner",
+      "text": "",
+      "image": "2/49_corner.png"
+    },
+    {
+      "row": 50,
+      "word": "corner",
+      "text": "a point where two or more edges or lines meet",
+      "image": null
+    },
+    {
+      "row": 51,
+      "word": "cube",
+      "text": "a three-dimensional shape with 6 identical square faces",
+      "image": "2/51_cube.png"
+    },
+    {
+      "row": 55,
+      "word": "cylinder",
+      "text": "a three-dimensional shape with 2 circular faces",
+      "image": "2/55_cylinder.png"
+    },
+    {
+      "row": 56,
+      "word": "data",
+      "text": "information about things or people in a group (ex: if you have a box of colored pencils, then the lengths and colors of each of the pencils are data about the pencils in the box)",
+      "image": null
+    },
+    {
+      "row": 59,
+      "word": "decompose",
+      "text": "to break apart",
+      "image": "2/59_decompose.png"
+    },
+    {
+      "row": 63,
+      "word": "difference",
+      "text": "the amount you get when you subtract one number from another",
+      "image": "2/63_difference.png"
+    },
+    {
+      "row": 64,
+      "word": "digit",
+      "text": "a symbol used to write numbers; the digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 (42 is an example of a two-digit number)",
+      "image": null
+    },
+    {
+      "row": 65,
+      "word": "dime",
+      "text": "a coin worth 10 cents",
+      "image": "2/65_dime.png"
+    },
+    {
+      "row": 70,
+      "word": "dollar",
+      "text": "a unit of money worth 100 cents",
+      "image": "2/70_dollar.png"
+    },
+    {
+      "row": 71,
+      "word": "edge",
+      "text": "a line segment representing where two faces meet on a three-dimensional shape",
+      "image": null
+    },
+    {
+      "row": 76,
+      "word": "equal",
+      "text": "having the same value",
+      "image": null
+    },
+    {
+      "row": 77,
+      "word": "equation",
+      "text": "a math statement showing that the values on each side of the equal sign are the same",
+      "image": "2/77_equation.png"
+    },
+    {
+      "row": 81,
+      "word": "estimate",
+      "text": "a guess you make about a value based on what you know",
+      "image": null
+    },
+    {
+      "row": 82,
+      "word": "even number",
+      "text": "a whole number is even if it is the sum of two equal whole numbers",
+      "image": "2/82_even-number.png"
+    },
+    {
+      "row": 83,
+      "word": "expanded form",
+      "text": "a representation of a number as an addition expression that shows the value of each digit",
+      "image": "2/83_expanded-form.png"
+    },
+    {
+      "row": 85,
+      "word": "expression",
+      "text": "a statement with at least 2 numbers and at least 1 math operation (such as addition or subtraction)",
+      "image": "2/85_expression.png"
+    },
+    {
+      "row": 87,
+      "word": "face",
+      "text": "a flat surface on a three-dimensional shape",
+      "image": null
+    },
+    {
+      "row": 93,
+      "word": "flat shapes",
+      "text": "remove this from 2nd",
+      "image": "2/93_flat-shapes.png"
+    },
+    {
+      "row": 99,
+      "word": "greater than",
+      "text": "a phrase that means one value is more than another value",
+      "image": "2/99_greater-than.png"
+    },
+    {
+      "row": 100,
+      "word": "half past",
+      "text": "an expression that means it is 30 minutes past the hour (ex: the clock shows half past 4 o'clock, or 4:30)",
+      "image": "2/100_half-past.png"
+    },
+    {
+      "row": 102,
+      "word": "hexagon",
+      "text": "a shape with 6 sides and 6 corners",
+      "image": "2/102_hexagon.png"
+    },
+    {
+      "row": 104,
+      "word": "hour hand",
+      "text": "the short arrow on a clock that points to the hour and moves from hour to hour",
+      "image": "2/104_hour-hand.png"
+    },
+    {
+      "row": 116,
+      "word": "length",
+      "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
+      "image": "2/116_length.png"
+    },
+    {
+      "row": 118,
+      "word": "less than",
+      "text": "a phrase that means one value is less than another value",
+      "image": "2/118_less-than.png"
+    },
+    {
+      "row": 122,
+      "word": "line plot",
+      "text": "a display of measurement data in which every data value is shown with a symbol above a number line",
+      "image": "2/122_line-plot.png"
+    },
+    {
+      "row": 127,
+      "word": "longer",
+      "text": "",
+      "image": "2/127_longer.png"
+    },
+    {
+      "row": 128,
+      "word": "meter stick",
+      "text": "a tool for measuring length in centimeters and meters that is exactly 1 meter long",
+      "image": null
+    },
+    {
+      "row": 134,
+      "word": "minute hand",
+      "text": "the long arrow on a clock that points to the tick marks around the clock to show how many minutes have passed and goes around the whole circle in an hour",
+      "image": "2/134_minute-hand.png"
+    },
+    {
+      "row": 139,
+      "word": "nickel",
+      "text": "a coin worth 5 cents",
+      "image": "2/139_nickel.png"
+    },
+    {
+      "row": 143,
+      "word": "number line",
+      "text": "a diagram that represents numbers as distances from 0 using equally-spaced tick marks",
+      "image": "2/143_number-line.png"
+    },
+    {
+      "row": 147,
+      "word": "odd numbers",
+      "text": "a number is odd if it cannot be written as the sum of two equal numbers",
+      "image": "2/147_odd-numbers.png"
+    },
+    {
+      "row": 148,
+      "word": "one",
+      "text": "an amount that has a value of 1 (plural: ones)",
+      "image": "2/148_one.png"
+    },
+    {
+      "row": 149,
+      "word": "open number line",
+      "text": "a blank number line on which tick marks, points, numbers, and arrows can be added to represent problems and strategies",
+      "image": "2/149_open-number-line.png"
+    },
+    {
+      "row": 153,
+      "word": "p.m.",
+      "text": "a phrase referring to the period of time from noon to midnight",
+      "image": null
+    },
+    {
+      "row": 160,
+      "word": "penny",
+      "text": "a coin worth 1 cent",
+      "image": "2/160_penny.png"
+    },
+    {
+      "row": 161,
+      "word": "pentagon",
+      "text": "a shape with 5 sides and 5 corners",
+      "image": "2/161_pentagon.png"
+    },
+    {
+      "row": 164,
+      "word": "picture graph",
+      "text": "a way to show the number of items in a group or category using pictures to represent the objects",
+      "image": "2/164_picture-graph.png"
+    },
+    {
+      "row": 167,
+      "word": "point",
+      "text": "a location on a number line or graph",
+      "image": "2/167_point.png"
+    },
+    {
+      "row": 173,
+      "word": "quadrilateral",
+      "text": "a shape with 4 sides and 4 corners",
+      "image": "2/173_quadrilateral.png"
+    },
+    {
+      "row": 175,
+      "word": "quarter (coin)",
+      "text": "a coin worth 25 cents",
+      "image": "2/175_quarter-coin.png"
+    },
+    {
+      "row": 176,
+      "word": "quarter past",
+      "text": "an expression that means it is 15 minutes past the hour (ex: the clock shows quarter past 4 o'clock, or 4:15)",
+      "image": "2/176_quarter-past.png"
+    },
+    {
+      "row": 177,
+      "word": "quarter to",
+      "text": "an expression that means it is 15 minutes until the next hour (ex: the clock shows quarter to 5 o'clock or 4:45)",
+      "image": "2/177_quarter-to.png"
+    },
+    {
+      "row": 180,
+      "word": "rectangle",
+      "text": "a shape with 4 sides and 4 square corners",
+      "image": "2/180_rectangle.png"
+    },
+    {
+      "row": 181,
+      "word": "rectangular prism",
+      "text": "a solid shape with 6 rectangular faces",
+      "image": "2/181_rectangular-prism.png"
+    },
+    {
+      "row": 187,
+      "word": "row",
+      "text": "a part of an array that goes side to side",
+      "image": "2/187_row.png"
+    },
+    {
+      "row": 188,
+      "word": "ruler",
+      "text": "a tool used to measure length that shows the distance from 0 in equal length units",
+      "image": null
+    },
+    {
+      "row": 197,
+      "word": "shorter",
+      "text": "",
+      "image": "2/197_shorter.png"
+    },
+    {
+      "row": 203,
+      "word": "sphere",
+      "text": "a round three-dimensional shape with no vertices or faces",
+      "image": "2/203_sphere.png"
+    },
+    {
+      "row": 204,
+      "word": "square",
+      "text": "a type of rectangle with 4 equal sides and 4 square corners",
+      "image": "2/204_square.png"
+    },
+    {
+      "row": 206,
+      "word": "square corner",
+      "text": "a corner that looks like where 2 sides of a square touch",
+      "image": "2/206_square-corner.png"
+    },
+    {
+      "row": 210,
+      "word": "standard form",
+      "text": "a representation of a number using only digits to represent place values",
+      "image": null
+    },
+    {
+      "row": 211,
+      "word": "straight",
+      "text": "",
+      "image": "2/211_straight.png"
+    },
+    {
+      "row": 214,
+      "word": "sum",
+      "text": "the value when 2 or more numbers are added",
+      "image": "2/214_sum.png"
+    },
+    {
+      "row": 216,
+      "word": "taller",
+      "text": "",
+      "image": "2/216_taller.png"
+    },
+    {
+      "row": 217,
+      "word": "tape diagram",
+      "text": "a tool that shows the relationship between quantities, represented by rectangles placed side by side",
+      "image": "2/217_tape-diagram.png"
+    },
+    {
+      "row": 220,
+      "word": "ten",
+      "text": "a group of 10 ones (plural: tens)",
+      "image": "2/220_ten.png"
+    },
+    {
+      "row": 227,
+      "word": "three-dimensional",
+      "text": "a term that describes solid objects with the three measurable dimensions of length, width, and height",
+      "image": "2/227_three-dimensional.png"
+    },
+    {
+      "row": 231,
+      "word": "triangle",
+      "text": "a shape with 3 sides and 3 corners",
+      "image": "2/231_triangle.png"
+    },
+    {
+      "row": 232,
+      "word": "triangular prism",
+      "text": "a solid shape with 2 triangular faces and 3 rectangular faces",
+      "image": "2/232_triangular-prism.png"
+    },
+    {
+      "row": 236,
+      "word": "two-dimensional",
+      "text": "a term that describes flat objects with the two measurable dimensions of length and width",
+      "image": "2/236_two-dimensional.png"
+    }
+  ],
+  "3": [
+    {
+      "row": 3,
+      "word": "centimeter",
+      "text": "a unit of length measurement in the metric system (100 centimeters is equal to 1 meter)",
+      "image": null
+    },
+    {
+      "row": 4,
+      "word": "foot",
+      "text": "a unit of length in the U.S. customary measurement system that is 12 inches long (plural: feet)",
+      "image": null
+    },
+    {
+      "row": 5,
+      "word": "fourth",
+      "text": "each part of a whole that is partitioned into 4 equal parts (plural: fourths)",
+      "image": "3/5_fourth.png"
+    },
+    {
+      "row": 6,
+      "word": "half",
+      "text": "each part of a whole that is partitioned into 2 equal parts (plural: halves)",
+      "image": "3/6_half.png"
+    },
+    {
+      "row": 7,
+      "word": "hundred",
+      "text": "a group of 10 tens or 100 ones (plural: hundreds)",
+      "image": null
+    },
+    {
+      "row": 8,
+      "word": "meter",
+      "text": "a unit of length in the metric measurement system (1 meter is equal to 100 centimeters)",
+      "image": null
+    },
+    {
+      "row": 9,
+      "word": "quarter",
+      "text": "each part of a whole that is partitioned into 4 equal parts (plural: quarters)",
+      "image": "3/9_quarter.png"
+    },
+    {
+      "row": 10,
+      "word": "sixth",
+      "text": "each part of a whole that is partitioned into 6 equal parts (plural: sixths)",
+      "image": "3/10_sixth.png"
+    },
+    {
+      "row": 11,
+      "word": "third",
+      "text": "each part of a whole that is partitioned into 3 equal parts (plural: thirds)",
+      "image": "3/11_third.png"
+    },
+    {
+      "row": 12,
+      "word": "a.m.",
+      "text": "a phrase referring to the period of time from midnight to noon",
+      "image": null
+    },
+    {
+      "row": 15,
+      "word": "add",
+      "text": "to combine numbers to find their sum",
+      "image": null
+    },
+    {
+      "row": 16,
+      "word": "addend",
+      "text": "one of the numbers added together to find the sum",
+      "image": "3/16_addend.png"
+    },
+    {
+      "row": 18,
+      "word": "algorithm",
+      "text": "a set of steps that can be followed when making calculations",
+      "image": null
+    },
+    {
+      "row": 19,
+      "word": "eighth",
+      "text": "each part of a whole that is partitioned into 8 equal parts (plural: eighths)",
+      "image": "3/19_eighth.png"
+    },
+    {
+      "row": 20,
+      "word": "inch",
+      "text": "a unit of length in the U.S. customary measurement system (12 inches is equal to one foot)",
+      "image": null
+    },
+    {
+      "row": 22,
+      "word": "area",
+      "text": "a measurement of the amount of space inside a two-dimensional shape (shown here as the number of square units that cover the shape without gaps or overlaps)",
+      "image": "3/22_area.png"
+    },
+    {
+      "row": 23,
+      "word": "array",
+      "text": "an arrangement of objects in equal rows and equal columns, where each column must contain the same number of objects as the other columns, and each row must have the same number of objects as the other rows",
+      "image": "3/23_array.png"
+    },
+    {
+      "row": 25,
+      "word": "Associative Property of Multiplication",
+      "text": "the product of 3 or more numbers remains the same regardless of how the numbers are grouped",
+      "image": "3/25_associative-property-of-multiplication.png"
+    },
+    {
+      "row": 26,
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null
+    },
+    {
+      "row": 28,
+      "word": "bar graph",
+      "text": "a display of categorical data that uses bars to show the number of values in each category",
+      "image": "3/28_bar-graph.png"
+    },
+    {
+      "row": 37,
+      "word": "column",
+      "text": "a part of an array that goes up and down",
+      "image": "3/37_column.png"
+    },
+    {
+      "row": 42,
+      "word": "Commutative Property of Multiplication",
+      "text": "the order in which numbers are multiplied does not change the product",
+      "image": "3/42_commutative-property-of-multiplication.png"
+    },
+    {
+      "row": 43,
+      "word": "compose",
+      "text": "to put together",
+      "image": null
+    },
+    {
+      "row": 46,
+      "word": "conjecture",
+      "text": "a statement that you believe is true based on current information",
+      "image": null
+    },
+    {
+      "row": 56,
+      "word": "data",
+      "text": "information about things or people in a group (ex: if you have a box of colored pencils, then the lengths and colors of each of the pencils are data about the pencils in the box)",
+      "image": null
+    },
+    {
+      "row": 59,
+      "word": "decompose",
+      "text": "to break apart",
+      "image": null
+    },
+    {
+      "row": 62,
+      "word": "denominator",
+      "text": "the bottom number in a fraction that tells how many equal parts the whole was partitioned into",
+      "image": "3/62_denominator.png"
+    },
+    {
+      "row": 63,
+      "word": "difference",
+      "text": "the amount you get when you subtract one number from another",
+      "image": null
+    },
+    {
+      "row": 64,
+      "word": "digit",
+      "text": "a symbol used to write numbers; the digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 (42 is an example of a two-digit number)",
+      "image": null
+    },
+    {
+      "row": 66,
+      "word": "Distributive Property",
+      "text": "multiplying the sum of 2 or more addends by a factor will give the same result as multiplying each addend individually by the factor and then adding the products together",
+      "image": "3/66_distributive-property.png"
+    },
+    {
+      "row": 67,
+      "word": "divide",
+      "text": "to make equal groups from a total amount",
+      "image": null
+    },
+    {
+      "row": 68,
+      "word": "dividend",
+      "text": "change Dividend in image to dividend",
+      "image": "3/68_dividend.png"
+    },
+    {
+      "row": 69,
+      "word": "divisor",
+      "text": "change Divisor in image to divisor; the number that follows the division symbol that represents either the number of equal-sized groups or the size of each group",
+      "image": "3/69_divisor.png"
+    },
+    {
+      "row": 70,
+      "word": "dollar",
+      "text": "a unit of money worth 100 cents",
+      "image": "3/70_dollar.png"
+    },
+    {
+      "row": 74,
+      "word": "elapsed time",
+      "text": "the duration between two points in time indicating how much time has gone by during that period",
+      "image": null
+    },
+    {
+      "row": 77,
+      "word": "equation",
+      "text": "a math statement showing that the values on each side of the equal sign are the same",
+      "image": "3/77_equation.png"
+    },
+    {
+      "row": 80,
+      "word": "equivalent fractions",
+      "text": "two fractions that represent the same value",
+      "image": null
+    },
+    {
+      "row": 81,
+      "word": "estimate",
+      "text": "a guess you make about a value based on what you know",
+      "image": null
+    },
+    {
+      "row": 82,
+      "word": "even number",
+      "text": "a number is even if it is the sum of two equal whole numbers",
+      "image": null
+    },
+    {
+      "row": 83,
+      "word": "expanded form",
+      "text": "a representation of a number as an addition expression that shows the value of each digit",
+      "image": "3/83_expanded-form.png"
+    },
+    {
+      "row": 85,
+      "word": "expression",
+      "text": "a statement with at least 2 numbers and at least 1 math operation (such as addition, subtraction, multiplication, or division)",
+      "image": "3/85_expression.png"
+    },
+    {
+      "row": 89,
+      "word": "factor",
+      "text": "change Factor to factor in image; factor: a number that is multiplied by another number to determine the product",
+      "image": "3/89_factor.png"
+    },
+    {
+      "row": 96,
+      "word": "fraction",
+      "text": "a number that describes the parts of a whole that has been partitioned into equal parts",
+      "image": "3/96_fraction.png"
+    },
+    {
+      "row": 97,
+      "word": "gallon",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (1 gallon is equal to 4 quarts, 8 pints, or 16 cups)",
+      "image": null
+    },
+    {
+      "row": 98,
+      "word": "gram",
+      "text": "a unit of weight in the metric measurement system (1000 grams is equal to 1 kilogram)",
+      "image": null
+    },
+    {
+      "row": 104,
+      "word": "hour hand",
+      "text": "the short arrow on a clock that points to the hour and moves from hour to hour",
+      "image": "3/104_hour-hand.png"
+    },
+    {
+      "row": 107,
+      "word": "Identity Property of Multiplication",
+      "text": "the product of any number and 1 is itself",
+      "image": null
+    },
+    {
+      "row": 113,
+      "word": "key",
+      "text": "the part of a picture graph that shows what each picture represents",
+      "image": "3/113_key.png"
+    },
+    {
+      "row": 114,
+      "word": "kilogram",
+      "text": "a unit of weight in the metric measurement system (1 kilogram is equal to 1,000 grams)",
+      "image": null
+    },
+    {
+      "row": 122,
+      "word": "line plot",
+      "text": "a display of measurement data in which every data value is shown with a symbol above a number line",
+      "image": "3/122_line-plot.png"
+    },
+    {
+      "row": 125,
+      "word": "liquid volume",
+      "text": "the amount of space that a liquid takes up",
+      "image": null
+    },
+    {
+      "row": 126,
+      "word": "liter",
+      "text": "a liquid volume unit in the metric measurement system",
+      "image": null
+    },
+    {
+      "row": 134,
+      "word": "minute hand",
+      "text": "the long arrow on a clock that points to the tick marks around the clock to show how many minutes have passed and goes around the whole circle in an hour",
+      "image": "3/134_minute-hand.png"
+    },
+    {
+      "row": 135,
+      "word": "mixed number",
+      "text": "a number expressed as a whole number and a fraction less than 1",
+      "image": "3/135_mixed-number.png"
+    },
+    {
+      "row": 138,
+      "word": "multiply",
+      "text": "to determine the total amount in equal groups",
+      "image": null
+    },
+    {
+      "row": 142,
+      "word": "non-unit fraction",
+      "text": "a number that describes more than 1 part of a whole that has been partitioned into equal parts",
+      "image": "3/142_non-unit-fraction.png"
+    },
+    {
+      "row": 144,
+      "word": "numerator",
+      "text": "the top number in a fraction that tells how many of the equal parts are being described",
+      "image": "3/144_numerator.png"
+    },
+    {
+      "row": 147,
+      "word": "odd numbers",
+      "text": "a whole number is odd if it cannot be split into 2 equal groups or groups of 2 without any objects leftover",
+      "image": null
+    },
+    {
+      "row": 148,
+      "word": "one",
+      "text": "an amount that has a value of 1 (plural: ones)",
+      "image": null
+    },
+    {
+      "row": 153,
+      "word": "p.m.",
+      "text": "a phrase referring to the period of time from noon to midnight",
+      "image": null
+    },
+    {
+      "row": 156,
+      "word": "parentheses",
+      "text": "grouping symbols that can be used in expressions or equations, ex: (3 x 5) + (2 x 10)",
+      "image": null
+    },
+    {
+      "row": 162,
+      "word": "perimeter",
+      "text": "the total length of the boundary of a two-dimensional shape",
+      "image": "3/162_perimeter.png"
+    },
+    {
+      "row": 164,
+      "word": "picture graph",
+      "text": "a display of categorical data in which every data value is shown as a picture",
+      "image": "3/164_picture-graph.png"
+    },
+    {
+      "row": 165,
+      "word": "pint",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (8 pints is equal to 1 gallon)",
+      "image": null
+    },
+    {
+      "row": 171,
+      "word": "product",
+      "text": "the value when 2 or more numbers are multiplied",
+      "image": "3/171_product.png"
+    },
+    {
+      "row": 173,
+      "word": "quadrilateral",
+      "text": "a shape with 4 sides and 4 corners",
+      "image": "3/173_quadrilateral.png"
+    },
+    {
+      "row": 174,
+      "word": "quart",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (4 quarts is equal to 1 gallon)",
+      "image": null
+    },
+    {
+      "row": 178,
+      "word": "quotient",
+      "text": "change Quotient to quotient in image; the result obtained by dividing one quantity by another",
+      "image": "3/178_quotient.png"
+    },
+    {
+      "row": 180,
+      "word": "rectangle",
+      "text": "a quadrilateral that has 2 pairs of opposite sides that are of equal length and 4 square corners",
+      "image": "3/180_rectangle.png"
+    },
+    {
+      "row": 183,
+      "word": "rhombus",
+      "text": "a quadrilateral with 4 equal-length sides",
+      "image": "3/183_rhombus.png"
+    },
+    {
+      "row": 186,
+      "word": "rounding",
+      "text": "to estimate the value of a number by determining the nearest ten, hundred, or other place value",
+      "image": null
+    },
+    {
+      "row": 187,
+      "word": "row",
+      "text": "a part of an array that goes side to side",
+      "image": "3/187_row.png"
+    },
+    {
+      "row": 188,
+      "word": "ruler",
+      "text": "a tool used to measure length that shows the distance from 0 in equal length units",
+      "image": null
+    },
+    {
+      "row": 190,
+      "word": "scale",
+      "text": "the amount represented by each picture as shown in the key on a picture graph, and the amount represented by the space between the lines on a bar graph",
+      "image": "3/190_scale.png"
+    },
+    {
+      "row": 191,
+      "word": "scaled bar graph",
+      "text": "a bar graph where the scale is marked in units other than 1",
+      "image": "3/191_scaled-bar-graph.png"
+    },
+    {
+      "row": 192,
+      "word": "scaled picture graph",
+      "text": "a picture graph where each picture represents an amount other than 1",
+      "image": "3/192_scaled-picture-graph.png"
+    },
+    {
+      "row": 204,
+      "word": "square",
+      "text": "a quadrilateral with four equal sides and 4 square corners",
+      "image": "3/204_square.png"
+    },
+    {
+      "row": 205,
+      "word": "square centimeter",
+      "text": "a square with side lengths of 1 centimeter",
+      "image": null
+    },
+    {
+      "row": 206,
+      "word": "square corner",
+      "text": "a corner that looks like where 2 sides of a square touch",
+      "image": "3/206_square-corner.png"
+    },
+    {
+      "row": 207,
+      "word": "square foot",
+      "text": "a square with side lengths of 1 foot",
+      "image": null
+    },
+    {
+      "row": 208,
+      "word": "square inch",
+      "text": "a square with side lengths of 1 inch",
+      "image": null
+    },
+    {
+      "row": 209,
+      "word": "square meter",
+      "text": "a square with side lengths of 1 meter",
+      "image": null
+    },
+    {
+      "row": 210,
+      "word": "standard form",
+      "text": "a representation of a number using only digits to represent place values",
+      "image": null
+    },
+    {
+      "row": 214,
+      "word": "sum",
+      "text": "the value when 2 or more numbers are added",
+      "image": null
+    },
+    {
+      "row": 220,
+      "word": "ten",
+      "text": "a group of 10 ones (plural: tens)",
+      "image": null
+    },
+    {
+      "row": 224,
+      "word": "thousands",
+      "text": "the base-ten place value unit composed of 10 hundreds (one thousand in standard form is 1,000)",
+      "image": null
+    },
+    {
+      "row": 236,
+      "word": "two-dimensional",
+      "text": "a term that describes flat objects with the two measurable dimensions of length and width",
+      "image": "3/236_two-dimensional.png"
+    },
+    {
+      "row": 237,
+      "word": "unit fraction",
+      "text": "a number that describes exactly 1 part of a whole that has been partitioned into equal parts",
+      "image": "3/237_unit-fraction.png"
+    },
+    {
+      "row": 241,
+      "word": "weight",
+      "text": "a measurement of how heavy something is",
+      "image": null
+    }
+  ],
+  "4": [
+    {
+      "row": 3,
+      "word": "centimeter",
+      "text": "a unit of length measurement in the metric system (100 centimeters is equal to 1 meter)",
+      "image": null
+    },
+    {
+      "row": 8,
+      "word": "meter",
+      "text": "a unit of length in the metric measurement system (1 meter is equal to 100 centimeters)",
+      "image": null
+    },
+    {
+      "row": 14,
+      "word": "acute angle",
+      "text": "an angle with a measure of less than 90 degrees",
+      "image": "4/14_acute-angle.png"
+    },
+    {
+      "row": 21,
+      "word": "angle",
+      "text": "a geometric figure made up of 2 rays that share the same endpoint",
+      "image": "4/21_angle.png"
+    },
+    {
+      "row": 22,
+      "word": "area",
+      "text": "a measurement of the space inside a two-dimensional shape",
+      "image": null
+    },
+    {
+      "row": 26,
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null
+    },
+    {
+      "row": 38,
+      "word": "common denominator",
+      "text": "when 2 or more fractions have the same denominator",
+      "image": null
+    },
+    {
+      "row": 39,
+      "word": "common multiple",
+      "text": "a number that is a multiple of 2 or more given numbers",
+      "image": null
+    },
+    {
+      "row": 40,
+      "word": "common numerator",
+      "text": "when 2 or more fractions have the same numerator",
+      "image": null
+    },
+    {
+      "row": 44,
+      "word": "composite number",
+      "text": "a number that has more than 1 factor pair",
+      "image": null
+    },
+    {
+      "row": 46,
+      "word": "conjecture",
+      "text": "a formed idea using limited information",
+      "image": null
+    },
+    {
+      "row": 57,
+      "word": "decimal",
+      "text": "a fractional value written using single digits for each place value",
+      "image": null
+    },
+    {
+      "row": 58,
+      "word": "decimal point",
+      "text": "a period placed to the right of the ones place",
+      "image": null
+    },
+    {
+      "row": 61,
+      "word": "degree",
+      "text": "a unit for measuring the size of an angle",
+      "image": null
+    },
+    {
+      "row": 62,
+      "word": "denominator",
+      "text": "the bottom number in a fraction that tells how many equal parts the whole was partitioned into",
+      "image": null
+    },
+    {
+      "row": 78,
+      "word": "equilateral triangle",
+      "text": "a triangle with 3 equal sides",
+      "image": "4/78_equilateral-triangle.png"
+    },
+    {
+      "row": 79,
+      "word": "equipartition",
+      "text": "to partition into equal parts",
+      "image": null
+    },
+    {
+      "row": 80,
+      "word": "equivalent fractions",
+      "text": "two fractions that represent the same value",
+      "image": null
+    },
+    {
+      "row": 83,
+      "word": "expanded form",
+      "text": "a representation of a number as an addition expression that shows the value of each digit (ex: 482 in expanded form is 400 + 80 + 2)",
+      "image": null
+    },
+    {
+      "row": 88,
+      "word": "factor pair",
+      "text": "a set of two numbers that arrive at a specific number when multiplied (ex: 4 and 6 is a factor pair of 24)",
+      "image": null
+    },
+    {
+      "row": 103,
+      "word": "horizontal",
+      "text": "a straight line that goes from left to right",
+      "image": "4/103_horizontal.png"
+    },
+    {
+      "row": 105,
+      "word": "hundred thousands",
+      "text": "the base-ten place value unit composed of 10 ten thousands (one hundred thousand in standard form is 100,000)",
+      "image": null
+    },
+    {
+      "row": 111,
+      "word": "intersecting lines",
+      "text": "lines that cross",
+      "image": "4/111_intersecting-lines.png"
+    },
+    {
+      "row": 112,
+      "word": "isosceles triangle",
+      "text": "a triangle with exactly 2 equal-length sides",
+      "image": "4/112_isosceles-triangle.png"
+    },
+    {
+      "row": 115,
+      "word": "kilometer",
+      "text": "a unit of length in the metric measurement system (1,000 meters is equal to 1 kilometer)",
+      "image": null
+    },
+    {
+      "row": 116,
+      "word": "length",
+      "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
+      "image": null
+    },
+    {
+      "row": 120,
+      "word": "line",
+      "text": "a straight mark, sometimes connecting a set of points arranged side by side, that extends infinitely in both directions",
+      "image": "4/120_line.png"
+    },
+    {
+      "row": 121,
+      "word": "line of symmetry",
+      "text": "a line that splits a figure into 2 identical halves that mirror each other",
+      "image": "4/121_line-of-symmetry.png"
+    },
+    {
+      "row": 123,
+      "word": "line segment or segment",
+      "text": "a part of a line with 2 endpoints",
+      "image": "4/123_line-segment-or-segment.png"
+    },
+    {
+      "row": 124,
+      "word": "line symmetry",
+      "text": "the quality of a shape that can be divided into two identical or mirrored halves",
+      "image": null
+    },
+    {
+      "row": 131,
+      "word": "millileter",
+      "text": "a unit of liquid volume in the metric measurement system (1,000 millileters is equal to 1 liter)",
+      "image": null
+    },
+    {
+      "row": 133,
+      "word": "million",
+      "text": "the base-ten place value unit composed of 10 hundred thousands (one million in standard form is 1,000,000)",
+      "image": null
+    },
+    {
+      "row": 135,
+      "word": "mixed number",
+      "text": "a number expressed as a whole number and a fraction less than 1",
+      "image": null
+    },
+    {
+      "row": 137,
+      "word": "multiple",
+      "text": "a number you get by multiplying another number (ex: some multiples of 4 are 4, 8, 12, and 16)",
+      "image": null
+    },
+    {
+      "row": 144,
+      "word": "numerator",
+      "text": "the top number in a fraction that tells how many of the equal parts are being described",
+      "image": null
+    },
+    {
+      "row": 145,
+      "word": "obtuse angle",
+      "text": "an angle with a measure greater than 90 degrees but less than 180 degrees",
+      "image": "4/145_obtuse-angle.png"
+    },
+    {
+      "row": 146,
+      "word": "obtuse triangle",
+      "text": "a triangle with 1 obtuse angle",
+      "image": "4/146_obtuse-triangle.png"
+    },
+    {
+      "row": 152,
+      "word": "ounce",
+      "text": "a unit of weight in the U.S. customary measurement system (16 ounces is equal to 1 pound)",
+      "image": null
+    },
+    {
+      "row": 154,
+      "word": "parallel lines",
+      "text": "lines that never cross or intersect",
+      "image": "4/154_parallel-lines.png"
+    },
+    {
+      "row": 155,
+      "word": "parallelogram",
+      "text": "a quadrilateral with 2 pairs of opposite sides that are parallel",
+      "image": "4/155_parallelogram.png"
+    },
+    {
+      "row": 156,
+      "word": "parentheses",
+      "text": "grouping symbols that can be used in expressions or equations, ex: (3 x 5) + (2 x 10)",
+      "image": null
+    },
+    {
+      "row": 157,
+      "word": "partial product",
+      "text": "the value obtained when multiplying the parts of 2 numbers separately (which is then added to other partial products to arrive at the total product)",
+      "image": null
+    },
+    {
+      "row": 158,
+      "word": "partial quotient",
+      "text": "the value obtained when multiplying the divisor in a division equation by another number, then subtracting that number from the dividend (which is then added to other partial quotients to arrive at the total quotient)",
+      "image": null
+    },
+    {
+      "row": 159,
+      "word": "pattern",
+      "text": "a specific, replicable sequence of shapes or numbers; some patterns repeat and some patterns grow",
+      "image": null
+    },
+    {
+      "row": 162,
+      "word": "perimeter",
+      "text": "the total length of the boundary of a two-dimensional shape",
+      "image": null
+    },
+    {
+      "row": 163,
+      "word": "perpendicular line",
+      "text": "a line that crosses another line at a right angle",
+      "image": "4/163_perpendicular-line.png"
+    },
+    {
+      "row": 167,
+      "word": "point",
+      "text": "a location in space",
+      "image": "4/167_point.png"
+    },
+    {
+      "row": 168,
+      "word": "pound",
+      "text": "a unit of weight in the U.S. customary measurement system (1 pound is equal to 16 ounces)",
+      "image": null
+    },
+    {
+      "row": 169,
+      "word": "prime number",
+      "text": "the value when 2 or more numbers are multiplied",
+      "image": null
+    },
+    {
+      "row": 172,
+      "word": "protractor",
+      "text": "a tool for measuring the size of an angle in degrees",
+      "image": "4/172_protractor.png"
+    },
+    {
+      "row": 173,
+      "word": "quadrilateral",
+      "text": "a shape with 4 sides and 4 corners",
+      "image": "4/173_quadrilateral.png"
+    },
+    {
+      "row": 179,
+      "word": "ray",
+      "text": "a part of a line with 1 endpoint",
+      "image": "4/179_ray.png"
+    },
+    {
+      "row": 182,
+      "word": "remainder",
+      "text": "the amount leftover when another whole group of the divisor cannot be made when dividing",
+      "image": null
+    },
+    {
+      "row": 184,
+      "word": "right angle",
+      "text": "an angle that measures 90 degrees",
+      "image": "4/184_right-angle.png"
+    },
+    {
+      "row": 185,
+      "word": "right triangle",
+      "text": "a triangle with 1 right angle",
+      "image": "4/185_right-triangle.png"
+    },
+    {
+      "row": 186,
+      "word": "rounding",
+      "text": "to estimate the value of a number by determining the nearest multiple of a specific place value",
+      "image": null
+    },
+    {
+      "row": 193,
+      "word": "scalene triangle",
+      "text": "a triangle with no sides of equal length",
+      "image": "4/193_scalene-triangle.png"
+    },
+    {
+      "row": 194,
+      "word": "second",
+      "text": "a unit of time (60 seconds is equal to 1 minute)",
+      "image": null
+    },
+    {
+      "row": 210,
+      "word": "standard form",
+      "text": "a representation of a number using only digits to represent place values",
+      "image": null
+    },
+    {
+      "row": 212,
+      "word": "straight angle",
+      "text": "an angle that measures 180 degrees",
+      "image": "4/212_straight-angle.png"
+    },
+    {
+      "row": 221,
+      "word": "ten thousands",
+      "text": "the base-ten place value unit composed of 10 one thousands (one ten thousand in standard form is 10,000)",
+      "image": null
+    },
+    {
+      "row": 224,
+      "word": "thousands",
+      "text": "the base-ten place value unit composed of 10 hundreds (one thousand in standard form is 1,000)",
+      "image": null
+    },
+    {
+      "row": 237,
+      "word": "unit fraction",
+      "text": "a number that describes exactly 1 part of a whole that has been partitioned into equal parts",
+      "image": null
+    },
+    {
+      "row": 238,
+      "word": "vertex",
+      "text": "the point where 2 rays of an angle meet (plural: vertices)",
+      "image": "4/238_vertex.png"
+    },
+    {
+      "row": 239,
+      "word": "vertical",
+      "text": "a straight line that goes from up to down",
+      "image": "4/239_vertical.png"
+    },
+    {
+      "row": 242,
+      "word": "width",
+      "text": "how wide an object is from side to side (measured in same-sized units with no gaps or overlaps)",
+      "image": null
+    },
+    {
+      "row": 246,
+      "word": "yard",
+      "text": "a unit of length in the U.S. customary measurement system (1 yard is equal to three feet)",
+      "image": null
+    }
+  ],
+  "5": [
+    {
+      "row": 17,
+      "word": "adjacent",
+      "text": "2 lines in a shape that are immediately next to each other or touching",
+      "image": null
+    },
+    {
+      "row": 18,
+      "word": "algorithm",
+      "text": "a procedure used for solving a problem or performing a computation",
+      "image": null
+    },
+    {
+      "row": 22,
+      "word": "area",
+      "text": "a measurement of the space inside a two-dimensional shape",
+      "image": null
+    },
+    {
+      "row": 25,
+      "word": "Associative Property of Multiplication",
+      "text": "the product of 3 or more numbers remains the same regardless of how the numbers are grouped",
+      "image": null
+    },
+    {
+      "row": 26,
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null
+    },
+    {
+      "row": 27,
+      "word": "axis (axes)",
+      "text": "the perpendicular lines that form the coordinate grid, in which the vertical axis is the line going up and down/on the left and the horizontal axis is the line running side to side/on the bottom (plural: axes)",
+      "image": "5/27_axis-axes.png"
+    },
+    {
+      "row": 29,
+      "word": "base",
+      "text": "the number being multiplied by itself in exponential form",
+      "image": null
+    },
+    {
+      "row": 37,
+      "word": "column",
+      "text": "a part of an array that goes up and down",
+      "image": null
+    },
+    {
+      "row": 41,
+      "word": "Commutative Property of Addition",
+      "text": "the order in which numbers are added does not change the sum",
+      "image": null
+    },
+    {
+      "row": 42,
+      "word": "Commutative Property of Multiplication",
+      "text": "the order in which numbers are multiplied does not change the product",
+      "image": null
+    },
+    {
+      "row": 43,
+      "word": "compose",
+      "text": "to put together",
+      "image": null
+    },
+    {
+      "row": 46,
+      "word": "conjecture",
+      "text": "a formed idea using limited information",
+      "image": null
+    },
+    {
+      "row": 47,
+      "word": "coordinate grid",
+      "text": "a grid with numbers labeling the gridlines",
+      "image": "5/47_coordinate-grid.png"
+    },
+    {
+      "row": 48,
+      "word": "coordinate",
+      "text": "a pair of numbers that represent the distance from 0 in two directions, starting on the horizontal axis",
+      "image": null
+    },
+    {
+      "row": 52,
+      "word": "cubic unit",
+      "text": "any three-dimensional measure of volume that represents a number of cubes that have a defined side length",
+      "image": null
+    },
+    {
+      "row": 53,
+      "word": "cup",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (16 cups is equal to 1 gallon)",
+      "image": null
+    },
+    {
+      "row": 59,
+      "word": "decompose",
+      "text": "to break apart",
+      "image": null
+    },
+    {
+      "row": 60,
+      "word": "defining attribute",
+      "text": "a trait or property that a shape must have",
+      "image": null
+    },
+    {
+      "row": 66,
+      "word": "Distributive Property",
+      "text": "multiplying the sum of 2 or more addends by a factor will give the same result as multiplying each addend individually by the factor and then adding the products together",
+      "image": null
+    },
+    {
+      "row": 68,
+      "word": "dividend",
+      "text": "the number being divided, representing the total number being equally distributed or divided",
+      "image": null
+    },
+    {
+      "row": 69,
+      "word": "divisor",
+      "text": "the number that follows the division symbol that represents either the number of equal-sized groups or the size of each group",
+      "image": null
+    },
+    {
+      "row": 77,
+      "word": "equation",
+      "text": "a math statement showing that the values on each side of the equal sign are the same",
+      "image": null
+    },
+    {
+      "row": 79,
+      "word": "equipartition",
+      "text": "to partition into equal parts",
+      "image": null
+    },
+    {
+      "row": 84,
+      "word": "exponent",
+      "text": "a number representing the power to which a given number or expression should be multiplied, expressed as a small raised number (ex: in the expression 10^4, 4 is the exponent)",
+      "image": null
+    },
+    {
+      "row": 85,
+      "word": "expression",
+      "text": "a mathematical statement with a minimum of 2 numbers and at least 1 math operation",
+      "image": null
+    },
+    {
+      "row": 89,
+      "word": "factor",
+      "text": "a number that is multiplied by another number to determine the product",
+      "image": null
+    },
+    {
+      "row": 97,
+      "word": "gallon",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (1 gallon is equal to 4 quarts, 8 pints, or 16 cups)",
+      "image": null
+    },
+    {
+      "row": 106,
+      "word": "hundredths",
+      "text": "the base-ten place value unit equal to 1/100 (one hundredth in standard form is .01)",
+      "image": null
+    },
+    {
+      "row": 109,
+      "word": "inequality",
+      "text": "the name of a statement used to express the relationship between two unequal numbers, in which < or > symbols are used",
+      "image": null
+    },
+    {
+      "row": 110,
+      "word": "intersect",
+      "text": "to cross over or meet",
+      "image": null
+    },
+    {
+      "row": 122,
+      "word": "line plot",
+      "text": "a display of measurement data in which every data value is shown with a symbol above a number line",
+      "image": null
+    },
+    {
+      "row": 129,
+      "word": "mile",
+      "text": "a unit of length in the U.S. customary measurement system (1 mile is equal to 5,280 feet or 1,760 yards)",
+      "image": null
+    },
+    {
+      "row": 130,
+      "word": "milligram",
+      "text": "a unit of weight in the metric measurement system (1,000 milligrams is equal to 1 gram)",
+      "image": null
+    },
+    {
+      "row": 132,
+      "word": "millimeter",
+      "text": "a unit of length in the metric measurement system (1,000 millimeters is equal to 1 meter)",
+      "image": null
+    },
+    {
+      "row": 135,
+      "word": "mixed number",
+      "text": "a number expressed as a whole number and a fraction less than 1",
+      "image": null
+    },
+    {
+      "row": 142,
+      "word": "non-unit fraction",
+      "text": "a number that describes more than 1 part of a whole that has been partitioned into equal parts",
+      "image": null
+    },
+    {
+      "row": 150,
+      "word": "ordered pair",
+      "text": "a pair of 2 numbers that correspond to points on the x and y axes, expressed as (x, y)",
+      "image": null
+    },
+    {
+      "row": 151,
+      "word": "origin",
+      "text": "the point where the 2 axes intersect on the coordinate plane, which is located at (0,0)",
+      "image": null
+    },
+    {
+      "row": 154,
+      "word": "parallel lines",
+      "text": "lines that never cross or intersect",
+      "image": "5/154_parallel-lines.png"
+    },
+    {
+      "row": 155,
+      "word": "parallelogram",
+      "text": "a quadrilateral with 2 pairs of opposite sides that are parallel and have equal length",
+      "image": "5/155_parallelogram.png"
+    },
+    {
+      "row": 156,
+      "word": "parentheses",
+      "text": "grouping symbols that can be used in expressions or equations to indicate the order in which operations should be performed",
+      "image": null
+    },
+    {
+      "row": 157,
+      "word": "partial product",
+      "text": "the value obtained when multiplying the parts of 2 numbers separately (which is then added to other partial products to arrive at the total product)",
+      "image": null
+    },
+    {
+      "row": 158,
+      "word": "partial quotient",
+      "text": "the value obtained when multiplying the divisor in a division equation by another number, then subtracting that number from the dividend (which is then added to other partial quotients to arrive at the total quotient)",
+      "image": null
+    },
+    {
+      "row": 163,
+      "word": "perpendicular line",
+      "text": "a line that crosses another line at a 90\u00b0 angle",
+      "image": "5/163_perpendicular-line.png"
+    },
+    {
+      "row": 165,
+      "word": "pint",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (8 pints is equal to 1 gallon)",
+      "image": null
+    },
+    {
+      "row": 166,
+      "word": "plot",
+      "text": "to place a point (often representing x and y coordinates) on a grid",
+      "image": null
+    },
+    {
+      "row": 171,
+      "word": "product",
+      "text": "the value when 2 or more numbers are multiplied",
+      "image": null
+    },
+    {
+      "row": 173,
+      "word": "quadrilateral",
+      "text": "a polygon or shape with 4 sides and 4 angles",
+      "image": "5/173_quadrilateral.png"
+    },
+    {
+      "row": 174,
+      "word": "quart",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (4 quarts is equal to 1 gallon)",
+      "image": null
+    },
+    {
+      "row": 178,
+      "word": "quotient",
+      "text": "the result obtained by dividing 2 numbers representing either the number of equal-sized groups or the size of each group",
+      "image": null
+    },
+    {
+      "row": 180,
+      "word": "rectangle",
+      "text": "a quadrilateral with 2 pairs of opposite sides that are parallel and of equal length and 4 right angles",
+      "image": "5/180_rectangle.png"
+    },
+    {
+      "row": 181,
+      "word": "rectangular prism",
+      "text": "a solid figure with 6 faces that are all rectangles",
+      "image": "5/181_rectangular-prism.png"
+    },
+    {
+      "row": 182,
+      "word": "remainder",
+      "text": "the amount leftover when another whole group of the divisor cannot be made when dividing",
+      "image": null
+    },
+    {
+      "row": 183,
+      "word": "rhombus",
+      "text": "a quadrilateral with 4 equal-length sides",
+      "image": "5/183_rhombus.png"
+    },
+    {
+      "row": 184,
+      "word": "right angle",
+      "text": "an angle that measures 90 degrees",
+      "image": "5/184_right-angle.png"
+    },
+    {
+      "row": 186,
+      "word": "rounding",
+      "text": "to estimate the value of a number by determining the nearest multiple of a specific place value",
+      "image": null
+    },
+    {
+      "row": 187,
+      "word": "row",
+      "text": "a part of an array that goes side to side",
+      "image": null
+    },
+    {
+      "row": 204,
+      "word": "square",
+      "text": "a quadrilateral with 4 equal-length sides and 4 right angles",
+      "image": null
+    },
+    {
+      "row": 214,
+      "word": "sum",
+      "text": "the total when 2 or more numbers are added",
+      "image": null
+    },
+    {
+      "row": 217,
+      "word": "tape diagram",
+      "text": "a tool that shows the relationship between quantities, represented by rectangles placed side by side",
+      "image": null
+    },
+    {
+      "row": 222,
+      "word": "tenth",
+      "text": "the base-ten place value unit equal to 1/10 (one tenth in standard form is .1)",
+      "image": null
+    },
+    {
+      "row": 225,
+      "word": "thousandth",
+      "text": "the base-ten place value unit equal to 1/1,000 (one thousandth in standard form is .001)",
+      "image": null
+    },
+    {
+      "row": 228,
+      "word": "ton",
+      "text": "a unit of weight in the U.S. customary measurement system (1 ton is equal to 2,000 pounds)",
+      "image": null
+    },
+    {
+      "row": 230,
+      "word": "trapezoid",
+      "text": "a quadrilateral with at least 1 pair of opposite sides that are parallel",
+      "image": "5/230_trapezoid.png"
+    },
+    {
+      "row": 237,
+      "word": "unit fraction",
+      "text": "a number that describes exactly 1 part of a whole that has been partitioned into equal parts",
+      "image": null
+    },
+    {
+      "row": 238,
+      "word": "vertex",
+      "text": "the point where the adjacent sides of a shape meet, 2 or more rays of an angle meet, or the edges of a solid figure meet (plural: vertices)",
+      "image": "5/238_vertex.png"
+    },
+    {
+      "row": 240,
+      "word": "volume",
+      "text": "the amount of space a three-dimensional figure takes up",
+      "image": null
+    },
+    {
+      "row": 244,
+      "word": "x coordinate",
+      "text": "the first number in an ordered pair, indicating the horizontal distance along the x-axis from the origin at (0,0)",
+      "image": null
+    },
+    {
+      "row": 245,
+      "word": "y coordinate",
+      "text": "the second number in an ordered pair, indicating the vertical distance along the y-axis from the origin at (0,0)",
+      "image": null
+    }
+  ]
+}
