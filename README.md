@@ -79,6 +79,54 @@ Every one of those decisions is logged per-card in `data/qa_report.md` —
 check it after any re-extraction, especially if the sheet's column layout
 changes.
 
+## Unit-wise vocab spreadsheet
+
+`data/vocab.json` is organized by grade only — the big feedback spreadsheet
+has no unit column. But word walls get printed/posted unit by unit as a
+class works through the curriculum, so `scripts/build_unit_sheet.py` cross-
+references every vocab word against the official per-unit bilingual glossary
+PDFs (named like `KG-Unit3.pdf` / `Grade5-Unit6.pdf`) to figure out which
+unit each word belongs to, and produces a clean spreadsheet grouped by
+Grade > Unit > Word with images embedded:
+
+```
+python3 scripts/build_unit_sheet.py
+```
+
+writes `output/unit_vocab_sheet.xlsx` (one tab per grade, plus an
+"Unmapped" tab), `data/unit_vocab.json` (same data as JSON), and
+`data/unit_sheet_qa.md`.
+
+This currently only covers **grades with unit-glossary PDFs on hand**
+(Kindergarten and Grade 5) — `data/unit_glossary_raw/<grade>/unit<N>.txt`
+holds the plain-text dump of each PDF (there's no API to re-fetch these
+automatically; they were pulled from the provided Drive folders and pasted
+in). To add another grade, create `data/unit_glossary_raw/<grade>/unitN.txt`
+for each of its unit PDFs and rerun the script — nothing else changes.
+
+A word can legitimately show up in more than one unit (curriculum glossaries
+are cumulative — a term introduced in an early unit gets repeated in later
+units' glossaries). The script assigns each word to the **earliest** unit it
+appears in and notes every later reappearance in `unit_sheet_qa.md`. Some
+words never turn up in any provided unit glossary at all — for Grade 5,
+that's `adjacent`, `Commutative Property of Addition`, `conjecture`,
+`defining attribute`, `inequality`, `parentheses`, `tape diagram`, and
+`vertex`; they land on the "Unmapped" tab rather than being silently
+dropped, most likely because they belong to a unit past 7 that wasn't
+provided. Matching tolerates simple plural (`shape`/`shapes`) and
+hyphen/parenthesis (`x-coordinate`/`x coordinate`, `parallel (lines)`/
+`parallel lines`) differences between how a word is written in the
+spreadsheet versus the unit PDF; two forms that were genuine rewordings
+rather than formatting differences (K's "less than"/"more than" -> "less"/
+"more") are handled with a small, documented alias table
+(`WORD_ALIASES` in the script) rather than a fuzzier heuristic.
+
+This spreadsheet is a standalone deliverable for review right now — the
+card generator (`generate.py`) still reads `data/vocab.json` directly and
+doesn't yet group/paginate by unit. Wiring unit-ordered generation into
+`generate.py` would be a small follow-up once the unit data itself looks
+right.
+
 ## Generating cards
 
 ```

@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+"""
+Build a unit-organized vocab spreadsheet from data/vocab.json (the output of
+extract_data.py), using the official per-unit bilingual glossary PDFs as the
+source of truth for which unit each word belongs to.
+
+Why this exists: data/vocab.json is organized by grade only. The word wall
+is meant to be printed/posted unit by unit as a class works through the
+curriculum, so cards need a unit number, not just a grade. The big feedback
+spreadsheet has no unit column at all -- the unit-level glossary PDFs
+(named like "KG-Unit3.pdf" / "Grade5-Unit6.pdf") are the only place that
+information exists, so we cross-reference each vocab word against every
+unit glossary's text to find which unit(s) introduce/reference it.
+
+Input: data/unit_glossary_raw/<grade>/unit<N>.txt -- plain-text dumps of the
+unit glossary PDFs (see README.md for how these were produced; there's no
+API to regenerate them automatically, they were pasted in from Drive).
+
+Output:
+  data/unit_vocab.json   -- grade -> word -> {text, image, primary_unit, all_units}
+  data/unit_sheet_qa.md  -- every word with no unit match, and every word that
+                            showed up in more than one unit (common: cumulative
+                            glossaries repeat earlier terms in later units)
+  output/unit_vocab_sheet.xlsx -- the actual spreadsheet, grouped by
+                            Grade > Unit > Word, images embedded, with an
+                            "Unmapped" tab for words no unit text matched
+"""
+import json
+import re
+from pathlib import Path
+
+import openpyxl
+from openpyxl.drawing.image import Image as XLImage
+from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.utils import get_column_letter
+from PIL import Image as PILImage
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+RAW_DIR = DATA_DIR / "unit_glossary_raw"
+IMAGES_DIR = REPO_ROOT / "assets" / "images"
+OUTPUT_DIR = REPO_ROOT / "output"
+
+UNIT_FILE_RE = re.compile(r"unit(\d+)\.txt$", re.IGNORECASE)
+
+# Word forms in the glossary spreadsheet that don't literally appear in the
+# unit PDFs but clearly refer to the same taught term (confirmed by hand
+# against the raw unit text -- not a guess): K's "less than" is just labeled
+# "less" in the unit glossaries.
+WORD_ALIASES = {
+    "less than": "less",
+    "more than": "more",
+}
+
+
+def normalize(text):
+    text = text.lower()
+    text = text.replace("-", " ").replace("(", " ").replace(")", " ")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def word_in_text(word, normalized_text):
+    candidates = {word, WORD_ALIASES.get(word, word)}
+    for candidate in candidates:
+        base = normalize(candidate)
+        # tolerate a simple plural mismatch either direction (unit glossaries
+        # sometimes list "solid shapes" where the spreadsheet says "solid shape")
+        for variant in (base, base + "s", base + "es"):
+            pattern = r"(?<!\w)" + re.escape(variant) + r"(?!\w)"
+            if re.search(pattern, normalized_text):
+                return True
+        if base.endswith("s") and re.search(r"(?<!\w)" + re.escape(base[:-1]) + r"(?!\w)", normalized_text):
+            return True
+    return False
+
+
+def load_unit_texts(grade_dir):
+    """Return {unit_number: normalized_text} for one grade's raw-text folder."""
+    units = {}
+    if not grade_dir.is_dir():
+        return units
+    for path in grade_dir.glob("unit*.txt"):
+        m = UNIT_FILE_RE.search(path.name)
+        if not m:
+            continue
+        units[int(m.group(1))] = normalize(path.read_text())
+    return units
+
+
+def map_words_to_units(words, unit_texts):
+    """words: list of word strings. unit_texts: {unit_num: normalized_text}.
+    Returns {word: sorted_list_of_unit_numbers_it_appears_in}."""
+    result = {}
+    for word in words:
+        matches = sorted(u for u, text in unit_texts.items() if word_in_text(word, text))
+        result[word] = matches
+    return result
+
+
+def build_unit_vocab():
+    vocab = json.loads((DATA_DIR / "vocab.json").read_text())
+    unit_vocab = {}
+    qa_lines = ["# Unit-mapping QA report\n"]
+
+    for grade, cards in vocab.items():
+        grade_dir_name = "K" if grade == "K" else grade
+        unit_texts = load_unit_texts(RAW_DIR / grade_dir_name)
+        if not unit_texts:
+            qa_lines.append(f"\n## Grade {grade}: no unit glossary PDFs provided yet -- skipped.\n")
+            continue
+
+        words = [c["word"] for c in cards]
+        word_to_units = map_words_to_units(words, unit_texts)
+
+        qa_lines.append(f"\n## Grade {grade} (units available: {sorted(unit_texts)})\n")
+        grade_entries = []
+        for card in cards:
+            units_found = word_to_units[card["word"]]
+            primary_unit = units_found[0] if units_found else None
+            entry = {
+                "word": card["word"],
+                "text": card.get("text") or "",
+                "image": card.get("image"),
+                "primary_unit": primary_unit,
+                "all_units": units_found,
+            }
+            grade_entries.append(entry)
+            if not units_found:
+                qa_lines.append(f"- UNMAPPED: '{card['word']}' -- not found in any provided unit glossary")
+            elif len(units_found) > 1:
+                qa_lines.append(
+                    f"- '{card['word']}' appears in units {units_found} -- filed under unit {primary_unit} "
+                    f"(earliest), also referenced later"
+                )
+        unit_vocab[grade] = grade_entries
+
+    (DATA_DIR / "unit_vocab.json").write_text(json.dumps(unit_vocab, indent=2))
+    (DATA_DIR / "unit_sheet_qa.md").write_text("\n".join(qa_lines) + "\n")
+    return unit_vocab
+
+
+HEADER_FILL = PatternFill("solid", fgColor="F27221")
+HEADER_FONT = Font(color="FFFFFF", bold=True)
+UNIT_FILL = PatternFill("solid", fgColor="FDE9DD")
+IMG_COL_WIDTH_PX = 110
+ROW_HEIGHT_PX = 90
+
+
+def add_sheet_header(ws):
+    headers = ["Grade", "Unit", "Word", "Definition", "Image"]
+    for col, title in enumerate(headers, start=1):
+        cell = ws.cell(row=1, column=col, value=title)
+        cell.fill = HEADER_FILL
+        cell.font = HEADER_FONT
+    ws.column_dimensions["A"].width = 8
+    ws.column_dimensions["B"].width = 8
+    ws.column_dimensions["C"].width = 28
+    ws.column_dimensions["D"].width = 70
+    ws.column_dimensions["E"].width = IMG_COL_WIDTH_PX / 7
+
+
+def write_image(ws, row, col, image_rel_path):
+    if not image_rel_path:
+        return
+    img_path = IMAGES_DIR / image_rel_path
+    if not img_path.exists():
+        return
+    with PILImage.open(img_path) as im:
+        w, h = im.size
+    scale = min(IMG_COL_WIDTH_PX / w, ROW_HEIGHT_PX / h, 1.0)
+    xl_img = XLImage(str(img_path))
+    xl_img.width, xl_img.height = w * scale, h * scale
+    ws.add_image(xl_img, f"{get_column_letter(col)}{row}")
+
+
+def build_workbook(unit_vocab):
+    wb = openpyxl.Workbook()
+    wb.remove(wb.active)
+
+    unmapped_rows = []
+
+    for grade in ["K", "1", "2", "3", "4", "5"]:
+        entries = unit_vocab.get(grade)
+        if not entries:
+            continue
+        ws = wb.create_sheet(title=f"Grade {grade}")
+        add_sheet_header(ws)
+
+        mapped = [e for e in entries if e["primary_unit"] is not None]
+        mapped.sort(key=lambda e: (e["primary_unit"], e["word"].lower()))
+
+        row = 2
+        current_unit = None
+        for entry in mapped:
+            if entry["primary_unit"] != current_unit:
+                current_unit = entry["primary_unit"]
+            ws.row_dimensions[row].height = ROW_HEIGHT_PX * 0.75
+            ws.cell(row=row, column=1, value=grade)
+            unit_cell = ws.cell(row=row, column=2, value=current_unit)
+            unit_cell.fill = UNIT_FILL
+            ws.cell(row=row, column=3, value=entry["word"]).alignment = Alignment(vertical="top", wrap_text=True)
+            ws.cell(row=row, column=4, value=entry["text"]).alignment = Alignment(vertical="top", wrap_text=True)
+            write_image(ws, row, 5, entry["image"])
+            row += 1
+
+        for entry in entries:
+            if entry["primary_unit"] is None:
+                unmapped_rows.append((grade, entry))
+
+    if unmapped_rows:
+        ws = wb.create_sheet(title="Unmapped")
+        headers = ["Grade", "Word", "Definition", "Image"]
+        for col, title in enumerate(headers, start=1):
+            cell = ws.cell(row=1, column=col, value=title)
+            cell.fill = HEADER_FILL
+            cell.font = HEADER_FONT
+        ws.column_dimensions["A"].width = 8
+        ws.column_dimensions["B"].width = 28
+        ws.column_dimensions["C"].width = 70
+        ws.column_dimensions["D"].width = IMG_COL_WIDTH_PX / 7
+        row = 2
+        for grade, entry in unmapped_rows:
+            ws.row_dimensions[row].height = ROW_HEIGHT_PX * 0.75
+            ws.cell(row=row, column=1, value=grade)
+            ws.cell(row=row, column=2, value=entry["word"]).alignment = Alignment(vertical="top", wrap_text=True)
+            ws.cell(row=row, column=3, value=entry["text"]).alignment = Alignment(vertical="top", wrap_text=True)
+            write_image(ws, row, 4, entry["image"])
+            row += 1
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = OUTPUT_DIR / "unit_vocab_sheet.xlsx"
+    wb.save(out_path)
+    return out_path
+
+
+def main():
+    unit_vocab = build_unit_vocab()
+    out_path = build_workbook(unit_vocab)
+    for grade, entries in unit_vocab.items():
+        mapped = sum(1 for e in entries if e["primary_unit"] is not None)
+        print(f"grade {grade}: {mapped}/{len(entries)} words mapped to a unit")
+    print(f"Wrote {out_path}")
+
+
+if __name__ == "__main__":
+    main()

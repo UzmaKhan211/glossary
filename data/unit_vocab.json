@@ -1,0 +1,1245 @@
+{
+  "K": [
+    {
+      "word": "above",
+      "text": "",
+      "image": "K/13_above.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "add",
+      "text": "",
+      "image": "K/15_add.png",
+      "primary_unit": 4,
+      "all_units": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "word": "behind",
+      "text": "",
+      "image": "K/30_behind.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "below",
+      "text": "",
+      "image": "K/31_below.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "beside",
+      "text": "",
+      "image": "K/32_beside.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "between",
+      "text": "",
+      "image": "K/33_between.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "circle",
+      "text": "",
+      "image": "K/36_circle.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "cone",
+      "text": "",
+      "image": "K/45_cone.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "corner",
+      "text": "",
+      "image": "K/49_corner.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "cube",
+      "text": "",
+      "image": "K/51_cube.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "curved",
+      "text": "",
+      "image": "K/54_curved.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "cylinder",
+      "text": "",
+      "image": "K/55_cylinder.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "eight",
+      "text": "",
+      "image": "K/72_eight.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "eighteen",
+      "text": "",
+      "image": "K/73_eighteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "eleven",
+      "text": "",
+      "image": "K/75_eleven.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "equation",
+      "text": "",
+      "image": "K/77_equation.png",
+      "primary_unit": 5,
+      "all_units": [
+        5,
+        6
+      ]
+    },
+    {
+      "word": "expression",
+      "text": "",
+      "image": "K/85_expression.png",
+      "primary_unit": 4,
+      "all_units": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "word": "face",
+      "text": "",
+      "image": "K/86_face.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "fewer",
+      "text": "",
+      "image": "K/90_fewer.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "word": "fifteen",
+      "text": "",
+      "image": "K/91_fifteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "five",
+      "text": "",
+      "image": "K/92_five.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "word": "flat shapes",
+      "text": "",
+      "image": "K/93_flat-shapes.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "four",
+      "text": "",
+      "image": "K/94_four.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "word": "fourteen",
+      "text": "",
+      "image": "K/95_fourteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "heavier",
+      "text": "",
+      "image": "K/101_heavier.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "hexagon",
+      "text": "",
+      "image": "K/102_hexagon.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "in front of",
+      "text": "",
+      "image": "K/108_in-front-of.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "less than",
+      "text": "",
+      "image": "K/117_less-than.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        7
+      ]
+    },
+    {
+      "word": "lighter",
+      "text": "",
+      "image": "K/119_lighter.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "longer",
+      "text": "",
+      "image": "K/127_longer.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "more",
+      "text": "",
+      "image": "K/136_more.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "word": "nine",
+      "text": "",
+      "image": "K/140_nine.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "nineteen",
+      "text": "",
+      "image": "K/141_nineteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "one",
+      "text": "",
+      "image": "K/148_one.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "prism",
+      "text": "",
+      "image": "K/170_prism.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "rectangle",
+      "text": "",
+      "image": "K/180_rectangle.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "same",
+      "text": "",
+      "image": "K/189_same.png",
+      "primary_unit": 1,
+      "all_units": [
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "word": "seven",
+      "text": "",
+      "image": "K/195_seven.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "seventeen",
+      "text": "",
+      "image": "K/196_seventeen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "shorter",
+      "text": "",
+      "image": "K/197_shorter.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "side",
+      "text": "",
+      "image": "K/198_side.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "six",
+      "text": "",
+      "image": "K/199_six.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "sixteen",
+      "text": "",
+      "image": "K/200_sixteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "solid shape",
+      "text": "",
+      "image": "K/201_solid-shape.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "sort",
+      "text": "",
+      "image": "K/202_sort.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "sphere",
+      "text": "",
+      "image": "K/203_sphere.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "square",
+      "text": "",
+      "image": "K/204_square.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "straight",
+      "text": "",
+      "image": "K/211_straight.png",
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "subtract",
+      "text": "",
+      "image": "K/213_subtract.png",
+      "primary_unit": 4,
+      "all_units": [
+        4,
+        7
+      ]
+    },
+    {
+      "word": "taller",
+      "text": "",
+      "image": "K/216_taller.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "teen number",
+      "text": "",
+      "image": "K/218_teen-number.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "ten",
+      "text": "",
+      "image": "K/220_ten.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "thirteen",
+      "text": "",
+      "image": "K/223_thirteen.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "three",
+      "text": "",
+      "image": "K/226_three.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "word": "total",
+      "text": "",
+      "image": "K/229_total.png",
+      "primary_unit": 4,
+      "all_units": [
+        4,
+        5
+      ]
+    },
+    {
+      "word": "triangle",
+      "text": "",
+      "image": "K/231_triangle.png",
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        7
+      ]
+    },
+    {
+      "word": "twelve",
+      "text": "",
+      "image": "K/233_twelve.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "twenty",
+      "text": "",
+      "image": "K/234_twenty.png",
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "two",
+      "text": "",
+      "image": "K/235_two.png",
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "word": "written number",
+      "text": "",
+      "image": "K/243_written-number.png",
+      "primary_unit": 2,
+      "all_units": [
+        2
+      ]
+    },
+    {
+      "word": "zero",
+      "text": "",
+      "image": "K/247_zero.png",
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    }
+  ],
+  "5": [
+    {
+      "word": "adjacent",
+      "text": "2 lines in a shape that are immediately next to each other or touching",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "algorithm",
+      "text": "a procedure used for solving a problem or performing a computation",
+      "image": null,
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        4
+      ]
+    },
+    {
+      "word": "area",
+      "text": "a measurement of the space inside a two-dimensional shape",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "word": "Associative Property of Multiplication",
+      "text": "the product of 3 or more numbers remains the same regardless of how the numbers are grouped",
+      "image": null,
+      "primary_unit": 1,
+      "all_units": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "word": "attribute",
+      "text": "a feature or trait of an object or set of objects",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "axis (axes)",
+      "text": "the perpendicular lines that form the coordinate grid, in which the vertical axis is the line going up and down/on the left and the horizontal axis is the line running side to side/on the bottom (plural: axes)",
+      "image": "5/27_axis-axes.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "base",
+      "text": "the number being multiplied by itself in exponential form",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5,
+        6
+      ]
+    },
+    {
+      "word": "column",
+      "text": "a part of an array that goes up and down",
+      "image": null,
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "Commutative Property of Addition",
+      "text": "the order in which numbers are added does not change the sum",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "Commutative Property of Multiplication",
+      "text": "the order in which numbers are multiplied does not change the product",
+      "image": null,
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    },
+    {
+      "word": "compose",
+      "text": "to put together",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "conjecture",
+      "text": "a formed idea using limited information",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "coordinate grid",
+      "text": "a grid with numbers labeling the gridlines",
+      "image": "5/47_coordinate-grid.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "coordinate",
+      "text": "a pair of numbers that represent the distance from 0 in two directions, starting on the horizontal axis",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "cubic unit",
+      "text": "any three-dimensional measure of volume that represents a number of cubes that have a defined side length",
+      "image": null,
+      "primary_unit": 1,
+      "all_units": [
+        1
+      ]
+    },
+    {
+      "word": "cup",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (16 cups is equal to 1 gallon)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "decompose",
+      "text": "to break apart",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "defining attribute",
+      "text": "a trait or property that a shape must have",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "Distributive Property",
+      "text": "multiplying the sum of 2 or more addends by a factor will give the same result as multiplying each addend individually by the factor and then adding the products together",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "word": "dividend",
+      "text": "the number being divided, representing the total number being equally distributed or divided",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "divisor",
+      "text": "the number that follows the division symbol that represents either the number of equal-sized groups or the size of each group",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "word": "equation",
+      "text": "a math statement showing that the values on each side of the equal sign are the same",
+      "image": null,
+      "primary_unit": 3,
+      "all_units": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "word": "equipartition",
+      "text": "to partition into equal parts",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3
+      ]
+    },
+    {
+      "word": "exponent",
+      "text": "a number representing the power to which a given number or expression should be multiplied, expressed as a small raised number (ex: in the expression 10^4, 4 is the exponent)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "expression",
+      "text": "a mathematical statement with a minimum of 2 numbers and at least 1 math operation",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "factor",
+      "text": "a number that is multiplied by another number to determine the product",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "gallon",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (1 gallon is equal to 4 quarts, 8 pints, or 16 cups)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "hundredths",
+      "text": "the base-ten place value unit equal to 1/100 (one hundredth in standard form is .01)",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "inequality",
+      "text": "the name of a statement used to express the relationship between two unequal numbers, in which < or > symbols are used",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "intersect",
+      "text": "to cross over or meet",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "line plot",
+      "text": "a display of measurement data in which every data value is shown with a symbol above a number line",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "mile",
+      "text": "a unit of length in the U.S. customary measurement system (1 mile is equal to 5,280 feet or 1,760 yards)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "milligram",
+      "text": "a unit of weight in the metric measurement system (1,000 milligrams is equal to 1 gram)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "millimeter",
+      "text": "a unit of length in the metric measurement system (1,000 millimeters is equal to 1 meter)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "mixed number",
+      "text": "a number expressed as a whole number and a fraction less than 1",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "word": "non-unit fraction",
+      "text": "a number that describes more than 1 part of a whole that has been partitioned into equal parts",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3
+      ]
+    },
+    {
+      "word": "ordered pair",
+      "text": "a pair of 2 numbers that correspond to points on the x and y axes, expressed as (x, y)",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "origin",
+      "text": "the point where the 2 axes intersect on the coordinate plane, which is located at (0,0)",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "parallel lines",
+      "text": "lines that never cross or intersect",
+      "image": "5/154_parallel-lines.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "parallelogram",
+      "text": "a quadrilateral with 2 pairs of opposite sides that are parallel and have equal length",
+      "image": "5/155_parallelogram.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "parentheses",
+      "text": "grouping symbols that can be used in expressions or equations to indicate the order in which operations should be performed",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "partial product",
+      "text": "the value obtained when multiplying the parts of 2 numbers separately (which is then added to other partial products to arrive at the total product)",
+      "image": null,
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    },
+    {
+      "word": "partial quotient",
+      "text": "the value obtained when multiplying the divisor in a division equation by another number, then subtracting that number from the dividend (which is then added to other partial quotients to arrive at the total quotient)",
+      "image": null,
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    },
+    {
+      "word": "perpendicular line",
+      "text": "a line that crosses another line at a 90\u00b0 angle",
+      "image": "5/163_perpendicular-line.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "pint",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (8 pints is equal to 1 gallon)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "plot",
+      "text": "to place a point (often representing x and y coordinates) on a grid",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "product",
+      "text": "the value when 2 or more numbers are multiplied",
+      "image": null,
+      "primary_unit": 1,
+      "all_units": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "quadrilateral",
+      "text": "a polygon or shape with 4 sides and 4 angles",
+      "image": "5/173_quadrilateral.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "quart",
+      "text": "a liquid volume unit in the U.S. Customary measurement system (4 quarts is equal to 1 gallon)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "quotient",
+      "text": "the result obtained by dividing 2 numbers representing either the number of equal-sized groups or the size of each group",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "rectangle",
+      "text": "a quadrilateral with 2 pairs of opposite sides that are parallel and of equal length and 4 right angles",
+      "image": "5/180_rectangle.png",
+      "primary_unit": 4,
+      "all_units": [
+        4,
+        7
+      ]
+    },
+    {
+      "word": "rectangular prism",
+      "text": "a solid figure with 6 faces that are all rectangles",
+      "image": "5/181_rectangular-prism.png",
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    },
+    {
+      "word": "remainder",
+      "text": "the amount leftover when another whole group of the divisor cannot be made when dividing",
+      "image": null,
+      "primary_unit": 4,
+      "all_units": [
+        4
+      ]
+    },
+    {
+      "word": "rhombus",
+      "text": "a quadrilateral with 4 equal-length sides",
+      "image": "5/183_rhombus.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "right angle",
+      "text": "an angle that measures 90 degrees",
+      "image": "5/184_right-angle.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "rounding",
+      "text": "to estimate the value of a number by determining the nearest multiple of a specific place value",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "row",
+      "text": "a part of an array that goes side to side",
+      "image": null,
+      "primary_unit": 3,
+      "all_units": [
+        3
+      ]
+    },
+    {
+      "word": "square",
+      "text": "a quadrilateral with 4 equal-length sides and 4 right angles",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "sum",
+      "text": "the total when 2 or more numbers are added",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "word": "tape diagram",
+      "text": "a tool that shows the relationship between quantities, represented by rectangles placed side by side",
+      "image": null,
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "tenth",
+      "text": "the base-ten place value unit equal to 1/10 (one tenth in standard form is .1)",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "thousandth",
+      "text": "the base-ten place value unit equal to 1/1,000 (one thousandth in standard form is .001)",
+      "image": null,
+      "primary_unit": 5,
+      "all_units": [
+        5
+      ]
+    },
+    {
+      "word": "ton",
+      "text": "a unit of weight in the U.S. customary measurement system (1 ton is equal to 2,000 pounds)",
+      "image": null,
+      "primary_unit": 6,
+      "all_units": [
+        6
+      ]
+    },
+    {
+      "word": "trapezoid",
+      "text": "a quadrilateral with at least 1 pair of opposite sides that are parallel",
+      "image": "5/230_trapezoid.png",
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "unit fraction",
+      "text": "a number that describes exactly 1 part of a whole that has been partitioned into equal parts",
+      "image": null,
+      "primary_unit": 2,
+      "all_units": [
+        2,
+        3
+      ]
+    },
+    {
+      "word": "vertex",
+      "text": "the point where the adjacent sides of a shape meet, 2 or more rays of an angle meet, or the edges of a solid figure meet (plural: vertices)",
+      "image": "5/238_vertex.png",
+      "primary_unit": null,
+      "all_units": []
+    },
+    {
+      "word": "volume",
+      "text": "the amount of space a three-dimensional figure takes up",
+      "image": null,
+      "primary_unit": 1,
+      "all_units": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "word": "x coordinate",
+      "text": "the first number in an ordered pair, indicating the horizontal distance along the x-axis from the origin at (0,0)",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    },
+    {
+      "word": "y coordinate",
+      "text": "the second number in an ordered pair, indicating the vertical distance along the y-axis from the origin at (0,0)",
+      "image": null,
+      "primary_unit": 7,
+      "all_units": [
+        7
+      ]
+    }
+  ]
+}
