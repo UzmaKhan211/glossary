@@ -1,0 +1,86 @@
+{
+  "1": [
+    {"word": "common multiple", "spanish_word": "múltiplo común", "spanish_definition": "un número que es múltiplo de 2 o más números determinados", "confidence": "high"},
+    {"word": "composite number", "spanish_word": "número compuesto", "spanish_definition": "un número que tiene más de 1 par de factores", "confidence": "high"},
+    {"word": "multiple", "spanish_word": "múltiplo", "spanish_definition": "un número que se obtiene al multiplicar por otro número (ejemplo: algunos múltiplos de 4 son 4, 8, 12 y 16)", "confidence": "high"},
+    {"word": "prime number", "spanish_word": "número primo", "spanish_definition": "un número que tiene 1 solo par de factores", "confidence": "high"}
+  ],
+  "2": [
+    {"word": "common denominator", "spanish_word": "denominador común", "spanish_definition": "cuando 2 o más fracciones tienen el mismo denominator", "confidence": "low", "note": "The source PDF's Spanish definition ends with the English word 'denominator' instead of 'denominador' (apparent typo in the original document). Copied verbatim as instructed, without correcting."},
+    {"word": "common numerator", "spanish_word": "numerador común", "spanish_definition": "cuando 2 o más fracciones tienen el mismo numerador", "confidence": "high"}
+  ],
+  "3": [
+    {"word": "common denominator", "spanish_word": "denominador común", "spanish_definition": "cuando 2 o más fracciones tienen el mismo denominador", "confidence": "high"},
+    {"word": "composite number", "spanish_word": "número compuesto", "spanish_definition": "un número que tiene más de 1 par de factores", "confidence": "high"},
+    {"word": "denominator", "spanish_word": "denominador", "spanish_definition": "la parte inferior de una fracción que indica en cuántas partes iguales se dividió el entero", "confidence": "high"},
+    {"word": "equivalent fractions", "spanish_word": "fracciones equivalentes", "spanish_definition": "2 fracciones que representan el mismo valor", "confidence": "high"},
+    {"word": "mixed number", "spanish_word": "número mixto", "spanish_definition": "un número expresado como un número natural y una fracción menor que 1", "confidence": "high"},
+    {"word": "numerator", "spanish_word": "numerador", "spanish_definition": "el número superior de una fracción que indica cuántas partes iguales se describen", "confidence": "high"},
+    {"word": "prime number", "spanish_word": "número primo", "spanish_definition": "un número que tiene 1 solo par de factores", "confidence": "high"},
+    {"word": "unit fraction", "spanish_word": "fracción unitaria", "spanish_definition": "un número que describe exactamente 1 parte de un entero que se ha dividido en partes iguales", "confidence": "high"}
+  ],
+  "4": [
+    {"word": "decimal", "spanish_word": "decimal", "spanish_definition": "un valor fraccionario que se escribe usando dígitos individuales en cada valor posicional", "confidence": "high"},
+    {"word": "decimal point", "spanish_word": "punto decimal", "spanish_definition": "un punto que se ubica a la derecha de la posición de unidades", "confidence": "high"},
+    {"word": "expanded form", "spanish_word": "forma expandida", "spanish_definition": "representación de un número como una expresión de suma que muestra el valor de cada dígito (ejemplo: 482 escrito en la forma expandida es 400 + 80 + 2)", "confidence": "high"},
+    {"word": "factor pair", "spanish_word": "par de factores", "spanish_definition": "un conjunto de 2 números que llegan a un número específico cuando se multiplican (ejemplo: 4 y 6 son un par de factores de 24)", "confidence": "high"},
+    {"word": "hundred thousands", "spanish_word": "centena de millar", "spanish_definition": "la unidad de valor posicional de base diez compuesta por 10 decenas de millar (una centena de millar escrita en la forma estándar es 100,000)", "confidence": "high"},
+    {"word": "million", "spanish_word": "millón", "spanish_definition": "la unidad de valor posicional de base diez compuesta por 10 centenas de millar (un millón escrito en la forma estándar es 1,000,000)", "confidence": "high"},
+    {"word": "multiple", "spanish_word": "múltiplo", "spanish_definition": "un número que se obtiene al multiplicar por otro número (ejemplo: algunos múltiplos de 4 son 4, 8, 12 y 16)", "confidence": "high"},
+    {"word": "rounding", "spanish_word": "redondeo", "spanish_definition": "estimar el valor de un número determinando el múltiplo más cercano de un valor posicional específico", "confidence": "high"},
+    {"word": "standard form", "spanish_word": "forma estándar", "spanish_definition": "una representación de un número que utiliza solo dígitos para representar valores posicionales", "confidence": "high"},
+    {"word": "ten thousand", "spanish_word": "decena de millares", "spanish_definition": "la unidad de valor posicional de base diez compuesta por 10 millares (una decena de millar en forma estándar es 10,000)", "confidence": "high"},
+    {"word": "thousand", "spanish_word": "", "spanish_definition": "", "confidence": "low", "note": "No bolded headword for 'thousand' exists in unit4.txt. The file's T-section only contains 'ten thousands'; 'thousand'/'one thousands' appears only inline inside other definitions, never as its own glossary entry (English or Spanish). Left blank rather than inventing a translation."}
+  ],
+  "5": [
+    {"word": "centimeter", "spanish_word": "", "spanish_definition": "", "confidence": "low", "note": "No bolded headword for 'centimeter' exists in unit5.txt. 'centimeter'/'centímetros' appears only inline inside the 'meter'/'metro' definition, never as its own glossary entry. Left blank rather than inventing a translation."},
+    {"word": "meter", "spanish_word": "metro", "spanish_definition": "una unidad de longitud del sistema de medida métrico decimal (1 metro equivale a 100 centímetros)", "confidence": "high"},
+    {"word": "factor pair", "spanish_word": "par de factores", "spanish_definition": "un conjunto de 2 números que llegan a un número específico cuando se multiplican (ejemplo: 4 y 6 son un par de factores de 24)", "confidence": "high"},
+    {"word": "kilometer", "spanish_word": "kilómetro", "spanish_definition": "una unidad de longitud del sistema de medida métrico decimal (1,000 metros equivalen a 1 kilómetro)", "confidence": "high"},
+    {"word": "ounce", "spanish_word": "onza", "spanish_definition": "una unidad de peso del sistema de medida estándar de los Estados Unidos (16 onzas equivalen a 1 libra)", "confidence": "high"},
+    {"word": "perimeter", "spanish_word": "perímetro", "spanish_definition": "la longitud total del contorno de una figura bidimensional", "confidence": "high"},
+    {"word": "pound", "spanish_word": "libra", "spanish_definition": "una unidad de peso del sistema de medida estándar de los Estados Unidos (1 libra equivale a 16 onzas)", "confidence": "high"},
+    {"word": "second", "spanish_word": "segundo", "spanish_definition": "una unidad de tiempo (60 segundos equivalen a 1 minuto)", "confidence": "high"},
+    {"word": "yard", "spanish_word": "yarda", "spanish_definition": "una unidad de longitud del sistema de medida estándar de los Estados Unidos (1 yarda equivale a 3 pies)", "confidence": "high"}
+  ],
+  "6": [
+    {"word": "area", "spanish_word": "área", "spanish_definition": "una medida del espacio dentro de una figura bidimensional", "confidence": "high"},
+    {"word": "expanded form", "spanish_word": "forma expandida", "spanish_definition": "representación de un número como una expresión de suma que muestra el valor de cada dígito (ejemplo: 482 escrito en la forma expandida es 400 + 80 + 2)", "confidence": "high"},
+    {"word": "length", "spanish_word": "longitud", "spanish_definition": "cuán largo es un objeto de un extremo al otro (debe medirse en unidades de una misma longitud, sin espacios ni superposiciones)", "confidence": "high"},
+    {"word": "multiple", "spanish_word": "múltiplo", "spanish_definition": "un número que se obtiene al multiplicar por otro número (ejemplo: algunos múltiplos de 4 son 4, 8, 12 y 16)", "confidence": "high"},
+    {"word": "partial product", "spanish_word": "producto parcial", "spanish_definition": "el valor que se obtiene al multiplicar las partes de 2 números por separado (que luego se suma a otros productos parciales para obtener el producto total)", "confidence": "high"},
+    {"word": "partial quotient", "spanish_word": "cociente parcial", "spanish_definition": "el valor que se obtiene al multiplicar el divisor de una ecuación de división por otro número para luego restar ese número al dividendo (que luego se suma a otros cocientes parciales para obtener el cociente total)", "confidence": "high"},
+    {"word": "perimeter", "spanish_word": "perímetro", "spanish_definition": "la longitud total del contorno de una figura bidimensional", "confidence": "high"},
+    {"word": "remainder", "spanish_word": "resto", "spanish_definition": "la cantidad que sobra cuando, al dividir, no se puede formar otro grupo completo en el divisor", "confidence": "high"},
+    {"word": "width", "spanish_word": "ancho", "spanish_definition": "cuán ancho es un objeto de un lado al otro (debe medirse en unidades de una misma longitud, sin espacios ni superposiciones)", "confidence": "high"}
+  ],
+  "7": [
+    {"word": "acute angle", "spanish_word": "ángulo agudo", "spanish_definition": "un ángulo que mide menos de 90 grados", "confidence": "high"},
+    {"word": "angle", "spanish_word": "ángulo", "spanish_definition": "una figura geométrica formada por 2 semirrectas que comparten el mismo extremo", "confidence": "high"},
+    {"word": "attribute", "spanish_word": "atributo", "spanish_definition": "una característica o rasgo de un objeto o conjunto de objetos", "confidence": "high"},
+    {"word": "degree", "spanish_word": "grado", "spanish_definition": "unidad que mide el tamaño de un ángulo", "confidence": "high"},
+    {"word": "equilateral triangle", "spanish_word": "triángulo equilátero", "spanish_definition": "un triángulo con 3 lados iguales", "confidence": "high"},
+    {"word": "horizontal", "spanish_word": "horizontal", "spanish_definition": "una línea recta que se extiende de izquierda a derecha", "confidence": "high"},
+    {"word": "intersecting lines", "spanish_word": "líneas de intersección", "spanish_definition": "líneas que cruzan", "confidence": "high"},
+    {"word": "isosceles triangle", "spanish_word": "triángulo isósceles", "spanish_definition": "un triángulo con al menos 2 lados de igual longitud", "confidence": "high"},
+    {"word": "line", "spanish_word": "línea, recta", "spanish_definition": "una marca recta que se extiende infinitamente en ambas direcciones y, a veces, conecta un conjunto de puntos dispuestos uno al lado del otro", "confidence": "high"},
+    {"word": "line of symmetry", "spanish_word": "eje de simetría", "spanish_definition": "una línea que divide una figura en mitades idénticas y una es el reflejo de la otra", "confidence": "high"},
+    {"word": "line segment or segment", "spanish_word": "segmento de recta o segmento", "spanish_definition": "una parte de una recta con 2 extremos", "confidence": "high"},
+    {"word": "line symmetry", "spanish_word": "simetría lineal", "spanish_definition": "la cualidad de una figura que puede dividirse en dos mitades idénticas o reflejadas", "confidence": "high"},
+    {"word": "obtuse angle", "spanish_word": "ángulo obtuso", "spanish_definition": "un ángulo que mide más de 90 grados, pero menos de 180 grados", "confidence": "high"},
+    {"word": "obtuse triangle", "spanish_word": "triángulo obtuso", "spanish_definition": "un triángulo con 1 ángulo obtuso", "confidence": "high"},
+    {"word": "parallel lines", "spanish_word": "líneas paralelas", "spanish_definition": "rectas que nunca se cruzan o intersecan", "confidence": "high"},
+    {"word": "parallelogram", "spanish_word": "paralelogramo", "spanish_definition": "un cuadrilátero con 2 pares de lados opuestos que son paralelos", "confidence": "high"},
+    {"word": "perpendicular line", "spanish_word": "recta perpendicular", "spanish_definition": "una recta que se cruza con otra recta formando un ángulo recto", "confidence": "high"},
+    {"word": "point", "spanish_word": "punto", "spanish_definition": "una ubicación en el espacio", "confidence": "high"},
+    {"word": "protractor", "spanish_word": "transportador", "spanish_definition": "una herramienta para medir el tamaño de un ángulo en grados", "confidence": "high"},
+    {"word": "quadrilateral", "spanish_word": "cuadrilátero", "spanish_definition": "una figura con 4 lados y 4 esquinas", "confidence": "high"},
+    {"word": "ray", "spanish_word": "semirrecta", "spanish_definition": "una parte de una recta con 1 extremo", "confidence": "high"},
+    {"word": "right angle", "spanish_word": "ángulo recto", "spanish_definition": "un ángulo que mide 90 grados", "confidence": "high"},
+    {"word": "right triangle", "spanish_word": "triángulo rectángulo", "spanish_definition": "un triángulo con 1 ángulo recto", "confidence": "high"},
+    {"word": "scalene triangle", "spanish_word": "triángulo escaleno", "spanish_definition": "un triángulo sin lados de igual longitud", "confidence": "high"},
+    {"word": "straight angle", "spanish_word": "ángulo llano", "spanish_definition": "un ángulo que mide 180 grados", "confidence": "high"},
+    {"word": "vertex", "spanish_word": "vértice", "spanish_definition": "el punto donde se encuentran los 2 lados de un ángulo (plural: vértices)", "confidence": "high"},
+    {"word": "vertical", "spanish_word": "vertical", "spanish_definition": "una línea recta que se extiende de arriba a abajo", "confidence": "high"}
+  ]
+}
