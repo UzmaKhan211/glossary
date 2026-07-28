@@ -1,0 +1,213 @@
+D E F H
+
+|  |
+| :-: |
+| [**Page 1**]() |
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math
+
+is based on curricula from Illustrative Mathematics (IM).
+
+English
+
+Español
+
+Grade 4 Unit 4 Glossary/4.º grado Unidad 4 Glosario
+
+D
+
+**decimal ** a fractional value written
+
+using single digits for each place
+
+value
+
+**decimal point ** a period placed to
+
+the right of the ones place
+
+E
+
+**expanded form ** a representation
+
+of a number as an addition
+
+expression that shows the value
+
+of each digit (example: 482 in
+
+expanded form is 400 + 80 + 2)
+
+F
+
+**factor pair ** a set of 2 numbers
+
+that arrive at a specific number
+
+when multiplied (example: 4 and 6
+
+are a factor pair of 24)
+
+H
+
+**hundred thousands ** the base-
+
+ten place value unit composed of
+
+10 ten thousands (one hundred
+
+thousand in standard form
+
+is 100,000)
+
+**decimal ** un valor fraccionario
+
+que se escribe usando dígitos
+
+individuales en cada valor
+
+posicional
+
+**punto decimal ** un punto que se
+
+ubica a la derecha de la posición
+
+de unidades
+
+**forma expandida ** representación
+
+de un número como una expresión
+
+de suma que muestra el valor
+
+de cada dígito (ejemplo: 482
+
+escrito en la forma expandida es
+
+400 + 80 + 2)
+
+**par de factores ** un conjunto de
+
+2 números que llegan a un
+
+número específico cuando se
+
+multiplican (ejemplo: 4 y 6 son un
+
+par de factores de 24)
+
+**centena de millar ** la unidad
+
+de valor posicional de base diez
+
+compuesta por 10 decenas de
+
+millar (una centena de millar
+
+escrita en la forma estándar
+
+es 100,000)
+
+-----
+
+|  |
+| :-: |
+| [**Page 2**]() |
+
+English
+
+Español
+
+**Grade 4 Unit 4 Glossary/4.º grado Unidad 4 Glosario**
+
+M
+
+**million ** the base-ten place value
+
+unit composed of 10 hundred
+
+thousands (one million in
+
+standard form is 1,000,000)
+
+**multiple ** a number you get by
+
+multiplying another number
+
+(example: some multiples of 4 are
+
+4, 8, 12, and 16)
+
+R
+
+**rounding ** to estimate the value
+
+of a number by determining the
+
+nearest multiple of a specific
+
+place value
+
+S
+
+**standard form ** a representation
+
+of a number using only digits to
+
+represent place values
+
+T
+
+**ten thousands ** the base-ten
+
+place value unit composed
+
+of 10 one thousands (one ten
+
+thousand in standard form
+
+is 10,000)
+
+**millón ** la unidad de valor
+
+posicional de base diez
+
+compuesta por 10 centenas de
+
+millar (un millón escrito en la
+
+forma estándar es 1,000,000)
+
+**múltiplo ** un número que se
+
+obtiene al multiplicar por otro
+
+número (ejemplo: algunos
+
+múltiplos de 4 son 4, 8, 12 y 16)
+
+**redondeo ** estimar el valor de
+
+un número determinando el
+
+múltiplo más cercano de un valor
+
+posicional específico
+
+**forma estándar ** una
+
+representación de un número
+
+que utiliza solo dígitos para
+
+representar valores posicionales
+
+**decena de millares ** la unidad
+
+de valor posicional de base
+
+diez compuesta por 10 millares
+
+(una decena de millar en forma
+
+estándar es 10,000)

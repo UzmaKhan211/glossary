@@ -1,0 +1,207 @@
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español A
+
+area a measurement of the space
+
+área una medida del inside a two-dimensional shape
+
+espacio dentro de una figura bidimensional
+
+attribute a feature or trait of an
+
+atributo una característica o object or set of objects
+
+rasgo de un objeto o conjunto de objetos
+
+axis (axes) the perpendicular
+
+eje (ejes) las rectas lines that form the coordinate
+
+perpendiculares que forman el grid, in which the vertical axis is
+
+plano de coordenadas, en el cual, the line going up and down/on the
+
+el eje vertical es la recta de la left and the horizontal axis is the
+
+parte izquierda que se extiende de line running side to side/on the
+
+abajo a arriba y el eje horizontal es bottom (plural: axes)
+
+la recta de la parte inferior que se extiende de un lado a otro
+
+10109 9
+
+8877665 M N
+
+5 M N
+
+44332211L P
+
+L P
+
+0 1 2 3 4
+
+5 6 7 8 9 10
+
+0 1 2 3 4
+
+5 6 7 8 9 10
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math is based on curricula from Illustrative Mathematics (IM).
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español C
+
+coordinate grid a grid with numbers labeling the gridlines
+
+10 1 2 3 4
+
+cuadrícula de coordenadas una cuadrícula cuyas líneas están rotuladas con números
+
+10109
+
+8765 M N
+
+5 M N
+
+4433221L P
+
+L P
+
+5 6 7 8 9 10
+
+0 1 2 3 4
+
+coordinates a pair of numbers that represent the distance from 0 in 2 directions, starting on the horizontal axis
+
+I
+
+intersect to cross over or meet
+
+O
+
+ordered pair a pair of 2 numbers that correspond to points on the x- and y axes, expressed as (x, y)
+
+9
+
+8765 6 7 8 9 10
+
+coordenadas un par de números que representan la distancia al 0 en dos direcciones, partiendo del eje horizontal
+
+intersecarse cruzarse o encontrarse
+
+par ordenado un par de números que corresponden a puntos en los ejes x y y, y el par se expresa (x, y)
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español
+
+origin the point where the 2 axes intersect on the coordinate grid, which is located at (0, 0)
+
+P
+
+parallel (lines) lines that never cross or intersect
+
+parallelogram a quadrilateral with 2 pairs of opposite sides that are parallel and have equal length
+
+pattern a specific, replicable sequence of shapes or numbers; some patterns repeat and some patterns grow
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math is based on curricula from Illustrative Mathematics (IM). origen el punto donde se intersecan los 2 ejes en la cuadrícula de coordenadas, que se halla en (0, 0)
+
+(rectas) paralelas rectas que nunca se cruzan o intersecan
+
+paralelogramo un cuadrilátero con 2 pares de lados opuestos que son paralelos y tienen igual longitud
+
+patrón una secuencia específica y replicable de figuras o números; algunos patrones se repiten y otros patrones incrementan
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español
+
+perimeter the total length of the boundary of a two-dimensional shape
+
+perpendicular line a line that crosses another line at a 90° angle
+
+Q
+
+quadrilateral a polygon or shape with 4 sides and 4 angles
+
+perímetro la longitud total del contorno de una figura bidimensional
+
+(rectas) perpendiculares una recta que cruza otra recta en un ángulo de 90°
+
+cuadrilátero un polígono o figura con 4 lados y 4 ángulos
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español R
+
+rectangle a quadrilateral with 2
+
+rectángulo un cuadrilátero pairs of opposite sides that are
+
+con 2 pares de lados opuestos parallel and of equal length and
+
+paralelos de igual longitud y 4 right angles
+
+4 ángulos rectos
+
+rectangles
+
+rectangles
+
+square
+
+square
+
+square
+
+square
+
+rhombus a quadrilateral with
+
+rombo un cuadrilátero con 4 equal-length sides
+
+4 lados de igual longitud
+
+right angle an angle that
+
+ángulo recto un ángulo que mide measures 90 degrees
+
+90 grados
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math is based on curricula from Illustrative Mathematics (IM).
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español S
+
+square a quadrilateral with 4 equal-length sides and 4 right angles
+
+T
+
+trapezoid a quadrilateral with at least 1 pair of opposite sides that are parallel
+
+triangle a shape with 3 sides and 3 corners
+
+X
+
+x-coordinate the first number in an ordered pair, indicating the horizontal distance along the x-axis from the origin at (0, 0)
+
+cuadrado un cuadrilátero con 4 lados de igual longitud y 4 ángulos rectos
+
+trapecio un cuadrilátero con al menos 1 par de lados opuestos que son paralelos
+
+triángulo una figura con 3 lados y 3 esquinas
+
+coordenada x el primer número de un par ordenado que indica la distancia horizontal en el eje x a partir del origen en (0, 0)
+
+Grade 5 Unit 7 Glossary/5.º grado Unidad 7 Glosario
+
+English Español Y
+
+y-coordinate the second number in an ordered pair, indicating the vertical distance along the y-axis from the origin at (0, 0)
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math is based on curricula from Illustrative Mathematics (IM). coordenada y el segundo número de un par ordenado que indica la distancia vertical en el eje y a partir del origen en (0, 0)

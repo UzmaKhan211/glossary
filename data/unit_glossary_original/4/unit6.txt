@@ -1,0 +1,417 @@
+6 ÷ 3 = 2 6 ÷ 3 = 2
+
+|  |
+| :-: |
+| [**Page 1**]() |
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math
+
+is based on curricula from Illustrative Mathematics (IM).
+
+English
+
+Español
+
+Grade 4 Unit 6 Glossary/4.º grado Unidad 6 Glosario
+
+A
+
+**area ** a measurement of the space
+
+inside a two-dimensional shape
+
+D
+
+**decompose ** to break apart
+
+**Distributive Property ** multiplying
+
+the sum of 2 or more addends
+
+by a factor will give the same
+
+result as multiplying each addend
+
+individually by the factor and then
+
+adding the products together
+
+7 × 8 = 2 × 8 + 5 × 8
+
+8
+
+2
+
+5
+
+**dividend ** the number that
+
+represents the total number of
+
+objects being divided
+
+6 ÷ 3 = 2
+
+dividend
+
+**área ** una medida del espacio
+
+dentro de una figura bidimensional
+
+**descomponer ** separar
+
+**propiedad distributiva ** multiplicar
+
+la suma de 2 o más sumandos por
+
+un factor da el mismo resultado
+
+que multiplicar cada sumando
+
+individualmente por el factor y
+
+luego sumar los productos
+
+7 × 8 = 2 × 8 + 5 × 8
+
+8
+
+2
+
+5
+
+**dividendo ** el número que
+
+representa la cantidad total de los
+
+objetos que se van a dividir
+
+6 ÷ 3 = 2
+
+dividendo
+
+-----
+
+|  |
+| :-: |
+| [**Page 2**]() |
+
+English
+
+Español
+
+**Grade 4 Unit 6 Glossary/4.º grado Unidad 6 Glosario**
+
+**divisor ** the number that follows
+
+the division symbol that represents
+
+either the number of equal-sized
+
+groups or the size of each group
+
+6 ÷ 3 = 2
+
+divisor
+
+E
+
+**equal ** having the same value
+
+**estimate ** a guess you make
+
+about a value based on what
+
+you know
+
+**expanded form ** a representation
+
+of a number as an addition
+
+expression that shows the value
+
+of each digit (example: 482 in
+
+expanded form is 400 + 80 + 2)
+
+**expression ** a statement with at
+
+least 2 numbers and at least one
+
+math operation (such as addition,
+
+subtraction, multiplication,
+
+or division)
+
+5 + 3
+
+8 – 2
+
+8 ÷ 2
+
+2 × 4
+
+**divisor ** el número que sigue al
+
+símbolo de división que representa
+
+el número de grupos del mismo
+
+tamaño o el tamaño de cada grupo
+
+6 ÷ 3 = 2
+
+divisor
+
+**igual ** tener el mismo valor
+
+**estimación, estimar ** suposición
+
+que haces acerca de un valor
+
+basándote en lo que sabes
+
+**forma expandida ** representación
+
+de un número como una expresión
+
+de suma que muestra el valor de
+
+cada dígito (ejemplo: 482 escrito
+
+en la forma expandida es
+
+400 + 80 + 2)
+
+**expresión ** un enunciado con al
+
+menos 2 números y al menos una
+
+operación matemática (como
+
+suma, resta, multiplicación
+
+o división)
+
+5 + 3
+
+8 – 2
+
+8 ÷ 2
+
+2 × 4
+
+-----
+
+|  |
+| :-: |
+| [**Page 3**]() |
+
+© Amplify Education, Inc and its licensors. Amplify Desmos Math
+
+is based on curricula from Illustrative Mathematics (IM).
+
+English
+
+Español
+
+Grade 4 Unit 6 Glossary/4.º grado Unidad 6 Glosario
+
+F
+
+**factor ** a number that is
+
+multiplied by another number to
+
+determine the product
+
+2 × 3 = 6
+
+factor factor
+
+L
+
+**length ** how long an object is from
+
+endpoint to endpoint (measured
+
+in same-length units with no gaps
+
+or overlaps)
+
+M
+
+**multiple ** a number you get by
+
+multiplying another number
+
+(example: some multiples of 4 are
+
+4, 8, 12, and 16)
+
+P
+
+**partial product ** the value
+
+obtained when multiplying the
+
+parts of 2 numbers separately
+
+(which is then added to other
+
+partial products to arrive at the
+
+total product)
+
+**factor ** un número que se
+
+multiplica por otro número para
+
+determinar el producto
+
+2 × 3 = 6
+
+factor factor
+
+**longitud ** cuán largo es un objeto
+
+de un extremo al otro (debe
+
+medirse en unidades de una
+
+misma longitud, sin espacios
+
+ni superposiciones)
+
+**múltiplo ** un número que se
+
+obtiene al multiplicar por otro
+
+número (ejemplo: algunos
+
+múltiplos de 4 son 4, 8, 12 y 16)
+
+**producto parcial ** el valor que
+
+se obtiene al multiplicar las
+
+partes de 2 números por
+
+separado (que luego se suma
+
+a otros productos parciales
+
+para obtener el producto total)
+
+-----
+
+|  |
+| :-: |
+| [**Page 4**]() |
+
+English
+
+Español
+
+**Grade 4 Unit 6 Glossary/4.º grado Unidad 6 Glosario**
+
+**partial quotient ** the value
+
+obtained when multiplying the
+
+divisor in a division equation by
+
+another number, then subtracting
+
+that number from the dividend
+
+(which is then added to other
+
+partial quotients to arrive at the
+
+total quotient)
+
+**perimeter ** the total length of the
+
+boundary of a two-dimensional
+
+shape
+
+Q
+
+**quotient ** the result obtained by
+
+dividing one quantity by another
+
+6 ÷ 3 = 2
+
+quotient
+
+R
+
+**remainder ** the amount leftover
+
+when another whole group of
+
+the divisor cannot be made
+
+when dividing
+
+W
+
+**width ** how wide an object is
+
+from side to side (measured in
+
+same-sized units with no gaps
+
+or overlaps)
+
+**cociente parcial ** el valor que se
+
+obtiene al multiplicar el divisor
+
+de una ecuación de división por
+
+otro número para luego restar ese
+
+número al dividendo (que luego se
+
+suma a otros cocientes parciales
+
+para obtener el cociente total)
+
+**perímetro ** la longitud total
+
+del contorno de una figura
+
+bidimensional
+
+**cociente ** el resultado que se
+
+obtiene al dividir una cantidad
+
+por otra
+
+6 ÷ 3 = 2
+
+cociente
+
+**resto ** la cantidad que sobra
+
+cuando, al dividir, no se puede
+
+formar otro grupo completo
+
+en el divisor
+
+**ancho ** cuán ancho es un
+
+objeto de un lado al otro
+
+(debe medirse en unidades de
+
+una misma longitud, sin espacios
+
+ni superposiciones)
