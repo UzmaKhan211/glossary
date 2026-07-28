@@ -1,0 +1,496 @@
+{
+  "1": [
+    {
+      "word": "category",
+      "spanish_word": "categoría",
+      "spanish_definition": "un grupo de objetos que se parecen en algún aspecto",
+      "confidence": "high"
+    },
+    {
+      "word": "conjecture",
+      "spanish_word": "conjetura",
+      "spanish_definition": "expresión que crees que es cierta según la información dada",
+      "confidence": "high"
+    },
+    {
+      "word": "data",
+      "spanish_word": "datos",
+      "spanish_definition": "información sobre cosas o personas de un grupo",
+      "confidence": "high"
+    },
+    {
+      "word": "difference",
+      "spanish_word": "diferencia",
+      "spanish_definition": "la cantidad que obtienes cuando restas un número a otro 10 – 6 = 4 10 – 6 = 4",
+      "confidence": "high"
+    },
+    {
+      "word": "equal",
+      "spanish_word": "igual",
+      "spanish_definition": "la misma cantidad",
+      "confidence": "high"
+    },
+    {
+      "word": "sum",
+      "spanish_word": "suma",
+      "spanish_definition": "el total cuando se suman 2 o más números 8 + 6 = 14 8 + 6 = 14",
+      "confidence": "high"
+    },
+    {
+      "word": "survey",
+      "spanish_word": "encuesta",
+      "spanish_definition": "una herramienta que se puede utilizar para recopilar información sobre las respuestas de un grupo de personas a una determinada pregunta",
+      "confidence": "high"
+    }
+  ],
+  "2": [
+    {
+      "word": "add",
+      "spanish_word": "sumar",
+      "spanish_definition": "combinar números para hallar su suma",
+      "confidence": "high"
+    },
+    {
+      "word": "addend",
+      "spanish_word": "sumando",
+      "spanish_definition": "uno de los números que se suman para hallar la suma 5 + 6 = 11 5 + 6 = 11",
+      "confidence": "high"
+    },
+    {
+      "word": "data",
+      "spanish_word": "datos",
+      "spanish_definition": "información sobre cosas o personas de un grupo",
+      "confidence": "high"
+    },
+    {
+      "word": "difference",
+      "spanish_word": "diferencia",
+      "spanish_definition": "la cantidad que obtienes cuando restas un número a otro 10 – 6 = 4 10 – 6 = 4",
+      "confidence": "high"
+    },
+    {
+      "word": "equal",
+      "spanish_word": "igual",
+      "spanish_definition": "tener el mismo valor",
+      "confidence": "high"
+    },
+    {
+      "word": "equation",
+      "spanish_word": "ecuación",
+      "spanish_definition": "un enunciado matemático que muestra que los valores a cada lado del signo igual son los mismos 6 = 4 + 2 6 = 4 + 2",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition sentence is given in the source (mirrors the English entry, which is also just the headword with no definition text). Source lines were duplicated/garbled ('menor cantidad' then 'fewer menor cantidad'); the translation itself is unambiguous and confirmed by the identical pattern in unit4 and unit6."
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition sentence is given in the source (mirrors the English entry, which is also just the headword with no definition text). Source lines were duplicated/garbled; translation confirmed by the identical pattern in unit4 and unit6."
+    },
+    {
+      "word": "subtract",
+      "spanish_word": "restar",
+      "spanish_definition": "hallar la diferencia entre números",
+      "confidence": "high"
+    },
+    {
+      "word": "sum",
+      "spanish_word": "suma",
+      "spanish_definition": "el valor cuando se suman 2 o más números 8 + 6 = 14 8 + 6 = 14",
+      "confidence": "high"
+    },
+    {
+      "word": "survey",
+      "spanish_word": "encuesta",
+      "spanish_definition": "una herramienta que se puede utilizar para recopilar información sobre las respuestas de un grupo de personas a una determinada pregunta",
+      "confidence": "high"
+    }
+  ],
+  "3": [
+    {
+      "word": "one",
+      "spanish_word": "unidad",
+      "spanish_definition": "una cantidad que tiene un valor de 1 (plural: unidades)",
+      "confidence": "high"
+    },
+    {
+      "word": "ten",
+      "spanish_word": "decena",
+      "spanish_definition": "un grupo de 10 unidades (plural: decenas)",
+      "confidence": "high"
+    }
+  ],
+  "4": [
+    {
+      "word": "addend",
+      "spanish_word": "sumando",
+      "spanish_definition": "uno de los números que se suman para hallar la suma 5 + 6 = 11",
+      "confidence": "high"
+    },
+    {
+      "word": "conjecture",
+      "spanish_word": "conjetura",
+      "spanish_definition": "expresión que crees que es cierta según la información dada",
+      "confidence": "high"
+    },
+    {
+      "word": "digit",
+      "spanish_word": "dígito o cifra",
+      "spanish_definition": "un símbolo que se usa para escribir números; los dígitos son 0, 1, 2, 3, 4, 5, 6, 7, 8, y 9 (42 es un ejemplo de un número de dos dígitos)",
+      "confidence": "high"
+    },
+    {
+      "word": "equal",
+      "spanish_word": "igual",
+      "spanish_definition": "tener el mismo valor",
+      "confidence": "high"
+    },
+    {
+      "word": "estimate",
+      "spanish_word": "estimación, estimar",
+      "spanish_definition": "suposición que haces acerca de un valor basándote en lo que sabes",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition given in source (headword only, duplicated as 'menor cantidad' twice); mirrors the English entry which is also just the headword."
+    },
+    {
+      "word": "greater than",
+      "spanish_word": "mayor que",
+      "spanish_definition": "una frase que significa que un valor es mayor que otro valor 63 es mayor que 32. 63 > 32",
+      "confidence": "high"
+    },
+    {
+      "word": "less than",
+      "spanish_word": "menor que",
+      "spanish_definition": "una frase que significa que un valor es menor que otro valor 32 es menor que 63. 32 < 63",
+      "confidence": "high"
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition given in source (headword only, duplicated as 'mayor cantidad' twice); mirrors the English entry which is also just the headword."
+    },
+    {
+      "word": "one",
+      "spanish_word": "unidad",
+      "spanish_definition": "una cantidad que tiene un valor de 1 (plural: unidades)",
+      "confidence": "high"
+    },
+    {
+      "word": "ten",
+      "spanish_word": "decena",
+      "spanish_definition": "un grupo de 10 unidades (plural: decenas)",
+      "confidence": "high"
+    }
+  ],
+  "5": [
+    {
+      "word": "category",
+      "spanish_word": "categoría",
+      "spanish_definition": "un grupo de objetos que se parecen en algún aspecto",
+      "confidence": "high"
+    },
+    {
+      "word": "data",
+      "spanish_word": "datos",
+      "spanish_definition": "información sobre cosas o personas de un grupo",
+      "confidence": "high"
+    },
+    {
+      "word": "digit",
+      "spanish_word": "dígito",
+      "spanish_definition": "un símbolo que se usa para escribir números; los dígitos son 0, 1, 2, 3, 4, 5, 6, 7, 8, y 9 (42 es un ejemplo de un número de dos dígitos)",
+      "confidence": "high"
+    },
+    {
+      "word": "one",
+      "spanish_word": "unidad",
+      "spanish_definition": "una cantidad que tiene un valor de 1 (plural: unidades)",
+      "confidence": "high"
+    },
+    {
+      "word": "ten",
+      "spanish_word": "decena",
+      "spanish_definition": "un grupo de 10 unidades (plural: decenas)",
+      "confidence": "high"
+    }
+  ],
+  "6": [
+    {
+      "word": "add",
+      "spanish_word": "sumar",
+      "spanish_definition": "combinar números para hallar la suma",
+      "confidence": "high"
+    },
+    {
+      "word": "difference",
+      "spanish_word": "diferencia",
+      "spanish_definition": "la cantidad que obtienes cuando restas un número a otro 10 – 6 = 4 10 – 6 = 4",
+      "confidence": "high"
+    },
+    {
+      "word": "digit",
+      "spanish_word": "dígito",
+      "spanish_definition": "cualquiera de los números del 0 al 9",
+      "confidence": "high"
+    },
+    {
+      "word": "estimate",
+      "spanish_word": "estimación, estimar",
+      "spanish_definition": "suposición que haces acerca de un valor basándote en lo que sabes",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition given in source (headword only, duplicated as 'menor cantidad' / 'fewer menor cantidad'); mirrors the English entry which is also just the headword."
+    },
+    {
+      "word": "length",
+      "spanish_word": "longitud",
+      "spanish_definition": "cuán largo es un objeto de un extremo al otro (debe medirse en unidades de una misma longitud, sin dejar espacios ni poniendo una medida encima de otra)",
+      "confidence": "high"
+    },
+    {
+      "word": "longer",
+      "spanish_word": "más largo",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition given in source (headword only, duplicated twice as 'más largo'); mirrors the English entry which is also just the headword ('longerlonger' duplicated in source)."
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "No separate Spanish definition given in source (headword only, duplicated twice as 'mayor cantidad'); mirrors the English entry which is also just the headword."
+    },
+    {
+      "word": "one",
+      "spanish_word": "una unidad",
+      "spanish_definition": "una cantidad que tiene un valor de 1 (plural: unidades)",
+      "confidence": "high"
+    },
+    {
+      "word": "shorter",
+      "spanish_word": "más corto/más bajo",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Source gives two Spanish forms ('más corto' for length, 'más bajo' for height) joined as 'más corto/más bajo' on its own summary line, plus each form repeated once more on its own line; no separate definition sentence exists, mirroring the English entry which is also just the headword."
+    },
+    {
+      "word": "subtract",
+      "spanish_word": "restar",
+      "spanish_definition": "hallar la diferencia entre números",
+      "confidence": "high"
+    },
+    {
+      "word": "sum",
+      "spanish_word": "suma",
+      "spanish_definition": "el total cuando se suman 2 o más números 8 + 6 = 14 8 + 6 = 14",
+      "confidence": "high"
+    },
+    {
+      "word": "taller",
+      "spanish_word": "más alto",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Source line reads 'más altomás alto' (two copies of 'más alto' glued together with no space, mirroring the doubled English 'taller taller'). Reconstructed as the single word 'más alto' with no separate definition, but flagging because un-gluing two concatenated words required a judgment call beyond simple line-rejoining."
+    },
+    {
+      "word": "ten",
+      "spanish_word": "una decena",
+      "spanish_definition": "un grupo de 10 unidades (plural: decenas)",
+      "confidence": "high"
+    }
+  ],
+  "7": [
+    {
+      "word": "fourth",
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_definition": "cada parte de una figura que se divide en 4 partes iguales (plural: cuartos)",
+      "confidence": "high"
+    },
+    {
+      "word": "half",
+      "spanish_word": "mitad, medio",
+      "spanish_definition": "cada parte de una figura que se divide en 2 partes iguales (plural: mitades)",
+      "confidence": "high"
+    },
+    {
+      "word": "quarter",
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_definition": "cada parte de una figura dividida en 4 partes iguales",
+      "confidence": "high"
+    },
+    {
+      "word": "attribute",
+      "spanish_word": "atributo",
+      "spanish_definition": "característica o rasgo de un objeto o conjunto de objetos",
+      "confidence": "high"
+    },
+    {
+      "word": "cone",
+      "spanish_word": "cono",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "corner",
+      "spanish_word": "esquina",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "cube",
+      "spanish_word": "cubo",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "curved",
+      "spanish_word": "curvo",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "cylinder",
+      "spanish_word": "cilindro",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "equal",
+      "spanish_word": "igual",
+      "spanish_definition": "tener el mismo valor",
+      "confidence": "high"
+    },
+    {
+      "word": "expression",
+      "spanish_word": "",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "No standalone 'expression' headword entry exists anywhere in unit7.txt. The word only appears embedded inside the 'half past' definition ('an expression that means...' / 'una expresión que significa...'). No dedicated English or Spanish glossary entry for 'expression' could be found in this file."
+    },
+    {
+      "word": "face",
+      "spanish_word": "cara",
+      "spanish_definition": "una superficie plana de una figura tridimensional",
+      "confidence": "high"
+    },
+    {
+      "word": "flat shapes",
+      "spanish_word": "figura plana",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "half past",
+      "spanish_word": "y media",
+      "spanish_definition": "una expresión que significa que han transcurrido 30 minutos de una hora (ejemplo: el reloj muestra las cuatro y media o 4:30)",
+      "confidence": "high"
+    },
+    {
+      "word": "hour hand",
+      "spanish_word": "manecilla de horas",
+      "spanish_definition": "la aguja corta de un reloj que señala la hora y se mueve de una hora a otra",
+      "confidence": "high"
+    },
+    {
+      "word": "minute hand",
+      "spanish_word": "manecilla de minutos, minutero",
+      "spanish_definition": "la aguja larga en un reloj que señala las marcas alrededor del reloj indicando cuántos minutos han pasado y da la vuelta al círculo completo en una hora",
+      "confidence": "high"
+    },
+    {
+      "word": "rectangle",
+      "spanish_word": "rectángulo",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "This page's extraction is garbled: the English column shows 'rectanglesquare' (rectangle and square glued together with no definitions) and the Spanish column shows 'rectángulo' followed by a stray line 'rectangles' then 'rectángulos', then 'cuadrado square' then 'cuadrado'. Reconstructed 'rectangle' -> 'rectángulo' by position/order, but the stray 'rectangles'/'rectángulos' fragments (possibly a plural-form aside) could not be confidently placed, so flagging as low confidence."
+    },
+    {
+      "word": "rectangular prism",
+      "spanish_word": "prisma rectangular",
+      "spanish_definition": "un cuerpo geométrico con 6 caras rectangulares",
+      "confidence": "high"
+    },
+    {
+      "word": "side",
+      "spanish_word": "lado",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "solid shape",
+      "spanish_word": "cuerpo geométrico",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "sphere",
+      "spanish_word": "esfera",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "square",
+      "spanish_word": "cuadrado",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Same garbled page as 'rectangle': English shows 'rectanglesquare' glued together, and Spanish shows 'cuadrado square' glued together right before a final standalone 'cuadrado' line. Reconstructed 'square' -> 'cuadrado' by position/order, but the glued 'cuadrado square' fragment could not be fully explained, so flagging as low confidence."
+    },
+    {
+      "word": "square corner",
+      "spanish_word": "esquina en ángulo recto",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "straight",
+      "spanish_word": "recto",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "triangle",
+      "spanish_word": "triángulo",
+      "spanish_definition": "",
+      "confidence": "high",
+      "note": "Headword-only entry in source, no definition sentence given for either English or Spanish."
+    },
+    {
+      "word": "triangular prism",
+      "spanish_word": "prisma triangular",
+      "spanish_definition": "un cuerpo geométrico con 2 caras triangulares y 3 caras rectangulares",
+      "confidence": "high"
+    }
+  ]
+}
