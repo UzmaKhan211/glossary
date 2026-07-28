@@ -68,12 +68,17 @@ and "the image" both take a little judgment:
   1-2 like *cone*, *taller*, *fewer*) paste the image directly into
   `Current`/`New Entry` since those rows don't need text. Priority, newest
   first: `Feedback` > `Image` > `New Entry` > `Current`.
-- **Word**: derived from column A (`"a foot/ feet"` -> `"foot"`). Column D
-  ("Overall Feedback") is mostly free-form editorial notes ("add in 5th",
-  "remove from 2nd"), *not* a reliable word source — it's only used when it
-  literally says `entry: X` / `entry word: X`. Two rows needed a manual
-  override after auditing the sheet by hand (see `MANUAL_WORD_OVERRIDES` in
-  `scripts/extract_data.py`); everything else is programmatic.
+- **Word**: derived from column A (`"a foot/ feet"` -> `"foot"`), then column D
+  ("Overall Feedback") is applied on top when it's an actual word edit rather
+  than an editorial note. Every one of the 34 non-empty D values in the sheet
+  was hand-classified into one of three buckets (`apply_word_feedback` in
+  `scripts/extract_data.py`): (1) states the replacement word/phrase directly —
+  a bare word ("centimeter"), an `entry: X` / `entry word: X` / `change entry
+  to X` prefix — used verbatim; (2) a sentence instructing an edit to make
+  ("remove parentheses around sides") — parsed and applied to column A's word;
+  (3) a grade-placement note ("add in 5th", "adding this in to 2nd", "remove
+  from 2nd") — not a word edit at all, ignored. No manual per-row overrides
+  remain; the whole 34-row set is handled by these three general rules.
 
 Every one of those decisions is logged per-card in `data/qa_report.md` —
 check it after any re-extraction, especially if the sheet's column layout
@@ -97,29 +102,40 @@ writes `output/unit_vocab_sheet.xlsx` (one tab per grade, plus an
 "Unmapped" tab), `data/unit_vocab.json` (same data as JSON), and
 `data/unit_sheet_qa.md`.
 
-This currently only covers **grades with unit-glossary PDFs on hand**
-(Kindergarten and Grade 5) — `data/unit_glossary_raw/<grade>/unit<N>.txt`
-holds the plain-text dump of each PDF (there's no API to re-fetch these
-automatically; they were pulled from the provided Drive folders and pasted
-in). To add another grade, create `data/unit_glossary_raw/<grade>/unitN.txt`
-for each of its unit PDFs and rerun the script — nothing else changes.
+All 6 grades are now covered (K, 1, 2, 3, 4: 7 units each except Grade 2,
+which has 8; Grade 5: 7 units) — `data/unit_glossary_raw/<grade>/unit<N>.txt`
+holds the plain-text dump of each unit's PDF (there's no API to re-fetch
+these automatically; they were pulled from the provided Drive folders and
+pasted in). To add a grade that gets new/updated unit PDFs later, replace
+its `unitN.txt` files and rerun the script — nothing else changes. Current
+mapping rate: K 61/61, Grade 1 48/50, Grade 2 75/82, Grade 3 77/89,
+Grade 4 62/67, Grade 5 61/69 — the rest are on the "Unmapped" tab.
 
 A word can legitimately show up in more than one unit (curriculum glossaries
 are cumulative — a term introduced in an early unit gets repeated in later
 units' glossaries). The script assigns each word to the **earliest** unit it
-appears in and notes every later reappearance in `unit_sheet_qa.md`. Some
-words never turn up in any provided unit glossary at all — for Grade 5,
-that's `adjacent`, `Commutative Property of Addition`, `conjecture`,
-`defining attribute`, `inequality`, `parentheses`, `tape diagram`, and
-`vertex`; they land on the "Unmapped" tab rather than being silently
-dropped, most likely because they belong to a unit past 7 that wasn't
-provided. Matching tolerates simple plural (`shape`/`shapes`) and
-hyphen/parenthesis (`x-coordinate`/`x coordinate`, `parallel (lines)`/
-`parallel lines`) differences between how a word is written in the
-spreadsheet versus the unit PDF; two forms that were genuine rewordings
-rather than formatting differences (K's "less than"/"more than" -> "less"/
-"more") are handled with a small, documented alias table
+appears in and notes every later reappearance in `unit_sheet_qa.md`. Words
+that never turn up in any provided unit glossary at all land on the
+"Unmapped" tab rather than being silently dropped, most likely because they
+belong to a unit past what was provided. Matching tolerates simple plural
+(`shape`/`shapes`) and hyphen/parenthesis (`x-coordinate`/`x coordinate`,
+`parallel (lines)`/`parallel lines`) differences between how a word is
+written in the spreadsheet versus the unit PDF; two forms that were genuine
+rewordings rather than formatting differences (K's "less than"/"more than"
+-> "less"/"more") are handled with a small, documented alias table
 (`WORD_ALIASES` in the script) rather than a fuzzier heuristic.
+
+**Known issue, not yet fixed:** the matcher is a plain substring search
+across each unit's flattened text, so it can't always tell "this word is
+being defined here" apart from "this word happens to appear inside a
+*different* word's definition." Confirmed examples in Grade 5: `rectangle`
+gets filed under Unit 4 (which only mentions "rectangl**es**" inside
+*rectangular prism*'s definition) instead of Unit 7 (which actually defines
+it); `product`, `sum`, and `base` have similar off-by-a-few-units errors.
+The same matcher runs across grades 1-4 now too, so the same class of error
+almost certainly exists there as well — it just hasn't been hand-verified
+word-by-word the way Grade 5 was. Flagging this rather than silently
+shipping it; fixing the matcher (or hand-verifying the rest) is pending.
 
 This spreadsheet is a standalone deliverable for review right now — the
 card generator (`generate.py`) still reads `data/vocab.json` directly and

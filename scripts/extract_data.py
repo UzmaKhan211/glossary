@@ -25,9 +25,23 @@ sheet -- see conversation / audit notes):
   first: Feedback > Image > New Entry > Current.
 
   Word: derived from column A (handles "a foot/ feet" -> "foot" style
-  variants). Column D ("Overall Feedback") is mostly free-form editorial notes
-  ("add in 5th", "remove from 2nd") and is NOT a reliable word source, except
-  when it literally reads "entry: X" / "entry word: X", which means "use X".
+  variants), then column D ("Overall Feedback") is applied on top when it
+  carries an actual word edit. D is free-form editorial commentary, so each
+  non-empty value is classified into one of three buckets (see
+  apply_word_feedback / WORD_FEEDBACK_IGNORE_RE below):
+    1. States a specific replacement word/phrase directly ("centimeter"),
+       via an "entry: X" / "entry word: X" / "change entry to X" prefix, or
+       as a bare word with no recognized prefix at all -> use it verbatim.
+    2. A sentence instructing an edit to make to the word itself
+       ("remove parentheses around sides") -> the instruction is parsed and
+       applied to column A's word (only "remove parentheses around <X>" is
+       known to occur; if there's nothing matching "(<X>)" to remove --
+       e.g. row 154, where the parenthetical it's referring to is actually
+       in the grade 5 definition text, already stripped by clean_definition,
+       not in the word -- this is a no-op and normal column-A cleaning is
+       used instead).
+    3. Grade-placement/scope notes ("add in 5th", "adding this in to 2nd",
+       "remove from 2nd") -> not a word edit at all, ignored.
 """
 import base64
 import json
@@ -57,15 +71,15 @@ ROLE_NAMES = ("current", "image", "feedback", "new_entry")
 # Image priority, newest/most-authoritative first.
 IMAGE_ROLE_PRIORITY = ("feedback", "image", "new_entry", "current")
 
-# Confirmed one-off word corrections found during data audit (see qa_report.md).
-# D column said something like "remove parentheses around sides" (an instruction,
-# not a literal replacement word) -- these are hand-fixed rather than guessed at.
-MANUAL_WORD_OVERRIDES = {
-    17: "adjacent",       # D: "remove parentheses around sides" -> "adjacent (sides)" -> "adjacent"
-    106: "hundredths",    # A: "hundreths** " (typo + stray markup) -> corrected spelling
-}
-
 ENTRY_PREFIX_RE = re.compile(r"^(?:entry word|entry)\s*:\s*(.+)$", re.IGNORECASE)
+CHANGE_ENTRY_RE = re.compile(r"^change entry to (.+)$", re.IGNORECASE)
+# Trailing grade-scope clause tacked onto a "change entry to" note, e.g.
+# "change entry to one in 1st and up" -- not part of the word itself.
+GRADE_SCOPE_SUFFIX_RE = re.compile(r"\s+in\s+\d\w*.*$", re.IGNORECASE)
+# Grade-placement notes ("add in 5th", "adding this in to 2nd", "remove from
+# 2nd") -- not word edits, ignore entirely.
+IGNORE_FEEDBACK_RE = re.compile(r"^(add(?:ing)?\b.*?\bin\b|remove from\b)", re.IGNORECASE)
+REMOVE_PARENS_RE = re.compile(r"remove parentheses.*?around\s+\(?([\w /]+?)\)?\s*$", re.IGNORECASE)
 LEADING_ARTICLE_RE = re.compile(r"^(a|an)\s+", re.IGNORECASE)
 TRAILING_NUMERIC_PAREN_RE = re.compile(r"\s*\(\d[\d/]*\)\s*$")
 LEADING_ASTERISK_CALLOUT_RE = re.compile(r"^\*{2,}[^*]*\*{2,}\s*")
@@ -108,14 +122,40 @@ def clean_definition(raw, word):
     return text
 
 
-def clean_word(a_raw, d_raw, row):
-    if row in MANUAL_WORD_OVERRIDES:
-        return MANUAL_WORD_OVERRIDES[row]
-
+def apply_word_feedback(a_raw, d_raw):
+    """Classify a non-empty 'Overall Feedback' value and, if it's actually a
+    word edit (as opposed to a grade-placement note), return the resulting
+    word. Returns None if there's no feedback to apply, or the feedback
+    doesn't end up changing anything (see REMOVE_PARENS_RE case)."""
     d = str(d_raw).strip() if d_raw else ""
+    if not d:
+        return None
+    if IGNORE_FEEDBACK_RE.match(d):
+        return None
+
     m = ENTRY_PREFIX_RE.match(d)
     if m:
-        return m.group(1).strip()
+        return m.group(1).strip().lower()
+
+    m = CHANGE_ENTRY_RE.match(d)
+    if m:
+        return GRADE_SCOPE_SUFFIX_RE.sub("", m.group(1)).strip().lower()
+
+    m = REMOVE_PARENS_RE.search(d)
+    if m:
+        inner = m.group(1).strip()
+        s = str(a_raw).split("\n")[0]
+        stripped = re.sub(r"\s*\(" + re.escape(inner) + r"\)", "", s, flags=re.IGNORECASE).strip()
+        return stripped if stripped != s else None
+
+    # Bare word/phrase with no recognized prefix -- e.g. "centimeter", "gram".
+    return d.lower()
+
+
+def clean_word(a_raw, d_raw, row):
+    feedback_word = apply_word_feedback(a_raw, d_raw)
+    if feedback_word:
+        return feedback_word
 
     s = str(a_raw).split("\n")[0]
     s = s.split("/")[0]

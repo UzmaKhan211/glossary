@@ -386,11 +386,11 @@ Total cards per grade: {'K': 61, '1': 50, '2': 82, '3': 89, '4': 67, '5': 69}
 - row 220 | grade 1 | word='ten' | text_source=new_entry | image_source=image (image173.png)
 - row 220 | grade 2 | word='ten' | text_source=new_entry | image_source=image (image173.png)
 - row 220 | grade 3 | word='ten' | text_source=new_entry | image_source=none
-- row 221 | grade 4 | word='ten thousands' | text_source=new_entry | image_source=none
+- row 221 | grade 4 | word='ten thousand' | text_source=new_entry | image_source=none
 - row 222 | grade 5 | word='tenth' | text_source=new_entry | image_source=none
 - row 223 | grade K | word='thirteen' | text_source=none | image_source=current (image156.png)
-- row 224 | grade 3 | word='thousands' | text_source=new_entry | image_source=none
-- row 224 | grade 4 | word='thousands' | text_source=new_entry | image_source=none
+- row 224 | grade 3 | word='thousand' | text_source=new_entry | image_source=none
+- row 224 | grade 4 | word='thousand' | text_source=new_entry | image_source=none
 - row 225 | grade 5 | word='thousandth' | text_source=new_entry | image_source=none
 - row 226 | grade K | word='three' | text_source=none | image_source=current (image150.png)
 - row 227 | grade 2 | word='three-dimensional' | text_source=new_entry | image_source=image (image154.png)
