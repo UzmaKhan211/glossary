@@ -52,6 +52,74 @@ WORD_ALIASES = {
     "more than": "more",
 }
 
+# word_in_text() is a plain substring search over each unit's flattened text,
+# so it can't distinguish "this word is being defined here" from "this word
+# happens to appear inside a *different* word's definition" -- e.g. Grade 5
+# Unit 4 never defines "rectangle", it defines "rectangular prism" ("a solid
+# figure with 6 faces that are all rectangl[e]s"), and the plural-tolerance
+# rule matches that incidental "rectangles" as if it were rectangle's own
+# entry. A second, related failure mode showed up in grades 2-4: a word that
+# is genuinely just the tail of a *different*, longer compound term ("foot"
+# inside "square foot", "denominator" inside "common denominator") gets
+# credited with a match that isn't really about it at all.
+#
+# Every (grade, word) below was hand-verified against the actual unit text in
+# data/unit_glossary_raw/ -- read the surrounding sentence, decided whether it
+# was that word's own "word <definition>" entry or just incidental use inside
+# someone else's definition, and rebuilt the true unit list from scratch. This
+# REPLACES word_in_text()'s automatic result for these entries (rather than
+# only nudging the primary unit) so the "also referenced in" list is accurate
+# too, not just the primary placement. An empty list means the word never has
+# a real standalone entry in any of the provided units, despite an incidental
+# text match -- it should land on the Unmapped tab, not get a fake unit.
+VERIFIED_UNIT_CORRECTIONS = {
+    # Grade 1
+    ("1", "more"): [2, 4, 6],  # unit 1 only had "...or MORE numbers..." inside sum's definition
+    ("1", "one"): [3, 4, 5, 6],  # units 1-2 only had "...subtract ONE number...", "addend ONE OF the..."
+    ("1", "side"): [7],  # unit 2 only had "...on each SIDE of the equal sign..." inside equation's definition
+    ("1", "subtract"): [2, 6],  # unit 1 only had "...when you SUBTRACT one number..." inside difference's definition
+    ("1", "sum"): [1, 2, 6],  # unit 4's only "sum" hit was incidental, inside addend's definition
+
+    # Grade 2
+    ("2", "foot"): [3],  # unit 6's only hit was "...12 inches is equal to 1 FOOT" inside inch's definition
+    ("2", "meter"): [3],  # unit 6's only hit was "...is equal to 1 METER" inside centimeter's definition
+    ("2", "digit"): [7],  # unit 5's hits were both incidental (expanded form's/standard form's definitions)
+    ("2", "equal"): [8],  # units 2,3,6,7 only ever use "equal"/"equally" inside other words' definitions
+    ("2", "expression"): [7, 8],  # units 5,6 only had "an EXPRESSION that means..." inside half past/quarter past
+    ("2", "length"): [],  # no unit has a real "length" entry; all 3 hits were incidental ("unit of length")
+    ("2", "number line"): [4],  # unit 3's hit was inside line plot's definition ("above a number line")
+    ("2", "one"): [7],  # units 5,8 only had incidental "...100 ONES", "addend ONE OF the numbers..."
+    ("2", "point"): [4],  # unit 6's hits were incidental, inside hour hand's/minute hand's definitions
+    ("2", "rectangle"): [6],  # unit 1's hits were incidental, inside bar graph's/tape diagram's definitions
+    ("2", "sum"): [7, 8],  # unit 2's only hit was inside Commutative Property of Addition's definition
+    ("2", "ten"): [7],  # unit 5's only hit was "...group of 10 TENS..." inside hundred's definition
+
+    # Grade 3
+    ("3", "foot"): [],  # no real "foot" entry; unit 2 only has "square foot" (different term), unit 6 incidental
+    ("3", "inch"): [6],  # unit 2 only has "square inch" (different term), no standalone "inch" entry
+    ("3", "equation"): [4],  # unit 2's only hit was inside parentheses' definition ("expressions or equations")
+    ("3", "expression"): [4],  # unit 2's only hit was inside parentheses' definition ("used in expressions")
+    ("3", "square"): [7],  # units 2,4 only have "square centimeter/foot/inch" (different terms) + "square units"
+    ("3", "sum"): [],  # no real "sum" entry; unit 4 incidental (Distributive Property), unit 6 incidental (add)
+    ("3", "two-dimensional"): [7],  # units 2,4 only use it as a descriptor inside area's definition
+
+    # Grade 4
+    ("4", "denominator"): [3],  # unit 2 only has "common denominator"/"common numerator" (different terms)
+    ("4", "factor pair"): [4, 5],  # units 1,3 only had it inside composite number's/prime number's definitions
+    ("4", "length"): [6],  # units 5,7 only had "unit of length", "equal-length sides" (descriptive, not the entry)
+    ("4", "numerator"): [3],  # unit 2 only has "common numerator" (different term), no standalone "numerator"
+    ("4", "point"): [7],  # unit 4 only has "decimal point" (different term), no standalone "point" entry
+
+    # Grade 5 (originally reported, now fixed)
+    ("5", "rectangle"): [7],  # unit 4 only defines "rectangular prism"; "rectangles" there is incidental
+    ("5", "base"): [6],  # unit 5's only hit was "base-ten place value" inside hundredths'/tenth's definitions
+    ("5", "product"): [3, 4, 5, 6],  # units 1,2 only had "product" inside Associative Property's/factor's definitions
+    ("5", "sum"): [4, 5, 6],  # units 2,3 only had "sum" inside Distributive Property's definition
+    ("5", "equation"): [3, 5],  # unit 4's hit was incidental, inside partial quotients' definition
+    ("5", "expression"): [2, 3, 4, 5],  # unit 6's hits were incidental, inside exponent's definition
+    ("5", "volume"): [1, 4],  # unit 6's hits were incidental, inside cup's/gallon's "liquid volume unit" phrasing
+}
+
 
 def normalize(text):
     text = text.lower()
@@ -115,7 +183,9 @@ def build_unit_vocab():
         qa_lines.append(f"\n## Grade {grade} (units available: {sorted(unit_texts)})\n")
         grade_entries = []
         for card in cards:
-            units_found = word_to_units[card["word"]]
+            correction_key = (grade, card["word"])
+            corrected = correction_key in VERIFIED_UNIT_CORRECTIONS
+            units_found = VERIFIED_UNIT_CORRECTIONS[correction_key] if corrected else word_to_units[card["word"]]
             primary_unit = units_found[0] if units_found else None
             entry = {
                 "word": card["word"],
@@ -125,13 +195,16 @@ def build_unit_vocab():
                 "all_units": units_found,
             }
             grade_entries.append(entry)
+            tag = " [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]" if corrected else ""
             if not units_found:
-                qa_lines.append(f"- UNMAPPED: '{card['word']}' -- not found in any provided unit glossary")
+                qa_lines.append(f"- UNMAPPED: '{card['word']}' -- not found in any provided unit glossary{tag}")
             elif len(units_found) > 1:
                 qa_lines.append(
                     f"- '{card['word']}' appears in units {units_found} -- filed under unit {primary_unit} "
-                    f"(earliest), also referenced later"
+                    f"(earliest), also referenced later{tag}"
                 )
+            elif corrected:
+                qa_lines.append(f"- '{card['word']}' filed under unit {primary_unit}{tag}")
         unit_vocab[grade] = grade_entries
 
     (DATA_DIR / "unit_vocab.json").write_text(json.dumps(unit_vocab, indent=2))

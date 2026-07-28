@@ -875,9 +875,8 @@
       "word": "more",
       "text": "",
       "image": "1/136_more.png",
-      "primary_unit": 1,
+      "primary_unit": 2,
       "all_units": [
-        1,
         2,
         4,
         6
@@ -887,10 +886,8 @@
       "word": "one",
       "text": "an amount that has a value of 1 (plural: ones)",
       "image": "1/148_one.png",
-      "primary_unit": 1,
+      "primary_unit": 3,
       "all_units": [
-        1,
-        2,
         3,
         4,
         5,
@@ -928,9 +925,8 @@
       "word": "side",
       "text": "",
       "image": "1/198_side.png",
-      "primary_unit": 2,
+      "primary_unit": 7,
       "all_units": [
-        2,
         7
       ]
     },
@@ -990,9 +986,8 @@
       "word": "subtract",
       "text": "to find the difference between numbers",
       "image": null,
-      "primary_unit": 1,
+      "primary_unit": 2,
       "all_units": [
-        1,
         2,
         6
       ]
@@ -1005,7 +1000,6 @@
       "all_units": [
         1,
         2,
-        4,
         6
       ]
     },
@@ -1083,8 +1077,7 @@
       "image": null,
       "primary_unit": 3,
       "all_units": [
-        3,
-        6
+        3
       ]
     },
     {
@@ -1121,8 +1114,7 @@
       "image": null,
       "primary_unit": 3,
       "all_units": [
-        3,
-        6
+        3
       ]
     },
     {
@@ -1332,9 +1324,8 @@
       "word": "digit",
       "text": "a symbol used to write numbers; the digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 (42 is an example of a two-digit number)",
       "image": null,
-      "primary_unit": 5,
+      "primary_unit": 7,
       "all_units": [
-        5,
         7
       ]
     },
@@ -1367,12 +1358,8 @@
       "word": "equal",
       "text": "having the same value",
       "image": null,
-      "primary_unit": 2,
+      "primary_unit": 8,
       "all_units": [
-        2,
-        3,
-        6,
-        7,
         8
       ]
     },
@@ -1415,10 +1402,8 @@
       "word": "expression",
       "text": "a statement with at least 2 numbers and at least 1 math operation (such as addition or subtraction)",
       "image": "2/85_expression.png",
-      "primary_unit": 5,
+      "primary_unit": 7,
       "all_units": [
-        5,
-        6,
         7,
         8
       ]
@@ -1479,12 +1464,8 @@
       "word": "length",
       "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
       "image": "2/116_length.png",
-      "primary_unit": 1,
-      "all_units": [
-        1,
-        3,
-        6
-      ]
+      "primary_unit": null,
+      "all_units": []
     },
     {
       "word": "less than",
@@ -1540,9 +1521,8 @@
       "word": "number line",
       "text": "a diagram that represents numbers as distances from 0 using equally-spaced tick marks",
       "image": "2/143_number-line.png",
-      "primary_unit": 3,
+      "primary_unit": 4,
       "all_units": [
-        3,
         4
       ]
     },
@@ -1559,11 +1539,9 @@
       "word": "one",
       "text": "an amount that has a value of 1 (plural: ones)",
       "image": "2/148_one.png",
-      "primary_unit": 5,
+      "primary_unit": 7,
       "all_units": [
-        5,
-        7,
-        8
+        7
       ]
     },
     {
@@ -1617,8 +1595,7 @@
       "image": "2/167_point.png",
       "primary_unit": 4,
       "all_units": [
-        4,
-        6
+        4
       ]
     },
     {
@@ -1661,9 +1638,8 @@
       "word": "rectangle",
       "text": "a shape with 4 sides and 4 square corners",
       "image": "2/180_rectangle.png",
-      "primary_unit": 1,
+      "primary_unit": 6,
       "all_units": [
-        1,
         6
       ]
     },
@@ -1750,9 +1726,8 @@
       "word": "sum",
       "text": "the value when 2 or more numbers are added",
       "image": "2/214_sum.png",
-      "primary_unit": 2,
+      "primary_unit": 7,
       "all_units": [
-        2,
         7,
         8
       ]
@@ -1777,9 +1752,8 @@
       "word": "ten",
       "text": "a group of 10 ones (plural: tens)",
       "image": "2/220_ten.png",
-      "primary_unit": 5,
+      "primary_unit": 7,
       "all_units": [
-        5,
         7
       ]
     },
@@ -1834,11 +1808,8 @@
       "word": "foot",
       "text": "a unit of length in the U.S. customary measurement system that is 12 inches long (plural: feet)",
       "image": null,
-      "primary_unit": 2,
-      "all_units": [
-        2,
-        6
-      ]
+      "primary_unit": null,
+      "all_units": []
     },
     {
       "word": "fourth",
@@ -1954,9 +1925,8 @@
       "word": "inch",
       "text": "a unit of length in the U.S. customary measurement system (12 inches is equal to one foot)",
       "image": null,
-      "primary_unit": 2,
+      "primary_unit": 6,
       "all_units": [
-        2,
         6
       ]
     },
@@ -2138,9 +2108,8 @@
       "word": "equation",
       "text": "a math statement showing that the values on each side of the equal sign are the same",
       "image": "3/77_equation.png",
-      "primary_unit": 2,
+      "primary_unit": 4,
       "all_units": [
-        2,
         4
       ]
     },
@@ -2182,9 +2151,8 @@
       "word": "expression",
       "text": "a statement with at least 2 numbers and at least 1 math operation (such as addition, subtraction, multiplication, or division)",
       "image": "3/85_expression.png",
-      "primary_unit": 2,
+      "primary_unit": 4,
       "all_units": [
-        2,
         4
       ]
     },
@@ -2505,10 +2473,8 @@
       "word": "square",
       "text": "a quadrilateral with four equal sides and 4 square corners",
       "image": "3/204_square.png",
-      "primary_unit": 2,
+      "primary_unit": 7,
       "all_units": [
-        2,
-        4,
         7
       ]
     },
@@ -2568,11 +2534,8 @@
       "word": "sum",
       "text": "the value when 2 or more numbers are added",
       "image": null,
-      "primary_unit": 4,
-      "all_units": [
-        4,
-        6
-      ]
+      "primary_unit": null,
+      "all_units": []
     },
     {
       "word": "ten",
@@ -2594,10 +2557,8 @@
       "word": "two-dimensional",
       "text": "a term that describes flat objects with the two measurable dimensions of length and width",
       "image": "3/236_two-dimensional.png",
-      "primary_unit": 2,
+      "primary_unit": 7,
       "all_units": [
-        2,
-        4,
         7
       ]
     },
@@ -2751,9 +2712,8 @@
       "word": "denominator",
       "text": "the bottom number in a fraction that tells how many equal parts the whole was partitioned into",
       "image": null,
-      "primary_unit": 2,
+      "primary_unit": 3,
       "all_units": [
-        2,
         3
       ]
     },
@@ -2796,10 +2756,8 @@
       "word": "factor pair",
       "text": "a set of two numbers that arrive at a specific number when multiplied (ex: 4 and 6 is a factor pair of 24)",
       "image": null,
-      "primary_unit": 1,
+      "primary_unit": 4,
       "all_units": [
-        1,
-        3,
         4,
         5
       ]
@@ -2853,11 +2811,9 @@
       "word": "length",
       "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
       "image": null,
-      "primary_unit": 5,
+      "primary_unit": 6,
       "all_units": [
-        5,
-        6,
-        7
+        6
       ]
     },
     {
@@ -2936,9 +2892,8 @@
       "word": "numerator",
       "text": "the top number in a fraction that tells how many of the equal parts are being described",
       "image": null,
-      "primary_unit": 2,
+      "primary_unit": 3,
       "all_units": [
-        2,
         3
       ]
     },
@@ -3042,9 +2997,8 @@
       "word": "point",
       "text": "a location in space",
       "image": "4/167_point.png",
-      "primary_unit": 4,
+      "primary_unit": 7,
       "all_units": [
-        4,
         7
       ]
     },
@@ -3295,9 +3249,8 @@
       "word": "base",
       "text": "the number being multiplied by itself in exponential form",
       "image": null,
-      "primary_unit": 5,
+      "primary_unit": 6,
       "all_units": [
-        5,
         6
       ]
     },
@@ -3438,7 +3391,6 @@
       "primary_unit": 3,
       "all_units": [
         3,
-        4,
         5
       ]
     },
@@ -3470,8 +3422,7 @@
         2,
         3,
         4,
-        5,
-        6
+        5
       ]
     },
     {
@@ -3671,10 +3622,8 @@
       "word": "product",
       "text": "the value when 2 or more numbers are multiplied",
       "image": null,
-      "primary_unit": 1,
+      "primary_unit": 3,
       "all_units": [
-        1,
-        2,
         3,
         4,
         5,
@@ -3716,9 +3665,8 @@
       "word": "rectangle",
       "text": "a quadrilateral with 2 pairs of opposite sides that are parallel and of equal length and 4 right angles",
       "image": "5/180_rectangle.png",
-      "primary_unit": 4,
+      "primary_unit": 7,
       "all_units": [
-        4,
         7
       ]
     },
@@ -3789,10 +3737,8 @@
       "word": "sum",
       "text": "the total when 2 or more numbers are added",
       "image": null,
-      "primary_unit": 2,
+      "primary_unit": 4,
       "all_units": [
-        2,
-        3,
         4,
         5,
         6
@@ -3865,8 +3811,7 @@
       "primary_unit": 1,
       "all_units": [
         1,
-        4,
-        6
+        4
       ]
     },
     {

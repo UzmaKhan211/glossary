@@ -108,7 +108,7 @@ holds the plain-text dump of each unit's PDF (there's no API to re-fetch
 these automatically; they were pulled from the provided Drive folders and
 pasted in). To add a grade that gets new/updated unit PDFs later, replace
 its `unitN.txt` files and rerun the script — nothing else changes. Current
-mapping rate: K 61/61, Grade 1 48/50, Grade 2 75/82, Grade 3 77/89,
+mapping rate: K 61/61, Grade 1 48/50, Grade 2 74/82, Grade 3 75/89,
 Grade 4 62/67, Grade 5 61/69 — the rest are on the "Unmapped" tab.
 
 A word can legitimately show up in more than one unit (curriculum glossaries
@@ -125,17 +125,29 @@ rewordings rather than formatting differences (K's "less than"/"more than"
 -> "less"/"more") are handled with a small, documented alias table
 (`WORD_ALIASES` in the script) rather than a fuzzier heuristic.
 
-**Known issue, not yet fixed:** the matcher is a plain substring search
-across each unit's flattened text, so it can't always tell "this word is
-being defined here" apart from "this word happens to appear inside a
-*different* word's definition." Confirmed examples in Grade 5: `rectangle`
-gets filed under Unit 4 (which only mentions "rectangl**es**" inside
-*rectangular prism*'s definition) instead of Unit 7 (which actually defines
-it); `product`, `sum`, and `base` have similar off-by-a-few-units errors.
-The same matcher runs across grades 1-4 now too, so the same class of error
-almost certainly exists there as well — it just hasn't been hand-verified
-word-by-word the way Grade 5 was. Flagging this rather than silently
-shipping it; fixing the matcher (or hand-verifying the rest) is pending.
+**Fixed: false-positive unit placements.** The matcher is a plain substring
+search across each unit's flattened text, so on its own it can't tell "this
+word is being defined here" apart from "this word happens to appear inside
+a *different* word's definition" -- e.g. Grade 5 Unit 4 never defines
+"rectangle," it defines *rectangular prism* ("a solid figure with 6 faces
+that are all rectangl**es**"), and the plural-tolerance rule matched that
+incidental "rectangles" as if it were rectangle's own entry. A related
+failure mode showed up in grades 2-4: a word that's genuinely just the tail
+of a longer, different compound term ("foot" inside "square foot",
+"denominator" inside "common denominator") gets credited with a match that
+isn't really about it at all.
+
+Every word flagged as appearing in 2+ units (plus every word that could
+plausibly hit this bug) was hand-checked against the actual unit text --
+36 corrected (grade, word) pairs across all 6 grades are in
+`VERIFIED_UNIT_CORRECTIONS` in `scripts/build_unit_sheet.py`, each with a
+comment citing exactly what the false match was. Three words came out with
+**no** genuine standalone entry in any provided unit at all (Grade 2
+`length`, Grade 3 `foot`, Grade 3 `sum` -- all previously mis-filed under a
+unit that only used the word incidentally) and now correctly land on the
+Unmapped tab instead. `unit_sheet_qa.md` tags every corrected entry with
+`[hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]` so the fix is traceable
+back to its reasoning, not just a silent number change.
 
 This spreadsheet is a standalone deliverable for review right now — the
 card generator (`generate.py`) still reads `data/vocab.json` directly and
