@@ -13,7 +13,9 @@
 - 'expression' appears in units [4, 5, 6, 7] -- filed under unit 4 (earliest), also referenced later
 - 'fewer' appears in units [2, 3, 7] -- filed under unit 2 (earliest), also referenced later
 - 'five' appears in units [2, 4, 7] -- filed under unit 2 (earliest), also referenced later
+- 'flat shapes' (unit 7): Spanish translation is low-confidence -- Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled.
 - 'four' appears in units [2, 4, 5, 7] -- filed under unit 2 (earliest), also referenced later
+- 'heavier' (unit 7): Spanish translation is low-confidence -- Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled.
 - 'less than' appears in units [2, 7] -- filed under unit 2 (earliest), also referenced later
 - 'more' appears in units [2, 3, 7] -- filed under unit 2 (earliest), also referenced later
 - 'rectangle' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
@@ -21,6 +23,7 @@
 - 'shorter' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
 - 'square' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
 - 'subtract' appears in units [4, 7] -- filed under unit 4 (earliest), also referenced later
+- 'teen number' (unit 6): Spanish translation is low-confidence -- No Spanish-language headword or definition for 'teen number' appears anywhere in unit 6's source text (checked both the cleaned and raw text dumps). In the position where a Spanish translation would be, the PDF shows only the shared numeral illustration '11 12 13 14 15' / '16 17 18 19' (identical in both the English and Spanish columns). This is a best-effort placeholder using that numeral content, not a verbatim word translation -- flagging per instructions since no clean Spanish text could be found.
 - 'three' appears in units [2, 4, 5, 7] -- filed under unit 2 (earliest), also referenced later
 - 'total' appears in units [4, 5] -- filed under unit 4 (earliest), also referenced later
 - 'triangle' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
@@ -37,14 +40,22 @@
 - 'digit' appears in units [4, 5, 6] -- filed under unit 4 (earliest), also referenced later
 - 'equal' appears in units [1, 2, 4, 7] -- filed under unit 1 (earliest), also referenced later
 - 'estimate' appears in units [4, 6] -- filed under unit 4 (earliest), also referenced later
+- 'expression' (unit 7): no Spanish translation found -- left blank
 - 'fewer' appears in units [2, 4, 6] -- filed under unit 2 (earliest), also referenced later
 - 'more' appears in units [2, 4, 6] -- filed under unit 2 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'more' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'one' appears in units [3, 4, 5, 6] -- filed under unit 3 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'one' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'rectangle' (unit 7): Spanish translation is low-confidence -- This page's extraction is garbled: the English column shows 'rectanglesquare' (rectangle and square glued together with no definitions) and the Spanish column shows 'rectángulo' followed by a stray line 'rectangles' then 'rectángulos', then 'cuadrado square' then 'cuadrado'. Reconstructed 'rectangle' -> 'rectángulo' by position/order, but the stray 'rectangles'/'rectángulos' fragments (possibly a plural-form aside) could not be confidently placed, so flagging as low confidence.
 - 'side' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'sort' -- not found in any provided unit glossary
+- 'square' (unit 7): Spanish translation is low-confidence -- Same garbled page as 'rectangle': English shows 'rectanglesquare' glued together, and Spanish shows 'cuadrado square' glued together right before a final standalone 'cuadrado' line. Reconstructed 'square' -> 'cuadrado' by position/order, but the glued 'cuadrado square' fragment could not be fully explained, so flagging as low confidence.
 - 'subtract' appears in units [2, 6] -- filed under unit 2 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'subtract' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'sum' appears in units [1, 2, 6] -- filed under unit 1 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'sum' filed under unit 1 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'survey' appears in units [1, 2] -- filed under unit 1 (earliest), also referenced later
+- 'taller' (unit 6): Spanish translation is low-confidence -- Source line reads 'más altomás alto' (two copies of 'más alto' glued together with no space, mirroring the doubled English 'taller taller'). Reconstructed as the single word 'más alto' with no separate definition, but flagging because un-gluing two concatenated words required a judgment call beyond simple line-rejoining.
 - UNMAPPED: 'teen number' -- not found in any provided unit glossary
 - 'ten' appears in units [3, 4, 5, 6] -- filed under unit 3 (earliest), also referenced later
 
@@ -56,7 +67,11 @@
 - 'meter' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'quarter' appears in units [2, 6] -- filed under unit 2 (earliest), also referenced later
 - 'inch' appears in units [3, 6] -- filed under unit 3 (earliest), also referenced later
+- 'category' (unit 1): no Spanish translation found -- left blank
 - 'compose' appears in units [2, 7, 8] -- filed under unit 2 (earliest), also referenced later
+- 'corner' (unit 6): no Spanish translation found -- left blank
+- 'corner' (unit 6): no Spanish translation found -- left blank
+- 'data' (unit 3): no Spanish translation found -- left blank
 - 'decompose' appears in units [2, 7] -- filed under unit 2 (earliest), also referenced later
 - 'digit' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'edge' -- not found in any provided unit glossary
@@ -64,60 +79,94 @@
 - 'equation' appears in units [7, 8] -- filed under unit 7 (earliest), also referenced later
 - UNMAPPED: 'estimate' -- not found in any provided unit glossary
 - 'expression' appears in units [7, 8] -- filed under unit 7 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'expression' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'face' (unit 6): no Spanish translation found -- left blank
 - UNMAPPED: 'greater than' -- not found in any provided unit glossary
 - UNMAPPED: 'length' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'length' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'less than' -- not found in any provided unit glossary
 - UNMAPPED: 'longer' -- not found in any provided unit glossary
 - 'number line' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'one' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'picture graph' (unit 1): Spanish translation is low-confidence -- This page's English and Spanish text were interleaved line-by-line by the extractor (unit1 is the 'plain style' file with a known-garbled interleaved page). Reconstructed by manually separating the English fragments ('picture graph a way to' / 'show the number of items' / 'in a group or category using' / 'pictures to represent the' / 'objects') from the interleaved Spanish fragments ('gráfico de imágenes una' / 'forma de mostrar qué' / 'cantidad de objetos hay en un' / 'grupo o una categoría usando' / 'imágenes para representar los objetos'). High confidence in the reconstruction logic, but flagging per instructions since it required manual de-interleaving.
 - 'point' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'rectangle' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'shorter' -- not found in any provided unit glossary
 - 'sum' appears in units [7, 8] -- filed under unit 7 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'sum' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'taller' -- not found in any provided unit glossary
 - 'ten' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 
 ## Grade 3 (units available: [1, 2, 3, 4, 5, 6, 7])
 
+- 'centimeter' (unit 2): no Spanish translation found -- left blank
 - UNMAPPED: 'foot' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'foot' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'fourth' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - 'half' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
+- 'hundred' (unit 3): no Spanish translation found -- left blank
+- 'meter' (unit 2): no Spanish translation found -- left blank
+- 'addend' (unit 4): no Spanish translation found -- left blank
 - 'inch' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'area' appears in units [2, 4, 7] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'array' -- not found in any provided unit glossary
+- 'bar graph' (unit 1): no Spanish translation found -- left blank
 - UNMAPPED: 'column' -- not found in any provided unit glossary
 - 'Commutative Property of Multiplication' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
 - UNMAPPED: 'conjecture' -- not found in any provided unit glossary
+- 'difference' (unit 6): no Spanish translation found -- left blank
 - UNMAPPED: 'digit' -- not found in any provided unit glossary
 - 'divide' appears in units [4, 6] -- filed under unit 4 (earliest), also referenced later
+- 'divide' (unit 4): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line; definition reconstructed by hand-separating alternating fragments.
+- 'dividend' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'divide'.
+- 'divisor' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'divide'.
+- 'dollar' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'divide'.
 - UNMAPPED: 'elapsed time' -- not found in any provided unit glossary
 - 'equation' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'estimate' (unit 3): no Spanish translation found -- left blank
 - UNMAPPED: 'expanded form' -- not found in any provided unit glossary
 - 'expression' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'factor' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
 - 'fraction' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - UNMAPPED: 'gallon' -- not found in any provided unit glossary
+- 'hour hand' (unit 6): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line (clock diagram page); definition reconstructed by hand-separating alternating fragments.
+- 'kilogram' (unit 6): Spanish translation is low-confidence -- Reconstructed from a line-by-line interleaved page.
+- 'minute hand' (unit 6): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line (clock diagram page); definition reconstructed by hand-separating alternating fragments.
+- 'mixed number' (unit 6): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'minute hand'.
 - 'multiply' appears in units [1, 4, 6] -- filed under unit 1 (earliest), also referenced later
+- 'odd numbers' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'factor'.
+- 'one' (unit 4): no Spanish translation found -- left blank
 - 'parentheses' appears in units [2, 4] -- filed under unit 2 (earliest), also referenced later
+- 'perimeter' (unit 7): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line; definition reconstructed by hand-separating alternating fragments.
+- 'picture graph' (unit 1): no Spanish translation found -- left blank
 - UNMAPPED: 'pint' -- not found in any provided unit glossary
 - 'product' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
+- 'quadrilateral' (unit 7): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'perimeter'.
 - UNMAPPED: 'quart' -- not found in any provided unit glossary
 - UNMAPPED: 'row' -- not found in any provided unit glossary
+- 'scale' (unit 1): Spanish translation is low-confidence -- This page's text extractor interleaved English and Spanish line-by-line (fragment splicing). Definition reconstructed by hand-separating the alternating English/Spanish fragments in reading order; the English reconstruction matches the known definition, giving confidence in the split, but flagging since it required manual reconstruction.
+- 'scaled bar graph' (unit 1): Spanish translation is low-confidence -- Reconstructed from a line-by-line interleaved English/Spanish page (same page cluster as 'scale').
+- 'scaled picture graph' (unit 1): Spanish translation is low-confidence -- Reconstructed from a line-by-line interleaved English/Spanish page.
 - 'square' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'standard form' -- not found in any provided unit glossary
 - UNMAPPED: 'sum' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'sum' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'ten' (unit 3): no Spanish translation found -- left blank
 - UNMAPPED: 'thousand' -- not found in any provided unit glossary
 - 'two-dimensional' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 
 ## Grade 4 (units available: [1, 2, 3, 4, 5, 6, 7])
 
+- 'centimeter' (unit 5): no Spanish translation found -- left blank
 - 'common denominator' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
+- 'common denominator' (unit 2): Spanish translation is low-confidence -- The source PDF's Spanish definition ends with the English word 'denominator' instead of 'denominador' (apparent typo in the original document). Copied verbatim as instructed, without correcting.
 - 'composite number' appears in units [1, 3] -- filed under unit 1 (earliest), also referenced later
 - UNMAPPED: 'conjecture' -- not found in any provided unit glossary
 - 'denominator' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'equipartition' -- not found in any provided unit glossary
 - 'expanded form' appears in units [4, 6] -- filed under unit 4 (earliest), also referenced later
 - 'factor pair' appears in units [4, 5] -- filed under unit 4 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'factor pair' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'length' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'millileter' -- not found in any provided unit glossary
 - 'multiple' appears in units [1, 4, 6] -- filed under unit 1 (earliest), also referenced later
@@ -127,6 +176,7 @@
 - 'perimeter' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - 'point' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'prime number' appears in units [1, 3] -- filed under unit 1 (earliest), also referenced later
+- 'thousand' (unit 4): no Spanish translation found -- left blank
 
 ## Grade 5 (units available: [1, 2, 3, 4, 5, 6, 7])
 
@@ -134,6 +184,8 @@
 - 'algorithm' appears in units [3, 4] -- filed under unit 3 (earliest), also referenced later
 - 'area' appears in units [2, 3, 4, 5, 7] -- filed under unit 2 (earliest), also referenced later
 - 'Associative Property of Multiplication' appears in units [1, 2, 4, 5] -- filed under unit 1 (earliest), also referenced later
+- 'attribute' (unit 7): Spanish translation is low-confidence -- Reconstructed from interleaved English/Spanish lines in unit7.txt using the known English definition as an anchor.
+- 'axis (axes)' (unit 7): Spanish translation is low-confidence -- Reconstructed from interleaved English/Spanish lines in unit7.txt (with stray coordinate-grid diagram-label digits/letters ignored) using the known English definition as an anchor.
 - 'base' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'Commutative Property of Addition' -- not found in any provided unit glossary
 - UNMAPPED: 'conjecture' -- not found in any provided unit glossary
@@ -142,18 +194,26 @@
 - 'dividend' appears in units [2, 3, 4, 5, 6] -- filed under unit 2 (earliest), also referenced later
 - 'divisor' appears in units [2, 3, 4, 5] -- filed under unit 2 (earliest), also referenced later
 - 'equation' appears in units [3, 5] -- filed under unit 3 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'equation' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'equipartition' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
 - 'expression' appears in units [2, 3, 4, 5] -- filed under unit 2 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'expression' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'factor' appears in units [2, 3, 4, 5, 6] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'inequality' -- not found in any provided unit glossary
 - 'mixed number' appears in units [2, 3, 4, 6] -- filed under unit 2 (earliest), also referenced later
 - 'non-unit fraction' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'parentheses' -- not found in any provided unit glossary
+- 'plot' (unit 6): Spanish translation is low-confidence -- unit6.txt contains no standalone glossary entry for 'plot' distinct from 'line plot' -- only 'line plot'/'gráfica de puntos' exists as a headword. Mapped to that entry rather than inventing a separate translation.
 - 'product' appears in units [3, 4, 5, 6] -- filed under unit 3 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'product' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'quotient' appears in units [2, 3, 4, 5, 6] -- filed under unit 2 (earliest), also referenced later
-- 'rectangle' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'rectangle' (unit 7): Spanish translation is low-confidence -- Reconstructed from interleaved English/Spanish lines in unit7.txt (stray 'rectangles'/'square' diagram-caption lines ignored) using the known English definition as an anchor.
+- 'rhombus' (unit 7): Spanish translation is low-confidence -- Reconstructed from interleaved English/Spanish lines in unit7.txt using the known English definition as an anchor.
+- 'right angle' (unit 7): Spanish translation is low-confidence -- Reconstructed from interleaved English/Spanish lines in unit7.txt using the known English definition as an anchor.
 - 'sum' appears in units [4, 5, 6] -- filed under unit 4 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'sum' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'tape diagram' -- not found in any provided unit glossary
 - 'unit fraction' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'vertex' -- not found in any provided unit glossary
 - 'volume' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'volume' filed under unit 1 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]

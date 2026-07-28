@@ -8,7 +8,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "arriba",
+      "spanish_text": ""
     },
     {
       "word": "add",
@@ -19,7 +21,9 @@
         4,
         5,
         7
-      ]
+      ],
+      "spanish_word": "sumar",
+      "spanish_text": "4 + 3 cuatro m\u00e1s tres"
     },
     {
       "word": "behind",
@@ -28,7 +32,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "detr\u00e1s",
+      "spanish_text": ""
     },
     {
       "word": "below",
@@ -38,7 +44,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "debajo",
+      "spanish_text": ""
     },
     {
       "word": "beside",
@@ -48,7 +56,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "al lado de/junto a",
+      "spanish_text": ""
     },
     {
       "word": "between",
@@ -58,7 +68,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "entre",
+      "spanish_text": ""
     },
     {
       "word": "circle",
@@ -68,7 +80,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "c\u00edrculo",
+      "spanish_text": ""
     },
     {
       "word": "cone",
@@ -77,7 +91,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cono",
+      "spanish_text": ""
     },
     {
       "word": "corner",
@@ -86,7 +102,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "esquina",
+      "spanish_text": ""
     },
     {
       "word": "cube",
@@ -95,7 +113,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cubo",
+      "spanish_text": ""
     },
     {
       "word": "curved",
@@ -104,7 +124,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "curvo",
+      "spanish_text": ""
     },
     {
       "word": "cylinder",
@@ -113,7 +135,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cilindro",
+      "spanish_text": ""
     },
     {
       "word": "eight",
@@ -122,7 +146,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "ocho",
+      "spanish_text": ""
     },
     {
       "word": "eighteen",
@@ -131,7 +157,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "dieciocho",
+      "spanish_text": ""
     },
     {
       "word": "eleven",
@@ -140,7 +168,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "once",
+      "spanish_text": ""
     },
     {
       "word": "equation",
@@ -150,7 +180,9 @@
       "all_units": [
         5,
         6
-      ]
+      ],
+      "spanish_word": "ecuaci\u00f3n",
+      "spanish_text": ""
     },
     {
       "word": "expression",
@@ -162,7 +194,9 @@
         5,
         6,
         7
-      ]
+      ],
+      "spanish_word": "expresi\u00f3n",
+      "spanish_text": ""
     },
     {
       "word": "face",
@@ -171,7 +205,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cara",
+      "spanish_text": ""
     },
     {
       "word": "fewer",
@@ -182,7 +218,9 @@
         2,
         3,
         7
-      ]
+      ],
+      "spanish_word": "menor cantidad",
+      "spanish_text": ""
     },
     {
       "word": "fifteen",
@@ -191,7 +229,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "quince",
+      "spanish_text": ""
     },
     {
       "word": "five",
@@ -202,7 +242,9 @@
         2,
         4,
         7
-      ]
+      ],
+      "spanish_word": "cinco",
+      "spanish_text": ""
     },
     {
       "word": "flat shapes",
@@ -211,7 +253,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "figuras planas",
+      "spanish_text": ""
     },
     {
       "word": "four",
@@ -223,7 +267,9 @@
         4,
         5,
         7
-      ]
+      ],
+      "spanish_word": "cuatro",
+      "spanish_text": ""
     },
     {
       "word": "fourteen",
@@ -232,7 +278,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "catorce",
+      "spanish_text": ""
     },
     {
       "word": "heavier",
@@ -241,7 +289,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "m\u00e1s pesado",
+      "spanish_text": ""
     },
     {
       "word": "hexagon",
@@ -250,7 +300,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "hex\u00e1gono",
+      "spanish_text": ""
     },
     {
       "word": "in front of",
@@ -259,7 +311,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "delante de",
+      "spanish_text": ""
     },
     {
       "word": "less than",
@@ -269,7 +323,9 @@
       "all_units": [
         2,
         7
-      ]
+      ],
+      "spanish_word": "menos",
+      "spanish_text": ""
     },
     {
       "word": "lighter",
@@ -278,7 +334,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "m\u00e1s liviano",
+      "spanish_text": ""
     },
     {
       "word": "longer",
@@ -287,7 +345,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "m\u00e1s largo",
+      "spanish_text": ""
     },
     {
       "word": "more",
@@ -298,7 +358,9 @@
         2,
         3,
         7
-      ]
+      ],
+      "spanish_word": "mayor cantidad",
+      "spanish_text": ""
     },
     {
       "word": "nine",
@@ -307,7 +369,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "nueve",
+      "spanish_text": ""
     },
     {
       "word": "nineteen",
@@ -316,7 +380,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "diecinueve",
+      "spanish_text": ""
     },
     {
       "word": "one",
@@ -325,7 +391,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "uno",
+      "spanish_text": ""
     },
     {
       "word": "prism",
@@ -334,7 +402,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "prisma",
+      "spanish_text": ""
     },
     {
       "word": "rectangle",
@@ -344,7 +414,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "rect\u00e1ngulo",
+      "spanish_text": ""
     },
     {
       "word": "same",
@@ -355,7 +427,9 @@
         1,
         2,
         7
-      ]
+      ],
+      "spanish_word": "iguales",
+      "spanish_text": ""
     },
     {
       "word": "seven",
@@ -364,7 +438,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "siete",
+      "spanish_text": ""
     },
     {
       "word": "seventeen",
@@ -373,7 +449,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "diecisiete",
+      "spanish_text": ""
     },
     {
       "word": "shorter",
@@ -383,7 +461,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "m\u00e1s corto/m\u00e1s bajo",
+      "spanish_text": ""
     },
     {
       "word": "side",
@@ -392,7 +472,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "lado",
+      "spanish_text": ""
     },
     {
       "word": "six",
@@ -401,7 +483,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "seis",
+      "spanish_text": ""
     },
     {
       "word": "sixteen",
@@ -410,7 +494,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "diecis\u00e9is",
+      "spanish_text": ""
     },
     {
       "word": "solid shape",
@@ -419,7 +505,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuerpos geom\u00e9tricos",
+      "spanish_text": ""
     },
     {
       "word": "sort",
@@ -428,7 +516,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "clasificar",
+      "spanish_text": ""
     },
     {
       "word": "sphere",
@@ -437,7 +527,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "esfera",
+      "spanish_text": ""
     },
     {
       "word": "square",
@@ -447,7 +539,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "cuadrado",
+      "spanish_text": ""
     },
     {
       "word": "straight",
@@ -456,7 +550,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "recto",
+      "spanish_text": ""
     },
     {
       "word": "subtract",
@@ -466,7 +562,9 @@
       "all_units": [
         4,
         7
-      ]
+      ],
+      "spanish_word": "restar",
+      "spanish_text": "5 \u2013 2 cinco menos dos"
     },
     {
       "word": "taller",
@@ -475,7 +573,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "m\u00e1s alto",
+      "spanish_text": ""
     },
     {
       "word": "teen number",
@@ -484,7 +584,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "11 12 13 14 15 16 17 18 19",
+      "spanish_text": ""
     },
     {
       "word": "ten",
@@ -493,7 +595,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "diez",
+      "spanish_text": ""
     },
     {
       "word": "thirteen",
@@ -502,7 +606,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "trece",
+      "spanish_text": ""
     },
     {
       "word": "three",
@@ -514,7 +620,9 @@
         4,
         5,
         7
-      ]
+      ],
+      "spanish_word": "tres",
+      "spanish_text": ""
     },
     {
       "word": "total",
@@ -524,7 +632,9 @@
       "all_units": [
         4,
         5
-      ]
+      ],
+      "spanish_word": "total",
+      "spanish_text": "El total es 6."
     },
     {
       "word": "triangle",
@@ -534,7 +644,9 @@
       "all_units": [
         3,
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo",
+      "spanish_text": ""
     },
     {
       "word": "twelve",
@@ -543,7 +655,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "doce",
+      "spanish_text": ""
     },
     {
       "word": "twenty",
@@ -552,7 +666,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "veinte",
+      "spanish_text": ""
     },
     {
       "word": "two",
@@ -563,7 +679,9 @@
         2,
         4,
         7
-      ]
+      ],
+      "spanish_word": "dos",
+      "spanish_text": ""
     },
     {
       "word": "written number",
@@ -572,7 +690,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "n\u00famero escrito",
+      "spanish_text": ""
     },
     {
       "word": "zero",
@@ -581,7 +701,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "cero",
+      "spanish_text": ""
     }
   ],
   "1": [
@@ -592,7 +714,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_text": "cada parte de una figura que se divide en 4 partes iguales (plural: cuartos)"
     },
     {
       "word": "half",
@@ -601,7 +725,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "mitad, medio",
+      "spanish_text": "cada parte de una figura que se divide en 2 partes iguales (plural: mitades)"
     },
     {
       "word": "quarter",
@@ -610,7 +736,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_text": "cada parte de una figura dividida en 4 partes iguales"
     },
     {
       "word": "add",
@@ -620,7 +748,9 @@
       "all_units": [
         2,
         6
-      ]
+      ],
+      "spanish_word": "sumar",
+      "spanish_text": "combinar n\u00fameros para hallar su suma"
     },
     {
       "word": "addend",
@@ -630,7 +760,9 @@
       "all_units": [
         2,
         4
-      ]
+      ],
+      "spanish_word": "sumando",
+      "spanish_text": "uno de los n\u00fameros que se suman para hallar la suma 5 + 6 = 11 5 + 6 = 11"
     },
     {
       "word": "attribute",
@@ -639,7 +771,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "atributo",
+      "spanish_text": "caracter\u00edstica o rasgo de un objeto o conjunto de objetos"
     },
     {
       "word": "category",
@@ -649,7 +783,9 @@
       "all_units": [
         1,
         5
-      ]
+      ],
+      "spanish_word": "categor\u00eda",
+      "spanish_text": "un grupo de objetos que se parecen en alg\u00fan aspecto"
     },
     {
       "word": "cone",
@@ -658,7 +794,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cono",
+      "spanish_text": ""
     },
     {
       "word": "conjecture",
@@ -668,7 +806,9 @@
       "all_units": [
         1,
         4
-      ]
+      ],
+      "spanish_word": "conjetura",
+      "spanish_text": "expresi\u00f3n que crees que es cierta seg\u00fan la informaci\u00f3n dada"
     },
     {
       "word": "corner",
@@ -677,7 +817,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "esquina",
+      "spanish_text": ""
     },
     {
       "word": "cube",
@@ -686,7 +828,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cubo",
+      "spanish_text": ""
     },
     {
       "word": "curved",
@@ -695,7 +839,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "curvo",
+      "spanish_text": ""
     },
     {
       "word": "cylinder",
@@ -704,7 +850,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cilindro",
+      "spanish_text": ""
     },
     {
       "word": "data",
@@ -715,7 +863,9 @@
         1,
         2,
         5
-      ]
+      ],
+      "spanish_word": "datos",
+      "spanish_text": "informaci\u00f3n sobre cosas o personas de un grupo"
     },
     {
       "word": "difference",
@@ -726,7 +876,9 @@
         1,
         2,
         6
-      ]
+      ],
+      "spanish_word": "diferencia",
+      "spanish_text": "la cantidad que obtienes cuando restas un n\u00famero a otro 10 \u2013 6 = 4 10 \u2013 6 = 4"
     },
     {
       "word": "digit",
@@ -737,7 +889,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "d\u00edgito o cifra",
+      "spanish_text": "un s\u00edmbolo que se usa para escribir n\u00fameros; los d\u00edgitos son 0, 1, 2, 3, 4, 5, 6, 7, 8, y 9 (42 es un ejemplo de un n\u00famero de dos d\u00edgitos)"
     },
     {
       "word": "equal",
@@ -749,7 +903,9 @@
         2,
         4,
         7
-      ]
+      ],
+      "spanish_word": "igual",
+      "spanish_text": "la misma cantidad"
     },
     {
       "word": "equation",
@@ -758,7 +914,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "ecuaci\u00f3n",
+      "spanish_text": "un enunciado matem\u00e1tico que muestra que los valores a cada lado del signo igual son los mismos 6 = 4 + 2 6 = 4 + 2"
     },
     {
       "word": "estimate",
@@ -768,7 +926,9 @@
       "all_units": [
         4,
         6
-      ]
+      ],
+      "spanish_word": "estimaci\u00f3n, estimar",
+      "spanish_text": "suposici\u00f3n que haces acerca de un valor bas\u00e1ndote en lo que sabes"
     },
     {
       "word": "expression",
@@ -777,7 +937,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "face",
@@ -786,7 +948,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cara",
+      "spanish_text": "una superficie plana de una figura tridimensional"
     },
     {
       "word": "fewer",
@@ -797,7 +961,9 @@
         2,
         4,
         6
-      ]
+      ],
+      "spanish_word": "menor cantidad",
+      "spanish_text": ""
     },
     {
       "word": "flat shapes",
@@ -806,7 +972,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "figura plana",
+      "spanish_text": ""
     },
     {
       "word": "greater than",
@@ -815,7 +983,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "mayor que",
+      "spanish_text": "una frase que significa que un valor es mayor que otro valor 63 es mayor que 32. 63 > 32"
     },
     {
       "word": "half past",
@@ -824,7 +994,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "y media",
+      "spanish_text": "una expresi\u00f3n que significa que han transcurrido 30 minutos de una hora (ejemplo: el reloj muestra las cuatro y media o 4:30)"
     },
     {
       "word": "hour hand",
@@ -833,7 +1005,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "manecilla de horas",
+      "spanish_text": "la aguja corta de un reloj que se\u00f1ala la hora y se mueve de una hora a otra"
     },
     {
       "word": "length",
@@ -842,7 +1016,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "longitud",
+      "spanish_text": "cu\u00e1n largo es un objeto de un extremo al otro (debe medirse en unidades de una misma longitud, sin dejar espacios ni poniendo una medida encima de otra)"
     },
     {
       "word": "less than",
@@ -851,7 +1027,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "menor que",
+      "spanish_text": "una frase que significa que un valor es menor que otro valor 32 es menor que 63. 32 < 63"
     },
     {
       "word": "longer",
@@ -860,7 +1038,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "m\u00e1s largo",
+      "spanish_text": ""
     },
     {
       "word": "minute hand",
@@ -869,7 +1049,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "manecilla de minutos, minutero",
+      "spanish_text": "la aguja larga en un reloj que se\u00f1ala las marcas alrededor del reloj indicando cu\u00e1ntos minutos han pasado y da la vuelta al c\u00edrculo completo en una hora"
     },
     {
       "word": "more",
@@ -880,7 +1062,9 @@
         2,
         4,
         6
-      ]
+      ],
+      "spanish_word": "mayor cantidad",
+      "spanish_text": ""
     },
     {
       "word": "one",
@@ -892,7 +1076,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "unidad",
+      "spanish_text": "una cantidad que tiene un valor de 1 (plural: unidades)"
     },
     {
       "word": "rectangle",
@@ -901,7 +1087,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "rect\u00e1ngulo",
+      "spanish_text": ""
     },
     {
       "word": "rectangular prism",
@@ -910,7 +1098,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "prisma rectangular",
+      "spanish_text": "un cuerpo geom\u00e9trico con 6 caras rectangulares"
     },
     {
       "word": "shorter",
@@ -919,7 +1109,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "m\u00e1s corto/m\u00e1s bajo",
+      "spanish_text": ""
     },
     {
       "word": "side",
@@ -928,7 +1120,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "lado",
+      "spanish_text": ""
     },
     {
       "word": "solid shape",
@@ -937,14 +1131,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuerpo geom\u00e9trico",
+      "spanish_text": ""
     },
     {
       "word": "sort",
       "text": "",
       "image": "1/202_sort.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "sphere",
@@ -953,7 +1151,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "esfera",
+      "spanish_text": ""
     },
     {
       "word": "square",
@@ -962,7 +1162,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadrado",
+      "spanish_text": ""
     },
     {
       "word": "square corner",
@@ -971,7 +1173,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "esquina en \u00e1ngulo recto",
+      "spanish_text": ""
     },
     {
       "word": "straight",
@@ -980,7 +1184,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "recto",
+      "spanish_text": ""
     },
     {
       "word": "subtract",
@@ -990,7 +1196,9 @@
       "all_units": [
         2,
         6
-      ]
+      ],
+      "spanish_word": "restar",
+      "spanish_text": "hallar la diferencia entre n\u00fameros"
     },
     {
       "word": "sum",
@@ -1001,7 +1209,9 @@
         1,
         2,
         6
-      ]
+      ],
+      "spanish_word": "suma",
+      "spanish_text": "el total cuando se suman 2 o m\u00e1s n\u00fameros 8 + 6 = 14 8 + 6 = 14"
     },
     {
       "word": "survey",
@@ -1011,7 +1221,9 @@
       "all_units": [
         1,
         2
-      ]
+      ],
+      "spanish_word": "encuesta",
+      "spanish_text": "una herramienta que se puede utilizar para recopilar informaci\u00f3n sobre las respuestas de un grupo de personas a una determinada pregunta"
     },
     {
       "word": "taller",
@@ -1020,14 +1232,18 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "m\u00e1s alto",
+      "spanish_text": ""
     },
     {
       "word": "teen number",
       "text": "a number between 11 and 19, composed of a ten and some ones",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "ten",
@@ -1039,7 +1255,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "decena",
+      "spanish_text": "un grupo de 10 unidades (plural: decenas)"
     },
     {
       "word": "triangle",
@@ -1048,7 +1266,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo",
+      "spanish_text": ""
     },
     {
       "word": "triangular prism",
@@ -1057,7 +1277,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "prisma triangular",
+      "spanish_text": "un cuerpo geom\u00e9trico con 2 caras triangulares y 3 caras rectangulares"
     }
   ],
   "2": [
@@ -1069,7 +1291,9 @@
       "all_units": [
         3,
         6
-      ]
+      ],
+      "spanish_word": "cent\u00edmetro",
+      "spanish_text": "una unidad de longitud del sistema de medida m\u00e9trico decimal (100 cent\u00edmetros equivalen a 1 metro)"
     },
     {
       "word": "foot",
@@ -1078,7 +1302,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "pie",
+      "spanish_text": "una unidad de longitud del sistema de medida est\u00e1ndar de los Estados Unidos que equivale a 12 pulgadas"
     },
     {
       "word": "fourth",
@@ -1087,7 +1313,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_text": "cada parte de un entero dividido en 4 partes iguales"
     },
     {
       "word": "half",
@@ -1096,7 +1324,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "mitad, medio",
+      "spanish_text": "cada parte de una figura dividida en 2 partes iguales (plural: mitades)"
     },
     {
       "word": "hundred",
@@ -1106,7 +1336,9 @@
       "all_units": [
         5,
         7
-      ]
+      ],
+      "spanish_word": "centena",
+      "spanish_text": "un grupo de 10 decenas o 100 unidades (plural: centenas)"
     },
     {
       "word": "meter",
@@ -1115,7 +1347,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "metro",
+      "spanish_text": "una unidad de longitud del sistema de medida m\u00e9trico decimal (1 metro equivale a 100 cent\u00edmetros)"
     },
     {
       "word": "quarter",
@@ -1125,7 +1359,9 @@
       "all_units": [
         2,
         6
-      ]
+      ],
+      "spanish_word": "moneda de veinticinco centavos",
+      "spanish_text": "una moneda que vale 25 centavos"
     },
     {
       "word": "third",
@@ -1134,7 +1370,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "tercio, tercera parte",
+      "spanish_text": "cada parte de un entero dividido en 3 partes iguales (plural: tercios)"
     },
     {
       "word": "a.m.",
@@ -1143,7 +1381,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "a.m.",
+      "spanish_text": "abreviatura que se refiere al per\u00edodo de tiempo entre la medianoche y el mediod\u00eda"
     },
     {
       "word": "inch",
@@ -1153,7 +1393,9 @@
       "all_units": [
         3,
         6
-      ]
+      ],
+      "spanish_word": "pulgada",
+      "spanish_text": "una unidad de longitud del sistema de medida est\u00e1ndar de los Estados Unidos (12 pulgadas equivalen a 1 pie)"
     },
     {
       "word": "array",
@@ -1162,7 +1404,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "disposici\u00f3n, matriz",
+      "spanish_text": "una disposici\u00f3n de objetos en filas iguales y columnas iguales, donde cada columna debe tener la misma cantidad de objetos que las otras columnas y cada fila debe tener la misma cantidad de objetos que las otras filas"
     },
     {
       "word": "Associative Property of Addition",
@@ -1171,7 +1415,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "propiedad asociativa de la suma",
+      "spanish_text": "la suma de 3 o m\u00e1s n\u00fameros es la misma, independientemente de c\u00f3mo se agrupen los sumandos"
     },
     {
       "word": "attribute",
@@ -1180,7 +1426,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "atributo",
+      "spanish_text": "una caracter\u00edstica o rasgo de un objeto o conjunto de objetos"
     },
     {
       "word": "bar graph",
@@ -1189,7 +1437,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "diagrama de barras",
+      "spanish_text": "una forma de mostrar qu\u00e9 cantidad hay en cada grupo o categor\u00eda usando la longitud de los rect\u00e1ngulos"
     },
     {
       "word": "category",
@@ -1198,7 +1448,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "cent",
@@ -1207,7 +1459,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "centavo",
+      "spanish_text": "una unidad de dinero (100 centavos equivalen a 1 d\u00f3lar)"
     },
     {
       "word": "column",
@@ -1216,7 +1470,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "columna",
+      "spanish_text": "una parte de una matriz que va de arriba a abajo"
     },
     {
       "word": "Commutative Property of Addition",
@@ -1225,7 +1481,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "Propiedad conmutativa de la suma",
+      "spanish_text": "el orden en el que se suman los n\u00fameros no cambia la suma"
     },
     {
       "word": "compose",
@@ -1236,7 +1494,9 @@
         2,
         7,
         8
-      ]
+      ],
+      "spanish_word": "componer",
+      "spanish_text": "juntar"
     },
     {
       "word": "cone",
@@ -1245,7 +1505,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cono",
+      "spanish_text": "una figura tridimensional con una cara circular y un v\u00e9rtice"
     },
     {
       "word": "conjecture",
@@ -1254,7 +1516,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "conjetura",
+      "spanish_text": "expresi\u00f3n que crees que es cierta seg\u00fan la informaci\u00f3n dada"
     },
     {
       "word": "corner",
@@ -1263,7 +1527,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "corner",
@@ -1272,7 +1538,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "cube",
@@ -1281,7 +1549,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cubo",
+      "spanish_text": "una figura tridimensional con 6 caras cuadradas id\u00e9nticas"
     },
     {
       "word": "cylinder",
@@ -1290,7 +1560,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cilindro",
+      "spanish_text": "una figura tridimensional con 2 caras circulares"
     },
     {
       "word": "data",
@@ -1299,7 +1571,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "decompose",
@@ -1309,7 +1583,9 @@
       "all_units": [
         2,
         7
-      ]
+      ],
+      "spanish_word": "descomponer",
+      "spanish_text": "separar"
     },
     {
       "word": "difference",
@@ -1318,7 +1594,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "diferencia",
+      "spanish_text": "la cantidad que obtienes cuando restas un n\u00famero a otro"
     },
     {
       "word": "digit",
@@ -1327,7 +1605,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "d\u00edgito o cifra",
+      "spanish_text": "un s\u00edmbolo que se usa para escribir n\u00fameros; los d\u00edgitos son 0, 1, 2, 3, 4, 5, 6, 7, 8 y 9 (42 es un ejemplo de un n\u00famero de dos d\u00edgitos)"
     },
     {
       "word": "dime",
@@ -1336,7 +1616,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "moneda de diez centavos",
+      "spanish_text": "una moneda que vale 10 centavos"
     },
     {
       "word": "dollar",
@@ -1345,14 +1627,18 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "d\u00f3lar",
+      "spanish_text": "unidad de dinero que vale 100 centavos"
     },
     {
       "word": "edge",
       "text": "a line segment representing where two faces meet on a three-dimensional shape",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "equal",
@@ -1361,7 +1647,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "igual",
+      "spanish_text": "tener el mismo valor"
     },
     {
       "word": "equation",
@@ -1371,14 +1659,18 @@
       "all_units": [
         7,
         8
-      ]
+      ],
+      "spanish_word": "ecuaci\u00f3n",
+      "spanish_text": "un enunciado matem\u00e1tico que muestra que los valores a cada lado del signo igual son los mismos"
     },
     {
       "word": "estimate",
       "text": "a guess you make about a value based on what you know",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "even number",
@@ -1387,7 +1679,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "n\u00famero par",
+      "spanish_text": "un n\u00famero entero es par si es la suma de dos n\u00fameros enteros iguales"
     },
     {
       "word": "expanded form",
@@ -1396,7 +1690,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "forma expandida",
+      "spanish_text": "representaci\u00f3n de un n\u00famero como una expresi\u00f3n de suma que muestra el valor de cada d\u00edgito"
     },
     {
       "word": "expression",
@@ -1406,7 +1702,9 @@
       "all_units": [
         7,
         8
-      ]
+      ],
+      "spanish_word": "expresi\u00f3n",
+      "spanish_text": "un enunciado con al menos 2 n\u00fameros y al menos 1 operaci\u00f3n matem\u00e1tica (como suma o resta)"
     },
     {
       "word": "face",
@@ -1415,7 +1713,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "flat shapes",
@@ -1424,14 +1724,18 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "figura plana",
+      "spanish_text": ""
     },
     {
       "word": "greater than",
       "text": "a phrase that means one value is more than another value",
       "image": "2/99_greater-than.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "half past",
@@ -1440,7 +1744,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "y media",
+      "spanish_text": "una expresi\u00f3n que significa que han transcurrido 30 minutos de una hora (ejemplo: el reloj muestra las cuatro y media o 4:30)"
     },
     {
       "word": "hexagon",
@@ -1449,7 +1755,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "hex\u00e1gono",
+      "spanish_text": "una figura con 6 lados y 6 esquinas"
     },
     {
       "word": "hour hand",
@@ -1458,21 +1766,27 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "manecilla de horas",
+      "spanish_text": "la aguja corta en un reloj que se\u00f1ala la hora y se mueve de una hora a otra"
     },
     {
       "word": "length",
       "text": "how long an object is from endpoint to endpoint (measured in same-length units with no gaps or overlaps)",
       "image": "2/116_length.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "less than",
       "text": "a phrase that means one value is less than another value",
       "image": "2/118_less-than.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "line plot",
@@ -1481,14 +1795,18 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "gr\u00e1fica de puntos",
+      "spanish_text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica"
     },
     {
       "word": "longer",
       "text": "",
       "image": "2/127_longer.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "meter stick",
@@ -1497,7 +1815,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "metro",
+      "spanish_text": "una herramienta para medir longitudes en cent\u00edmetros y metros que mide exactamente 1 metro de largo"
     },
     {
       "word": "minute hand",
@@ -1506,7 +1826,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "manecilla de minutos, minutero",
+      "spanish_text": "la aguja larga en un reloj que se\u00f1ala las marcas alrededor del reloj indicando cu\u00e1ntos minutos han pasado y da la vuelta al c\u00edrculo completo en una hora"
     },
     {
       "word": "nickel",
@@ -1515,7 +1837,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "moneda de cinco centavos",
+      "spanish_text": "una moneda que vale 5 centavos"
     },
     {
       "word": "number line",
@@ -1524,7 +1848,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "recta num\u00e9rica",
+      "spanish_text": "un diagrama que representa n\u00fameros en forma de distancias a partir del 0, usando marcas indicadoras igualmente espaciadas"
     },
     {
       "word": "odd numbers",
@@ -1533,7 +1859,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "n\u00famero impar",
+      "spanish_text": "un n\u00famero entero es impar si no puede escribirse como la suma de dos n\u00fameros iguales"
     },
     {
       "word": "one",
@@ -1542,7 +1870,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "unidad",
+      "spanish_text": "una cantidad que tiene un valor de 1 (plural: unidades)"
     },
     {
       "word": "open number line",
@@ -1551,7 +1881,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "recta num\u00e9rica abierta",
+      "spanish_text": "una recta num\u00e9rica en blanco en la que se pueden agregar marcas indicadoras, puntos, n\u00fameros y flechas para representar problemas y estrategias"
     },
     {
       "word": "p.m.",
@@ -1560,7 +1892,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "p.m.",
+      "spanish_text": "abreviatura que se refiere al per\u00edodo de tiempo entre el mediod\u00eda y la medianoche"
     },
     {
       "word": "penny",
@@ -1569,7 +1903,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "moneda de un centavo",
+      "spanish_text": "una moneda que vale 1 centavo"
     },
     {
       "word": "pentagon",
@@ -1578,7 +1914,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "pent\u00e1gono",
+      "spanish_text": "una figura con 5 lados y 5 esquinas"
     },
     {
       "word": "picture graph",
@@ -1587,7 +1925,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "gr\u00e1fico de im\u00e1genes",
+      "spanish_text": "una forma de mostrar qu\u00e9 cantidad de objetos hay en un grupo o una categor\u00eda usando im\u00e1genes para representar los objetos"
     },
     {
       "word": "point",
@@ -1596,7 +1936,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "punto",
+      "spanish_text": "una ubicaci\u00f3n en una recta num\u00e9rica o una gr\u00e1fica"
     },
     {
       "word": "quadrilateral",
@@ -1605,7 +1947,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuadril\u00e1tero",
+      "spanish_text": "una figura con 4 lados y 4 esquinas"
     },
     {
       "word": "quarter (coin)",
@@ -1614,7 +1958,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "moneda de veinticinco centavos",
+      "spanish_text": "una moneda que vale 25 centavos"
     },
     {
       "word": "quarter past",
@@ -1623,7 +1969,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "y cuarto",
+      "spanish_text": "una expresi\u00f3n que significa que han transcurrido 15 minutos de una hora (ejemplo: el reloj muestra las cuatro y cuarto o 4:15)"
     },
     {
       "word": "quarter to",
@@ -1632,7 +1980,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuarto para",
+      "spanish_text": "una expresi\u00f3n que significa que faltan 15 minutos para la hora siguiente (ejemplo: el reloj muestra un cuarto para las cinco o 4:45)"
     },
     {
       "word": "rectangle",
@@ -1641,7 +1991,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "rect\u00e1ngulo",
+      "spanish_text": "una figura con 4 lados y 4 esquinas de \u00e1ngulo recto"
     },
     {
       "word": "rectangular prism",
@@ -1650,7 +2002,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "prisma rectangular",
+      "spanish_text": "un cuerpo geom\u00e9trico con 6 caras rectangulares"
     },
     {
       "word": "row",
@@ -1659,7 +2013,9 @@
       "primary_unit": 8,
       "all_units": [
         8
-      ]
+      ],
+      "spanish_word": "fila",
+      "spanish_text": "una parte de una matriz que va de lado a lado"
     },
     {
       "word": "ruler",
@@ -1668,14 +2024,18 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "regla",
+      "spanish_text": "una herramienta que se usa para medir la longitud y muestra la distancia a partir del 0 en unidades de longitud iguales"
     },
     {
       "word": "shorter",
       "text": "",
       "image": "2/197_shorter.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "sphere",
@@ -1684,7 +2044,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "esfera",
+      "spanish_text": "una figura tridimensional sin v\u00e9rtices ni caras"
     },
     {
       "word": "square",
@@ -1693,7 +2055,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuadrado",
+      "spanish_text": "un tipo de rect\u00e1ngulo con 4 lados iguales y 4 esquinas de \u00e1ngulo recto"
     },
     {
       "word": "square corner",
@@ -1702,7 +2066,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "esquinas de \u00e1ngulos recto",
+      "spanish_text": "una esquina en la que aparentemente se encuentran 2 lados de un cuadrado"
     },
     {
       "word": "standard form",
@@ -1711,7 +2077,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "forma est\u00e1ndar",
+      "spanish_text": "una representaci\u00f3n de un n\u00famero que utiliza solo d\u00edgitos para representar valores posicionales"
     },
     {
       "word": "straight",
@@ -1720,7 +2088,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "recto",
+      "spanish_text": ""
     },
     {
       "word": "sum",
@@ -1730,14 +2100,18 @@
       "all_units": [
         7,
         8
-      ]
+      ],
+      "spanish_word": "suma",
+      "spanish_text": "el valor cuando se suman 2 o m\u00e1s n\u00fameros"
     },
     {
       "word": "taller",
       "text": "",
       "image": "2/216_taller.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "tape diagram",
@@ -1746,7 +2120,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "diagrama de cinta",
+      "spanish_text": "un diagrama de cinta es un grupo de rect\u00e1ngulos unidos para representar una relaci\u00f3n entre cantidades"
     },
     {
       "word": "ten",
@@ -1755,7 +2131,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "decena",
+      "spanish_text": "un grupo de 10 unidades (plural: decenas)"
     },
     {
       "word": "three-dimensional",
@@ -1764,7 +2142,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "tridimensional",
+      "spanish_text": "un t\u00e9rmino que describe cuerpos geom\u00e9tricos con tres dimensiones que pueden medirse: longitud, ancho y altura"
     },
     {
       "word": "triangle",
@@ -1773,7 +2153,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo",
+      "spanish_text": "una figura con 3 lados y 3 esquinas"
     },
     {
       "word": "triangular prism",
@@ -1782,7 +2164,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "prisma triangular",
+      "spanish_text": "un cuerpo geom\u00e9trico con 2 caras triangulares y 3 caras rectangulares"
     },
     {
       "word": "two-dimensional",
@@ -1791,7 +2175,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "bidimensional",
+      "spanish_text": "un t\u00e9rmino que describe objetos planos con dos dimensiones que pueden medirse: longitud y ancho"
     }
   ],
   "3": [
@@ -1802,14 +2188,18 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "foot",
       "text": "a unit of length in the U.S. customary measurement system that is 12 inches long (plural: feet)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "fourth",
@@ -1819,7 +2209,9 @@
       "all_units": [
         5,
         6
-      ]
+      ],
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_text": "cada parte de un entero dividido en 4 partes iguales"
     },
     {
       "word": "half",
@@ -1829,7 +2221,9 @@
       "all_units": [
         5,
         6
-      ]
+      ],
+      "spanish_word": "mitad, medio",
+      "spanish_text": "cada parte de un entero dividido en 2 partes iguales"
     },
     {
       "word": "hundred",
@@ -1838,7 +2232,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "meter",
@@ -1847,7 +2243,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "quarter",
@@ -1856,7 +2254,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_text": "cada parte de un entero que se divide en 4 partes iguales"
     },
     {
       "word": "sixth",
@@ -1865,7 +2265,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "sexto, sexta parte",
+      "spanish_text": "cada parte de un entero dividido en 6 partes iguales"
     },
     {
       "word": "third",
@@ -1874,7 +2276,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "tercio, tercera parte",
+      "spanish_text": "cada parte de un entero dividido en 3 partes iguales"
     },
     {
       "word": "a.m.",
@@ -1883,7 +2287,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "a.m.",
+      "spanish_text": "abreviatura que se refiere al per\u00edodo de tiempo entre la medianoche y el mediod\u00eda"
     },
     {
       "word": "add",
@@ -1892,7 +2298,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "sumar",
+      "spanish_text": "combinar n\u00fameros para hallar la suma"
     },
     {
       "word": "addend",
@@ -1901,7 +2309,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "algorithm",
@@ -1910,7 +2320,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "algoritmo",
+      "spanish_text": "un conjunto de pasos que se pueden seguir cuando se realizan c\u00e1lculos"
     },
     {
       "word": "eighth",
@@ -1919,7 +2331,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "octavo, octava parte",
+      "spanish_text": "cada parte de un entero dividido en 8 partes iguales"
     },
     {
       "word": "inch",
@@ -1928,7 +2342,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "pulgada",
+      "spanish_text": "una unidad de longitud del sistema de medida est\u00e1ndar de los Estados Unidos (12 pulgadas equivalen a un pie)"
     },
     {
       "word": "area",
@@ -1939,14 +2355,18 @@
         2,
         4,
         7
-      ]
+      ],
+      "spanish_word": "\u00e1rea",
+      "spanish_text": "una medida del espacio dentro de una figura bidimensional (aqu\u00ed se muestra como el n\u00famero de unidades cuadradas que cubren la figura sin espacios ni superposiciones)"
     },
     {
       "word": "array",
       "text": "an arrangement of objects in equal rows and equal columns, where each column must contain the same number of objects as the other columns, and each row must have the same number of objects as the other rows",
       "image": "3/23_array.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "Associative Property of Multiplication",
@@ -1955,7 +2375,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "propiedad asociativa de la multiplicaci\u00f3n",
+      "spanish_text": "el producto de 3 o m\u00e1s n\u00fameros es el mismo independientemente de c\u00f3mo se agrupen los n\u00fameros"
     },
     {
       "word": "attribute",
@@ -1964,7 +2386,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "atributo",
+      "spanish_text": "caracter\u00edstica o rasgo de un objeto o conjunto de objetos"
     },
     {
       "word": "bar graph",
@@ -1973,14 +2397,18 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "column",
       "text": "a part of an array that goes up and down",
       "image": "3/37_column.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "Commutative Property of Multiplication",
@@ -1990,7 +2418,9 @@
       "all_units": [
         1,
         4
-      ]
+      ],
+      "spanish_word": "propiedad conmutativa de la multiplicaci\u00f3n",
+      "spanish_text": "el orden en el que se multiplican 2 n\u00fameros no altera el producto"
     },
     {
       "word": "compose",
@@ -1999,14 +2429,18 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "componer",
+      "spanish_text": "juntar"
     },
     {
       "word": "conjecture",
       "text": "a statement that you believe is true based on current information",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "data",
@@ -2015,7 +2449,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "datos",
+      "spanish_text": "informaci\u00f3n sobre las cosas o personas de un grupo (ejemplo si tienes una caja de l\u00e1pices de colores, entonces las longitudes y los colores de cada uno de los l\u00e1pices son datos sobre los l\u00e1pices de la caja)"
     },
     {
       "word": "decompose",
@@ -2024,7 +2460,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "descomponer",
+      "spanish_text": "separar"
     },
     {
       "word": "denominator",
@@ -2033,7 +2471,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "denominador",
+      "spanish_text": "el n\u00famero inferior en una fracci\u00f3n que indica en cu\u00e1ntas partes iguales se dividi\u00f3 el entero"
     },
     {
       "word": "difference",
@@ -2042,14 +2482,18 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "digit",
       "text": "a symbol used to write numbers; the digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 (42 is an example of a two-digit number)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "Distributive Property",
@@ -2058,7 +2502,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "propiedad distributiva",
+      "spanish_text": "multiplicar la suma de 2 o m\u00e1s sumandos por un factor da el mismo resultado que multiplicar cada sumando individualmente por el factor y luego sumar los productos"
     },
     {
       "word": "divide",
@@ -2068,7 +2514,9 @@
       "all_units": [
         4,
         6
-      ]
+      ],
+      "spanish_word": "dividir",
+      "spanish_text": "hacer grupos iguales a partir de una cantidad total"
     },
     {
       "word": "dividend",
@@ -2077,7 +2525,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "dividendo",
+      "spanish_text": "el n\u00famero que representa la cantidad total de los objetos que se van a dividir"
     },
     {
       "word": "divisor",
@@ -2086,7 +2536,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "divisor",
+      "spanish_text": "el n\u00famero que sigue al s\u00edmbolo de divisi\u00f3n que representa el n\u00famero de grupos o el n\u00famero de objetos en cada grupo"
     },
     {
       "word": "dollar",
@@ -2095,14 +2547,18 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "d\u00f3lar",
+      "spanish_text": "una unidad de dinero que vale 100 centavos"
     },
     {
       "word": "elapsed time",
       "text": "the duration between two points in time indicating how much time has gone by during that period",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "equation",
@@ -2111,7 +2567,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "ecuaci\u00f3n",
+      "spanish_text": "un enunciado matem\u00e1tico que muestra que los valores a cada lado del signo igual son los mismos"
     },
     {
       "word": "equivalent fractions",
@@ -2120,7 +2578,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "fracciones equivalentes",
+      "spanish_text": "dos fracciones que representan el mismo valor"
     },
     {
       "word": "estimate",
@@ -2129,7 +2589,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "even number",
@@ -2138,14 +2600,18 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "n\u00famero par",
+      "spanish_text": "un n\u00famero es par si es la suma de dos n\u00fameros enteros iguales"
     },
     {
       "word": "expanded form",
       "text": "a representation of a number as an addition expression that shows the value of each digit",
       "image": "3/83_expanded-form.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "expression",
@@ -2154,7 +2620,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "expresi\u00f3n",
+      "spanish_text": "un enunciado con al menos 2 n\u00fameros y al menos una operaci\u00f3n matem\u00e1tica (como suma, resta, multiplicaci\u00f3n o divisi\u00f3n)"
     },
     {
       "word": "factor",
@@ -2164,7 +2632,9 @@
       "all_units": [
         1,
         4
-      ]
+      ],
+      "spanish_word": "factor",
+      "spanish_text": "un n\u00famero que se multiplica por otro n\u00famero para determinar el producto"
     },
     {
       "word": "fraction",
@@ -2174,14 +2644,18 @@
       "all_units": [
         5,
         6
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n",
+      "spanish_text": "un n\u00famero que describe las partes de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "gallon",
       "text": "a liquid volume unit in the U.S. Customary measurement system (1 gallon is equal to 4 quarts, 8 pints, or 16 cups)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "gram",
@@ -2190,7 +2664,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "gramo",
+      "spanish_text": "una unidad de peso del sistema de medida m\u00e9trico decimal (1,000 gramos equivalen a 1 kilogramo)"
     },
     {
       "word": "hour hand",
@@ -2199,7 +2675,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "manecilla de horas",
+      "spanish_text": "la aguja corta de un reloj que avanza de hora en hora"
     },
     {
       "word": "Identity Property of Multiplication",
@@ -2208,7 +2686,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "propiedad de la identidad de la multiplicaci\u00f3n",
+      "spanish_text": "el producto de cualquier n\u00famero y 1 es ese mismo n\u00famero"
     },
     {
       "word": "key",
@@ -2217,7 +2697,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "leyenda",
+      "spanish_text": "la parte de un gr\u00e1fico de im\u00e1genes que muestra qu\u00e9 representa cada imagen"
     },
     {
       "word": "kilogram",
@@ -2226,7 +2708,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "kilogramo",
+      "spanish_text": "una unidad de peso del sistema de medida m\u00e9trico decimal (1 kilogramo equivale a 1,000 gramos)"
     },
     {
       "word": "line plot",
@@ -2235,7 +2719,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "gr\u00e1fica de puntos",
+      "spanish_text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica"
     },
     {
       "word": "liquid volume",
@@ -2244,7 +2730,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "volumen l\u00edquido",
+      "spanish_text": "el espacio que ocupa un l\u00edquido"
     },
     {
       "word": "liter",
@@ -2253,7 +2741,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "litro",
+      "spanish_text": "unidad de volumen de l\u00edquido del sistema de medida m\u00e9trico decimal"
     },
     {
       "word": "minute hand",
@@ -2262,7 +2752,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "manecilla de minutos, minutero",
+      "spanish_text": "la aguja larga en un reloj que se\u00f1ala las marcas alrededor del reloj indicando cu\u00e1ntos minutos han pasado y da la vuelta al c\u00edrculo completo en una hora"
     },
     {
       "word": "mixed number",
@@ -2271,7 +2763,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "n\u00famero mixto",
+      "spanish_text": "un n\u00famero expresado como un n\u00famero natural y una fracci\u00f3n menor que 1"
     },
     {
       "word": "multiply",
@@ -2282,7 +2776,9 @@
         1,
         4,
         6
-      ]
+      ],
+      "spanish_word": "multiplicar",
+      "spanish_text": "determinar la cantidad total en grupos iguales"
     },
     {
       "word": "non-unit fraction",
@@ -2291,7 +2787,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n no unitaria",
+      "spanish_text": "un n\u00famero que describe m\u00e1s de 1 parte de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "numerator",
@@ -2300,7 +2798,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "numerador",
+      "spanish_text": "el n\u00famero superior de una fracci\u00f3n que indica cu\u00e1ntas partes iguales se describen"
     },
     {
       "word": "odd numbers",
@@ -2309,7 +2809,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "n\u00famero impar",
+      "spanish_text": "un n\u00famero entero es impar si no puede dividirse en 2 grupos iguales o grupos de 2 sin que quede ning\u00fan objeto"
     },
     {
       "word": "one",
@@ -2318,7 +2820,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "p.m.",
@@ -2327,7 +2831,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "p.m.",
+      "spanish_text": "abreviatura que se refiere al per\u00edodo de tiempo entre el mediod\u00eda y la medianoche"
     },
     {
       "word": "parentheses",
@@ -2337,7 +2843,9 @@
       "all_units": [
         2,
         4
-      ]
+      ],
+      "spanish_word": "par\u00e9ntesis",
+      "spanish_text": "s\u00edmbolos de agrupaci\u00f3n que pueden usarse en expresiones o ecuaciones, como (3 \u00d7 5) + (2 \u00d7 10)"
     },
     {
       "word": "perimeter",
@@ -2346,7 +2854,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "per\u00edmetro",
+      "spanish_text": "la longitud total del contorno de una figura bidimensional"
     },
     {
       "word": "picture graph",
@@ -2355,14 +2865,18 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "pint",
       "text": "a liquid volume unit in the U.S. Customary measurement system (8 pints is equal to 1 gallon)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "product",
@@ -2372,7 +2886,9 @@
       "all_units": [
         1,
         4
-      ]
+      ],
+      "spanish_word": "producto",
+      "spanish_text": "el valor cuando se multiplican 2 o m\u00e1s n\u00fameros"
     },
     {
       "word": "quadrilateral",
@@ -2381,14 +2897,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadril\u00e1tero",
+      "spanish_text": "una figura con 4 lados y 4 esquinas"
     },
     {
       "word": "quart",
       "text": "a liquid volume unit in the U.S. Customary measurement system (4 quarts is equal to 1 gallon)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "quotient",
@@ -2397,7 +2917,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "cociente",
+      "spanish_text": "el resultado que se obtiene al dividir una cantidad por otra"
     },
     {
       "word": "rectangle",
@@ -2406,7 +2928,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "rect\u00e1ngulo",
+      "spanish_text": "un cuadril\u00e1tero que tiene 2 pares de lados opuestos de la misma longitud y 4 esquinas de \u00e1ngulo recto"
     },
     {
       "word": "rhombus",
@@ -2415,7 +2939,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "rombo",
+      "spanish_text": "un cuadril\u00e1tero con 4 lados de igual longitud"
     },
     {
       "word": "rounding",
@@ -2424,14 +2950,18 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "redondeo",
+      "spanish_text": "estimar el valor de un n\u00famero determinando la decena, la centena o el valor posicional m\u00e1s cercano"
     },
     {
       "word": "row",
       "text": "a part of an array that goes side to side",
       "image": "3/187_row.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "ruler",
@@ -2440,7 +2970,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "regla",
+      "spanish_text": "una herramienta que se usa para medir la longitud y muestra la distancia a partir del 0 en unidades de longitud iguales"
     },
     {
       "word": "scale",
@@ -2449,7 +2981,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "escala",
+      "spanish_text": "la cantidad que se representa con cada figura, seg\u00fan la informaci\u00f3n de la leyenda del pictograma, y la cantidad que representa el espacio entre las l\u00edneas de un diagrama de barras"
     },
     {
       "word": "scaled bar graph",
@@ -2458,7 +2992,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "diagrama de barras a escala",
+      "spanish_text": "un diagrama de barras donde la escala est\u00e1 marcada en unidades distintas de 1"
     },
     {
       "word": "scaled picture graph",
@@ -2467,7 +3003,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "gr\u00e1fico de im\u00e1genes a escala",
+      "spanish_text": "un gr\u00e1fico de im\u00e1genes donde cada imagen representa una cantidad distinta de 1"
     },
     {
       "word": "square",
@@ -2476,7 +3014,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadrado",
+      "spanish_text": "un cuadril\u00e1tero con cuatro lados iguales y 4 esquinas de \u00e1ngulo recto"
     },
     {
       "word": "square centimeter",
@@ -2485,7 +3025,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "cent\u00edmetro cuadrado",
+      "spanish_text": "un cuadrado cuyos lados miden 1 cent\u00edmetro"
     },
     {
       "word": "square corner",
@@ -2494,7 +3036,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "esquina de \u00e1ngulo recto",
+      "spanish_text": "una esquina en la que aparentemente se encuentran 2 lados de un cuadrado"
     },
     {
       "word": "square foot",
@@ -2503,7 +3047,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "pie cuadrado",
+      "spanish_text": "un cuadrado cuyos lados miden 1 pie"
     },
     {
       "word": "square inch",
@@ -2512,7 +3058,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "pulgada cuadrada",
+      "spanish_text": "un cuadrado cuyos lados miden 1 pulgada"
     },
     {
       "word": "square meter",
@@ -2521,21 +3069,27 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "metro cuadrado",
+      "spanish_text": "un cuadrado cuyos lados miden 1 metro"
     },
     {
       "word": "standard form",
       "text": "a representation of a number using only digits to represent place values",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "sum",
       "text": "the value when 2 or more numbers are added",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "ten",
@@ -2544,14 +3098,18 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "thousand",
       "text": "the base-ten place value unit composed of 10 hundreds (one thousand in standard form is 1,000)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "two-dimensional",
@@ -2560,7 +3118,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "bidimensional",
+      "spanish_text": "un t\u00e9rmino que describe objetos planos con dos dimensiones que pueden medirse: longitud y ancho"
     },
     {
       "word": "unit fraction",
@@ -2569,7 +3129,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n unitaria",
+      "spanish_text": "un n\u00famero que describe exactamente 1 parte de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "weight",
@@ -2578,7 +3140,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "peso",
+      "spanish_text": "medida que indica qu\u00e9 tan pesado es algo"
     }
   ],
   "4": [
@@ -2589,7 +3153,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "meter",
@@ -2598,7 +3164,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "metro",
+      "spanish_text": "una unidad de longitud del sistema de medida m\u00e9trico decimal (1 metro equivale a 100 cent\u00edmetros)"
     },
     {
       "word": "acute angle",
@@ -2607,7 +3175,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo agudo",
+      "spanish_text": "un \u00e1ngulo que mide menos de 90 grados"
     },
     {
       "word": "angle",
@@ -2616,7 +3186,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo",
+      "spanish_text": "una figura geom\u00e9trica formada por 2 semirrectas que comparten el mismo extremo"
     },
     {
       "word": "area",
@@ -2625,7 +3197,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "\u00e1rea",
+      "spanish_text": "una medida del espacio dentro de una figura bidimensional"
     },
     {
       "word": "attribute",
@@ -2634,7 +3208,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "atributo",
+      "spanish_text": "una caracter\u00edstica o rasgo de un objeto o conjunto de objetos"
     },
     {
       "word": "common denominator",
@@ -2644,7 +3220,9 @@
       "all_units": [
         2,
         3
-      ]
+      ],
+      "spanish_word": "denominador com\u00fan",
+      "spanish_text": "cuando 2 o m\u00e1s fracciones tienen el mismo denominator"
     },
     {
       "word": "common multiple",
@@ -2653,7 +3231,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "m\u00faltiplo com\u00fan",
+      "spanish_text": "un n\u00famero que es m\u00faltiplo de 2 o m\u00e1s n\u00fameros determinados"
     },
     {
       "word": "common numerator",
@@ -2662,7 +3242,9 @@
       "primary_unit": 2,
       "all_units": [
         2
-      ]
+      ],
+      "spanish_word": "numerador com\u00fan",
+      "spanish_text": "cuando 2 o m\u00e1s fracciones tienen el mismo numerador"
     },
     {
       "word": "composite number",
@@ -2672,14 +3254,18 @@
       "all_units": [
         1,
         3
-      ]
+      ],
+      "spanish_word": "n\u00famero compuesto",
+      "spanish_text": "un n\u00famero que tiene m\u00e1s de 1 par de factores"
     },
     {
       "word": "conjecture",
       "text": "a formed idea using limited information",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "decimal",
@@ -2688,7 +3274,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "decimal",
+      "spanish_text": "un valor fraccionario que se escribe usando d\u00edgitos individuales en cada valor posicional"
     },
     {
       "word": "decimal point",
@@ -2697,7 +3285,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "punto decimal",
+      "spanish_text": "un punto que se ubica a la derecha de la posici\u00f3n de unidades"
     },
     {
       "word": "degree",
@@ -2706,7 +3296,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "grado",
+      "spanish_text": "unidad que mide el tama\u00f1o de un \u00e1ngulo"
     },
     {
       "word": "denominator",
@@ -2715,7 +3307,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "denominador",
+      "spanish_text": "la parte inferior de una fracci\u00f3n que indica en cu\u00e1ntas partes iguales se dividi\u00f3 el entero"
     },
     {
       "word": "equilateral triangle",
@@ -2724,14 +3318,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo equil\u00e1tero",
+      "spanish_text": "un tri\u00e1ngulo con 3 lados iguales"
     },
     {
       "word": "equipartition",
       "text": "to partition into equal parts",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "equivalent fractions",
@@ -2740,7 +3338,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "fracciones equivalentes",
+      "spanish_text": "2 fracciones que representan el mismo valor"
     },
     {
       "word": "expanded form",
@@ -2750,7 +3350,9 @@
       "all_units": [
         4,
         6
-      ]
+      ],
+      "spanish_word": "forma expandida",
+      "spanish_text": "representaci\u00f3n de un n\u00famero como una expresi\u00f3n de suma que muestra el valor de cada d\u00edgito (ejemplo: 482 escrito en la forma expandida es 400 + 80 + 2)"
     },
     {
       "word": "factor pair",
@@ -2760,7 +3362,9 @@
       "all_units": [
         4,
         5
-      ]
+      ],
+      "spanish_word": "par de factores",
+      "spanish_text": "un conjunto de 2 n\u00fameros que llegan a un n\u00famero espec\u00edfico cuando se multiplican (ejemplo: 4 y 6 son un par de factores de 24)"
     },
     {
       "word": "horizontal",
@@ -2769,7 +3373,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "horizontal",
+      "spanish_text": "una l\u00ednea recta que se extiende de izquierda a derecha"
     },
     {
       "word": "hundred thousands",
@@ -2778,7 +3384,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "centena de millar",
+      "spanish_text": "la unidad de valor posicional de base diez compuesta por 10 decenas de millar (una centena de millar escrita en la forma est\u00e1ndar es 100,000)"
     },
     {
       "word": "intersecting lines",
@@ -2787,7 +3395,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "l\u00edneas de intersecci\u00f3n",
+      "spanish_text": "l\u00edneas que cruzan"
     },
     {
       "word": "isosceles triangle",
@@ -2796,7 +3406,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo is\u00f3sceles",
+      "spanish_text": "un tri\u00e1ngulo con al menos 2 lados de igual longitud"
     },
     {
       "word": "kilometer",
@@ -2805,7 +3417,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "kil\u00f3metro",
+      "spanish_text": "una unidad de longitud del sistema de medida m\u00e9trico decimal (1,000 metros equivalen a 1 kil\u00f3metro)"
     },
     {
       "word": "length",
@@ -2814,7 +3428,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "longitud",
+      "spanish_text": "cu\u00e1n largo es un objeto de un extremo al otro (debe medirse en unidades de una misma longitud, sin espacios ni superposiciones)"
     },
     {
       "word": "line",
@@ -2823,7 +3439,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "l\u00ednea, recta",
+      "spanish_text": "una marca recta que se extiende infinitamente en ambas direcciones y, a veces, conecta un conjunto de puntos dispuestos uno al lado del otro"
     },
     {
       "word": "line of symmetry",
@@ -2832,7 +3450,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "eje de simetr\u00eda",
+      "spanish_text": "una l\u00ednea que divide una figura en mitades id\u00e9nticas y una es el reflejo de la otra"
     },
     {
       "word": "line segment or segment",
@@ -2841,7 +3461,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "segmento de recta o segmento",
+      "spanish_text": "una parte de una recta con 2 extremos"
     },
     {
       "word": "line symmetry",
@@ -2850,14 +3472,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "simetr\u00eda lineal",
+      "spanish_text": "la cualidad de una figura que puede dividirse en dos mitades id\u00e9nticas o reflejadas"
     },
     {
       "word": "millileter",
       "text": "a unit of liquid volume in the metric measurement system (1,000 millileters is equal to 1 liter)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "million",
@@ -2866,7 +3492,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "mill\u00f3n",
+      "spanish_text": "la unidad de valor posicional de base diez compuesta por 10 centenas de millar (un mill\u00f3n escrito en la forma est\u00e1ndar es 1,000,000)"
     },
     {
       "word": "mixed number",
@@ -2875,7 +3503,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "n\u00famero mixto",
+      "spanish_text": "un n\u00famero expresado como un n\u00famero natural y una fracci\u00f3n menor que 1"
     },
     {
       "word": "multiple",
@@ -2886,7 +3516,9 @@
         1,
         4,
         6
-      ]
+      ],
+      "spanish_word": "m\u00faltiplo",
+      "spanish_text": "un n\u00famero que se obtiene al multiplicar por otro n\u00famero (ejemplo: algunos m\u00faltiplos de 4 son 4, 8, 12 y 16)"
     },
     {
       "word": "numerator",
@@ -2895,7 +3527,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "numerador",
+      "spanish_text": "el n\u00famero superior de una fracci\u00f3n que indica cu\u00e1ntas partes iguales se describen"
     },
     {
       "word": "obtuse angle",
@@ -2904,7 +3538,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo obtuso",
+      "spanish_text": "un \u00e1ngulo que mide m\u00e1s de 90 grados, pero menos de 180 grados"
     },
     {
       "word": "obtuse triangle",
@@ -2913,7 +3549,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo obtuso",
+      "spanish_text": "un tri\u00e1ngulo con 1 \u00e1ngulo obtuso"
     },
     {
       "word": "ounce",
@@ -2922,7 +3560,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "onza",
+      "spanish_text": "una unidad de peso del sistema de medida est\u00e1ndar de los Estados Unidos (16 onzas equivalen a 1 libra)"
     },
     {
       "word": "parallel lines",
@@ -2931,7 +3571,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "l\u00edneas paralelas",
+      "spanish_text": "rectas que nunca se cruzan o intersecan"
     },
     {
       "word": "parallelogram",
@@ -2940,14 +3582,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "paralelogramo",
+      "spanish_text": "un cuadril\u00e1tero con 2 pares de lados opuestos que son paralelos"
     },
     {
       "word": "parentheses",
       "text": "grouping symbols that can be used in expressions or equations, ex: (3 x 5) + (2 x 10)",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "partial product",
@@ -2956,7 +3602,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "producto parcial",
+      "spanish_text": "el valor que se obtiene al multiplicar las partes de 2 n\u00fameros por separado (que luego se suma a otros productos parciales para obtener el producto total)"
     },
     {
       "word": "partial quotient",
@@ -2965,14 +3613,18 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cociente parcial",
+      "spanish_text": "el valor que se obtiene al multiplicar el divisor de una ecuaci\u00f3n de divisi\u00f3n por otro n\u00famero para luego restar ese n\u00famero al dividendo (que luego se suma a otros cocientes parciales para obtener el cociente total)"
     },
     {
       "word": "pattern",
       "text": "a specific, replicable sequence of shapes or numbers; some patterns repeat and some patterns grow",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "perimeter",
@@ -2982,7 +3634,9 @@
       "all_units": [
         5,
         6
-      ]
+      ],
+      "spanish_word": "per\u00edmetro",
+      "spanish_text": "la longitud total del contorno de una figura bidimensional"
     },
     {
       "word": "perpendicular line",
@@ -2991,7 +3645,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "recta perpendicular",
+      "spanish_text": "una recta que se cruza con otra recta formando un \u00e1ngulo recto"
     },
     {
       "word": "point",
@@ -3000,7 +3656,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "punto",
+      "spanish_text": "una ubicaci\u00f3n en el espacio"
     },
     {
       "word": "pound",
@@ -3009,7 +3667,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "libra",
+      "spanish_text": "una unidad de peso del sistema de medida est\u00e1ndar de los Estados Unidos (1 libra equivale a 16 onzas)"
     },
     {
       "word": "prime number",
@@ -3019,7 +3679,9 @@
       "all_units": [
         1,
         3
-      ]
+      ],
+      "spanish_word": "n\u00famero primo",
+      "spanish_text": "un n\u00famero que tiene 1 solo par de factores"
     },
     {
       "word": "protractor",
@@ -3028,7 +3690,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "transportador",
+      "spanish_text": "una herramienta para medir el tama\u00f1o de un \u00e1ngulo en grados"
     },
     {
       "word": "quadrilateral",
@@ -3037,7 +3701,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadril\u00e1tero",
+      "spanish_text": "una figura con 4 lados y 4 esquinas"
     },
     {
       "word": "ray",
@@ -3046,7 +3712,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "semirrecta",
+      "spanish_text": "una parte de una recta con 1 extremo"
     },
     {
       "word": "remainder",
@@ -3055,7 +3723,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "resto",
+      "spanish_text": "la cantidad que sobra cuando, al dividir, no se puede formar otro grupo completo en el divisor"
     },
     {
       "word": "right angle",
@@ -3064,7 +3734,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo recto",
+      "spanish_text": "un \u00e1ngulo que mide 90 grados"
     },
     {
       "word": "right triangle",
@@ -3073,7 +3745,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo rect\u00e1ngulo",
+      "spanish_text": "un tri\u00e1ngulo con 1 \u00e1ngulo recto"
     },
     {
       "word": "rounding",
@@ -3082,7 +3756,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "redondeo",
+      "spanish_text": "estimar el valor de un n\u00famero determinando el m\u00faltiplo m\u00e1s cercano de un valor posicional espec\u00edfico"
     },
     {
       "word": "scalene triangle",
@@ -3091,7 +3767,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "tri\u00e1ngulo escaleno",
+      "spanish_text": "un tri\u00e1ngulo sin lados de igual longitud"
     },
     {
       "word": "second",
@@ -3100,7 +3778,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "segundo",
+      "spanish_text": "una unidad de tiempo (60 segundos equivalen a 1 minuto)"
     },
     {
       "word": "standard form",
@@ -3109,7 +3789,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "forma est\u00e1ndar",
+      "spanish_text": "una representaci\u00f3n de un n\u00famero que utiliza solo d\u00edgitos para representar valores posicionales"
     },
     {
       "word": "straight angle",
@@ -3118,7 +3800,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo llano",
+      "spanish_text": "un \u00e1ngulo que mide 180 grados"
     },
     {
       "word": "ten thousand",
@@ -3127,7 +3811,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "decena de millares",
+      "spanish_text": "la unidad de valor posicional de base diez compuesta por 10 millares (una decena de millar en forma est\u00e1ndar es 10,000)"
     },
     {
       "word": "thousand",
@@ -3136,7 +3822,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "unit fraction",
@@ -3145,7 +3833,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n unitaria",
+      "spanish_text": "un n\u00famero que describe exactamente 1 parte de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "vertex",
@@ -3154,7 +3844,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "v\u00e9rtice",
+      "spanish_text": "el punto donde se encuentran los 2 lados de un \u00e1ngulo (plural: v\u00e9rtices)"
     },
     {
       "word": "vertical",
@@ -3163,7 +3855,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "vertical",
+      "spanish_text": "una l\u00ednea recta que se extiende de arriba a abajo"
     },
     {
       "word": "width",
@@ -3172,7 +3866,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "ancho",
+      "spanish_text": "cu\u00e1n ancho es un objeto de un lado al otro (debe medirse en unidades de una misma longitud, sin espacios ni superposiciones)"
     },
     {
       "word": "yard",
@@ -3181,7 +3877,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "yarda",
+      "spanish_text": "una unidad de longitud del sistema de medida est\u00e1ndar de los Estados Unidos (1 yarda equivale a 3 pies)"
     }
   ],
   "5": [
@@ -3190,7 +3888,9 @@
       "text": "2 lines in a shape that are immediately next to each other or touching",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "algorithm",
@@ -3200,7 +3900,9 @@
       "all_units": [
         3,
         4
-      ]
+      ],
+      "spanish_word": "algoritmo",
+      "spanish_text": "procedimiento que se emplea para resolver un problema o realizar un c\u00e1lculo"
     },
     {
       "word": "area",
@@ -3213,7 +3915,9 @@
         4,
         5,
         7
-      ]
+      ],
+      "spanish_word": "\u00e1rea",
+      "spanish_text": "una medida del espacio dentro de una figura bidimensional"
     },
     {
       "word": "Associative Property of Multiplication",
@@ -3225,7 +3929,9 @@
         2,
         4,
         5
-      ]
+      ],
+      "spanish_word": "propiedad asociativa de la multiplicaci\u00f3n",
+      "spanish_text": "el producto de 3 o m\u00e1s n\u00fameros es el mismo independientemente de c\u00f3mo se agrupen los n\u00fameros"
     },
     {
       "word": "attribute",
@@ -3234,7 +3940,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "atributo",
+      "spanish_text": "una caracter\u00edstica o rasgo de un objeto o conjunto de objetos"
     },
     {
       "word": "axis (axes)",
@@ -3243,7 +3951,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "eje (ejes)",
+      "spanish_text": "las rectas perpendiculares que forman el plano de coordenadas, en el cual, el eje vertical es la recta de la parte izquierda que se extiende de abajo a arriba y el eje horizontal es la recta de la parte inferior que se extiende de un lado a otro"
     },
     {
       "word": "base",
@@ -3252,7 +3962,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "base",
+      "spanish_text": "el n\u00famero que se multiplica por s\u00ed mismo en la forma exponencial"
     },
     {
       "word": "column",
@@ -3261,14 +3973,18 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "columna",
+      "spanish_text": "una parte de una matriz que va de arriba a abajo"
     },
     {
       "word": "Commutative Property of Addition",
       "text": "the order in which numbers are added does not change the sum",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "Commutative Property of Multiplication",
@@ -3277,7 +3993,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "propiedad conmutativa de la multiplicaci\u00f3n",
+      "spanish_text": "el orden en el que se multiplican los n\u00fameros no altera el producto"
     },
     {
       "word": "compose",
@@ -3286,14 +4004,18 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "componer",
+      "spanish_text": "juntar"
     },
     {
       "word": "conjecture",
       "text": "a formed idea using limited information",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "coordinate grid",
@@ -3302,7 +4024,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadr\u00edcula de coordenadas",
+      "spanish_text": "una cuadr\u00edcula cuyas l\u00edneas est\u00e1n rotuladas con n\u00fameros"
     },
     {
       "word": "coordinate",
@@ -3311,7 +4035,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "coordenadas",
+      "spanish_text": "un par de n\u00fameros que representan la distancia al 0 en dos direcciones, partiendo del eje horizontal"
     },
     {
       "word": "cubic unit",
@@ -3320,7 +4046,9 @@
       "primary_unit": 1,
       "all_units": [
         1
-      ]
+      ],
+      "spanish_word": "unidad c\u00fabica",
+      "spanish_text": "cualquier medida tridimensional de volumen representa una cantidad de cubos que tienen una longitud de lado definida"
     },
     {
       "word": "cup",
@@ -3329,7 +4057,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "taza",
+      "spanish_text": "una unidad de volumen l\u00edquido del sistema de medida est\u00e1ndar de los Estados Unidos (16 tazas equivalen a 1 gal\u00f3n)"
     },
     {
       "word": "decompose",
@@ -3338,14 +4068,18 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "descomponer",
+      "spanish_text": "separar"
     },
     {
       "word": "defining attribute",
       "text": "a trait or property that a shape must have",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "Distributive Property",
@@ -3357,7 +4091,9 @@
         3,
         4,
         5
-      ]
+      ],
+      "spanish_word": "propiedad distributiva",
+      "spanish_text": "multiplicar la suma de 2 o m\u00e1s sumandos por un factor da el mismo resultado que multiplicar cada sumando individualmente por el factor y luego sumar los productos"
     },
     {
       "word": "dividend",
@@ -3370,7 +4106,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "dividendo",
+      "spanish_text": "el n\u00famero que se divide, que representa el n\u00famero total que se distribuye o divide equitativamente"
     },
     {
       "word": "divisor",
@@ -3382,7 +4120,9 @@
         3,
         4,
         5
-      ]
+      ],
+      "spanish_word": "divisor",
+      "spanish_text": "el n\u00famero que sigue al s\u00edmbolo de divisi\u00f3n que representa el n\u00famero de grupos del mismo tama\u00f1o o el tama\u00f1o de cada grupo"
     },
     {
       "word": "equation",
@@ -3392,7 +4132,9 @@
       "all_units": [
         3,
         5
-      ]
+      ],
+      "spanish_word": "ecuaci\u00f3n",
+      "spanish_text": "un enunciado matem\u00e1tico que muestra que los valores a cada lado del signo igual son los mismos"
     },
     {
       "word": "equipartition",
@@ -3402,7 +4144,9 @@
       "all_units": [
         2,
         3
-      ]
+      ],
+      "spanish_word": "equipartici\u00f3n",
+      "spanish_text": "dividir en partes iguales"
     },
     {
       "word": "exponent",
@@ -3411,7 +4155,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "exponente",
+      "spanish_text": "un n\u00famero que representa la potencia a la que un determinado n\u00famero o una determinada potencia deben multiplicarse y se expresa como un n\u00famero peque\u00f1o situado en la parte superior (ejemplo: en la expresi\u00f3n 104, 4 es el exponente)"
     },
     {
       "word": "expression",
@@ -3423,7 +4169,9 @@
         3,
         4,
         5
-      ]
+      ],
+      "spanish_word": "expresi\u00f3n",
+      "spanish_text": "un enunciado matem\u00e1tico con al menos 2 n\u00fameros y al menos una operaci\u00f3n matem\u00e1tica"
     },
     {
       "word": "factor",
@@ -3436,7 +4184,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "factor",
+      "spanish_text": "un n\u00famero que se multiplica por otro n\u00famero para dar un producto"
     },
     {
       "word": "gallon",
@@ -3445,7 +4195,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "gal\u00f3n",
+      "spanish_text": "una unidad de volumen l\u00edquido del sistema de medida est\u00e1ndar de los Estados Unidos (1 gal\u00f3n equivale a 4 cuartos de gal\u00f3n, 8 pintas o 16 tazas)"
     },
     {
       "word": "hundredths",
@@ -3454,14 +4206,18 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "cent\u00e9simas",
+      "spanish_text": "la unidad de valor posicional de base diez que equivale a 1/100 (una cent\u00e9sima en la forma est\u00e1ndar es 0.01)"
     },
     {
       "word": "inequality",
       "text": "the name of a statement used to express the relationship between two unequal numbers, in which < or > symbols are used",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "intersect",
@@ -3470,7 +4226,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "intersecarse",
+      "spanish_text": "cruzarse o encontrarse"
     },
     {
       "word": "line plot",
@@ -3479,7 +4237,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "gr\u00e1fica de puntos",
+      "spanish_text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica"
     },
     {
       "word": "mile",
@@ -3488,7 +4248,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "milla",
+      "spanish_text": "una unidad de longitud del sistema de medida est\u00e1ndar de los Estados Unidos (1 milla equivale a 5,280 pies o 1,760 yardas)"
     },
     {
       "word": "milligram",
@@ -3497,7 +4259,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "miligramo",
+      "spanish_text": "una unidad de peso del sistema de medida m\u00e9trico decimal (1,000 miligramos equivalen a 1 gramo)"
     },
     {
       "word": "millimeter",
@@ -3506,7 +4270,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "mil\u00edmetro",
+      "spanish_text": "una unidad de longitud del sistema de medida m\u00e9trico decimal (1,000 mil\u00edmetros equivalen a 1 metro)"
     },
     {
       "word": "mixed number",
@@ -3518,7 +4284,9 @@
         3,
         4,
         6
-      ]
+      ],
+      "spanish_word": "n\u00famero mixto",
+      "spanish_text": "un n\u00famero expresado como un n\u00famero natural y una fracci\u00f3n menor que 1"
     },
     {
       "word": "non-unit fraction",
@@ -3528,7 +4296,9 @@
       "all_units": [
         2,
         3
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n no unitaria",
+      "spanish_text": "un n\u00famero que describe exactamente 1 parte de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "ordered pair",
@@ -3537,7 +4307,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "par ordenado",
+      "spanish_text": "un par de n\u00fameros que corresponden a puntos en los ejes x y y, y el par se expresa (x, y)"
     },
     {
       "word": "origin",
@@ -3546,7 +4318,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "origen",
+      "spanish_text": "el punto donde se intersecan los 2 ejes en la cuadr\u00edcula de coordenadas, que se halla en (0, 0)"
     },
     {
       "word": "parallel lines",
@@ -3555,7 +4329,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "(rectas) paralelas",
+      "spanish_text": "rectas que nunca se cruzan o intersecan"
     },
     {
       "word": "parallelogram",
@@ -3564,14 +4340,18 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "paralelogramo",
+      "spanish_text": "un cuadril\u00e1tero con 2 pares de lados opuestos que son paralelos y tienen igual longitud"
     },
     {
       "word": "parentheses",
       "text": "grouping symbols that can be used in expressions or equations to indicate the order in which operations should be performed",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "partial product",
@@ -3580,7 +4360,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "producto parcial",
+      "spanish_text": "el valor que se obtiene al multiplicar las partes de 2 n\u00fameros por separado (que luego se suma a otros productos parciales para obtener el producto total)"
     },
     {
       "word": "partial quotient",
@@ -3589,7 +4371,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "cocientes parciales",
+      "spanish_text": "el valor que se obtiene al multiplicar el divisor de una ecuaci\u00f3n de divisi\u00f3n por otro n\u00famero para luego restar ese n\u00famero al dividendo (que luego se suma a otros cocientes parciales para obtener el cociente total)"
     },
     {
       "word": "perpendicular line",
@@ -3598,7 +4382,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "(rectas) perpendiculares",
+      "spanish_text": "una recta que cruza otra recta en un \u00e1ngulo de 90\u00b0"
     },
     {
       "word": "pint",
@@ -3607,7 +4393,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "pinta",
+      "spanish_text": "una unidad de volumen l\u00edquido del sistema de medida est\u00e1ndar de los Estados Unidos (8 pintas equivalen a 1 gal\u00f3n)"
     },
     {
       "word": "plot",
@@ -3616,7 +4404,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "gr\u00e1fica de puntos",
+      "spanish_text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica"
     },
     {
       "word": "product",
@@ -3628,7 +4418,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "producto",
+      "spanish_text": "el valor cuando se multiplican 2 o m\u00e1s n\u00fameros"
     },
     {
       "word": "quadrilateral",
@@ -3637,7 +4429,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadril\u00e1tero",
+      "spanish_text": "un pol\u00edgono o figura con 4 lados y 4 \u00e1ngulos"
     },
     {
       "word": "quart",
@@ -3646,7 +4440,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "cuarto de gal\u00f3n",
+      "spanish_text": "una unidad de volumen l\u00edquido del sistema de medida est\u00e1ndar de los Estados Unidos (4 cuartos de gal\u00f3n equivalen a 1 gal\u00f3n)"
     },
     {
       "word": "quotient",
@@ -3659,7 +4455,9 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "cociente",
+      "spanish_text": "el resultado que se obtiene al dividir 2 n\u00fameros que representan la cantidad de grupos al igual tama\u00f1o o el tama\u00f1o de cada grupo"
     },
     {
       "word": "rectangle",
@@ -3668,7 +4466,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "rect\u00e1ngulo",
+      "spanish_text": "un cuadril\u00e1tero con 2 pares de lados opuestos paralelos de igual longitud y 4 \u00e1ngulos rectos"
     },
     {
       "word": "rectangular prism",
@@ -3677,7 +4477,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "prisma rectangular",
+      "spanish_text": "un cuerpo geom\u00e9trico con 6 caras rectangulares"
     },
     {
       "word": "remainder",
@@ -3686,7 +4488,9 @@
       "primary_unit": 4,
       "all_units": [
         4
-      ]
+      ],
+      "spanish_word": "resto",
+      "spanish_text": "la cantidad que sobra cuando no se puede formar otro grupo completo del divisor en un problema de divisi\u00f3n"
     },
     {
       "word": "rhombus",
@@ -3695,7 +4499,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "rombo",
+      "spanish_text": "un cuadril\u00e1tero con 4 lados de igual longitud"
     },
     {
       "word": "right angle",
@@ -3704,7 +4510,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "\u00e1ngulo recto",
+      "spanish_text": "un \u00e1ngulo que mide 90 grados"
     },
     {
       "word": "rounding",
@@ -3713,7 +4521,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "redondeo",
+      "spanish_text": "estimar el valor de un n\u00famero determinando el m\u00faltiplo m\u00e1s cercano con un valor posicional espec\u00edfico"
     },
     {
       "word": "row",
@@ -3722,7 +4532,9 @@
       "primary_unit": 3,
       "all_units": [
         3
-      ]
+      ],
+      "spanish_word": "fila",
+      "spanish_text": "una parte de una matriz que va de lado a lado"
     },
     {
       "word": "square",
@@ -3731,7 +4543,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "cuadrado",
+      "spanish_text": "un cuadril\u00e1tero con 4 lados de igual longitud y 4 \u00e1ngulos rectos"
     },
     {
       "word": "sum",
@@ -3742,14 +4556,18 @@
         4,
         5,
         6
-      ]
+      ],
+      "spanish_word": "suma",
+      "spanish_text": "el total cuando se suman 2 o m\u00e1s n\u00fameros"
     },
     {
       "word": "tape diagram",
       "text": "a tool that shows the relationship between quantities, represented by rectangles placed side by side",
       "image": null,
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "tenth",
@@ -3758,7 +4576,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "d\u00e9cima",
+      "spanish_text": "el valor posicional de base diez es igual a 1/10 (una d\u00e9cima en la forma est\u00e1ndar es 0.1)"
     },
     {
       "word": "thousandth",
@@ -3767,7 +4587,9 @@
       "primary_unit": 5,
       "all_units": [
         5
-      ]
+      ],
+      "spanish_word": "mil\u00e9simas",
+      "spanish_text": "el valor posicional de base diez es igual a 1/1,000 (una mil\u00e9sima en la forma est\u00e1ndar es 0.001)"
     },
     {
       "word": "ton",
@@ -3776,7 +4598,9 @@
       "primary_unit": 6,
       "all_units": [
         6
-      ]
+      ],
+      "spanish_word": "tonelada",
+      "spanish_text": "una unidad de peso del sistema de medida est\u00e1ndar de los Estados Unidos (1 tonelada equivale a 2,000 libras)"
     },
     {
       "word": "trapezoid",
@@ -3785,7 +4609,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "trapecio",
+      "spanish_text": "un cuadril\u00e1tero con al menos 1 par de lados opuestos que son paralelos"
     },
     {
       "word": "unit fraction",
@@ -3795,14 +4621,18 @@
       "all_units": [
         2,
         3
-      ]
+      ],
+      "spanish_word": "fracci\u00f3n unitaria",
+      "spanish_text": "un n\u00famero que describe exactamente 1 parte de un entero que se ha dividido en partes iguales"
     },
     {
       "word": "vertex",
       "text": "the point where the adjacent sides of a shape meet, 2 or more rays of an angle meet, or the edges of a solid figure meet (plural: vertices)",
       "image": "5/238_vertex.png",
       "primary_unit": null,
-      "all_units": []
+      "all_units": [],
+      "spanish_word": "",
+      "spanish_text": ""
     },
     {
       "word": "volume",
@@ -3812,7 +4642,9 @@
       "all_units": [
         1,
         4
-      ]
+      ],
+      "spanish_word": "volumen",
+      "spanish_text": "el espacio que ocupa una figura tridimensional"
     },
     {
       "word": "x coordinate",
@@ -3821,7 +4653,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "coordenada x",
+      "spanish_text": "el primer n\u00famero de un par ordenado que indica la distancia horizontal en el eje x a partir del origen en (0, 0)"
     },
     {
       "word": "y coordinate",
@@ -3830,7 +4664,9 @@
       "primary_unit": 7,
       "all_units": [
         7
-      ]
+      ],
+      "spanish_word": "coordenada y",
+      "spanish_text": "el segundo n\u00famero de un par ordenado que indica la distancia vertical en el eje y a partir del origen en (0, 0)"
     }
   ]
 }

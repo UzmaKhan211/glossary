@@ -38,6 +38,7 @@ from PIL import Image as PILImage
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 RAW_DIR = DATA_DIR / "unit_glossary_raw"
+SPANISH_DIR = DATA_DIR / "spanish_translations"
 IMAGES_DIR = REPO_ROOT / "assets" / "images"
 OUTPUT_DIR = REPO_ROOT / "output"
 
@@ -165,8 +166,25 @@ def map_words_to_units(words, unit_texts):
     return result
 
 
+def load_spanish_translations():
+    """Return {grade: {(unit_str, word): entry}} from data/spanish_translations/grade_<G>.json.
+
+    Those files were produced by carefully reading data/unit_glossary_original/ (the
+    byte-faithful re-fetch of the official bilingual glossary PDFs, NOT the reflowed
+    unit_glossary_raw/ cache used for unit-mapping) and copying the Spanish word and
+    definition exactly as printed -- see README.md for the extraction method.
+    """
+    lookup = {}
+    for path in SPANISH_DIR.glob("grade_*.json"):
+        grade = path.stem.removeprefix("grade_")
+        data = json.loads(path.read_text())
+        lookup[grade] = {(unit, entry["word"]): entry for unit, entries in data.items() for entry in entries}
+    return lookup
+
+
 def build_unit_vocab():
     vocab = json.loads((DATA_DIR / "vocab.json").read_text())
+    spanish_lookup = load_spanish_translations()
     unit_vocab = {}
     qa_lines = ["# Unit-mapping QA report\n"]
 
@@ -179,6 +197,7 @@ def build_unit_vocab():
 
         words = [c["word"] for c in cards]
         word_to_units = map_words_to_units(words, unit_texts)
+        grade_spanish = spanish_lookup.get(grade, {})
 
         qa_lines.append(f"\n## Grade {grade} (units available: {sorted(unit_texts)})\n")
         grade_entries = []
@@ -187,12 +206,15 @@ def build_unit_vocab():
             corrected = correction_key in VERIFIED_UNIT_CORRECTIONS
             units_found = VERIFIED_UNIT_CORRECTIONS[correction_key] if corrected else word_to_units[card["word"]]
             primary_unit = units_found[0] if units_found else None
+            spanish = grade_spanish.get((str(primary_unit), card["word"])) if primary_unit else None
             entry = {
                 "word": card["word"],
                 "text": card.get("text") or "",
                 "image": card.get("image"),
                 "primary_unit": primary_unit,
                 "all_units": units_found,
+                "spanish_word": (spanish or {}).get("spanish_word") or "",
+                "spanish_text": (spanish or {}).get("spanish_definition") or "",
             }
             grade_entries.append(entry)
             tag = " [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]" if corrected else ""
@@ -202,6 +224,13 @@ def build_unit_vocab():
                 qa_lines.append(
                     f"- '{card['word']}' appears in units {units_found} -- filed under unit {primary_unit} "
                     f"(earliest), also referenced later{tag}"
+                )
+            if primary_unit and not entry["spanish_word"]:
+                qa_lines.append(f"- '{card['word']}' (unit {primary_unit}): no Spanish translation found -- left blank")
+            elif spanish and spanish.get("confidence") in ("low", "unmapped"):
+                qa_lines.append(
+                    f"- '{card['word']}' (unit {primary_unit}): Spanish translation is low-confidence "
+                    f"-- {spanish.get('note', 'see data/spanish_translations/')}"
                 )
             elif corrected:
                 qa_lines.append(f"- '{card['word']}' filed under unit {primary_unit}{tag}")
@@ -220,7 +249,7 @@ ROW_HEIGHT_PX = 90
 
 
 def add_sheet_header(ws):
-    headers = ["Grade", "Unit", "Word", "Definition", "Image"]
+    headers = ["Grade", "Unit", "Word", "Definition", "Spanish Word", "Spanish Definition", "Image"]
     for col, title in enumerate(headers, start=1):
         cell = ws.cell(row=1, column=col, value=title)
         cell.fill = HEADER_FILL
@@ -229,7 +258,9 @@ def add_sheet_header(ws):
     ws.column_dimensions["B"].width = 8
     ws.column_dimensions["C"].width = 28
     ws.column_dimensions["D"].width = 70
-    ws.column_dimensions["E"].width = IMG_COL_WIDTH_PX / 7
+    ws.column_dimensions["E"].width = 28
+    ws.column_dimensions["F"].width = 70
+    ws.column_dimensions["G"].width = IMG_COL_WIDTH_PX / 7
 
 
 def write_image(ws, row, col, image_rel_path):
@@ -273,7 +304,9 @@ def build_workbook(unit_vocab):
             unit_cell.fill = UNIT_FILL
             ws.cell(row=row, column=3, value=entry["word"]).alignment = Alignment(vertical="top", wrap_text=True)
             ws.cell(row=row, column=4, value=entry["text"]).alignment = Alignment(vertical="top", wrap_text=True)
-            write_image(ws, row, 5, entry["image"])
+            ws.cell(row=row, column=5, value=entry["spanish_word"]).alignment = Alignment(vertical="top", wrap_text=True)
+            ws.cell(row=row, column=6, value=entry["spanish_text"]).alignment = Alignment(vertical="top", wrap_text=True)
+            write_image(ws, row, 7, entry["image"])
             row += 1
 
         for entry in entries:
@@ -311,7 +344,8 @@ def main():
     out_path = build_workbook(unit_vocab)
     for grade, entries in unit_vocab.items():
         mapped = sum(1 for e in entries if e["primary_unit"] is not None)
-        print(f"grade {grade}: {mapped}/{len(entries)} words mapped to a unit")
+        spanish = sum(1 for e in entries if e["primary_unit"] is not None and e["spanish_word"])
+        print(f"grade {grade}: {mapped}/{len(entries)} words mapped to a unit, {spanish}/{mapped} have a Spanish translation")
     print(f"Wrote {out_path}")
 
 

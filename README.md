@@ -149,6 +149,49 @@ Unmapped tab instead. `unit_sheet_qa.md` tags every corrected entry with
 `[hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]` so the fix is traceable
 back to its reasoning, not just a silent number change.
 
+### Spanish translations
+
+Every grade tab also has **Spanish Word** and **Spanish Definition** columns,
+copied verbatim from the same official bilingual glossary PDFs used for unit
+mapping — no re-translation, no paraphrasing, only line-unwrapping (the PDF
+text extractor breaks every visual line into its own paragraph, so a
+definition that reads across 3 lines gets joined back into one string).
+
+These come from a *different* source cache than the unit-mapping step above:
+`data/unit_glossary_raw/` had been reflowed for readability while building
+the unit-mapping feature, so it isn't safe to copy translations from
+verbatim. `data/unit_glossary_original/<grade>/unit<N>.txt` is a byte-faithful
+re-fetch of all 43 files, kept exactly as extracted (page-break markers, bold
+markdown, and all), and is the actual source for the Spanish columns. The
+extraction itself (`data/spanish_translations/grade_<G>.json`, one file per
+grade) was done by close manual reading rather than a generic script, because
+these PDFs' extracted text isn't uniform enough for one parser to trust
+blindly:
+
+- About a third of the files wrap each headword in `**bold**` markers, in
+  which case the English and Spanish entries for a page appear in the same
+  order (English block, then Spanish block) and pair up by position.
+- Most of the rest are plain text where the page's copyright notice sits
+  right at the English/Spanish boundary — often glued onto the surrounding
+  text with no line break, e.g. `...divided or equally distributed © Amplify
+  Education, Inc and its licensors... algoritmo procedimiento...`.
+- A handful of pages — mostly ones with diagrams (coordinate grids, clocks,
+  number lines) — got their English and Spanish text interleaved *line by
+  line* by the extractor instead of split into two clean blocks. Those were
+  reconstructed by hand, using the already-known-correct English definition
+  as an anchor to isolate which fragments were English so the rest could be
+  read off as the Spanish text.
+
+Every entry in `data/spanish_translations/` carries a `confidence` field.
+`unit_sheet_qa.md` surfaces anything not `"high"`: a word with no Spanish
+translation found (left blank in the sheet rather than guessed — usually
+because, like the false-positive unit placements above, the word never had
+its own standalone entry in that unit's PDF, only an incidental mention
+inside a different word's definition) or one reconstructed from a
+garbled/interleaved page. Coverage: K 61/61, Grade 1 47/48, Grade 2 69/74,
+Grade 3 65/75, Grade 4 60/62, Grade 5 61/61 unit-mapped words have a Spanish
+translation.
+
 This spreadsheet is a standalone deliverable for review right now — the
 card generator (`generate.py`) still reads `data/vocab.json` directly and
 doesn't yet group/paginate by unit. Wiring unit-ordered generation into
