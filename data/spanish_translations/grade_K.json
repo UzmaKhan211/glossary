@@ -1,0 +1,601 @@
+{
+  "1": [
+    {
+      "word": "same",
+      "spanish_word": "iguales",
+      "spanish_definition": "",
+      "confidence": "high"
+    }
+  ],
+  "2": [
+    {
+      "word": "eight",
+      "spanish_word": "ocho",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "five",
+      "spanish_word": "cinco",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "four",
+      "spanish_word": "cuatro",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "less than",
+      "spanish_word": "menos",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "nine",
+      "spanish_word": "nueve",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "one",
+      "spanish_word": "uno",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "same",
+      "spanish_word": "iguales",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "seven",
+      "spanish_word": "siete",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "six",
+      "spanish_word": "seis",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "ten",
+      "spanish_word": "diez",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "three",
+      "spanish_word": "tres",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "two",
+      "spanish_word": "dos",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "written number",
+      "spanish_word": "número escrito",
+      "spanish_definition": "",
+      "confidence": "high"
+    }
+  ],
+  "3": [
+    {
+      "word": "above",
+      "spanish_word": "arriba",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "behind",
+      "spanish_word": "detrás",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "below",
+      "spanish_word": "debajo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "beside",
+      "spanish_word": "al lado de/junto a",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "between",
+      "spanish_word": "entre",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "circle",
+      "spanish_word": "círculo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "corner",
+      "spanish_word": "esquina",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "curved",
+      "spanish_word": "curvo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "hexagon",
+      "spanish_word": "hexágono",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "in front of",
+      "spanish_word": "delante de",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "longer",
+      "spanish_word": "más largo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "rectangle",
+      "spanish_word": "rectángulo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "shorter",
+      "spanish_word": "más corto/más bajo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "side",
+      "spanish_word": "lado",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "sort",
+      "spanish_word": "clasificar",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "square",
+      "spanish_word": "cuadrado",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "straight",
+      "spanish_word": "recto",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "triangle",
+      "spanish_word": "triángulo",
+      "spanish_definition": "",
+      "confidence": "high"
+    }
+  ],
+  "4": [
+    {
+      "word": "add",
+      "spanish_word": "sumar",
+      "spanish_definition": "4 + 3 cuatro más tres",
+      "confidence": "high"
+    },
+    {
+      "word": "expression",
+      "spanish_word": "expresión",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "five",
+      "spanish_word": "cinco",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'five' is not a standalone headword in unit 4's file; it only appears inside the worked example for 'subtract' (5 – 2 / cinco menos dos). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "four",
+      "spanish_word": "cuatro",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'four' is not a standalone headword in unit 4's file; it only appears inside the worked example for 'add' (4 + 3 / cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "subtract",
+      "spanish_word": "restar",
+      "spanish_definition": "5 – 2 cinco menos dos",
+      "confidence": "high"
+    },
+    {
+      "word": "three",
+      "spanish_word": "tres",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'three' is not a standalone headword in unit 4's file; it only appears inside the worked example for 'add' (4 + 3 / cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "total",
+      "spanish_word": "total",
+      "spanish_definition": "El total es 6.",
+      "confidence": "high"
+    },
+    {
+      "word": "two",
+      "spanish_word": "dos",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'two' is not a standalone headword in unit 4's file; it only appears inside the worked example for 'subtract' (5 – 2 / cinco menos dos). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "zero",
+      "spanish_word": "cero",
+      "spanish_definition": "",
+      "confidence": "high"
+    }
+  ],
+  "5": [
+    {
+      "word": "add",
+      "spanish_word": "sumar",
+      "spanish_definition": "4 + 3 cuatro más tres",
+      "confidence": "high"
+    },
+    {
+      "word": "equation",
+      "spanish_word": "ecuación",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "expression",
+      "spanish_word": "expresión",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "four",
+      "spanish_word": "cuatro",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'four' is not a standalone headword in unit 5's file; it only appears inside the worked example for 'add' (4 + 3 / cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "three",
+      "spanish_word": "tres",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'three' is not a standalone headword in unit 5's file; it only appears inside the worked example for 'add' (4 + 3 / cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "total",
+      "spanish_word": "total",
+      "spanish_definition": "El total es 6.",
+      "confidence": "high"
+    }
+  ],
+  "6": [
+    {
+      "word": "eighteen",
+      "spanish_word": "dieciocho",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "eleven",
+      "spanish_word": "once",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "equation",
+      "spanish_word": "ecuación",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "expression",
+      "spanish_word": "expresión",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "fifteen",
+      "spanish_word": "quince",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "fourteen",
+      "spanish_word": "catorce",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "nineteen",
+      "spanish_word": "diecinueve",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "seventeen",
+      "spanish_word": "diecisiete",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "sixteen",
+      "spanish_word": "dieciséis",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "teen number",
+      "spanish_word": "11 12 13 14 15 16 17 18 19",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "No Spanish-language headword or definition for 'teen number' appears anywhere in unit 6's source text (checked both the cleaned and raw text dumps). In the position where a Spanish translation would be, the PDF shows only the shared numeral illustration '11 12 13 14 15' / '16 17 18 19' (identical in both the English and Spanish columns). This is a best-effort placeholder using that numeral content, not a verbatim word translation -- flagging per instructions since no clean Spanish text could be found."
+    },
+    {
+      "word": "thirteen",
+      "spanish_word": "trece",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "twelve",
+      "spanish_word": "doce",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "twenty",
+      "spanish_word": "veinte",
+      "spanish_definition": "",
+      "confidence": "high"
+    }
+  ],
+  "7": [
+    {
+      "word": "above",
+      "spanish_word": "arriba",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "add",
+      "spanish_word": "sumar",
+      "spanish_definition": "4 + 3 Cuatro más tres",
+      "confidence": "high"
+    },
+    {
+      "word": "below",
+      "spanish_word": "debajo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "beside",
+      "spanish_word": "al lado de/junto a",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "between",
+      "spanish_word": "entre",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "circle",
+      "spanish_word": "círculo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "cone",
+      "spanish_word": "cono",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "cube",
+      "spanish_word": "cubo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "cylinder",
+      "spanish_word": "cilindro",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "expression",
+      "spanish_word": "expresión",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "face",
+      "spanish_word": "cara",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "fewer",
+      "spanish_word": "menor cantidad",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand matching against well-established Spanish terms for these concepts (consistent with 'menor cantidad' used for 'fewer' in units 2 and 3 of this same grade); pairing is very likely correct but flagged per instructions because the source page was garbled."
+    },
+    {
+      "word": "five",
+      "spanish_word": "cinco",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'five' is not a standalone headword in unit 7's file; it only appears inside the worked example for 'subtract' (5 – 2 / cinco menos dos). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "flat shapes",
+      "spanish_word": "figuras planas",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled."
+    },
+    {
+      "word": "four",
+      "spanish_word": "cuatro",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'four' is not a standalone headword in unit 7's file; it only appears inside the worked example for 'add' (4 + 3 / Cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "heavier",
+      "spanish_word": "más pesado",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled."
+    },
+    {
+      "word": "less than",
+      "spanish_word": "menos",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand matching against 'menos' used for 'less than' in unit 2 of this same grade; pairing is very likely correct but flagged per instructions because the source page was garbled."
+    },
+    {
+      "word": "lighter",
+      "spanish_word": "más liviano",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "more",
+      "spanish_word": "mayor cantidad",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "prism",
+      "spanish_word": "prisma",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "rectangle",
+      "spanish_word": "rectángulo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "same",
+      "spanish_word": "iguales",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "shorter",
+      "spanish_word": "más corto/más bajo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "solid shape",
+      "spanish_word": "cuerpos geométricos",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "sphere",
+      "spanish_word": "esfera",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "square",
+      "spanish_word": "cuadrado",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "subtract",
+      "spanish_word": "restar",
+      "spanish_definition": "5 – 2 cinco menos dos",
+      "confidence": "high"
+    },
+    {
+      "word": "taller",
+      "spanish_word": "más alto",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "three",
+      "spanish_word": "tres",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'three' is not a standalone headword in unit 7's file; it only appears inside the worked example for 'add' (4 + 3 / Cuatro más tres). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    },
+    {
+      "word": "triangle",
+      "spanish_word": "triángulo",
+      "spanish_definition": "",
+      "confidence": "high"
+    },
+    {
+      "word": "two",
+      "spanish_word": "dos",
+      "spanish_definition": "",
+      "confidence": "low",
+      "note": "'two' is not a standalone headword in unit 7's file; it only appears inside the worked example for 'subtract' (5 – 2 / cinco menos dos). Spanish word extracted from that embedded example rather than its own dedicated entry."
+    }
+  ]
+}
