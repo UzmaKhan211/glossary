@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Grades -- Word Wall Pipeline{% endblock %}
+{% block content %}
+<h1>Word Wall Pipeline</h1>
+<p class="subtitle">Map vocabulary words to units, add Spanish translations, and export print-ready card decks -- for any grade, without needing an engineer.</p>
+
+{% if not vocab_loaded %}
+  <div class="card-box">
+    <h2>Start here</h2>
+    <p class="hint">No master glossary spreadsheet has been loaded yet. Upload it first -- every grade's word list comes from there.</p>
+    <a class="btn" href="{{ url_for('upload_spreadsheet') }}">Upload the spreadsheet</a>
+  </div>
+{% endif %}
+
+<div class="grade-grid">
+  {% for grade, s in grades.items() %}
+  <div class="grade-card">
+    <h3>{{ s.label }}</h3>
+    {% if s.words %}
+      <div class="stat-line">{{ s.words }} words from the spreadsheet</div>
+      <div class="stat-line">{{ s.mapped }}/{{ s.words }} mapped to a unit</div>
+      <div class="stat-line">{{ s.spanish }}/{{ s.mapped }} have a Spanish translation</div>
+      {% if s.units_uploaded %}
+        <div class="stat-line">Units uploaded: {{ s.units_uploaded | join(', ') }}</div>
+      {% else %}
+        <span class="pill empty">No unit PDFs yet</span>
+      {% endif %}
+    {% else %}
+      <span class="pill empty">No spreadsheet data yet</span>
+    {% endif %}
+    <div class="actions">
+      <a class="btn secondary" href="{{ url_for('map_grade', grade=grade) }}">Map units</a>
+      {% if s.has_data %}
+        <a class="btn secondary" href="{{ url_for('review_grade', grade=grade) }}">Review</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card-box">
+  <h2>How this works</h2>
+  <ol>
+    <li><strong>Upload the spreadsheet</strong> -- the master K-5 glossary feedback sheet. This gives every grade its cleaned word list.</li>
+    <li><strong>Map units</strong> -- for a grade, upload that grade's official per-unit glossary PDFs (e.g. <code>Grade5-Unit7.pdf</code>). Each word gets matched to the unit it belongs to, plus its Spanish translation, read straight from the PDF.</li>
+    <li><strong>Review</strong> -- check the matched table, fix anything that needs it, and save.</li>
+    <li><strong>Export PDFs</strong> -- generate the standalone English and Spanish card decks, ready to print.</li>
+  </ol>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Upload spreadsheet -- Word Wall Pipeline{% endblock %}
+{% block content %}
+<div class="steps">
+  <span class="active">1. Spreadsheet</span>
+  <span>2. Map units</span>
+  <span>3. Review</span>
+  <span>4. Export PDFs</span>
+</div>
+<h1>Upload the master glossary spreadsheet</h1>
+<p class="subtitle">This is the K-5 glossary updates &amp; feedback spreadsheet -- one row per word, with a Current/Image/Feedback/New Entry block per grade. Re-uploading replaces every grade's word list with a fresh extraction.</p>
+
+<div class="card-box">
+  <form method="post" enctype="multipart/form-data">
+    <div class="field">
+      <label for="spreadsheet">Spreadsheet file (.xlsx)</label>
+      <input type="file" id="spreadsheet" name="spreadsheet" accept=".xlsx" required>
+      <div class="hint">Only the format of Amplify's own K-5 glossary feedback sheet is supported -- a fixed 4-column (Current/Image/Feedback/New Entry) block per grade.</div>
+    </div>
+    <button class="btn" type="submit">Process spreadsheet</button>
+  </form>
+</div>
+{% endblock %}

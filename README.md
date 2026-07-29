@@ -38,6 +38,10 @@ the sheet / downloaded from Google Fonts), not source, so they don't bloat
 the repo or any handoff of it. `fetch_fonts.py` recreates the font files;
 `extract_data.py` (next section) recreates the images.
 
+`requirements.txt` also installs Flask and PyMuPDF, used by the web
+interface (see "Web interface" below) -- everything else only needs
+openpyxl/Jinja2/Playwright/Pillow.
+
 ## Regenerating the data from the spreadsheet
 
 Download the sheet (File > Download > Microsoft Excel) to
@@ -192,11 +196,65 @@ garbled/interleaved page. Coverage: K 61/61, Grade 1 47/48, Grade 2 69/74,
 Grade 3 65/75, Grade 4 60/62, Grade 5 61/61 unit-mapped words have a Spanish
 translation.
 
-This spreadsheet is a standalone deliverable for review right now — the
-card generator (`generate.py`) still reads `data/vocab.json` directly and
-doesn't yet group/paginate by unit. Wiring unit-ordered generation into
-`generate.py` would be a small follow-up once the unit data itself looks
-right.
+`scripts/generate.py` (below) still reads `data/vocab.json` directly and
+isn't unit-aware -- this spreadsheet is the reference data for review. The
+web interface (next section) *is* unit-aware and Spanish-aware, and is the
+easiest way to turn this data straight into printable card decks.
+
+## Web interface
+
+Everything above (mapping words to units, adding Spanish translations,
+generating cards) is also available as a small local web app, so mapping a
+*new* grade or redoing one doesn't require running scripts by hand:
+
+```
+python3 webapp/app.py
+```
+
+then open `http://127.0.0.1:5050`. Four steps, in order:
+
+1. **Upload the spreadsheet** -- the same master K-5 glossary feedback sheet
+   `extract_data.py` reads, processed the same way, giving every grade its
+   cleaned word list (`data/vocab.json`).
+2. **Map units** -- for a grade, upload its official per-unit glossary PDFs
+   (e.g. `Grade5-Unit7.pdf`, `KG-Unit3.pdf` -- the grade+unit are read out of
+   the filename). Each word gets matched to the unit it belongs to and its
+   Spanish translation, straight from the PDF.
+3. **Review** -- an editable table of every matched (and unmatched) word, so
+   anything the automatic match got wrong can be fixed by hand and saved.
+4. **Export PDFs** -- generate a standalone English or Spanish card deck for
+   any combination of grades, using the same template/fonts as the CLI
+   generator.
+
+**Why this doesn't reuse `data/unit_glossary_raw/`'s text-dump approach:**
+that approach (used for the original 6 grades, see above) extracted PDF text
+through a tool that sometimes interleaved the English and Spanish columns
+line-by-line on pages with diagrams -- workable, but it took careful manual
+reconstruction to get right (see the Spanish translations section above).
+The web interface instead opens the uploaded PDF directly with PyMuPDF
+(`scripts/pdf_glossary_parser.py`) and reads its actual structure: every
+glossary entry is its own text block, with the headword in a distinct
+bold/heavy font and the definition in the matching regular weight, and the
+English/Spanish columns are simply the blocks left vs. right of the page's
+midpoint. Reading the real structure sidesteps the interleaving problem
+instead of working around it, and was verified against the hardest cases
+from the original 6 grades (garbled coordinate-grid pages, icon-only K
+entries) with byte-for-byte matching results.
+
+Uploaded PDFs and their parsed cache live in `data/unit_pdfs/` (gitignored --
+regenerable by re-uploading) and `data/unit_glossary_parsed/` (committed,
+small JSON -- the source of truth for anything mapped through the web
+interface, the same role `data/unit_glossary_original/` plays for the
+original 6 grades). Matching itself is headword-list-to-headword-list
+comparison (tolerant of simple plurals), which is safer than the original
+substring search: since the PDF's own headwords are now known exactly, a
+word can't accidentally match text that's only ever mentioned *inside* a
+different word's definition.
+
+This is a single-user local tool (no login, no multi-session isolation) --
+run it, do the mapping, close it. It reads and writes the same `data/` and
+`output/` paths the CLI scripts use, so it's a front end for the real
+pipeline, not a separate copy of it.
 
 ## Generating cards
 

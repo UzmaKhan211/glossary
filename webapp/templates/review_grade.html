@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Review {{ grade_label }} -- Word Wall Pipeline{% endblock %}
+{% block content %}
+<div class="steps">
+  <span>1. Spreadsheet</span>
+  <span>2. Map units</span>
+  <span class="active">3. Review</span>
+  <span>4. Export PDFs</span>
+</div>
+<h1>Review {{ grade_label }}</h1>
+<p class="subtitle">
+  Rows highlighted in orange have no unit match -- fix the word or unit and save, or leave the unit blank to exclude it from both card decks.
+  Re-uploading a PDF for this grade in <a href="{{ url_for('map_grade', grade=grade) }}">Map units</a> re-matches everything from scratch, so save any spreadsheet/PDF-side corrections at the source if you need them to stick.
+</p>
+
+{% if not rows %}
+  <div class="card-box">
+    <p>No words mapped yet. <a href="{{ url_for('map_grade', grade=grade) }}">Upload this grade's unit PDFs</a> first.</p>
+  </div>
+{% else %}
+<form method="post">
+  <div class="table-scroll">
+    <table class="review-table">
+      <thead>
+        <tr>
+          <th>Unit</th>
+          <th>Word</th>
+          <th>Definition</th>
+          <th>Spanish word</th>
+          <th>Spanish definition</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i, row in rows %}
+        <tr class="{{ 'unmapped' if row.primary_unit is none }}">
+          <td><input class="unit-input" type="text" name="row{{ i }}_primary_unit" value="{{ row.primary_unit if row.primary_unit is not none else '' }}"></td>
+          <td><input class="word-input" type="text" name="row{{ i }}_word" value="{{ row.word }}"></td>
+          <td><textarea class="text-input" name="row{{ i }}_text" rows="2">{{ row.text }}</textarea></td>
+          <td><input class="word-input" type="text" name="row{{ i }}_spanish_word" value="{{ row.spanish_word }}"></td>
+          <td><textarea class="text-input" name="row{{ i }}_spanish_text" rows="2">{{ row.spanish_text }}</textarea></td>
+          <td>{% if row.image %}<img class="thumb" src="{{ url_for('serve_image', rel_path=row.image) }}" alt="">{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:16px;">
+    <button class="btn" type="submit">Save changes</button>
+    <a class="btn secondary" href="{{ url_for('generate') }}">Go to export</a>
+  </div>
+</form>
+{% endif %}
+{% endblock %}

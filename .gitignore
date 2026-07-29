@@ -3,7 +3,16 @@ data/source/
 __pycache__/
 *.pyc
 templates/_build.html
+templates/_build_*.html
 .DS_Store
+
+# Uploaded through the webapp (webapp/app.py): the master spreadsheet copy
+# and the raw unit-glossary PDFs a user drops in via /map/<grade>. Both are
+# regenerable by re-uploading -- data/unit_glossary_parsed/ (the parser's
+# output, small JSON) is what's actually committed as source of truth, the
+# same way data/unit_glossary_original/ is for the original 6 grades.
+data/_uploaded_master.xlsx
+data/unit_pdfs/
 
 # Regenerable build artifact (not source): comes from extract_data.py
 # against the sheet. Keeping this out of git keeps the repo (and any handoff
