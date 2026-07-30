@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Step 3: Map -- {{ grade_label }}{% endblock %}
+{% block content %}
+{% set current_step = 3 %}
+{% include "_steps.html" %}
+<h1>Step 3 of 5 -- Map {{ grade_label }} to units</h1>
+<p class="subtitle">Ready to match {{ grade_label }}'s {{ word_count }} words against the unit PDFs you've uploaded, and pull in each word's Spanish translation straight from the PDF text.</p>
+
+<div class="card-box">
+  <h2>Units uploaded for {{ grade_label }}</h2>
+  <p class="hint">
+    {% for unit, count in units_uploaded.items() %}Unit {{ unit }} ({{ count }} words){{ ", " if not loop.last }}{% endfor %}
+  </p>
+  <div class="hint">Missing a unit? <a href="{{ url_for('upload_pdfs', grade=grade) }}">Go back and upload it</a> before mapping, or upload more later and run mapping again -- it always re-matches from scratch using everything uploaded so far.</div>
+</div>
+
+<div class="card-box">
+  <form method="post">
+    <button class="btn" type="submit">Run mapping now</button>
+  </form>
+</div>
+{% endblock %}

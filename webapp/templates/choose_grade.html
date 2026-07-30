@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Choose a grade -- Word Wall Pipeline{% endblock %}
+{% block content %}
+{% set current_step = 2 %}
+{% include "_steps.html" %}
+<h1>Which grade are you working on?</h1>
+<p class="subtitle">Pick a grade to upload its unit glossary PDFs, map its words to units, and review the results. You'll come back to this page for each grade you want to process -- export (step 5) can combine as many grades as you like at the end.</p>
+
+<div class="grade-grid">
+  {% for grade, s in grades.items() %}
+  <div class="grade-card">
+    <h3>{{ s.label }}</h3>
+    {% if s.words %}
+      <div class="stat-line">{{ s.words }} words waiting from the spreadsheet</div>
+      {% if s.has_data %}
+        <span class="pill">Mapped -- {{ s.mapped }}/{{ s.words }}</span>
+      {% elif s.units_uploaded %}
+        <span class="pill">PDFs uploaded -- ready to map</span>
+      {% else %}
+        <span class="pill empty">Not started</span>
+      {% endif %}
+      <div class="actions">
+        <a class="btn" href="{{ url_for('upload_pdfs', grade=grade) }}">
+          {{ "Continue" if s.units_uploaded or s.has_data else "Start" }}
+        </a>
+      </div>
+    {% else %}
+      <span class="pill empty">No spreadsheet data</span>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

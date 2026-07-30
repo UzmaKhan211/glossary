@@ -55,7 +55,12 @@ def grade_status():
 
 @app.route("/")
 def home():
-    return render_template("home.html", grades=grade_status(), vocab_loaded=pipeline.VOCAB_PATH.exists())
+    status = grade_status()
+    vocab_loaded = pipeline.VOCAB_PATH.exists()
+    # "Get started" sends a first-time user to step 1, and a returning user
+    # (spreadsheet already loaded) straight to picking a grade to continue.
+    next_step_url = url_for("upload_spreadsheet") if not vocab_loaded else url_for("choose_grade")
+    return render_template("home.html", grades=status, vocab_loaded=vocab_loaded, next_step_url=next_step_url)
 
 
 @app.route("/upload-spreadsheet", methods=["GET", "POST"])
@@ -77,12 +82,21 @@ def upload_spreadsheet():
             "Spreadsheet processed: " + ", ".join(f"{pipeline.GRADE_LABELS[g]} {n}" for g, n in counts.items()),
             "success",
         )
-        return redirect(url_for("home"))
+        return redirect(url_for("choose_grade"))
     return render_template("upload_spreadsheet.html")
 
 
-@app.route("/map/<grade>", methods=["GET", "POST"])
-def map_grade(grade):
+@app.route("/choose-grade")
+def choose_grade():
+    status = grade_status()
+    if not any(s["words"] for s in status.values()):
+        flash("Upload the master spreadsheet first -- there's no word data for any grade yet.", "error")
+        return redirect(url_for("upload_spreadsheet"))
+    return render_template("choose_grade.html", grades=status)
+
+
+@app.route("/map/<grade>/pdfs", methods=["GET", "POST"])
+def upload_pdfs(grade):
     if grade not in pipeline.GRADES:
         return "Unknown grade", 404
 
@@ -90,7 +104,7 @@ def map_grade(grade):
         files = request.files.getlist("unit_pdfs")
         if not files or not any(f.filename for f in files):
             flash("Choose one or more unit PDF files first.", "error")
-            return redirect(url_for("map_grade", grade=grade))
+            return redirect(url_for("upload_pdfs", grade=grade))
 
         uploaded, errors = [], []
         for file in files:
@@ -115,17 +129,40 @@ def map_grade(grade):
                 errors.append(f"{file.filename} (unit {unit}): {w}")
 
         if uploaded:
-            pipeline.match_grade(grade)
-            flash(f"Uploaded {', '.join(uploaded)}. Data mapped -- review it below.", "success")
+            flash(f"Uploaded {', '.join(uploaded)}.", "success")
         for e in errors:
             flash(e, "warning")
-        return redirect(url_for("review_grade", grade=grade))
+        return redirect(url_for("upload_pdfs", grade=grade))
 
     return render_template(
-        "map_grade.html",
+        "upload_pdfs.html",
         grade=grade,
         grade_label=pipeline.GRADE_LABELS[grade],
         units_uploaded=pipeline.uploaded_units_summary(grade),
+        word_count=len(pipeline.load_vocab().get(grade, [])),
+    )
+
+
+@app.route("/map/<grade>/run", methods=["GET", "POST"])
+def run_mapping(grade):
+    if grade not in pipeline.GRADES:
+        return "Unknown grade", 404
+
+    units_uploaded = pipeline.uploaded_units_summary(grade)
+    if not units_uploaded:
+        flash("Upload this grade's unit PDFs first -- there's nothing to map yet.", "error")
+        return redirect(url_for("upload_pdfs", grade=grade))
+
+    if request.method == "POST":
+        pipeline.match_grade(grade)
+        flash("Mapping complete -- review the results below.", "success")
+        return redirect(url_for("review_grade", grade=grade))
+
+    return render_template(
+        "run_mapping.html",
+        grade=grade,
+        grade_label=pipeline.GRADE_LABELS[grade],
+        units_uploaded=units_uploaded,
         word_count=len(pipeline.load_vocab().get(grade, [])),
     )
 

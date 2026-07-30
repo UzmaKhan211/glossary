@@ -1,13 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Export PDFs -- Word Wall Pipeline{% endblock %}
+{% block title %}Step 5: Export -- Word Wall Pipeline{% endblock %}
 {% block content %}
-<div class="steps">
-  <span>1. Spreadsheet</span>
-  <span>2. Map units</span>
-  <span>3. Review</span>
-  <span class="active">4. Export PDFs</span>
-</div>
-<h1>Export card decks</h1>
+{% set current_step = 5 %}
+{% include "_steps.html" %}
+<h1>Step 5 of 5 -- Export card decks</h1>
 <p class="subtitle">Pick the grades to include and a language, then generate a standalone, print-ready PDF (2 cards per Letter-landscape page, matching the approved template). Words with no Spanish translation are skipped from the Spanish deck rather than printed blank.</p>
 
 <div class="card-box">

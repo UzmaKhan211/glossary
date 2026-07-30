@@ -211,20 +211,30 @@ generating cards) is also available as a small local web app, so mapping a
 python3 webapp/app.py
 ```
 
-then open `http://127.0.0.1:5050`. Four steps, in order:
+then open `http://127.0.0.1:5050`. It's a straight-line, 5-step wizard --
+each step's page tells you what it needs and what happens next, so someone
+who's never seen the pipeline before can follow it without asking anyone:
 
 1. **Upload the spreadsheet** -- the same master K-5 glossary feedback sheet
    `extract_data.py` reads, processed the same way, giving every grade its
-   cleaned word list (`data/vocab.json`).
-2. **Map units** -- for a grade, upload its official per-unit glossary PDFs
-   (e.g. `Grade5-Unit7.pdf`, `KG-Unit3.pdf` -- the grade+unit are read out of
-   the filename). Each word gets matched to the unit it belongs to and its
-   Spanish translation, straight from the PDF.
-3. **Review** -- an editable table of every matched (and unmatched) word, so
+   cleaned word list (`data/vocab.json`). Only needs doing once, unless the
+   spreadsheet itself changes.
+2. **Upload PDFs** -- pick a grade, then upload its official per-unit
+   glossary PDFs (e.g. `Grade5-Unit7.pdf`, `KG-Unit3.pdf` -- the grade+unit
+   are read out of the filename). This step only reads and stores them --
+   nothing gets matched to a word yet.
+3. **Map** -- an explicit "Run mapping now" step: matches every word against
+   whatever's been uploaded so far and pulls in each word's Spanish
+   translation straight from the PDF text.
+4. **Review** -- an editable table of every matched (and unmatched) word, so
    anything the automatic match got wrong can be fixed by hand and saved.
-4. **Export PDFs** -- generate a standalone English or Spanish card deck for
-   any combination of grades, using the same template/fonts as the CLI
+5. **Export** -- generate a standalone English or Spanish card deck for any
+   combination of grades, using the same template/fonts as the CLI
    generator.
+
+Steps 2-4 are per grade -- the "Grades" page lists every grade's progress
+and lets you jump back into whichever step it's currently at. Step 5 can
+combine as many already-mapped grades as you want into one deck.
 
 **Why this doesn't reuse `data/unit_glossary_raw/`'s text-dump approach:**
 that approach (used for the original 6 grades, see above) extracted PDF text

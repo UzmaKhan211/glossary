@@ -1,21 +1,17 @@
 {% extends "base.html" %}
-{% block title %}Review {{ grade_label }} -- Word Wall Pipeline{% endblock %}
+{% block title %}Step 4: Review -- {{ grade_label }}{% endblock %}
 {% block content %}
-<div class="steps">
-  <span>1. Spreadsheet</span>
-  <span>2. Map units</span>
-  <span class="active">3. Review</span>
-  <span>4. Export PDFs</span>
-</div>
-<h1>Review {{ grade_label }}</h1>
+{% set current_step = 4 %}
+{% include "_steps.html" %}
+<h1>Step 4 of 5 -- Review {{ grade_label }}</h1>
 <p class="subtitle">
   Rows highlighted in orange have no unit match -- fix the word or unit and save, or leave the unit blank to exclude it from both card decks.
-  Re-uploading a PDF for this grade in <a href="{{ url_for('map_grade', grade=grade) }}">Map units</a> re-matches everything from scratch, so save any spreadsheet/PDF-side corrections at the source if you need them to stick.
+  Uploading more PDFs and re-running mapping (<a href="{{ url_for('upload_pdfs', grade=grade) }}">step 2</a>) re-matches everything from scratch, so save any spreadsheet/PDF-side corrections at the source if you need them to stick.
 </p>
 
 {% if not rows %}
   <div class="card-box">
-    <p>No words mapped yet. <a href="{{ url_for('map_grade', grade=grade) }}">Upload this grade's unit PDFs</a> first.</p>
+    <p>No words mapped yet. <a href="{{ url_for('upload_pdfs', grade=grade) }}">Upload this grade's unit PDFs</a> first.</p>
   </div>
 {% else %}
 <form method="post">
@@ -47,7 +43,8 @@
   </div>
   <div style="margin-top:16px;">
     <button class="btn" type="submit">Save changes</button>
-    <a class="btn secondary" href="{{ url_for('generate') }}">Go to export</a>
+    <a class="btn secondary" href="{{ url_for('choose_grade') }}">Map another grade</a>
+    <a class="btn secondary" href="{{ url_for('generate') }}">Continue to export &rarr;</a>
   </div>
 </form>
 {% endif %}

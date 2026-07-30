@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Step 2: Upload PDFs -- {{ grade_label }}{% endblock %}
+{% block content %}
+{% set current_step = 2 %}
+{% include "_steps.html" %}
+<h1>Step 2 of 5 -- Upload {{ grade_label }}'s unit PDFs</h1>
+<p class="subtitle">
+  {% if word_count %}
+    {{ word_count }} words are waiting from the spreadsheet for {{ grade_label }}.
+  {% else %}
+    No spreadsheet data found for {{ grade_label }} yet -- <a href="{{ url_for('upload_spreadsheet') }}">upload the spreadsheet</a> first.
+  {% endif %}
+  Upload that grade's official per-unit glossary PDFs below. This step only uploads and reads them -- nothing gets matched to a word yet, that happens in the next step.
+</p>
+
+<div class="card-box">
+  <form method="post" enctype="multipart/form-data">
+    <div class="field">
+      <label for="unit_pdfs">Unit glossary PDFs</label>
+      <input type="file" id="unit_pdfs" name="unit_pdfs" accept=".pdf" multiple required>
+      <div class="hint">Filenames need to say which unit they are, e.g. <code>Grade5-Unit7.pdf</code> or <code>KG-Unit3.pdf</code>. Upload as many units at once as you like, and come back to add more later.</div>
+    </div>
+    <button class="btn" type="submit">Upload</button>
+  </form>
+</div>
+
+<div class="card-box">
+  <h2>Uploaded so far for {{ grade_label }}</h2>
+  {% if units_uploaded %}
+    <p class="hint">
+      {% for unit, count in units_uploaded.items() %}Unit {{ unit }} ({{ count }} words){{ ", " if not loop.last }}{% endfor %}
+    </p>
+    <a class="btn" href="{{ url_for('run_mapping', grade=grade) }}">Continue to mapping &rarr;</a>
+  {% else %}
+    <p class="hint">Nothing uploaded yet -- add at least one unit PDF above to continue.</p>
+  {% endif %}
+</div>
+{% endblock %}
