@@ -266,6 +266,18 @@ run it, do the mapping, close it. It reads and writes the same `data/` and
 `output/` paths the CLI scripts use, so it's a front end for the real
 pipeline, not a separate copy of it.
 
+**A fresh clone has word data but no image files.** `data/vocab.json` is
+committed, so a fresh `git clone` already shows every K-5 grade's word
+count as if it's fully set up -- but `assets/images/` isn't committed (see
+above: it's a regenerable build artifact), so none of the actual image
+files exist yet on a machine that hasn't uploaded the spreadsheet itself.
+That used to be silent -- cards would just render without pictures, no
+error. The dashboard (`/` and `/choose-grade`) now checks, per grade,
+whether the image files a card's `"image"` path points to actually exist
+on disk, and shows a warning banner naming exactly which grades are
+missing them if not. The fix either way is the same: upload the master
+spreadsheet (step 1) once on that machine to extract the images.
+
 **More than one master spreadsheet.** Step 1 is safe to repeat -- uploading
 a spreadsheet only updates the grades *that file itself defines columns
 for* (currently K-5, from `extract_data.GRADE_COLS`); any other grade

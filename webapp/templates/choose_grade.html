@@ -6,12 +6,21 @@
 <h1>Which grade are you working on?</h1>
 <p class="subtitle">Pick a grade to upload its unit glossary PDFs, map its words to units, and review the results. You'll come back to this page for each grade you want to process -- export (step 5) can combine as many grades as you like at the end.</p>
 
+{% set grades_missing_images = grades.values() | selectattr("images_missing") | list %}
+{% if grades_missing_images %}
+<div class="flash flash-warning" style="margin-bottom: 20px;">
+  <strong>No image files found</strong> for {{ grades_missing_images | map(attribute="label") | join(", ") }} --
+  re-upload the <a href="{{ url_for('upload_spreadsheet') }}">master spreadsheet</a> on this machine to extract them.
+</div>
+{% endif %}
+
 <div class="grade-grid">
   {% for grade, s in grades.items() %}
   <div class="grade-card">
     <h3>{{ s.label }}</h3>
     {% if s.words %}
       <div class="stat-line">{{ s.words }} words waiting from the spreadsheet</div>
+      {% if s.images_missing %}<div class="stat-line" style="color: var(--warn);">0/{{ s.images_expected }} image files present locally</div>{% endif %}
       {% if s.has_data %}
         <span class="pill">Mapped -- {{ s.mapped }}/{{ s.words }}</span>
       {% elif s.units_uploaded %}

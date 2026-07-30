@@ -42,6 +42,7 @@ def grade_status():
         entries = unit_vocab.get(grade, [])
         mapped = sum(1 for e in entries if e.get("primary_unit") is not None)
         spanish = sum(1 for e in entries if e.get("primary_unit") is not None and e.get("spanish_word"))
+        images_expected, images_present = pipeline.images_status(grade)
         status[grade] = {
             "label": pipeline.label_for_grade(grade),
             "words": len(cards),
@@ -49,6 +50,9 @@ def grade_status():
             "spanish": spanish,
             "units_uploaded": sorted(pipeline.uploaded_units_summary(grade)),
             "has_data": bool(entries),
+            "images_expected": images_expected,
+            "images_present": images_present,
+            "images_missing": images_expected > 0 and images_present == 0,
         }
     return status
 

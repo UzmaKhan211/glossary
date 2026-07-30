@@ -4,6 +4,17 @@
 <h1>Word Wall Pipeline</h1>
 <p class="subtitle">Map vocabulary words to units, add Spanish translations, and export print-ready card decks -- for any grade, without needing an engineer.</p>
 
+{% set grades_missing_images = grades.values() | selectattr("images_missing") | list %}
+{% if grades_missing_images %}
+<div class="flash flash-warning" style="margin-bottom: 20px;">
+  <strong>No image files found</strong> for {{ grades_missing_images | map(attribute="label") | join(", ") }}, even
+  though word data is loaded. This happens on a fresh clone/download -- the word list is committed to the repo, but
+  the actual image files aren't (they're regenerable, so they're kept out of git to save space). Re-upload the
+  <a href="{{ url_for('upload_spreadsheet') }}">master spreadsheet</a> on this machine to extract them; card
+  decks generated before that will be missing pictures.
+</div>
+{% endif %}
+
 <div class="card-box">
   <h2>{{ "Start here" if not vocab_loaded else "Continue where you left off" }}</h2>
   <p class="hint">
@@ -34,6 +45,7 @@
     <h3>{{ s.label }}</h3>
     {% if s.words %}
       <div class="stat-line">{{ s.words }} words from the spreadsheet</div>
+      {% if s.images_missing %}<div class="stat-line" style="color: var(--warn);">0/{{ s.images_expected }} image files present locally</div>{% endif %}
       {% if s.has_data %}
         <div class="stat-line">{{ s.mapped }}/{{ s.words }} mapped to a unit</div>
         <div class="stat-line">{{ s.spanish }}/{{ s.mapped }} have a Spanish translation</div>

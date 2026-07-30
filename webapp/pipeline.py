@@ -73,6 +73,25 @@ def load_vocab():
     return {g: [] for g in GRADES}
 
 
+def images_status(grade):
+    """(expected, present) image-file counts for a grade's cards.
+
+    data/vocab.json is committed to git and travels with a fresh clone, but
+    the actual image files under assets/images/ are gitignored (regenerable,
+    not source) -- so a fresh clone can show a full word list with an
+    "image" path recorded on every card while none of those files actually
+    exist on disk yet. That's silent otherwise: cards render fine minus the
+    picture, no error. This lets the UI flag it explicitly instead, since
+    the fix (re-upload the spreadsheet on this machine to re-extract the
+    images) isn't something you'd otherwise think to do if the words
+    already looked "loaded"."""
+    images_dir = REPO_ROOT / "assets" / "images"
+    cards = load_vocab().get(grade, [])
+    expected = sum(1 for c in cards if c.get("image"))
+    present = sum(1 for c in cards if c.get("image") and (images_dir / c["image"]).exists())
+    return expected, present
+
+
 def load_unit_vocab():
     if UNIT_VOCAB_PATH.exists():
         return json.loads(UNIT_VOCAB_PATH.read_text())
