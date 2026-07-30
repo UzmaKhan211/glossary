@@ -227,8 +227,15 @@ def match_grade(grade):
             index = unit_index[primary_unit]
             variant_hit = next(iter(_headword_variants(card["word"]) & set(index)))
             i = index[variant_hit]
-            spanish_word = units[primary_unit]["es"][i].word
-            spanish_text = units[primary_unit]["es"][i].definition
+            es_entries = units[primary_unit]["es"]
+            # If this unit's PDF had a mismatched English/Spanish entry count
+            # (the parser flags this -- see save_and_parse_unit_pdf's
+            # warnings), the position that lines up with the English
+            # headword may not exist on the Spanish side at all. Leave the
+            # Spanish fields blank rather than crash or grab the wrong word.
+            if i < len(es_entries):
+                spanish_word = es_entries[i].word
+                spanish_text = es_entries[i].definition
         entries.append({
             "word": card["word"],
             "text": card.get("text") or "",
