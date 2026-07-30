@@ -28,12 +28,35 @@ UNIT_PARSED_DIR = DATA_DIR / "unit_glossary_parsed"
 VOCAB_PATH = DATA_DIR / "vocab.json"
 UNIT_VOCAB_PATH = DATA_DIR / "unit_vocab.json"
 
+# The grades extract_data.py's fixed column layout currently understands.
+# This ISN'T a hard cap on what the app can show -- known_grades() below
+# also picks up whatever grades actually exist in data/vocab.json, so a
+# grades 6-8 spreadsheet (once extract_data.py -- or a variant of it -- can
+# read that sheet's own column layout) shows up here automatically without
+# any other code change. Uploading that sheet through the *current*
+# extractor won't work until its column layout is wired in, since
+# extract_data.GRADE_COLS is specific to the K-5 sheet's fixed columns.
 GRADES = ["K", "1", "2", "3", "4", "5"]
 GRADE_LABELS = {"K": "Kindergarten", "1": "Grade 1", "2": "Grade 2", "3": "Grade 3", "4": "Grade 4", "5": "Grade 5"}
 
+
+def label_for_grade(grade):
+    return GRADE_LABELS.get(grade, "Kindergarten" if grade == "K" else f"Grade {grade}")
+
+
+def known_grades():
+    """Every grade with word data loaded, in a sensible display order (K-5
+    first if present, then any other grade -- e.g. 6, 7, 8 -- numerically)."""
+    vocab = load_vocab()
+    grades = {g for g in (set(vocab) | set(GRADES)) if vocab.get(g)}
+    ordered = [g for g in GRADES if g in grades]
+    extra = sorted((g for g in grades if g not in GRADES), key=lambda g: (len(g), g))
+    return ordered + extra
+
+
 # Matches the grade+unit out of Amplify's own PDF filenames, e.g.
-# "Grade5-Unit7.pdf", "KG-Unit3.pdf", "Grade 2 - Unit 4.pdf".
-FILENAME_RE = re.compile(r"(?:grade\s*([1-5])|k\s*g?)\D*unit\s*(\d+)", re.IGNORECASE)
+# "Grade5-Unit7.pdf", "KG-Unit3.pdf", "Grade 2 - Unit 4.pdf", "Grade7-Unit2.pdf".
+FILENAME_RE = re.compile(r"(?:grade\s*(\d+)|k\s*g?)\D*unit\s*(\d+)", re.IGNORECASE)
 
 
 def grade_and_unit_from_filename(filename):
@@ -63,7 +86,13 @@ def save_unit_vocab(unit_vocab):
 
 def process_master_spreadsheet(xlsx_path):
     """Run the same extraction extract_data.py's CLI does, in-process, and
-    write data/vocab.json. Returns {grade: card_count}."""
+    merge the result into data/vocab.json. Returns {grade: card_count}.
+
+    This only ever touches the grades extract_data.GRADE_COLS knows how to
+    read from this specific spreadsheet's fixed column layout (currently
+    K-5) -- any other grade already in data/vocab.json (e.g. 6-8, once a
+    matching extractor for that sheet exists) is left untouched rather than
+    wiped out, so uploading a second/different spreadsheet is additive."""
     import openpyxl
 
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
@@ -106,8 +135,10 @@ def process_master_spreadsheet(xlsx_path):
 
             cards_by_grade[grade].append({"row": row, "word": word, "text": text, "image": image_rel_path})
 
+    existing = load_vocab()
+    existing.update(cards_by_grade)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    VOCAB_PATH.write_text(json.dumps(cards_by_grade, indent=2))
+    VOCAB_PATH.write_text(json.dumps(existing, indent=2))
     return {g: len(cards) for g, cards in cards_by_grade.items()}
 
 

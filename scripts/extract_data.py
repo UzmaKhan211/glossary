@@ -170,8 +170,14 @@ def slugify(word):
 
 
 def parse_drawing_anchors(xlsx_path):
-    """Return {(excel_row, col_letter): media_filename} for every floating image."""
+    """Return {(excel_row, col_letter): media_filename} for every floating image.
+
+    A spreadsheet with no embedded images at all (or a different one than
+    the K-5 sheet this was built against) simply has no xl/drawings/ part --
+    that's not an error, it just means no card gets an image from it."""
     with zipfile.ZipFile(xlsx_path) as z:
+        if "xl/drawings/drawing1.xml" not in z.namelist():
+            return {}
         drawing_xml = z.read("xl/drawings/drawing1.xml")
         rels_xml = z.read("xl/drawings/_rels/drawing1.xml.rels")
 

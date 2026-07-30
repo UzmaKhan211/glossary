@@ -37,13 +37,13 @@ def grade_status():
     vocab = pipeline.load_vocab()
     unit_vocab = pipeline.load_unit_vocab()
     status = {}
-    for grade in pipeline.GRADES:
+    for grade in pipeline.known_grades():
         cards = vocab.get(grade, [])
         entries = unit_vocab.get(grade, [])
         mapped = sum(1 for e in entries if e.get("primary_unit") is not None)
         spanish = sum(1 for e in entries if e.get("primary_unit") is not None and e.get("spanish_word"))
         status[grade] = {
-            "label": pipeline.GRADE_LABELS[grade],
+            "label": pipeline.label_for_grade(grade),
             "words": len(cards),
             "mapped": mapped,
             "spanish": spanish,
@@ -79,7 +79,7 @@ def upload_spreadsheet():
             flash(f"Couldn't read that spreadsheet: {exc}", "error")
             return redirect(url_for("upload_spreadsheet"))
         flash(
-            "Spreadsheet processed: " + ", ".join(f"{pipeline.GRADE_LABELS[g]} {n}" for g, n in counts.items()),
+            "Spreadsheet processed: " + ", ".join(f"{pipeline.label_for_grade(g)} {n}" for g, n in counts.items()),
             "success",
         )
         return redirect(url_for("choose_grade"))
@@ -97,8 +97,9 @@ def choose_grade():
 
 @app.route("/map/<grade>/pdfs", methods=["GET", "POST"])
 def upload_pdfs(grade):
-    if grade not in pipeline.GRADES:
-        return "Unknown grade", 404
+    if not pipeline.load_vocab().get(grade):
+        flash(f"No spreadsheet data for grade {grade!r} yet -- upload a spreadsheet that includes it first.", "error")
+        return redirect(url_for("choose_grade"))
 
     if request.method == "POST":
         files = request.files.getlist("unit_pdfs")
@@ -119,8 +120,8 @@ def upload_pdfs(grade):
                 continue
             if detected_grade != grade:
                 errors.append(
-                    f"{file.filename}: filename looks like {pipeline.GRADE_LABELS.get(detected_grade, detected_grade)}, "
-                    f"but you're uploading to {pipeline.GRADE_LABELS[grade]} -- double-check this is the right file."
+                    f"{file.filename}: filename looks like {pipeline.label_for_grade(detected_grade)}, "
+                    f"but you're uploading to {pipeline.label_for_grade(grade)} -- double-check this is the right file."
                 )
             pdf_bytes = file.read()
             count, warnings = pipeline.save_and_parse_unit_pdf(grade, unit, file.filename, pdf_bytes)
@@ -137,7 +138,7 @@ def upload_pdfs(grade):
     return render_template(
         "upload_pdfs.html",
         grade=grade,
-        grade_label=pipeline.GRADE_LABELS[grade],
+        grade_label=pipeline.label_for_grade(grade),
         units_uploaded=pipeline.uploaded_units_summary(grade),
         word_count=len(pipeline.load_vocab().get(grade, [])),
     )
@@ -145,8 +146,9 @@ def upload_pdfs(grade):
 
 @app.route("/map/<grade>/run", methods=["GET", "POST"])
 def run_mapping(grade):
-    if grade not in pipeline.GRADES:
-        return "Unknown grade", 404
+    if not pipeline.load_vocab().get(grade):
+        flash(f"No spreadsheet data for grade {grade!r} yet -- upload a spreadsheet that includes it first.", "error")
+        return redirect(url_for("choose_grade"))
 
     units_uploaded = pipeline.uploaded_units_summary(grade)
     if not units_uploaded:
@@ -161,7 +163,7 @@ def run_mapping(grade):
     return render_template(
         "run_mapping.html",
         grade=grade,
-        grade_label=pipeline.GRADE_LABELS[grade],
+        grade_label=pipeline.label_for_grade(grade),
         units_uploaded=units_uploaded,
         word_count=len(pipeline.load_vocab().get(grade, [])),
     )
@@ -169,8 +171,9 @@ def run_mapping(grade):
 
 @app.route("/review/<grade>", methods=["GET", "POST"])
 def review_grade(grade):
-    if grade not in pipeline.GRADES:
-        return "Unknown grade", 404
+    if not pipeline.load_vocab().get(grade):
+        flash(f"No spreadsheet data for grade {grade!r} yet -- upload a spreadsheet that includes it first.", "error")
+        return redirect(url_for("choose_grade"))
 
     unit_vocab = pipeline.load_unit_vocab()
     entries = unit_vocab.get(grade, [])
@@ -196,7 +199,7 @@ def review_grade(grade):
     return render_template(
         "review_grade.html",
         grade=grade,
-        grade_label=pipeline.GRADE_LABELS[grade],
+        grade_label=pipeline.label_for_grade(grade),
         rows=rows,
     )
 

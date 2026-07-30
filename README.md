@@ -266,6 +266,23 @@ run it, do the mapping, close it. It reads and writes the same `data/` and
 `output/` paths the CLI scripts use, so it's a front end for the real
 pipeline, not a separate copy of it.
 
+**More than one master spreadsheet.** Step 1 is safe to repeat -- uploading
+a spreadsheet only updates the grades *that file itself defines columns
+for* (currently K-5, from `extract_data.GRADE_COLS`); any other grade
+already loaded (e.g. a future grades 6-8 sheet) is left untouched rather
+than wiped out. The grade lists on every page (`Grade status`, `Grades`,
+`Export`) are generated from whatever's actually in `data/vocab.json`, not
+a hardcoded K-5 list, so a new grade shows up automatically once something
+can extract it. The part that *is* still specific to the current sheet is
+`extract_data.py`'s column layout (`GRADE_COLS`) -- a spreadsheet arranged
+differently (a separate 6-8 sheet, say) needs its own column mapping added
+there (or a second extractor function) before uploading it will produce
+real data, rather than silently reading the wrong columns. `pdf_glossary_parser.py`
+and the unit-matching/card-rendering steps downstream of that don't assume
+anything about grade K-5 specifically, so once a grade's word list exists
+in `data/vocab.json`, the rest of the pipeline (upload PDFs, map, review,
+export) already works for it unmodified.
+
 ## Generating cards
 
 ```

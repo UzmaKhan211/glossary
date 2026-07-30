@@ -3,15 +3,24 @@
 {% block content %}
 {% set current_step = 1 %}
 {% include "_steps.html" %}
-<h1>Step 1 of 5 -- Upload the master glossary spreadsheet</h1>
-<p class="subtitle">This is the K-5 glossary updates &amp; feedback spreadsheet -- one row per word, with a Current/Image/Feedback/New Entry block per grade. This gives every grade its word list, so it only needs doing once (re-upload later only if the spreadsheet itself changes).</p>
+<h1>Step 1 of 5 -- Upload a master glossary spreadsheet</h1>
+<p class="subtitle">
+  One row per word, with a Current/Image/Feedback/New Entry block per grade. This gives each grade its word list.
+  It's safe to come back and upload another spreadsheet later -- for example a separate grades 6-8 sheet -- it only
+  updates the grades that file actually contains; every other grade's data already loaded is left alone.
+</p>
 
 <div class="card-box">
   <form method="post" enctype="multipart/form-data">
     <div class="field">
       <label for="spreadsheet">Spreadsheet file (.xlsx)</label>
       <input type="file" id="spreadsheet" name="spreadsheet" accept=".xlsx" required>
-      <div class="hint">Only the format of Amplify's own K-5 glossary feedback sheet is supported -- a fixed 4-column (Current/Image/Feedback/New Entry) block per grade.</div>
+      <div class="hint">
+        Today this reads Amplify's K-5 glossary feedback sheet layout specifically -- a fixed 4-column
+        (Current/Image/Feedback/New Entry) block per grade, in that sheet's own column positions. A spreadsheet
+        with a different layout (e.g. a grades 6-8 sheet arranged differently) needs its column layout added to
+        <code>scripts/extract_data.py</code> first, or it won't read correctly.
+      </div>
     </div>
     <button class="btn" type="submit">Process spreadsheet &amp; continue</button>
   </form>
