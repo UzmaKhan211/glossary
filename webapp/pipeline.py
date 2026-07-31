@@ -247,6 +247,7 @@ def render_card_pdf(grades, language, out_path):
     from bolding import text_html_for
 
     images_dir = REPO_ROOT / "assets" / "images"
+    images_es_dir = REPO_ROOT / "assets" / "images_es"
     unit_vocab = load_unit_vocab()
 
     cards = []
@@ -257,14 +258,22 @@ def render_card_pdf(grades, language, out_path):
                 if not word:
                     continue  # no Spanish translation available for this word -- skip rather than print blank
                 text_html = None  # bolding is only curated for English definitions so far
+                # Most images are wordless diagrams/shapes/numbers and are reused
+                # as-is; only words whose image actually had English labels get a
+                # Spanish-relabeled version under assets/images_es/, so check
+                # there first and fall back to the plain English image.
+                image_rel = entry.get("spanish_image") or entry.get("image")
+                image_path = None
+                if image_rel:
+                    candidate = images_es_dir / image_rel
+                    image_path = candidate if candidate.exists() else images_dir / image_rel
             else:
                 word, text = entry["word"], entry.get("text") or ""
                 text_html = text_html_for(grade, entry["word"])
+                image_path = images_dir / entry["image"] if entry.get("image") else None
             image_uri = None
-            if entry.get("image"):
-                image_path = images_dir / entry["image"]
-                if image_path.exists():
-                    image_uri = image_path.resolve().as_uri()
+            if image_path and image_path.exists():
+                image_uri = image_path.resolve().as_uri()
             cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
                           "image_uri": image_uri})
 

@@ -39,7 +39,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
 RAW_DIR = DATA_DIR / "unit_glossary_raw"
 SPANISH_DIR = DATA_DIR / "spanish_translations"
+SPANISH_IMAGES_DIR = DATA_DIR / "spanish_images"
 IMAGES_DIR = REPO_ROOT / "assets" / "images"
+SPANISH_IMAGES_ASSETS_DIR = REPO_ROOT / "assets" / "images_es"
 OUTPUT_DIR = REPO_ROOT / "output"
 
 UNIT_FILE_RE = re.compile(r"unit(\d+)\.txt$", re.IGNORECASE)
@@ -182,9 +184,23 @@ def load_spanish_translations():
     return lookup
 
 
+def load_spanish_images():
+    """Return {grade: {word: image_rel_path}} from data/spanish_images/grade_<G>.json --
+    a word only appears here if its image actually needed a Spanish-relabeled version
+    (see README.md's "Spanish images" section for how these were identified and made).
+    Any word not in this lookup reuses its English image as-is: most vocabulary images
+    are wordless diagrams/shapes/numbers, so there's nothing to translate."""
+    lookup = {}
+    for path in SPANISH_IMAGES_DIR.glob("grade_*.json"):
+        grade = path.stem.removeprefix("grade_")
+        lookup[grade] = json.loads(path.read_text())
+    return lookup
+
+
 def build_unit_vocab():
     vocab = json.loads((DATA_DIR / "vocab.json").read_text())
     spanish_lookup = load_spanish_translations()
+    spanish_images_lookup = load_spanish_images()
     unit_vocab = {}
     qa_lines = ["# Unit-mapping QA report\n"]
 
@@ -198,6 +214,7 @@ def build_unit_vocab():
         words = [c["word"] for c in cards]
         word_to_units = map_words_to_units(words, unit_texts)
         grade_spanish = spanish_lookup.get(grade, {})
+        grade_spanish_images = spanish_images_lookup.get(grade, {})
 
         qa_lines.append(f"\n## Grade {grade} (units available: {sorted(unit_texts)})\n")
         grade_entries = []
@@ -211,6 +228,7 @@ def build_unit_vocab():
                 "word": card["word"],
                 "text": card.get("text") or "",
                 "image": card.get("image"),
+                "spanish_image": grade_spanish_images.get(card["word"]) or card.get("image"),
                 "primary_unit": primary_unit,
                 "all_units": units_found,
                 "spanish_word": (spanish or {}).get("spanish_word") or "",
@@ -249,7 +267,7 @@ ROW_HEIGHT_PX = 90
 
 
 def add_sheet_header(ws):
-    headers = ["Grade", "Unit", "Word", "Definition", "Spanish Word", "Spanish Definition", "Image"]
+    headers = ["Grade", "Unit", "Word", "Definition", "Spanish Word", "Spanish Definition", "Image", "Spanish Image"]
     for col, title in enumerate(headers, start=1):
         cell = ws.cell(row=1, column=col, value=title)
         cell.fill = HEADER_FILL
@@ -261,12 +279,25 @@ def add_sheet_header(ws):
     ws.column_dimensions["E"].width = 28
     ws.column_dimensions["F"].width = 70
     ws.column_dimensions["G"].width = IMG_COL_WIDTH_PX / 7
+    ws.column_dimensions["H"].width = IMG_COL_WIDTH_PX / 7
 
 
-def write_image(ws, row, col, image_rel_path):
+def write_image(ws, row, col, image_rel_path, prefer_es=False):
+    """Embed the image at image_rel_path (relative to assets/images/) into the
+    cell at (row, col). When prefer_es is set (the Spanish Image column), look
+    first under assets/images_es/ -- most words reuse the English image as-is
+    (wordless diagrams/shapes/numbers), and only the ones with a Spanish-
+    relabeled version have a file there; everything else falls back to the
+    same English image the Image column shows."""
     if not image_rel_path:
         return
-    img_path = IMAGES_DIR / image_rel_path
+    img_path = None
+    if prefer_es:
+        candidate = SPANISH_IMAGES_ASSETS_DIR / image_rel_path
+        if candidate.exists():
+            img_path = candidate
+    if img_path is None:
+        img_path = IMAGES_DIR / image_rel_path
     if not img_path.exists():
         return
     with PILImage.open(img_path) as im:
@@ -307,6 +338,7 @@ def build_workbook(unit_vocab):
             ws.cell(row=row, column=5, value=entry["spanish_word"]).alignment = Alignment(vertical="top", wrap_text=True)
             ws.cell(row=row, column=6, value=entry["spanish_text"]).alignment = Alignment(vertical="top", wrap_text=True)
             write_image(ws, row, 7, entry["image"])
+            write_image(ws, row, 8, entry["spanish_image"], prefer_es=True)
             row += 1
 
         for entry in entries:
@@ -315,7 +347,7 @@ def build_workbook(unit_vocab):
 
     if unmapped_rows:
         ws = wb.create_sheet(title="Unmapped")
-        headers = ["Grade", "Word", "Definition", "Image"]
+        headers = ["Grade", "Word", "Definition", "Image", "Spanish Image"]
         for col, title in enumerate(headers, start=1):
             cell = ws.cell(row=1, column=col, value=title)
             cell.fill = HEADER_FILL
@@ -324,6 +356,7 @@ def build_workbook(unit_vocab):
         ws.column_dimensions["B"].width = 28
         ws.column_dimensions["C"].width = 70
         ws.column_dimensions["D"].width = IMG_COL_WIDTH_PX / 7
+        ws.column_dimensions["E"].width = IMG_COL_WIDTH_PX / 7
         row = 2
         for grade, entry in unmapped_rows:
             ws.row_dimensions[row].height = ROW_HEIGHT_PX * 0.75
@@ -331,6 +364,7 @@ def build_workbook(unit_vocab):
             ws.cell(row=row, column=2, value=entry["word"]).alignment = Alignment(vertical="top", wrap_text=True)
             ws.cell(row=row, column=3, value=entry["text"]).alignment = Alignment(vertical="top", wrap_text=True)
             write_image(ws, row, 4, entry["image"])
+            write_image(ws, row, 5, entry["spanish_image"], prefer_es=True)
             row += 1
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

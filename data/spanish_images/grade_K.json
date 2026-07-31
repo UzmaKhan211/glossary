@@ -1,0 +1,21 @@
+{
+  "above": "K/13_above.png",
+  "add": "K/15_add.png",
+  "behind": "K/30_behind.png",
+  "below": "K/31_below.png",
+  "beside": "K/32_beside.png",
+  "between": "K/33_between.png",
+  "fewer": "K/90_fewer.png",
+  "heavier": "K/101_heavier.png",
+  "in front of": "K/108_in-front-of.png",
+  "less than": "K/117_less-than.png",
+  "lighter": "K/119_lighter.png",
+  "longer": "K/127_longer.png",
+  "more": "K/136_more.png",
+  "same": "K/189_same.png",
+  "shorter": "K/197_shorter.png",
+  "subtract": "K/213_subtract.png",
+  "taller": "K/216_taller.png",
+  "total": "K/229_total.png",
+  "twenty": "K/234_twenty.png"
+}
