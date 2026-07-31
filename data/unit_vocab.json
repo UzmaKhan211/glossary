@@ -1718,17 +1718,6 @@
       "spanish_text": ""
     },
     {
-      "word": "flat shapes",
-      "text": "remove this from 2nd",
-      "image": "2/93_flat-shapes.png",
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
-      "spanish_word": "figura plana",
-      "spanish_text": ""
-    },
-    {
       "word": "greater than",
       "text": "a phrase that means one value is more than another value",
       "image": "2/99_greater-than.png",
@@ -2520,7 +2509,7 @@
     },
     {
       "word": "dividend",
-      "text": "change Dividend in image to dividend",
+      "text": "the number that represents the total number of objects being divided",
       "image": "3/68_dividend.png",
       "primary_unit": 4,
       "all_units": [
@@ -2531,7 +2520,7 @@
     },
     {
       "word": "divisor",
-      "text": "change Divisor in image to divisor; the number that follows the division symbol that represents either the number of equal-sized groups or the size of each group",
+      "text": "the number that follows the division symbol that represents either the number of equal-sized groups or the size of each group",
       "image": "3/69_divisor.png",
       "primary_unit": 4,
       "all_units": [
@@ -2626,7 +2615,7 @@
     },
     {
       "word": "factor",
-      "text": "change Factor to factor in image; factor: a number that is multiplied by another number to determine the product",
+      "text": "a number that is multiplied by another number to determine the product",
       "image": "3/89_factor.png",
       "primary_unit": 1,
       "all_units": [
@@ -2912,7 +2901,7 @@
     },
     {
       "word": "quotient",
-      "text": "change Quotient to quotient in image; the result obtained by dividing one quantity by another",
+      "text": "the result obtained by dividing one quantity by another",
       "image": "3/178_quotient.png",
       "primary_unit": 4,
       "all_units": [

@@ -43,7 +43,6 @@ sheet -- see conversation / audit notes):
     3. Grade-placement/scope notes ("add in 5th", "adding this in to 2nd",
        "remove from 2nd") -> not a word edit at all, ignored.
 """
-import base64
 import json
 import re
 import sys
@@ -84,6 +83,21 @@ LEADING_ARTICLE_RE = re.compile(r"^(a|an)\s+", re.IGNORECASE)
 TRAILING_NUMERIC_PAREN_RE = re.compile(r"\s*\(\d[\d/]*\)\s*$")
 LEADING_ASTERISK_CALLOUT_RE = re.compile(r"^\*{2,}[^*]*\*{2,}\s*")
 LEADING_WORD_COLON_RE = re.compile(r"^([A-Za-z][A-Za-z '/-]{0,40}):\s*(.*)$", re.DOTALL)
+# An editor's note about relabeling the *image* (case) that got typed directly
+# into the Current/New Entry cell instead of the Feedback column, in either
+# word order ("change Dividend in image to dividend" / "change Factor to
+# factor in image"). Strip it -- it's not part of the definition, whether or
+# not real definition text follows it after a semicolon.
+IMAGE_CAPTION_NOTE_RE = re.compile(
+    r"^change\s+\S+\s*(?:in\s+image\s+)?to\s+\S+\s*(?:in\s+image\s*)?;?\s*",
+    re.IGNORECASE | re.DOTALL,
+)
+# A whole-cell editor's note that this word shouldn't appear in this grade at
+# all ("remove this from 2nd") -- same root cause as IMAGE_CAPTION_NOTE_RE
+# (a note typed into Current/New Entry instead of the Feedback column), but
+# the right fix here is to drop the card for this grade entirely, not clean
+# its text.
+REMOVE_ROW_NOTE_RE = re.compile(r"^remove\s+this\s+from\s+\d+\w*\s*$", re.IGNORECASE)
 
 
 def col_letter(col0: int) -> str:
@@ -100,6 +114,7 @@ def clean_definition(raw, word):
     if not raw:
         return ""
     text = str(raw).strip()
+    text = IMAGE_CAPTION_NOTE_RE.sub("", text).strip()
     text = LEADING_ASTERISK_CALLOUT_RE.sub("", text).strip()
     # Trailing editorial notes: real content never follows a run of 2+ asterisks.
     text = re.split(r"\*{2,}", text)[0].strip()
@@ -218,12 +233,11 @@ def extract_media(xlsx_path, media_name, dest_path):
     dest_path.write_bytes(data)
 
 
-def main():
-    if len(sys.argv) != 2:
-        print(f"usage: {sys.argv[0]} path/to/glossary.xlsx", file=sys.stderr)
-        sys.exit(1)
-
-    xlsx_path = Path(sys.argv[1])
+def extract_cards(xlsx_path):
+    """Read the master spreadsheet and return (cards_by_grade, qa_lines).
+    Shared by this script's CLI (below) and the webapp
+    (webapp/pipeline.py's process_master_spreadsheet), so there's exactly
+    one place that knows how to turn a row into a card."""
     wb = openpyxl.load_workbook(xlsx_path, data_only=True)
     ws = wb.active
 
@@ -231,7 +245,6 @@ def main():
 
     cards_by_grade = defaultdict(list)
     qa_lines = ["# Word Wall data extraction QA report\n"]
-    skipped = []
 
     for row in range(3, ws.max_row + 1):
         a_raw = ws[f"A{row}"].value
@@ -245,11 +258,29 @@ def main():
 
             cur_text = ws[f"{cur_col}{row}"].value
             new_text = ws[f"{new_col}{row}"].value
+
+            if any(REMOVE_ROW_NOTE_RE.match(str(v).strip()) for v in (cur_text, new_text) if v):
+                qa_lines.append(
+                    f"- row {row} | grade {grade} | word='{word}' | "
+                    f"SKIPPED -- editor's note says to remove this word from this grade"
+                )
+                continue
+
             text_source = "new_entry" if (new_text and str(new_text).strip()) else (
                 "current" if (cur_text and str(cur_text).strip()) else None
             )
             raw_text = new_text if text_source == "new_entry" else cur_text
             text = clean_definition(raw_text, word) if text_source else ""
+
+            # An editor occasionally left only an image-relabeling note in
+            # the New Entry cell ("change Dividend in image to dividend")
+            # with no real definition text at all -- clean_definition()
+            # strips the note itself, but if that's ALL the cell contained,
+            # fall back to Current the same way an outright-blank New Entry
+            # cell would, rather than leaving the card with an empty definition.
+            if text_source == "new_entry" and not text and cur_text and str(cur_text).strip():
+                text_source = "current (new entry was only an image-relabel note)"
+                text = clean_definition(cur_text, word)
 
             image_source = None
             media_name = None
@@ -282,6 +313,17 @@ def main():
                 f"text_source={text_source or 'none'} | image_source={image_source or 'none'}"
                 + (f" ({media_name})" if media_name else "")
             )
+
+    return cards_by_grade, qa_lines
+
+
+def main():
+    if len(sys.argv) != 2:
+        print(f"usage: {sys.argv[0]} path/to/glossary.xlsx", file=sys.stderr)
+        sys.exit(1)
+
+    xlsx_path = Path(sys.argv[1])
+    cards_by_grade, qa_lines = extract_cards(xlsx_path)
 
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     out = {g: cards_by_grade.get(g, []) for g in GRADE_COLS}

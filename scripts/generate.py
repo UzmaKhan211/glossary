@@ -27,6 +27,7 @@ IMAGES_DIR = REPO_ROOT / "assets" / "images"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from grade_fonts import grade_css  # noqa: E402
+from bolding import text_html_for  # noqa: E402
 
 # Minimum an auto-shrunk header/definition is allowed to shrink to, as a
 # fraction of its nominal size, before we give up and let it clip. Keeps a
@@ -128,7 +129,7 @@ def load_cards(grades, limit=None):
                 "grade": grade,
                 "word": c["word"],
                 "text": c.get("text") or "",
-                "text_html": c.get("text_html"),
+                "text_html": text_html_for(grade, c["word"]),
                 "image_uri": image_uri,
             })
     return cards

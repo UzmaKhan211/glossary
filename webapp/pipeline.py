@@ -103,55 +103,16 @@ def save_unit_vocab(unit_vocab):
 
 
 def process_master_spreadsheet(xlsx_path):
-    """Run the same extraction extract_data.py's CLI does, in-process, and
-    merge the result into data/vocab.json. Returns {grade: card_count}.
+    """Run extract_data.extract_cards() (the same extraction the CLI uses)
+    and merge the result into data/vocab.json. Returns {grade: card_count}.
 
     This only ever touches the grades extract_data.GRADE_COLS knows how to
     read from this specific spreadsheet's fixed column layout (currently
     K-5) -- any other grade already in data/vocab.json (e.g. 6-8, once a
     matching extractor for that sheet exists) is left untouched rather than
     wiped out, so uploading a second/different spreadsheet is additive."""
-    import openpyxl
-
-    wb = openpyxl.load_workbook(xlsx_path, data_only=True)
-    ws = wb.active
-    anchors = extract_data.parse_drawing_anchors(xlsx_path)
-
-    cards_by_grade = {g: [] for g in extract_data.GRADE_COLS}
-    for row in range(3, ws.max_row + 1):
-        a_raw = ws[f"A{row}"].value
-        if not a_raw or not str(a_raw).strip():
-            continue
-        d_raw = ws[f"D{row}"].value
-        word = extract_data.clean_word(a_raw, d_raw, row)
-
-        for grade, (cur_col, img_col, fb_col, new_col) in extract_data.GRADE_COLS.items():
-            cols = {"current": cur_col, "image": img_col, "feedback": fb_col, "new_entry": new_col}
-            cur_text = ws[f"{cur_col}{row}"].value
-            new_text = ws[f"{new_col}{row}"].value
-            text_source = "new_entry" if (new_text and str(new_text).strip()) else (
-                "current" if (cur_text and str(cur_text).strip()) else None
-            )
-            raw_text = new_text if text_source == "new_entry" else cur_text
-            text = extract_data.clean_definition(raw_text, word) if text_source else ""
-
-            media_name = None
-            for role in extract_data.IMAGE_ROLE_PRIORITY:
-                key = (row, cols[role])
-                if key in anchors:
-                    media_name = anchors[key]
-                    break
-
-            if not text and not media_name:
-                continue
-
-            image_rel_path = None
-            if media_name:
-                ext = Path(media_name).suffix
-                image_rel_path = f"{grade}/{row}_{extract_data.slugify(word)}{ext}"
-                extract_data.extract_media(xlsx_path, media_name, extract_data.IMAGES_DIR / image_rel_path)
-
-            cards_by_grade[grade].append({"row": row, "word": word, "text": text, "image": image_rel_path})
+    cards_by_grade, _qa_lines = extract_data.extract_cards(xlsx_path)
+    cards_by_grade = {g: cards_by_grade.get(g, []) for g in extract_data.GRADE_COLS}
 
     existing = load_vocab()
     existing.update(cards_by_grade)
@@ -283,6 +244,7 @@ def render_card_pdf(grades, language, out_path):
     Returns (card_count, shrink_report) -- see generate.AUTOFIT_JS for what
     a shrink-report entry looks like."""
     import generate
+    from bolding import text_html_for
 
     images_dir = REPO_ROOT / "assets" / "images"
     unit_vocab = load_unit_vocab()
@@ -294,10 +256,10 @@ def render_card_pdf(grades, language, out_path):
                 word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
                 if not word:
                     continue  # no Spanish translation available for this word -- skip rather than print blank
-                text_html = entry.get("spanish_text_html")
+                text_html = None  # bolding is only curated for English definitions so far
             else:
                 word, text = entry["word"], entry.get("text") or ""
-                text_html = entry.get("text_html")
+                text_html = text_html_for(grade, entry["word"])
             image_uri = None
             if entry.get("image"):
                 image_path = images_dir / entry["image"]

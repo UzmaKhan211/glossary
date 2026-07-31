@@ -1,7 +1,7 @@
 # Word Wall data extraction QA report
 
 
-Total cards per grade: {'K': 61, '1': 50, '2': 82, '3': 89, '4': 67, '5': 69}
+Total cards per grade: {'K': 61, '1': 50, '2': 81, '3': 89, '4': 67, '5': 69}
 
 - row 3 | grade 2 | word='centimeter' | text_source=new_entry | image_source=feedback (image15.png)
 - row 3 | grade 3 | word='centimeter' | text_source=new_entry | image_source=none
@@ -126,7 +126,7 @@ Total cards per grade: {'K': 61, '1': 50, '2': 82, '3': 89, '4': 67, '5': 69}
 - row 66 | grade 3 | word='Distributive Property' | text_source=new_entry | image_source=image (image123.png)
 - row 66 | grade 5 | word='Distributive Property' | text_source=new_entry | image_source=none
 - row 67 | grade 3 | word='divide' | text_source=current | image_source=none
-- row 68 | grade 3 | word='dividend' | text_source=new_entry | image_source=image (image52.png)
+- row 68 | grade 3 | word='dividend' | text_source=current (new entry was only an image-relabel note) | image_source=image (image52.png)
 - row 68 | grade 5 | word='dividend' | text_source=current | image_source=none
 - row 69 | grade 3 | word='divisor' | text_source=new_entry | image_source=image (image106.png)
 - row 69 | grade 5 | word='divisor' | text_source=new_entry | image_source=none
@@ -175,7 +175,7 @@ Total cards per grade: {'K': 61, '1': 50, '2': 82, '3': 89, '4': 67, '5': 69}
 - row 92 | grade K | word='five' | text_source=none | image_source=current (image48.png)
 - row 93 | grade K | word='flat shapes' | text_source=none | image_source=current (image55.png)
 - row 93 | grade 1 | word='flat shapes' | text_source=none | image_source=current (image55.png)
-- row 93 | grade 2 | word='flat shapes' | text_source=new_entry | image_source=current (image55.png)
+- row 93 | grade 2 | word='flat shapes' | SKIPPED -- editor's note says to remove this word from this grade
 - row 94 | grade K | word='four' | text_source=none | image_source=current (image51.png)
 - row 95 | grade K | word='fourteen' | text_source=none | image_source=current (image127.png)
 - row 96 | grade 3 | word='fraction' | text_source=current | image_source=image (image80.png)
