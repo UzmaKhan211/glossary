@@ -230,13 +230,16 @@ def generate():
             flash("Pick a language.", "error")
             return redirect(url_for("generate"))
 
-        import datetime
         out_name = f"word_wall_{'spanish' if language == 'es' else 'english'}_{'-'.join(grades)}.pdf"
         out_path = pipeline.OUTPUT_DIR / out_name
-        count = pipeline.render_card_pdf(grades, language, out_path, str(datetime.date.today().year))
+        count, shrink_report = pipeline.render_card_pdf(grades, language, out_path)
         if count == 0:
             flash("No cards to export for that selection -- map some words to units first.", "error")
             return redirect(url_for("generate"))
+        if shrink_report:
+            details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrink_report)
+            flash(f"{len(shrink_report)} word(s) had their font auto-shrunk to fit -- please review: {details}",
+                  "warning")
         return send_file(out_path, as_attachment=True, download_name=out_name)
 
     return render_template("generate.html", grades=status)

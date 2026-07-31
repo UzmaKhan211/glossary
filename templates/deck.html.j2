@@ -10,7 +10,7 @@
 {% for pair in pages %}
 <div class="sheet">
   {% set card = pair[0] %}
-  <div class="card grade-{{ card.grade }}">
+  <div class="card grade-{{ card.grade }}{{ ' no-image' if not card.image_uri }}">
     {% include "card_body.html.j2" %}
   </div>
 
@@ -22,7 +22,7 @@
 
   {% if pair[1] %}
     {% set card = pair[1] %}
-    <div class="card grade-{{ card.grade }}">
+    <div class="card grade-{{ card.grade }}{{ ' no-image' if not card.image_uri }}">
       {% include "card_body.html.j2" %}
     </div>
   {% else %}

@@ -4,18 +4,13 @@
 }
 
 :root {
-  /* Sampled directly from the approved prototype (Letter_79.pdf). To color
-     -code borders by grade band instead (matching the K/1/2-3/4-5 chips in
-     the font-table screenshot), override this per .card.grade-X selector
-     further down instead of changing this default. */
+  /* Sampled directly from the updated card template (2026-07). */
   --card-border: #7cb342;
   --card-radius: 0.17in;
   --ink: #3b3b3b;
-  --body-ink: #4c4c4c;
+  --body-ink: #000000;
   --amplify-orange: #f27221;
-  --footer-border: #e5e5e5;
-  --footer-text: #b5b5b5;
-  --cut-line: #bebebe;
+  --cut-line: #c9c7bd;
 }
 
 * {
@@ -36,7 +31,7 @@ body {
 .sheet {
   width: 11in;
   height: 8.5in;
-  padding: 0.43in 0.73in;
+  padding: 0.378in 0.69in;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,8 +43,8 @@ body {
 }
 
 .card {
-  width: 9.54in;
-  height: 3.44in;
+  width: 9.63in;
+  height: 3.53in;
   border: 2.2pt solid var(--card-border);
   border-radius: var(--card-radius);
   padding: 0.2in 0.4in 0.16in;
@@ -64,23 +59,43 @@ body {
 
 .card-header {
   color: var(--ink);
-  white-space: normal;
-  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.card-body-row {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35in;
+  margin-top: 0.14in;
 }
 
 .card-text {
   color: var(--body-ink);
-  margin-top: 0.08in;
+  align-self: flex-start;
+  max-width: 5.5in;
+}
+
+.card.no-image .card-body-row {
+  justify-content: center;
+}
+
+.card.no-image .card-text {
+  align-self: center;
+  text-align: center;
+  max-width: 7.4in;
 }
 
 .card-image-wrap {
   flex: 1 1 auto;
   min-height: 0;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.08in;
-  margin-bottom: 0.06in;
 }
 
 .card-image-wrap img {
@@ -93,38 +108,25 @@ body {
   margin-top: auto;
   flex: 0 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.2in;
-  border: 1pt solid var(--footer-border);
-  border-radius: 0.05in;
-  padding: 0.06in 0.18in;
+  justify-content: flex-end;
 }
 
 .footer-logo {
-  height: 15pt;
+  height: 0.25in;
   width: auto;
   display: block;
 }
 
-.footer-copy {
-  color: var(--footer-text);
-  font-family: 'Benton Sans';
-  font-weight: 350;
-  font-size: 7.5pt;
-  text-align: right;
-}
-
 .cut-line {
   flex: 0 0 auto;
-  height: 0.76in;
+  height: 0.674in;
   display: flex;
   align-items: center;
   gap: 0.15in;
   color: var(--cut-line);
   font-family: 'Benton Sans';
   font-weight: 350;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .cut-line .line {

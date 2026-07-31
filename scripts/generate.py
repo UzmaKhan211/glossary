@@ -2,8 +2,9 @@
 """
 Render Word Wall vocab cards (2 per Letter-landscape page) from data/vocab.json
 into a print-ready PDF, using Playwright/Chromium so the HTML+CSS template can
-match the approved prototype (Letter_79.pdf) exactly: rounded card border,
-Amplify footer bar, "cut here" divider between the two cards on a page.
+match the approved card template exactly: rounded card border, word + definition
++ image side by side, Amplify logo footer, "cut here" divider between the two
+cards on a page.
 
 Usage:
   python3 scripts/generate.py --grade 2 --out output/grade2.pdf
@@ -11,7 +12,6 @@ Usage:
   python3 scripts/generate.py --grade 3 --limit 6 --out output/grade3_sample.pdf
 """
 import argparse
-import datetime
 import json
 import os
 import sys
@@ -28,35 +28,86 @@ IMAGES_DIR = REPO_ROOT / "assets" / "images"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from grade_fonts import grade_css  # noqa: E402
 
-# Minimum an auto-shrunk text/header block is allowed to shrink to, as a
-# fraction of its nominal (font-table) size, before we give up and let it
-# clip. Keeps very long definitions from becoming illegibly tiny.
+# Minimum an auto-shrunk header/definition is allowed to shrink to, as a
+# fraction of its nominal size, before we give up and let it clip. Keeps a
+# pathologically long word/definition from becoming illegibly tiny.
 MIN_SHRINK_RATIO = 0.62
 
+# Two independent jobs:
+#  1. The header (word) must never wrap to a second line (CSS already forces
+#     white-space: nowrap + overflow: hidden on it) -- if it's too wide for
+#     the card at its nominal 52pt, shrink it in 0.5pt steps until it fits on
+#     one line, and record exactly which word got shrunk and by how much so
+#     it can be reported back and reviewed by hand.
+#  2. The existing behavior: if a long definition still makes the card taller
+#     than its fixed box, shrink the definition (and, as a last resort, the
+#     header again) until it fits.
 AUTOFIT_JS = """
 (minRatio) => {
-  function shrinkToFit(card, selector, floorRatio) {
-    const el = card.querySelector(selector);
-    if (!el) return;
+  const report = [];
+  const pxToPt = (px) => px * 72 / 96;
+
+  function shrinkFontUntil(el, fitsFn, floorRatio) {
     const cs = getComputedStyle(el);
     const originalSize = parseFloat(cs.fontSize);
     const ratio = parseFloat(cs.lineHeight) / originalSize;
     const floor = originalSize * floorRatio;
     let size = originalSize;
     let guard = 0;
-    while (card.scrollHeight > card.clientHeight + 1 && size > floor && guard < 60) {
+    while (!fitsFn() && size > floor && guard < 80) {
       size -= 0.5;
       el.style.fontSize = size + 'px';
       el.style.lineHeight = (size * ratio) + 'px';
       guard++;
     }
+    return { originalSize, finalSize: size };
   }
+
   document.querySelectorAll('.card:not(.empty)').forEach(card => {
-    shrinkToFit(card, '.card-text', minRatio);
-    if (card.scrollHeight > card.clientHeight + 1) {
-      shrinkToFit(card, '.card-header', minRatio);
+    const header = card.querySelector('.card-header');
+    const gradeMatch = card.className.match(/grade-(\\S+)/);
+    const grade = gradeMatch ? gradeMatch[1] : '?';
+
+    if (header) {
+      const { originalSize, finalSize } = shrinkFontUntil(
+        header,
+        () => header.scrollWidth <= header.clientWidth + 1,
+        minRatio,
+      );
+      if (finalSize < originalSize) {
+        report.push({
+          word: header.textContent, grade,
+          fromPt: Math.round(pxToPt(originalSize) * 10) / 10,
+          toPt: Math.round(pxToPt(finalSize) * 10) / 10,
+          reason: 'too wide for one line',
+        });
+      }
+    }
+
+    const textEl = card.querySelector('.card-text');
+    if (textEl && card.scrollHeight > card.clientHeight + 1) {
+      const { originalSize, finalSize } = shrinkFontUntil(
+        textEl,
+        () => card.scrollHeight <= card.clientHeight + 1,
+        minRatio,
+      );
+      if (finalSize < originalSize) {
+        report.push({
+          word: header ? header.textContent : '?', grade,
+          fromPt: Math.round(pxToPt(originalSize) * 10) / 10,
+          toPt: Math.round(pxToPt(finalSize) * 10) / 10,
+          reason: 'definition too tall for the card',
+        });
+      }
+    }
+
+    // Last resort if it's still overflowing: shrink the header further too.
+    if (header && card.scrollHeight > card.clientHeight + 1) {
+      shrinkFontUntil(header, () => card.scrollHeight <= card.clientHeight + 1, minRatio);
     }
   });
+
+  return report;
 }
 """
 
@@ -77,6 +128,7 @@ def load_cards(grades, limit=None):
                 "grade": grade,
                 "word": c["word"],
                 "text": c.get("text") or "",
+                "text_html": c.get("text_html"),
                 "image_uri": image_uri,
             })
     return cards
@@ -102,15 +154,44 @@ def paginate(cards):
     return pages
 
 
-def render_html(cards, year, print_code):
+def render_html(cards, lang="en"):
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)))
     template = env.get_template("deck.html.j2")
     return template.render(
         pages=paginate(cards),
         grade_css=grade_css(),
-        year=year,
-        print_code=print_code,
+        lang=lang,
     )
+
+
+def render_pdf(cards, out_path, lang="en"):
+    """Render `cards` to a print-ready PDF at out_path. Returns the list of
+    autofit shrink-report entries (see AUTOFIT_JS) so callers can surface
+    exactly which words got shrunk and why."""
+    html = render_html(cards, lang)
+    build_html_path = TEMPLATES_DIR / f"_build_{lang}.html"
+    build_html_path.write_text(html)
+    out_path = Path(out_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(executable_path=resolve_chromium_executable())
+            page = browser.new_page()
+            page.goto(build_html_path.resolve().as_uri())
+            shrink_report = page.evaluate(AUTOFIT_JS, MIN_SHRINK_RATIO)
+            page.pdf(
+                path=str(out_path),
+                width="11in",
+                height="8.5in",
+                print_background=True,
+                margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
+            )
+            browser.close()
+    finally:
+        build_html_path.unlink(missing_ok=True)
+
+    return shrink_report
 
 
 def main():
@@ -120,8 +201,6 @@ def main():
     parser.add_argument("--limit", type=int, default=None,
                          help="Max cards per grade (useful for quick samples)")
     parser.add_argument("--out", default="output/word_wall_cards.pdf")
-    parser.add_argument("--year", default=str(datetime.date.today().year))
-    parser.add_argument("--print-code", default="", help="Optional footer print/SKU code")
     args = parser.parse_args()
 
     cards = load_cards(args.grade, args.limit)
@@ -129,29 +208,15 @@ def main():
         print("No cards found for the requested grade(s).", file=sys.stderr)
         sys.exit(1)
 
-    html = render_html(cards, args.year, args.print_code)
-    build_html_path = TEMPLATES_DIR / "_build.html"
-    build_html_path.write_text(html)
-
     out_path = REPO_ROOT / args.out
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+    shrink_report = render_pdf(cards, out_path)
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path=resolve_chromium_executable())
-        page = browser.new_page()
-        page.goto(build_html_path.resolve().as_uri())
-        page.evaluate(AUTOFIT_JS, MIN_SHRINK_RATIO)
-        page.pdf(
-            path=str(out_path),
-            width="11in",
-            height="8.5in",
-            print_background=True,
-            margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
-        )
-        browser.close()
-
-    build_html_path.unlink()
     print(f"Wrote {len(cards)} cards ({len(cards) // 2 + len(cards) % 2} pages) -> {out_path}")
+    if shrink_report:
+        print(f"\n{len(shrink_report)} card(s) had their font auto-shrunk to fit -- please review:")
+        for entry in shrink_report:
+            print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt "
+                  f"({entry['reason']})")
 
 
 if __name__ == "__main__":

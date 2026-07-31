@@ -18,7 +18,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import extract_data  # noqa: E402
 from pdf_glossary_parser import GlossaryEntry, parse_unit_pdf  # noqa: E402
-from grade_fonts import grade_css  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "data"
@@ -276,17 +275,15 @@ def uploaded_units_summary(grade):
     return {unit: len(parsed["en"]) for unit, parsed in load_parsed_units(grade).items()}
 
 
-def render_card_pdf(grades, language, out_path, year, print_code=""):
+def render_card_pdf(grades, language, out_path):
     """Render a standalone card deck PDF for the given grades, in English
-    (language="en") or Spanish (language="es"), using the same template/CSS
-    the original generator uses -- just swapping which fields feed the
-    card's headword/definition text."""
-    import datetime
-    from jinja2 import Environment, FileSystemLoader
-    from playwright.sync_api import sync_playwright
-    import os
+    (language="en") or Spanish (language="es"). Reuses scripts/generate.py's
+    render_pdf() (same template/CSS/autofit logic as the CLI generator) so
+    there's exactly one place that knows how to turn cards into a PDF.
+    Returns (card_count, shrink_report) -- see generate.AUTOFIT_JS for what
+    a shrink-report entry looks like."""
+    import generate
 
-    templates_dir = REPO_ROOT / "templates"
     images_dir = REPO_ROOT / "assets" / "images"
     unit_vocab = load_unit_vocab()
 
@@ -297,74 +294,20 @@ def render_card_pdf(grades, language, out_path, year, print_code=""):
                 word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
                 if not word:
                     continue  # no Spanish translation available for this word -- skip rather than print blank
+                text_html = entry.get("spanish_text_html")
             else:
                 word, text = entry["word"], entry.get("text") or ""
+                text_html = entry.get("text_html")
             image_uri = None
             if entry.get("image"):
                 image_path = images_dir / entry["image"]
                 if image_path.exists():
                     image_uri = image_path.resolve().as_uri()
-            cards.append({"grade": grade, "word": word, "text": text, "image_uri": image_uri})
+            cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
+                          "image_uri": image_uri})
 
     if not cards:
-        return 0
+        return 0, []
 
-    env = Environment(loader=FileSystemLoader(str(templates_dir)))
-    template = env.get_template("deck.html.j2")
-    pages = [(cards[i], cards[i + 1] if i + 1 < len(cards) else None) for i in range(0, len(cards), 2)]
-    html = template.render(pages=pages, grade_css=grade_css(), year=year, print_code=print_code, lang=language)
-
-    build_html_path = templates_dir / f"_build_{language}.html"
-    build_html_path.write_text(html)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    browsers_path = os.environ.get("PLAYWRIGHT_BROWSERS_PATH")
-    executable_path = None
-    if browsers_path:
-        candidates = sorted(Path(browsers_path).glob("chromium-*/chrome-linux/chrome"))
-        if candidates:
-            executable_path = str(candidates[-1])
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path=executable_path)
-        page = browser.new_page()
-        page.goto(build_html_path.resolve().as_uri())
-        page.evaluate(_AUTOFIT_JS, 0.62)
-        page.pdf(
-            path=str(out_path),
-            width="11in",
-            height="8.5in",
-            print_background=True,
-            margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
-        )
-        browser.close()
-    build_html_path.unlink()
-    return len(cards)
-
-
-_AUTOFIT_JS = """
-(minRatio) => {
-  function shrinkToFit(card, selector, floorRatio) {
-    const el = card.querySelector(selector);
-    if (!el) return;
-    const cs = getComputedStyle(el);
-    const originalSize = parseFloat(cs.fontSize);
-    const ratio = parseFloat(cs.lineHeight) / originalSize;
-    const floor = originalSize * floorRatio;
-    let size = originalSize;
-    let guard = 0;
-    while (card.scrollHeight > card.clientHeight + 1 && size > floor && guard < 60) {
-      size -= 0.5;
-      el.style.fontSize = size + 'px';
-      el.style.lineHeight = (size * ratio) + 'px';
-      guard++;
-    }
-  }
-  document.querySelectorAll('.card:not(.empty)').forEach(card => {
-    shrinkToFit(card, '.card-text', minRatio);
-    if (card.scrollHeight > card.clientHeight + 1) {
-      shrinkToFit(card, '.card-header', minRatio);
-    }
-  });
-}
-"""
+    shrink_report = generate.render_pdf(cards, out_path, lang=language)
+    return len(cards), shrink_report
