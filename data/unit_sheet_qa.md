@@ -12,9 +12,9 @@
 - 'equation' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - 'expression' appears in units [4, 5, 6, 7] -- filed under unit 4 (earliest), also referenced later
 - 'fewer' appears in units [2, 3, 7] -- filed under unit 2 (earliest), also referenced later
-- 'five' appears in units [2, 4, 7] -- filed under unit 2 (earliest), also referenced later
+- 'five' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'flat shapes' (unit 7): Spanish translation is low-confidence -- Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled.
-- 'four' appears in units [2, 4, 5, 7] -- filed under unit 2 (earliest), also referenced later
+- 'four' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'heavier' (unit 7): Spanish translation is low-confidence -- Extracted from a page where the text extractor interleaved English and Spanish content line-by-line rather than giving two clean column blocks (unit 7, the 'fewer / flat shapes / heavier / less' page). Reconstructed by hand; pairing is very likely correct but flagged per instructions because the source page was garbled.
 - 'less than' appears in units [2, 7] -- filed under unit 2 (earliest), also referenced later
 - 'more' appears in units [2, 3, 7] -- filed under unit 2 (earliest), also referenced later
@@ -24,10 +24,10 @@
 - 'square' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
 - 'subtract' appears in units [4, 7] -- filed under unit 4 (earliest), also referenced later
 - 'teen number' (unit 6): Spanish translation is low-confidence -- No Spanish-language headword or definition for 'teen number' appears anywhere in unit 6's source text (checked both the cleaned and raw text dumps). In the position where a Spanish translation would be, the PDF shows only the shared numeral illustration '11 12 13 14 15' / '16 17 18 19' (identical in both the English and Spanish columns). This is a best-effort placeholder using that numeral content, not a verbatim word translation -- flagging per instructions since no clean Spanish text could be found.
-- 'three' appears in units [2, 4, 5, 7] -- filed under unit 2 (earliest), also referenced later
+- 'three' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'total' appears in units [4, 5] -- filed under unit 4 (earliest), also referenced later
 - 'triangle' appears in units [3, 7] -- filed under unit 3 (earliest), also referenced later
-- 'two' appears in units [2, 4, 7] -- filed under unit 2 (earliest), also referenced later
+- 'two' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 
 ## Grade 1 (units available: [1, 2, 3, 4, 5, 6, 7])
 
@@ -40,7 +40,8 @@
 - 'digit' appears in units [4, 5, 6] -- filed under unit 4 (earliest), also referenced later
 - 'equal' appears in units [1, 2, 4, 7] -- filed under unit 1 (earliest), also referenced later
 - 'estimate' appears in units [4, 6] -- filed under unit 4 (earliest), also referenced later
-- 'expression' (unit 7): no Spanish translation found -- left blank
+- UNMAPPED: 'expression' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'expression' (unit None): Spanish translation is low-confidence -- No standalone 'expression' headword entry exists anywhere in unit7.txt. The word only appears embedded inside the 'half past' definition ('an expression that means...' / 'una expresión que significa...'). No dedicated English or Spanish glossary entry for 'expression' could be found in this file.
 - 'fewer' appears in units [2, 4, 6] -- filed under unit 2 (earliest), also referenced later
 - 'more' appears in units [2, 4, 6] -- filed under unit 2 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'more' filed under unit 2 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
@@ -65,13 +66,17 @@
 - 'foot' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'hundred' appears in units [5, 7] -- filed under unit 5 (earliest), also referenced later
 - 'meter' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
-- 'quarter' appears in units [2, 6] -- filed under unit 2 (earliest), also referenced later
+- 'quarter' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'inch' appears in units [3, 6] -- filed under unit 3 (earliest), also referenced later
-- 'category' (unit 1): Spanish translation is low-confidence -- No standalone 'category' headword entry exists in unit1.txt, so there is no separate Spanish sentence definition to pair with it -- but the word 'categoría' appears embedded inside the 'bar graph' and 'picture graph' definitions ('in each group or category' / 'en cada grupo o categoría'), in the same sense as this card's own definition, so the word itself is recoverable even though a matching full-sentence definition is not.
+- UNMAPPED: 'category' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'category' (unit None): Spanish translation is low-confidence -- No standalone 'category' headword entry exists in unit1.txt, so there is no separate Spanish sentence definition to pair with it -- but the word 'categoría' appears embedded inside the 'bar graph' and 'picture graph' definitions ('in each group or category' / 'en cada grupo o categoría'), in the same sense as this card's own definition, so the word itself is recoverable even though a matching full-sentence definition is not.
 - 'compose' appears in units [2, 7, 8] -- filed under unit 2 (earliest), also referenced later
-- 'corner' (unit 6): Spanish translation is low-confidence -- Duplicate of the other 'corner' checklist entry -- see note above.
-- 'corner' (unit 6): Spanish translation is low-confidence -- Duplicate of the other 'corner' checklist entry -- see note above.
-- 'data' (unit 3): Spanish translation is low-confidence -- No standalone 'data' headword entry exists in unit3.txt, so there is no separate Spanish sentence definition -- but 'datos' appears embedded inside the 'line plot' definition ('measurement data' / 'datos de medidas'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'corner' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'corner' (unit None): Spanish translation is low-confidence -- Duplicate of the other 'corner' checklist entry -- see note above.
+- UNMAPPED: 'corner' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'corner' (unit None): Spanish translation is low-confidence -- Duplicate of the other 'corner' checklist entry -- see note above.
+- UNMAPPED: 'data' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'data' (unit None): Spanish translation is low-confidence -- No standalone 'data' headword entry exists in unit3.txt, so there is no separate Spanish sentence definition -- but 'datos' appears embedded inside the 'line plot' definition ('measurement data' / 'datos de medidas'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition.
 - 'decompose' appears in units [2, 7] -- filed under unit 2 (earliest), also referenced later
 - 'digit' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - UNMAPPED: 'edge' -- not found in any provided unit glossary
@@ -80,7 +85,8 @@
 - UNMAPPED: 'estimate' -- not found in any provided unit glossary
 - 'expression' appears in units [7, 8] -- filed under unit 7 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'expression' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
-- 'face' (unit 6): Spanish translation is low-confidence -- No standalone 'face' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'cara' appears embedded inside other 3D-shape definitions (cone, cube, cylinder, rectangular prism, sphere, triangular prism, e.g. 'a circular face' / 'una cara circular'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'face' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'face' (unit None): Spanish translation is low-confidence -- No standalone 'face' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'cara' appears embedded inside other 3D-shape definitions (cone, cube, cylinder, rectangular prism, sphere, triangular prism, e.g. 'a circular face' / 'una cara circular'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'greater than' -- not found in any provided unit glossary
 - UNMAPPED: 'length' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'length' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
@@ -99,22 +105,28 @@
 
 ## Grade 3 (units available: [1, 2, 3, 4, 5, 6, 7])
 
-- 'centimeter' (unit 2): Spanish translation is low-confidence -- No standalone 'centimeter' headword entry exists in unit2.txt, so there is no separate Spanish sentence definition -- but 'centímetro' appears embedded inside 'square centimeter''s definition ('a square with side lengths of 1 centimeter' / 'un cuadrado cuyos lados miden 1 centímetro'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'centimeter' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'centimeter' (unit None): Spanish translation is low-confidence -- No standalone 'centimeter' headword entry exists in unit2.txt, so there is no separate Spanish sentence definition -- but 'centímetro' appears embedded inside 'square centimeter''s definition ('a square with side lengths of 1 centimeter' / 'un cuadrado cuyos lados miden 1 centímetro'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'foot' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'foot' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'fourth' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - 'half' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
-- 'hundred' (unit 3): Spanish translation is low-confidence -- unit3.txt only contains headwords 'algorithm' and 'rounding'; there is no standalone Spanish sentence definition for 'hundred' -- but 'centena' appears embedded inside 'rounding''s definition ('...the nearest ten, hundred, or other place value' / '...la decena, la centena o el valor posicional más cercano'), the same place-value sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
-- 'meter' (unit 2): Spanish translation is low-confidence -- No standalone 'meter' headword entry exists in unit2.txt, so there is no separate Spanish sentence definition -- but 'metro' appears embedded inside 'square meter''s definition ('a square with side lengths of 1 meter' / 'un cuadrado cuyos lados miden 1 metro'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
-- 'addend' (unit 4): Spanish translation is low-confidence -- No standalone 'addend' headword entry exists in unit4.txt, so there is no separate Spanish sentence definition -- but 'sumando' appears embedded inside 'Distributive Property''s definition ('...the sum of 2 or more addends...' / '...la suma de 2 o más sumandos...'), the same sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'hundred' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'hundred' (unit None): Spanish translation is low-confidence -- unit3.txt only contains headwords 'algorithm' and 'rounding'; there is no standalone Spanish sentence definition for 'hundred' -- but 'centena' appears embedded inside 'rounding''s definition ('...the nearest ten, hundred, or other place value' / '...la decena, la centena o el valor posicional más cercano'), the same place-value sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'meter' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'meter' (unit None): Spanish translation is low-confidence -- No standalone 'meter' headword entry exists in unit2.txt, so there is no separate Spanish sentence definition -- but 'metro' appears embedded inside 'square meter''s definition ('a square with side lengths of 1 meter' / 'un cuadrado cuyos lados miden 1 metro'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'addend' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'addend' (unit None): Spanish translation is low-confidence -- No standalone 'addend' headword entry exists in unit4.txt, so there is no separate Spanish sentence definition -- but 'sumando' appears embedded inside 'Distributive Property''s definition ('...the sum of 2 or more addends...' / '...la suma de 2 o más sumandos...'), the same sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
 - 'inch' filed under unit 6 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'area' appears in units [2, 4, 7] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'array' -- not found in any provided unit glossary
-- 'bar graph' (unit 1): Spanish translation is low-confidence -- No standalone headword entry for 'bar graph' exists in unit1.txt, so there is no separate Spanish sentence definition -- but 'diagrama de barras' appears embedded inside 'scale''s definition ('...the space between the lines on a bar graph' / '...el espacio entre las líneas de un diagrama de barras') and is confirmed again by 'scaled bar graph' -> 'diagrama de barras a escala', so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'bar graph' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'bar graph' (unit None): Spanish translation is low-confidence -- No standalone headword entry for 'bar graph' exists in unit1.txt, so there is no separate Spanish sentence definition -- but 'diagrama de barras' appears embedded inside 'scale''s definition ('...the space between the lines on a bar graph' / '...el espacio entre las líneas de un diagrama de barras') and is confirmed again by 'scaled bar graph' -> 'diagrama de barras a escala', so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'column' -- not found in any provided unit glossary
 - 'Commutative Property of Multiplication' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
 - UNMAPPED: 'conjecture' -- not found in any provided unit glossary
-- 'difference' (unit 6): Spanish translation is low-confidence -- No standalone 'difference' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'diferencia' appears embedded inside 'subtract''s definition ('find the difference between numbers' / 'hallar la diferencia entre números'), the same sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'difference' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'difference' (unit None): Spanish translation is low-confidence -- No standalone 'difference' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'diferencia' appears embedded inside 'subtract''s definition ('find the difference between numbers' / 'hallar la diferencia entre números'), the same sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'digit' -- not found in any provided unit glossary
 - 'divide' appears in units [4, 6] -- filed under unit 4 (earliest), also referenced later
 - 'divide' (unit 4): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line; definition reconstructed by hand-separating alternating fragments.
@@ -123,7 +135,8 @@
 - 'dollar' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'divide'.
 - UNMAPPED: 'elapsed time' -- not found in any provided unit glossary
 - 'equation' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
-- 'estimate' (unit 3): no Spanish translation found -- left blank
+- UNMAPPED: 'estimate' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'estimate' (unit None): Spanish translation is low-confidence -- No standalone 'estimate'/'estimar' headword entry in unit3.txt; it appears only as the verb 'estimar' inside the 'rounding' definition, but this card's own definition is the noun sense ('a guess you make...'), and no noun-form Spanish word (e.g. 'estimación') is confirmed anywhere in the source -- left blank rather than guessing a part of speech not evidenced in the text.
 - UNMAPPED: 'expanded form' -- not found in any provided unit glossary
 - 'expression' filed under unit 4 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'factor' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
@@ -135,10 +148,12 @@
 - 'mixed number' (unit 6): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'minute hand'.
 - 'multiply' appears in units [1, 4, 6] -- filed under unit 1 (earliest), also referenced later
 - 'odd numbers' (unit 4): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'factor'.
-- 'one' (unit 4): no Spanish translation found -- left blank
+- UNMAPPED: 'one' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'one' (unit None): Spanish translation is low-confidence -- No standalone 'one'/'uno' headword entry in unit4.txt; 'one' appears only incidentally inside other definitions (expression, quotient).
 - 'parentheses' appears in units [2, 4] -- filed under unit 2 (earliest), also referenced later
 - 'perimeter' (unit 7): Spanish translation is low-confidence -- Page interleaved English/Spanish line-by-line; definition reconstructed by hand-separating alternating fragments.
-- 'picture graph' (unit 1): Spanish translation is low-confidence -- No standalone headword entry for 'picture graph' exists in unit1.txt, so there is no separate Spanish sentence definition -- but 'gráfico de imágenes' appears embedded inside 'key''s definition ('the part of a picture graph' / 'la parte de un gráfico de imágenes') and is confirmed again by 'scaled picture graph' -> 'gráfico de imágenes a escala', so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'picture graph' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'picture graph' (unit None): Spanish translation is low-confidence -- No standalone headword entry for 'picture graph' exists in unit1.txt, so there is no separate Spanish sentence definition -- but 'gráfico de imágenes' appears embedded inside 'key''s definition ('the part of a picture graph' / 'la parte de un gráfico de imágenes') and is confirmed again by 'scaled picture graph' -> 'gráfico de imágenes a escala', so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'pint' -- not found in any provided unit glossary
 - 'product' appears in units [1, 4] -- filed under unit 1 (earliest), also referenced later
 - 'quadrilateral' (unit 7): Spanish translation is low-confidence -- Reconstructed from the same line-by-line interleaved page as 'perimeter'.
@@ -151,13 +166,15 @@
 - UNMAPPED: 'standard form' -- not found in any provided unit glossary
 - UNMAPPED: 'sum' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'sum' filed under unit None [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
-- 'ten' (unit 3): Spanish translation is low-confidence -- unit3.txt only contains headwords 'algorithm' and 'rounding'; there is no standalone Spanish sentence definition for 'ten' -- but 'decena' appears embedded inside 'rounding''s definition ('...the nearest ten, hundred, or other place value' / '...la decena, la centena o el valor posicional más cercano'), the same place-value sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'ten' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'ten' (unit None): Spanish translation is low-confidence -- unit3.txt only contains headwords 'algorithm' and 'rounding'; there is no standalone Spanish sentence definition for 'ten' -- but 'decena' appears embedded inside 'rounding''s definition ('...the nearest ten, hundred, or other place value' / '...la decena, la centena o el valor posicional más cercano'), the same place-value sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
 - UNMAPPED: 'thousand' -- not found in any provided unit glossary
 - 'two-dimensional' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 
 ## Grade 4 (units available: [1, 2, 3, 4, 5, 6, 7])
 
-- 'centimeter' (unit 5): Spanish translation is low-confidence -- No standalone 'centimeter' headword entry exists in unit5.txt, so there is no separate Spanish sentence definition -- but 'centímetros' appears embedded inside 'meter''s definition ('1 meter is equal to 100 centimeters' / '1 metro equivale a 100 centímetros'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
+- UNMAPPED: 'centimeter' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'centimeter' (unit None): Spanish translation is low-confidence -- No standalone 'centimeter' headword entry exists in unit5.txt, so there is no separate Spanish sentence definition -- but 'centímetros' appears embedded inside 'meter''s definition ('1 meter is equal to 100 centimeters' / '1 metro equivale a 100 centímetros'), the same unit-of-length sense as this card, so the word itself is recoverable even without a matching full-sentence definition.
 - 'common denominator' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
 - 'common denominator' (unit 2): Spanish translation is low-confidence -- The source PDF's Spanish definition ends with the English word 'denominator' instead of 'denominador' (apparent typo in the original document). Copied verbatim as instructed, without correcting.
 - 'composite number' appears in units [1, 3] -- filed under unit 1 (earliest), also referenced later
@@ -176,7 +193,8 @@
 - 'perimeter' appears in units [5, 6] -- filed under unit 5 (earliest), also referenced later
 - 'point' filed under unit 7 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'prime number' appears in units [1, 3] -- filed under unit 1 (earliest), also referenced later
-- 'thousand' (unit 4): no Spanish translation found -- left blank
+- UNMAPPED: 'thousand' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'thousand' (unit None): Spanish translation is low-confidence -- No bolded headword for 'thousand' exists in unit4.txt. The file's T-section only contains 'ten thousands'; 'thousand'/'one thousands' appears only inline inside other definitions, never as its own glossary entry (English or Spanish). Left blank rather than inventing a translation.
 
 ## Grade 5 (units available: [1, 2, 3, 4, 5, 6, 7])
 
@@ -203,7 +221,8 @@
 - 'mixed number' appears in units [2, 3, 4, 6] -- filed under unit 2 (earliest), also referenced later
 - 'non-unit fraction' appears in units [2, 3] -- filed under unit 2 (earliest), also referenced later
 - UNMAPPED: 'parentheses' -- not found in any provided unit glossary
-- 'plot' (unit 6): Spanish translation is low-confidence -- unit6.txt contains no standalone glossary entry for 'plot' distinct from 'line plot' -- only 'line plot'/'gráfica de puntos' exists as a headword. Mapped to that entry rather than inventing a separate translation.
+- UNMAPPED: 'plot' -- not found in any provided unit glossary [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
+- 'plot' (unit None): Spanish translation is low-confidence -- unit6.txt contains no standalone glossary entry for 'plot' distinct from 'line plot' -- only 'line plot'/'gráfica de puntos' exists as a headword. Mapped to that entry rather than inventing a separate translation.
 - 'product' appears in units [3, 4, 5, 6] -- filed under unit 3 (earliest), also referenced later [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'product' filed under unit 3 [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]
 - 'quotient' appears in units [2, 3, 4, 5, 6] -- filed under unit 2 (earliest), also referenced later

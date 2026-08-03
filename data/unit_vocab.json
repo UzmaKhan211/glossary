@@ -432,22 +432,12 @@
       "spanish_image": "K/92_five.png",
       "primary_unit": 2,
       "all_units": [
-        2,
-        4,
-        7
+        2
       ],
       "spanish_word": "cinco",
       "spanish_text": "",
       "spanish_by_unit": {
         "2": {
-          "word": "cinco",
-          "text": ""
-        },
-        "4": {
-          "word": "cinco",
-          "text": ""
-        },
-        "7": {
           "word": "cinco",
           "text": ""
         }
@@ -478,27 +468,12 @@
       "spanish_image": "K/94_four.png",
       "primary_unit": 2,
       "all_units": [
-        2,
-        4,
-        5,
-        7
+        2
       ],
       "spanish_word": "cuatro",
       "spanish_text": "",
       "spanish_by_unit": {
         "2": {
-          "word": "cuatro",
-          "text": ""
-        },
-        "4": {
-          "word": "cuatro",
-          "text": ""
-        },
-        "5": {
-          "word": "cuatro",
-          "text": ""
-        },
-        "7": {
           "word": "cuatro",
           "text": ""
         }
@@ -1096,27 +1071,12 @@
       "spanish_image": "K/226_three.png",
       "primary_unit": 2,
       "all_units": [
-        2,
-        4,
-        5,
-        7
+        2
       ],
       "spanish_word": "tres",
       "spanish_text": "",
       "spanish_by_unit": {
         "2": {
-          "word": "tres",
-          "text": ""
-        },
-        "4": {
-          "word": "tres",
-          "text": ""
-        },
-        "5": {
-          "word": "tres",
-          "text": ""
-        },
-        "7": {
           "word": "tres",
           "text": ""
         }
@@ -1211,22 +1171,12 @@
       "spanish_image": "K/235_two.png",
       "primary_unit": 2,
       "all_units": [
-        2,
-        4,
-        7
+        2
       ],
       "spanish_word": "dos",
       "spanish_text": "",
       "spanish_by_unit": {
         "2": {
-          "word": "dos",
-          "text": ""
-        },
-        "4": {
-          "word": "dos",
-          "text": ""
-        },
-        "7": {
           "word": "dos",
           "text": ""
         }
@@ -1687,18 +1637,11 @@
       "text": "a mathematical statement with numbers and symbols",
       "image": "1/85_expression.png",
       "spanish_image": "1/85_expression.png",
-      "primary_unit": 7,
-      "all_units": [
-        7
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "7": {
-          "word": "",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "face",
@@ -2421,18 +2364,13 @@
       "text": "each part of a shape that is partitioned into 4 equal parts (plural: quarters)",
       "image": "2/9_quarter.png",
       "spanish_image": "2/9_quarter.png",
-      "primary_unit": 2,
+      "primary_unit": 6,
       "all_units": [
-        2,
         6
       ],
       "spanish_word": "cuarto, cuarta parte",
       "spanish_text": "cada parte de un entero dividido en 4 partes iguales (plural: cuarteles)",
       "spanish_by_unit": {
-        "2": {
-          "word": "cuarto, cuarta parte",
-          "text": "cada parte de un entero dividido en 4 partes iguales (plural: cuarteles)"
-        },
         "6": {
           "word": "cuarto, cuarta parte",
           "text": "cada parte de un entero dividido en 4 partes iguales (plural: cuarteles)"
@@ -2575,18 +2513,11 @@
       "text": "a group of objects that are alike in some way",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 1,
-      "all_units": [
-        1
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "categor\u00eda",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "1": {
-          "word": "categor\u00eda",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "cent",
@@ -2711,36 +2642,22 @@
       "text": "",
       "image": "2/49_corner.png",
       "spanish_image": "2/49_corner.png",
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "esquina",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "6": {
-          "word": "esquina",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "corner",
       "text": "a point where two or more edges or lines meet",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "esquina",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "6": {
-          "word": "esquina",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "cube",
@@ -2783,18 +2700,11 @@
       "text": "information about things or people in a group (ex: if you have a box of colored pencils, then the lengths and colors of each of the pencils are data about the pencils in the box)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 3,
-      "all_units": [
-        3
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "datos",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "3": {
-          "word": "datos",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "decompose",
@@ -3018,18 +2928,11 @@
       "text": "a flat surface on a three-dimensional shape",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "cara",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "6": {
-          "word": "cara",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "greater than",
@@ -3757,18 +3660,11 @@
       "text": "a unit of length measurement in the metric system (100 centimeters is equal to 1 meter)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 2,
-      "all_units": [
-        2
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "cent\u00edmetro",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "2": {
-          "word": "cent\u00edmetro",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "foot",
@@ -3832,36 +3728,22 @@
       "text": "a group of 10 tens or 100 ones (plural: hundreds)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 3,
-      "all_units": [
-        3
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "centena",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "3": {
-          "word": "centena",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "meter",
       "text": "a unit of length in the metric measurement system (1 meter is equal to 100 centimeters)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 2,
-      "all_units": [
-        2
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "metro",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "2": {
-          "word": "metro",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "quarter",
@@ -3958,18 +3840,11 @@
       "text": "one of the numbers added together to find the sum",
       "image": "3/16_addend.png",
       "spanish_image": "3/16_addend.png",
-      "primary_unit": 4,
-      "all_units": [
-        4
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "sumando",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "4": {
-          "word": "sumando",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "algorithm",
@@ -4105,18 +3980,11 @@
       "text": "a display of categorical data that uses bars to show the number of values in each category",
       "image": "3/28_bar-graph.png",
       "spanish_image": "3/28_bar-graph.png",
-      "primary_unit": 1,
-      "all_units": [
-        1
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "diagrama de barras",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "1": {
-          "word": "diagrama de barras",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "column",
@@ -4240,18 +4108,11 @@
       "text": "the amount you get when you subtract one number from another",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "diferencia",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "6": {
-          "word": "diferencia",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "digit",
@@ -4411,18 +4272,11 @@
       "text": "a guess you make about a value based on what you know",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 3,
-      "all_units": [
-        3
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "3": {
-          "word": "",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "even number",
@@ -4795,18 +4649,11 @@
       "text": "an amount that has a value of 1 (plural: ones)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 4,
-      "all_units": [
-        4
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "4": {
-          "word": "",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "p.m.",
@@ -4872,18 +4719,11 @@
       "text": "a display of categorical data in which every data value is shown as a picture",
       "image": "3/164_picture-graph.png",
       "spanish_image": "3/164_picture-graph.png",
-      "primary_unit": 1,
-      "all_units": [
-        1
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "gr\u00e1fico de im\u00e1genes",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "1": {
-          "word": "gr\u00e1fico de im\u00e1genes",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "pint",
@@ -5238,18 +5078,11 @@
       "text": "a group of 10 ones (plural: tens)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 3,
-      "all_units": [
-        3
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "decena",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "3": {
-          "word": "decena",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "thousand",
@@ -5323,18 +5156,11 @@
       "text": "a unit of length measurement in the metric system (100 centimeters is equal to 1 meter)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 5,
-      "all_units": [
-        5
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "cent\u00edmetro",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "5": {
-          "word": "cent\u00edmetro",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "meter",
@@ -6426,18 +6252,11 @@
       "text": "the base-ten place value unit composed of 10 hundreds (one thousand in standard form is 1,000)",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 4,
-      "all_units": [
-        4
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "",
       "spanish_text": "",
-      "spanish_by_unit": {
-        "4": {
-          "word": "",
-          "text": ""
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "unit fraction",
@@ -7459,18 +7278,11 @@
       "text": "to place a point (often representing x and y coordinates) on a grid",
       "image": null,
       "spanish_image": null,
-      "primary_unit": 6,
-      "all_units": [
-        6
-      ],
+      "primary_unit": null,
+      "all_units": [],
       "spanish_word": "gr\u00e1fica de puntos",
       "spanish_text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica",
-      "spanish_by_unit": {
-        "6": {
-          "word": "gr\u00e1fica de puntos",
-          "text": "una visualizaci\u00f3n de datos de medidas en la que cada valor se muestra con un s\u00edmbolo sobre una recta num\u00e9rica"
-        }
-      }
+      "spanish_by_unit": {}
     },
     {
       "word": "product",

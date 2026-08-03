@@ -76,7 +76,14 @@ WORD_ALIASES = {
 # a real standalone entry in any of the provided units, despite an incidental
 # text match -- it should land on the Unmapped tab, not get a fake unit.
 VERIFIED_UNIT_CORRECTIONS = {
+    # Grade K
+    ("K", "four"): [2],  # units 4,5,7 only had it inside add's/subtract's worked examples ("four plus three")
+    ("K", "five"): [2],  # units 4,5,7 only had it inside add's/subtract's worked examples ("five minus two")
+    ("K", "three"): [2],  # units 4,5,7 only had it inside add's/subtract's worked examples ("four plus three")
+    ("K", "two"): [2],  # units 4,5,7 only had it inside add's/subtract's worked examples
+
     # Grade 1
+    ("1", "expression"): [],  # unit 7's only hit was "an EXPRESSION that means..." inside half past's definition
     ("1", "more"): [2, 4, 6],  # unit 1 only had "...or MORE numbers..." inside sum's definition
     ("1", "one"): [3, 4, 5, 6],  # units 1-2 only had "...subtract ONE number...", "addend ONE OF the..."
     ("1", "side"): [7],  # unit 2 only had "...on each SIDE of the equal sign..." inside equation's definition
@@ -84,6 +91,10 @@ VERIFIED_UNIT_CORRECTIONS = {
     ("1", "sum"): [1, 2, 6],  # unit 4's only "sum" hit was incidental, inside addend's definition
 
     # Grade 2
+    ("2", "category"): [],  # no real "category" entry; units 1's hits were incidental (bar/picture graph's definitions)
+    ("2", "corner"): [],  # no real "corner" entry (only "square corner"); other hits are incidental shape descriptions
+    ("2", "data"): [],  # no real "data" entry; unit 3's hits were incidental, inside line plot's definition
+    ("2", "face"): [],  # no real "face" entry; unit 6's hits were incidental, inside 3D-shape definitions
     ("2", "foot"): [3],  # unit 6's only hit was "...12 inches is equal to 1 FOOT" inside inch's definition
     ("2", "meter"): [3],  # unit 6's only hit was "...is equal to 1 METER" inside centimeter's definition
     ("2", "digit"): [7],  # unit 5's hits were both incidental (expanded form's/standard form's definitions)
@@ -93,29 +104,43 @@ VERIFIED_UNIT_CORRECTIONS = {
     ("2", "number line"): [4],  # unit 3's hit was inside line plot's definition ("above a number line")
     ("2", "one"): [7],  # units 5,8 only had incidental "...100 ONES", "addend ONE OF the numbers..."
     ("2", "point"): [4],  # unit 6's hits were incidental, inside hour hand's/minute hand's definitions
+    ("2", "quarter"): [6],  # unit 2 only has "quarter (coin)" (25 cents) -- a different sense, not the fraction word
     ("2", "rectangle"): [6],  # unit 1's hits were incidental, inside bar graph's/tape diagram's definitions
     ("2", "sum"): [7, 8],  # unit 2's only hit was inside Commutative Property of Addition's definition
     ("2", "ten"): [7],  # unit 5's only hit was "...group of 10 TENS..." inside hundred's definition
 
     # Grade 3
+    ("3", "addend"): [],  # no real "addend" entry; unit 4's hit was incidental, inside Distributive Property's definition
+    ("3", "bar graph"): [],  # no real "bar graph" entry; unit 1's hit was incidental, inside scale's definition
+    ("3", "centimeter"): [],  # no real "centimeter" entry (only "square centimeter"); unit 2's hit was incidental
+    ("3", "difference"): [],  # no real "difference" entry; unit 6's hit was incidental, inside subtract's definition
+    ("3", "estimate"): [],  # no real "estimate" entry; unit 3's hit was incidental, inside rounding's own definition
     ("3", "foot"): [],  # no real "foot" entry; unit 2 only has "square foot" (different term), unit 6 incidental
+    ("3", "hundred"): [],  # no real "hundred" entry; unit 3's hit was incidental, inside rounding's definition
     ("3", "inch"): [6],  # unit 2 only has "square inch" (different term), no standalone "inch" entry
+    ("3", "meter"): [],  # no real "meter" entry (only "square meter"); unit 2's hit was incidental
+    ("3", "one"): [],  # no real "one" entry; unit 4's hits were incidental, inside expression's/quotient's definitions
     ("3", "equation"): [4],  # unit 2's only hit was inside parentheses' definition ("expressions or equations")
     ("3", "expression"): [4],  # unit 2's only hit was inside parentheses' definition ("used in expressions")
+    ("3", "picture graph"): [],  # no real "picture graph" entry; unit 1's hit was incidental, inside key's definition
     ("3", "square"): [7],  # units 2,4 only have "square centimeter/foot/inch" (different terms) + "square units"
     ("3", "sum"): [],  # no real "sum" entry; unit 4 incidental (Distributive Property), unit 6 incidental (add)
+    ("3", "ten"): [],  # no real "ten" entry; unit 3's hit was incidental, inside rounding's definition
     ("3", "two-dimensional"): [7],  # units 2,4 only use it as a descriptor inside area's definition
 
     # Grade 4
+    ("4", "centimeter"): [],  # no real "centimeter" entry; unit 5's hit was incidental, inside meter's definition
     ("4", "denominator"): [3],  # unit 2 only has "common denominator"/"common numerator" (different terms)
     ("4", "factor pair"): [4, 5],  # units 1,3 only had it inside composite number's/prime number's definitions
     ("4", "length"): [6],  # units 5,7 only had "unit of length", "equal-length sides" (descriptive, not the entry)
     ("4", "numerator"): [3],  # unit 2 only has "common numerator" (different term), no standalone "numerator"
     ("4", "point"): [7],  # unit 4 only has "decimal point" (different term), no standalone "point" entry
+    ("4", "thousand"): [],  # no real "thousand" entry; unit 4 only has "hundred thousands"/"ten thousands" (different terms)
 
     # Grade 5 (originally reported, now fixed)
     ("5", "rectangle"): [7],  # unit 4 only defines "rectangular prism"; "rectangles" there is incidental
     ("5", "base"): [6],  # unit 5's only hit was "base-ten place value" inside hundredths'/tenth's definitions
+    ("5", "plot"): [],  # no real "plot" entry (only "line plot", a different term); unit 6's hit was incidental
     ("5", "product"): [3, 4, 5, 6],  # units 1,2 only had "product" inside Associative Property's/factor's definitions
     ("5", "sum"): [4, 5, 6],  # units 2,3 only had "sum" inside Distributive Property's definition
     ("5", "equation"): [3, 5],  # unit 4's hit was incidental, inside partial quotients' definition
@@ -224,6 +249,21 @@ def build_unit_vocab():
             units_found = VERIFIED_UNIT_CORRECTIONS[correction_key] if corrected else word_to_units[card["word"]]
             primary_unit = units_found[0] if units_found else None
             spanish = grade_spanish.get((str(primary_unit), card["word"])) if primary_unit else None
+            if spanish is None:
+                # This word may have no genuine unit home (units_found empty
+                # -- see VERIFIED_UNIT_CORRECTIONS) even though it's still a
+                # real vocabulary word for this grade with a verified
+                # translation on file, just filed under whichever unit's PDF
+                # happened to be extracted first. Unit membership only
+                # governs which unit-specific decks the word appears in
+                # (all_units/spanish_by_unit below); the combined whole-grade
+                # deck should still show a translation if one exists on
+                # record anywhere, rather than going blank.
+                any_unit_matches = sorted(
+                    (int(u), match) for (u, w), match in grade_spanish.items() if w == card["word"]
+                )
+                if any_unit_matches:
+                    spanish = any_unit_matches[0][1]
             # A word that recurs across units can have a genuinely different
             # official Spanish phrasing per unit (e.g. grade 1's "equal" is
             # "la misma cantidad" in unit 1 but "tener el mismo valor" in
