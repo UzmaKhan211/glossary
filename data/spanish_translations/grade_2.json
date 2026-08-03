@@ -8,10 +8,10 @@
     },
     {
       "word": "category",
-      "spanish_word": "",
+      "spanish_word": "categoría",
       "spanish_definition": "",
       "confidence": "low",
-      "note": "No standalone 'category' headword entry exists in unit1.txt. The word only appears embedded inside the 'bar graph' and 'picture graph' definitions ('in each group or category' / 'categoría'). No dedicated Spanish glossary entry could be found."
+      "note": "No standalone 'category' headword entry exists in unit1.txt, so there is no separate Spanish sentence definition to pair with it -- but the word 'categoría' appears embedded inside the 'bar graph' and 'picture graph' definitions ('in each group or category' / 'en cada grupo o categoría'), in the same sense as this card's own definition, so the word itself is recoverable even though a matching full-sentence definition is not."
     },
     {
       "word": "picture graph",
@@ -117,10 +117,10 @@
     },
     {
       "word": "data",
-      "spanish_word": "",
+      "spanish_word": "datos",
       "spanish_definition": "",
       "confidence": "low",
-      "note": "No standalone 'data' headword entry exists in unit3.txt. The word only appears embedded inside the 'line plot' definition ('measurement data' / 'datos de medidas'). No dedicated Spanish glossary entry could be found."
+      "note": "No standalone 'data' headword entry exists in unit3.txt, so there is no separate Spanish sentence definition -- but 'datos' appears embedded inside the 'line plot' definition ('measurement data' / 'datos de medidas'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition."
     },
     {
       "word": "line plot",
@@ -245,17 +245,17 @@
     },
     {
       "word": "corner",
-      "spanish_word": "",
+      "spanish_word": "esquina",
       "spanish_definition": "",
       "confidence": "low",
-      "note": "No standalone 'corner' headword entry exists in unit6.txt. The word 'corners'/'esquinas' only appears embedded inside other shape definitions (hexagon, pentagon, quadrilateral, rectangle, triangle). The only bolded 'corner'-related headword in the source is 'square corner' ('esquinas de ángulos recto'), which is captured separately below as 'square corner'. The checklist lists 'corner' twice with no distinguishing context, so both checklist instances are represented here identically and flagged."
+      "note": "No standalone 'corner' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'esquina(s)' appears repeatedly and consistently throughout the unit as the direct translation of 'corner(s)' in shape descriptions (hexagon, pentagon, quadrilateral, rectangle, triangle: e.g. '5 sides and 5 corners' / '5 lados y 5 esquinas'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition. The checklist lists 'corner' twice (a duplicate spreadsheet row, unrelated to translation), so both instances get this same word."
     },
     {
       "word": "corner",
-      "spanish_word": "",
+      "spanish_word": "esquina",
       "spanish_definition": "",
       "confidence": "low",
-      "note": "Duplicate of the other 'corner' checklist entry -- see note above. No second standalone 'corner' entry exists in the source; 'square corner' is the only related bolded headword."
+      "note": "Duplicate of the other 'corner' checklist entry -- see note above."
     },
     {
       "word": "cube",
@@ -271,10 +271,10 @@
     },
     {
       "word": "face",
-      "spanish_word": "",
+      "spanish_word": "cara",
       "spanish_definition": "",
       "confidence": "low",
-      "note": "No standalone 'face' headword entry exists in unit6.txt. The word 'face'/'cara' only appears embedded inside other 3D-shape definitions (cone, cube, cylinder, rectangular prism, sphere, triangular prism). No dedicated Spanish glossary entry could be found."
+      "note": "No standalone 'face' headword entry exists in unit6.txt, so there is no separate Spanish sentence definition -- but 'cara' appears embedded inside other 3D-shape definitions (cone, cube, cylinder, rectangular prism, sphere, triangular prism, e.g. 'a circular face' / 'una cara circular'), the same sense as this card's own definition, so the word itself is recoverable even without a matching full-sentence definition."
     },
     {
       "word": "flat shapes",
