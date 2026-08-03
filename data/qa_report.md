@@ -287,7 +287,7 @@ Total cards per grade: {'K': 61, '1': 50, '2': 81, '3': 89, '4': 67, '5': 69}
 - row 167 | grade 2 | word='point' | text_source=current | image_source=image (image100.png)
 - row 167 | grade 4 | word='point' | text_source=current | image_source=image (image117.png)
 - row 168 | grade 4 | word='pound' | text_source=new_entry | image_source=none
-- row 169 | grade 4 | word='prime number' | text_source=current | image_source=none
+- row 169 | grade 4 | word='prime number' | text_source=current [hand-corrected -- see VERIFIED_TEXT_CORRECTIONS] | image_source=none
 - row 170 | grade K | word='prism' | text_source=none | image_source=current (image134.png)
 - row 171 | grade 3 | word='product' | text_source=new_entry | image_source=image (image109.png)
 - row 171 | grade 5 | word='product' | text_source=new_entry | image_source=none

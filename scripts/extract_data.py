@@ -67,6 +67,22 @@ GRADE_COLS = {
 }
 ROLE_NAMES = ("current", "image", "feedback", "new_entry")
 
+# Hand-verified fixes for definitions that are simply wrong in the master
+# spreadsheet cell itself (not an editorial-note artifact clean_definition()
+# can strip, or a regex could generically detect) -- confirmed against
+# Amplify's own official unit glossary PDFs (data/unit_glossary_original/)
+# before overriding. Keyed by (grade, word); the corrected text replaces
+# whatever clean_definition() produced from the spreadsheet cell.
+VERIFIED_TEXT_CORRECTIONS = {
+    # Grade 4's spreadsheet cell had "the value when 2 or more numbers are
+    # multiplied" -- that's the definition of "product", not "prime number".
+    # Confirmed against unit1.txt/unit3.txt's own glossary entry: "prime
+    # number a number that has only 1 factor pair" (matches the Spanish
+    # translation already on file: "un número que tiene 1 solo par de
+    # factores").
+    ("4", "prime number"): "a number that has only 1 factor pair",
+}
+
 # Image priority, newest/most-authoritative first.
 IMAGE_ROLE_PRIORITY = ("feedback", "image", "new_entry", "current")
 
@@ -281,6 +297,10 @@ def extract_cards(xlsx_path):
             if text_source == "new_entry" and not text and cur_text and str(cur_text).strip():
                 text_source = "current (new entry was only an image-relabel note)"
                 text = clean_definition(cur_text, word)
+
+            if (grade, word) in VERIFIED_TEXT_CORRECTIONS:
+                text = VERIFIED_TEXT_CORRECTIONS[(grade, word)]
+                text_source = (text_source or "none") + " [hand-corrected -- see VERIFIED_TEXT_CORRECTIONS]"
 
             image_source = None
             media_name = None
