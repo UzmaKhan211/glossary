@@ -20,6 +20,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOLDED_DIR = REPO_ROOT / "data" / "bolded_definitions"
+BOLDED_ES_DIR = REPO_ROOT / "data" / "bolded_definitions_es"
 
 BOLD_MARKDOWN_RE = re.compile(r"\*\*(.+?)\*\*")
 
@@ -50,6 +51,34 @@ def text_html_for(grade, word):
     definition, or None if nothing's been curated for it yet -- callers
     should fall back to the plain definition text in that case."""
     bolded_markdown = _load_grade(grade).get(word)
+    if not bolded_markdown:
+        return None
+    return markdown_bold_to_html(bolded_markdown)
+
+
+@lru_cache(maxsize=None)
+def _load_grade_es(grade):
+    path = BOLDED_ES_DIR / f"grade_{grade}.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text())
+
+
+def spanish_text_html_for(grade, spanish_text):
+    """HTML (with <strong> tags) for this grade's curated Spanish bolded
+    definition matching spanish_text verbatim, or None if nothing's been
+    curated for it (or it doesn't match any curated entry, e.g. a not-yet-
+    reviewed unit-specific phrasing variant) -- callers should fall back to
+    the plain Spanish text in that case.
+
+    Keyed by the literal Spanish sentence rather than by word, unlike
+    text_html_for(): a word placed in several units can have a genuinely
+    different official Spanish phrasing per unit (see spanish_by_unit's
+    note in build_unit_sheet.py), so each distinct sentence needs its own
+    bolding rather than one markup per word."""
+    if not spanish_text:
+        return None
+    bolded_markdown = _load_grade_es(grade).get(spanish_text)
     if not bolded_markdown:
         return None
     return markdown_bold_to_html(bolded_markdown)

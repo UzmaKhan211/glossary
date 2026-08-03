@@ -266,7 +266,7 @@ def _cards_for_grade(grade, language, unit=None):
     each of those units rather than only its earliest appearance. Shared by
     render_card_pdf (whole-grade decks, unit=None -- one card per word) and
     render_unit_pdfs (one PDF per unit)."""
-    from bolding import text_html_for
+    from bolding import spanish_text_html_for, text_html_for
 
     images_dir = REPO_ROOT / "assets" / "images"
     images_es_dir = REPO_ROOT / "assets" / "images_es"
@@ -288,7 +288,7 @@ def _cards_for_grade(grade, language, unit=None):
             text = (per_unit_es or {}).get("text") or entry.get("spanish_text") or ""
             if not word:
                 continue  # no Spanish translation available for this word -- skip rather than print blank
-            text_html = None  # bolding is only curated for English definitions so far
+            text_html = spanish_text_html_for(grade, text)
             # Most images are wordless diagrams/shapes/numbers and are reused
             # as-is; only words whose image actually had English labels get a
             # Spanish-relabeled version under assets/images_es/, so check
