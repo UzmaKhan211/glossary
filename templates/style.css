@@ -79,14 +79,11 @@ body {
   max-width: 5.5in;
 }
 
-.card.no-image .card-body-row {
-  justify-content: center;
-}
-
 .card.no-image .card-text {
-  align-self: center;
-  text-align: center;
-  max-width: 7.4in;
+  align-self: flex-start;
+  text-align: left;
+  max-width: none;
+  width: 100%;
 }
 
 .card-image-wrap {
@@ -94,7 +91,7 @@ body {
   min-height: 0;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
