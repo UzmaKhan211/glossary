@@ -167,6 +167,15 @@ input[type="file"], select, input[type="text"] {
 .radio-row { display: flex; gap: 16px; margin-bottom: 18px; }
 .radio-row label { display: flex; align-items: center; gap: 6px; font-weight: 500; }
 
+.checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+.checkbox-line input { flex: 0 0 auto; }
+
 table.review-table {
   width: 100%;
   border-collapse: collapse;

@@ -236,6 +236,47 @@ def uploaded_units_summary(grade):
     return {unit: len(parsed["en"]) for unit, parsed in load_parsed_units(grade).items()}
 
 
+def _cards_for_grade(grade, language, unit=None):
+    """Build the card dicts for a single grade (see render_card_pdf's
+    docstring for the shape), optionally restricted to entries whose
+    primary_unit matches unit. Shared by render_card_pdf (whole-grade decks)
+    and render_unit_pdfs (one PDF per unit)."""
+    from bolding import text_html_for
+
+    images_dir = REPO_ROOT / "assets" / "images"
+    images_es_dir = REPO_ROOT / "assets" / "images_es"
+    unit_vocab = load_unit_vocab()
+
+    cards = []
+    for entry in unit_vocab.get(grade, []):
+        if unit is not None and entry.get("primary_unit") != unit:
+            continue
+        if language == "es":
+            word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
+            if not word:
+                continue  # no Spanish translation available for this word -- skip rather than print blank
+            text_html = None  # bolding is only curated for English definitions so far
+            # Most images are wordless diagrams/shapes/numbers and are reused
+            # as-is; only words whose image actually had English labels get a
+            # Spanish-relabeled version under assets/images_es/, so check
+            # there first and fall back to the plain English image.
+            image_rel = entry.get("spanish_image") or entry.get("image")
+            image_path = None
+            if image_rel:
+                candidate = images_es_dir / image_rel
+                image_path = candidate if candidate.exists() else images_dir / image_rel
+        else:
+            word, text = entry["word"], entry.get("text") or ""
+            text_html = text_html_for(grade, entry["word"])
+            image_path = images_dir / entry["image"] if entry.get("image") else None
+        image_uri = None
+        if image_path and image_path.exists():
+            image_uri = image_path.resolve().as_uri()
+        cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
+                      "image_uri": image_uri})
+    return cards
+
+
 def render_card_pdf(grades, language, out_path):
     """Render a standalone card deck PDF for the given grades, in English
     (language="en") or Spanish (language="es"). Reuses scripts/generate.py's
@@ -244,41 +285,48 @@ def render_card_pdf(grades, language, out_path):
     Returns (card_count, shrink_report) -- see generate.AUTOFIT_JS for what
     a shrink-report entry looks like."""
     import generate
-    from bolding import text_html_for
-
-    images_dir = REPO_ROOT / "assets" / "images"
-    images_es_dir = REPO_ROOT / "assets" / "images_es"
-    unit_vocab = load_unit_vocab()
 
     cards = []
     for grade in grades:
-        for entry in unit_vocab.get(grade, []):
-            if language == "es":
-                word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
-                if not word:
-                    continue  # no Spanish translation available for this word -- skip rather than print blank
-                text_html = None  # bolding is only curated for English definitions so far
-                # Most images are wordless diagrams/shapes/numbers and are reused
-                # as-is; only words whose image actually had English labels get a
-                # Spanish-relabeled version under assets/images_es/, so check
-                # there first and fall back to the plain English image.
-                image_rel = entry.get("spanish_image") or entry.get("image")
-                image_path = None
-                if image_rel:
-                    candidate = images_es_dir / image_rel
-                    image_path = candidate if candidate.exists() else images_dir / image_rel
-            else:
-                word, text = entry["word"], entry.get("text") or ""
-                text_html = text_html_for(grade, entry["word"])
-                image_path = images_dir / entry["image"] if entry.get("image") else None
-            image_uri = None
-            if image_path and image_path.exists():
-                image_uri = image_path.resolve().as_uri()
-            cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
-                          "image_uri": image_uri})
+        cards.extend(_cards_for_grade(grade, language))
 
     if not cards:
         return 0, []
 
     shrink_report = generate.render_pdf(cards, out_path, lang=language)
     return len(cards), shrink_report
+
+
+def units_for_grade(grade):
+    """Sorted list of unit numbers that have at least one word mapped to them
+    for this grade (i.e. what render_unit_pdfs would produce a file for)."""
+    unit_vocab = load_unit_vocab()
+    units = {e["primary_unit"] for e in unit_vocab.get(grade, []) if e.get("primary_unit") is not None}
+    return sorted(units)
+
+
+def render_unit_pdfs(grades, language, out_dir):
+    """Render one standalone PDF per (grade, unit) into out_dir, instead of a
+    single combined deck -- for printing/posting a Word Wall unit by unit as
+    a class works through the curriculum. Returns a list of
+    {"grade", "unit", "path", "count", "shrink_report"}, one per unit that
+    actually produced at least one card for this language (a unit with no
+    Spanish translations yet simply doesn't appear, the same way it's
+    skipped from the combined Spanish deck)."""
+    import generate
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    results = []
+    for grade in grades:
+        for unit in units_for_grade(grade):
+            cards = _cards_for_grade(grade, language, unit=unit)
+            if not cards:
+                continue
+            grade_slug = grade if grade == "K" else f"grade{grade}"
+            out_path = out_dir / f"{grade_slug}_unit{unit}_{language}.pdf"
+            shrink_report = generate.render_pdf(cards, out_path, lang=language)
+            results.append({
+                "grade": grade, "unit": unit, "path": out_path,
+                "count": len(cards), "shrink_report": shrink_report,
+            })
+    return results

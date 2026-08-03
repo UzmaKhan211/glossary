@@ -15,7 +15,9 @@ always were. All data is read from/written to the same data/ and output/
 paths those scripts use, so this is a front end for the real pipeline,
 not a separate copy of it.
 """
+import shutil
 import sys
+import zipfile
 from pathlib import Path
 
 from flask import Flask, flash, redirect, render_template, request, send_file, url_for
@@ -49,6 +51,7 @@ def grade_status():
             "mapped": mapped,
             "spanish": spanish,
             "units_uploaded": sorted(pipeline.uploaded_units_summary(grade)),
+            "units_mapped": pipeline.units_for_grade(grade),
             "has_data": bool(entries),
             "images_expected": images_expected,
             "images_present": images_present,
@@ -217,12 +220,20 @@ def serve_image(rel_path):
     return send_file(target)
 
 
+def _flash_shrink_report(shrink_report):
+    if shrink_report:
+        details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrink_report)
+        flash(f"{len(shrink_report)} word(s) had their font auto-shrunk to fit -- please review: {details}",
+              "warning")
+
+
 @app.route("/generate", methods=["GET", "POST"])
 def generate():
     status = grade_status()
     if request.method == "POST":
         grades = request.form.getlist("grades")
         language = request.form.get("language")
+        split_by_unit = request.form.get("split_by_unit") == "on"
         if not grades:
             flash("Pick at least one grade first.", "error")
             return redirect(url_for("generate"))
@@ -230,16 +241,40 @@ def generate():
             flash("Pick a language.", "error")
             return redirect(url_for("generate"))
 
+        if split_by_unit:
+            # Render each grade+unit to its own PDF in a scratch dir, then zip
+            # them up -- a browser download is a single file, so this is the
+            # only way to hand back "one PDF per unit" in one click. The
+            # scratch dir is wiped first so a stale file from a previous
+            # export (e.g. a unit that's since been remapped away) can't ride
+            # along into the new zip.
+            work_dir = pipeline.OUTPUT_DIR / "_unit_pdfs_tmp"
+            if work_dir.exists():
+                shutil.rmtree(work_dir)
+            results = pipeline.render_unit_pdfs(grades, language, work_dir)
+            if not results:
+                flash("No cards to export for that selection -- map some words to units first.", "error")
+                return redirect(url_for("generate"))
+            _flash_shrink_report([e for r in results for e in r["shrink_report"]])
+
+            language_label = "Spanish" if language == "es" else "English"
+            zip_name = f"word_wall_units_{'spanish' if language == 'es' else 'english'}_{'-'.join(grades)}.zip"
+            zip_path = pipeline.OUTPUT_DIR / zip_name
+            with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+                for r in results:
+                    grade_label = pipeline.label_for_grade(r["grade"])
+                    arcname = f"{grade_label}/Unit {r['unit']} ({language_label}).pdf"
+                    zf.write(r["path"], arcname=arcname)
+            shutil.rmtree(work_dir)
+            return send_file(zip_path, as_attachment=True, download_name=zip_name)
+
         out_name = f"word_wall_{'spanish' if language == 'es' else 'english'}_{'-'.join(grades)}.pdf"
         out_path = pipeline.OUTPUT_DIR / out_name
         count, shrink_report = pipeline.render_card_pdf(grades, language, out_path)
         if count == 0:
             flash("No cards to export for that selection -- map some words to units first.", "error")
             return redirect(url_for("generate"))
-        if shrink_report:
-            details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrink_report)
-            flash(f"{len(shrink_report)} word(s) had their font auto-shrunk to fit -- please review: {details}",
-                  "warning")
+        _flash_shrink_report(shrink_report)
         return send_file(out_path, as_attachment=True, download_name=out_name)
 
     return render_template("generate.html", grades=status)

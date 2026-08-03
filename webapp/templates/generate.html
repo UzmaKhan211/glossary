@@ -24,7 +24,13 @@
       <label><input type="radio" name="language" value="es"> Spanish</label>
     </div>
 
-    <button class="btn" type="submit">Generate &amp; download PDF</button>
+    <label class="checkbox-line">
+      <input type="checkbox" name="split_by_unit">
+      Split into one PDF per unit (downloads a .zip with a separate file for each grade's Unit 1, Unit 2, etc.,
+      instead of one combined deck)
+    </label>
+
+    <button class="btn" type="submit">Generate &amp; download</button>
   </form>
 </div>
 {% endblock %}
