@@ -30,10 +30,10 @@
   "2": [
     {
       "word": "quarter",
-      "spanish_word": "moneda de veinticinco centavos",
-      "spanish_definition": "una moneda que vale 25 centavos",
+      "spanish_word": "cuarto, cuarta parte",
+      "spanish_definition": "cada parte de un entero dividido en 4 partes iguales (plural: cuarteles)",
       "confidence": "high",
-      "note": "Unit2 only has one 'quarter'-related entry, bolded as 'quarter (coin)'. The checklist lists both 'quarter' and 'quarter (coin)' for unit2; both map to this same single glossary entry."
+      "note": "QA fix: previously this entry copied the 'quarter (coin)' translation ('moneda de veinticinco centavos' / 'una moneda que vale 25 centavos'), which is the wrong headword -- this card's English text is the fraction sense ('each part of a shape that is partitioned into 4 equal parts'), not the coin sense. Unit2's own PDF (unit2.txt) only bolds 'quarter (coin)' and has no separate fraction-sense 'quarter' entry, but the fraction-sense 'quarter' does appear as its own official headword in unit6.txt ('quarter each part of a shape that is partitioned into 4 equal parts (plural: quarters)' -> 'cuarto, cuarta parte cada parte de un entero dividido en 4 partes iguales (plural: cuarteles)'). Since this is the same canonical vocabulary word/definition as the unit6 entry, its official Amplify Spanish translation from unit6.txt is used here instead of inventing a new one."
     },
     {
       "word": "cent",
