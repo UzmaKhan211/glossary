@@ -389,6 +389,7 @@ def build_workbook(unit_vocab):
         ws.column_dimensions["C"].width = 70
         ws.column_dimensions["D"].width = IMG_COL_WIDTH_PX / 7
         ws.column_dimensions["E"].width = IMG_COL_WIDTH_PX / 7
+        unmapped_rows.sort(key=lambda pair: (pair[0], pair[1]["word"].lower()))
         row = 2
         for grade, entry in unmapped_rows:
             ws.row_dimensions[row].height = ROW_HEIGHT_PX * 0.75

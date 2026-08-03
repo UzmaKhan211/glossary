@@ -117,7 +117,11 @@ def load_cards(grades, limit=None):
     vocab = json.loads((DATA_DIR / "vocab.json").read_text())
     cards = []
     for grade in grades:
-        grade_cards = vocab.get(grade, [])
+        # Alphabetize each grade's cards by word rather than leaving them in
+        # master-spreadsheet row order, so a printed deck can be flipped
+        # through/found A-Z. Sort before applying --limit so a sample deck
+        # is the first N words alphabetically, not just the first N rows.
+        grade_cards = sorted(vocab.get(grade, []), key=lambda c: c["word"].lower())
         if limit:
             grade_cards = grade_cards[:limit]
         for c in grade_cards:

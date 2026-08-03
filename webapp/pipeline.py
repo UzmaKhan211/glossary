@@ -307,6 +307,11 @@ def _cards_for_grade(grade, language, unit=None):
             image_uri = image_path.resolve().as_uri()
         cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
                       "image_uri": image_uri})
+    # Alphabetize by the word actually printed on the card (English or
+    # Spanish, whichever this deck is in), not spreadsheet row order -- so a
+    # printed deck can be flipped through/found A-Z rather than in whatever
+    # order the master spreadsheet happened to list words in.
+    cards.sort(key=lambda c: c["word"].lower())
     return cards
 
 
