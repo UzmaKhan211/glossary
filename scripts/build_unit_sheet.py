@@ -224,6 +224,22 @@ def build_unit_vocab():
             units_found = VERIFIED_UNIT_CORRECTIONS[correction_key] if corrected else word_to_units[card["word"]]
             primary_unit = units_found[0] if units_found else None
             spanish = grade_spanish.get((str(primary_unit), card["word"])) if primary_unit else None
+            # A word that recurs across units can have a genuinely different
+            # official Spanish phrasing per unit (e.g. grade 1's "equal" is
+            # "la misma cantidad" in unit 1 but "tener el mismo valor" in
+            # units 2/4/7) -- so every unit this word is placed in (all_units,
+            # not just primary_unit) needs its OWN translation looked up,
+            # rather than reusing primary_unit's for every repeat. Units with
+            # no translation on record for this specific word fall back to
+            # primary_unit's further down in build_workbook()/_cards_for_grade().
+            spanish_by_unit = {}
+            for u in units_found:
+                per_unit = grade_spanish.get((str(u), card["word"]))
+                if per_unit:
+                    spanish_by_unit[str(u)] = {
+                        "word": per_unit.get("spanish_word") or "",
+                        "text": per_unit.get("spanish_definition") or "",
+                    }
             entry = {
                 "word": card["word"],
                 "text": card.get("text") or "",
@@ -233,6 +249,7 @@ def build_unit_vocab():
                 "all_units": units_found,
                 "spanish_word": (spanish or {}).get("spanish_word") or "",
                 "spanish_text": (spanish or {}).get("spanish_definition") or "",
+                "spanish_by_unit": spanish_by_unit,
             }
             grade_entries.append(entry)
             tag = " [hand-corrected -- see VERIFIED_UNIT_CORRECTIONS]" if corrected else ""
@@ -341,10 +358,17 @@ def build_workbook(unit_vocab):
             ws.cell(row=row, column=1, value=grade)
             unit_cell = ws.cell(row=row, column=2, value=current_unit)
             unit_cell.fill = UNIT_FILL
+            # This unit may have its own distinct official Spanish phrasing
+            # for the word (see spanish_by_unit's note in build_unit_vocab());
+            # fall back to the primary unit's translation if this specific
+            # unit doesn't have one on record.
+            per_unit_es = entry["spanish_by_unit"].get(str(unit))
+            spanish_word = per_unit_es["word"] if per_unit_es else entry["spanish_word"]
+            spanish_text = per_unit_es["text"] if per_unit_es else entry["spanish_text"]
             ws.cell(row=row, column=3, value=entry["word"]).alignment = Alignment(vertical="top", wrap_text=True)
             ws.cell(row=row, column=4, value=entry["text"]).alignment = Alignment(vertical="top", wrap_text=True)
-            ws.cell(row=row, column=5, value=entry["spanish_word"]).alignment = Alignment(vertical="top", wrap_text=True)
-            ws.cell(row=row, column=6, value=entry["spanish_text"]).alignment = Alignment(vertical="top", wrap_text=True)
+            ws.cell(row=row, column=5, value=spanish_word).alignment = Alignment(vertical="top", wrap_text=True)
+            ws.cell(row=row, column=6, value=spanish_text).alignment = Alignment(vertical="top", wrap_text=True)
             write_image(ws, row, 7, entry["image"])
             write_image(ws, row, 8, entry["spanish_image"], prefer_es=True)
             row += 1

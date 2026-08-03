@@ -194,6 +194,26 @@ def match_grade(grade):
                 index.setdefault(variant, i)
         unit_index[unit_num] = index
 
+    def spanish_for_unit(word, unit_num):
+        """Look up this word's Spanish word/definition specifically from
+        unit_num's own uploaded PDF, rather than assuming every unit a word
+        recurs in shares one translation -- units can genuinely phrase the
+        same word differently."""
+        index = unit_index[unit_num]
+        variant_hit = next(iter(_headword_variants(word) & set(index)), None)
+        if variant_hit is None:
+            return "", ""
+        i = index[variant_hit]
+        es_entries = units[unit_num]["es"]
+        # If this unit's PDF had a mismatched English/Spanish entry count
+        # (the parser flags this -- see save_and_parse_unit_pdf's warnings),
+        # the position that lines up with the English headword may not
+        # exist on the Spanish side at all. Leave the Spanish fields blank
+        # rather than crash or grab the wrong word.
+        if i >= len(es_entries):
+            return "", ""
+        return es_entries[i].word, es_entries[i].definition
+
     entries = []
     for card in cards:
         candidates = sorted(
@@ -202,19 +222,18 @@ def match_grade(grade):
         )
         primary_unit = candidates[0] if candidates else None
         spanish_word, spanish_text = "", ""
+        spanish_by_unit = {}
         if primary_unit is not None:
-            index = unit_index[primary_unit]
-            variant_hit = next(iter(_headword_variants(card["word"]) & set(index)))
-            i = index[variant_hit]
-            es_entries = units[primary_unit]["es"]
-            # If this unit's PDF had a mismatched English/Spanish entry count
-            # (the parser flags this -- see save_and_parse_unit_pdf's
-            # warnings), the position that lines up with the English
-            # headword may not exist on the Spanish side at all. Leave the
-            # Spanish fields blank rather than crash or grab the wrong word.
-            if i < len(es_entries):
-                spanish_word = es_entries[i].word
-                spanish_text = es_entries[i].definition
+            spanish_word, spanish_text = spanish_for_unit(card["word"], primary_unit)
+            # A word appearing in several units (e.g. "above" reintroduced in
+            # a later unit) can have distinct phrasing per unit -- record
+            # each unit's own translation, not just the primary one, so
+            # per-unit exports show the right words instead of reusing the
+            # earliest unit's translation everywhere.
+            for u in candidates:
+                w, t = spanish_for_unit(card["word"], u)
+                if w:
+                    spanish_by_unit[str(u)] = {"word": w, "text": t}
         entries.append({
             "word": card["word"],
             "text": card.get("text") or "",
@@ -223,6 +242,7 @@ def match_grade(grade):
             "all_units": candidates,
             "spanish_word": spanish_word,
             "spanish_text": spanish_text,
+            "spanish_by_unit": spanish_by_unit,
         })
 
     unit_vocab = load_unit_vocab()
@@ -257,7 +277,15 @@ def _cards_for_grade(grade, language, unit=None):
         if unit is not None and unit not in (entry.get("all_units") or []):
             continue
         if language == "es":
-            word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
+            # A word placed in several units can have a genuinely different
+            # official Spanish phrasing per unit (see spanish_by_unit's note
+            # in build_unit_sheet.py's build_unit_vocab()) -- when rendering
+            # a specific unit's PDF, prefer that unit's own translation over
+            # the word's primary-unit one, falling back if this unit doesn't
+            # have one on record.
+            per_unit_es = (entry.get("spanish_by_unit") or {}).get(str(unit)) if unit is not None else None
+            word = (per_unit_es or {}).get("word") or entry.get("spanish_word") or ""
+            text = (per_unit_es or {}).get("text") or entry.get("spanish_text") or ""
             if not word:
                 continue  # no Spanish translation available for this word -- skip rather than print blank
             text_html = None  # bolding is only curated for English definitions so far
