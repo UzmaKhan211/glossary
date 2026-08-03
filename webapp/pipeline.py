@@ -306,12 +306,18 @@ def _cards_for_grade(grade, language, unit=None):
         if image_path and image_path.exists():
             image_uri = image_path.resolve().as_uri()
         cards.append({"grade": grade, "word": word, "text": text, "text_html": text_html,
-                      "image_uri": image_uri})
-    # Alphabetize by the word actually printed on the card (English or
-    # Spanish, whichever this deck is in), not spreadsheet row order -- so a
-    # printed deck can be flipped through/found A-Z rather than in whatever
-    # order the master spreadsheet happened to list words in.
-    cards.sort(key=lambda c: c["word"].lower())
+                      "image_uri": image_uri, "_sort_word": entry["word"]})
+    # Alphabetize by the ENGLISH word always, even in the Spanish deck --
+    # Spanish cards follow the same order as their English counterparts
+    # (e.g. if "data" sorts before "meter" in English, the Spanish deck
+    # shows data's translation before meter's translation too, regardless of
+    # what the Spanish words themselves start with) rather than being
+    # re-sorted A-Z in Spanish. Not spreadsheet row order either -- so a
+    # printed deck can be flipped through/found by this shared order rather
+    # than whatever order the master spreadsheet happened to list words in.
+    cards.sort(key=lambda c: c["_sort_word"].lower())
+    for c in cards:
+        del c["_sort_word"]
     return cards
 
 
