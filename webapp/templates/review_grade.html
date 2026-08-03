@@ -5,7 +5,9 @@
 {% include "_steps.html" %}
 <h1>Step 4 of 5 -- Review {{ grade_label }}</h1>
 <p class="subtitle">
-  Rows highlighted in orange have no unit match -- fix the word or unit and save, or leave the unit blank to exclude it from both card decks.
+  Rows highlighted in orange have no unit match -- fix the word or unit(s) and save, or leave it blank to exclude the word from every card deck.
+  A word that genuinely appears in more than one unit (e.g. "above" is introduced in unit 3 and comes back in unit 7) gets a card in each of
+  those units' PDFs -- enter every unit it belongs to as a comma-separated list (e.g. "3, 7"), not just the first one.
   Uploading more PDFs and re-running mapping (<a href="{{ url_for('upload_pdfs', grade=grade) }}">step 2</a>) re-matches everything from scratch, so save any spreadsheet/PDF-side corrections at the source if you need them to stick.
 </p>
 
@@ -19,7 +21,7 @@
     <table class="review-table">
       <thead>
         <tr>
-          <th>Unit</th>
+          <th>Unit(s)</th>
           <th>Word</th>
           <th>Definition</th>
           <th>Spanish word</th>
@@ -29,8 +31,8 @@
       </thead>
       <tbody>
         {% for i, row in rows %}
-        <tr class="{{ 'unmapped' if row.primary_unit is none }}">
-          <td><input class="unit-input" type="text" name="row{{ i }}_primary_unit" value="{{ row.primary_unit if row.primary_unit is not none else '' }}"></td>
+        <tr class="{{ 'unmapped' if not row.all_units }}">
+          <td><input class="unit-input" type="text" name="row{{ i }}_units" value="{{ row.all_units | join(', ') if row.all_units else '' }}"></td>
           <td><input class="word-input" type="text" name="row{{ i }}_word" value="{{ row.word }}"></td>
           <td><textarea class="text-input" name="row{{ i }}_text" rows="2">{{ row.text }}</textarea></td>
           <td><input class="word-input" type="text" name="row{{ i }}_spanish_word" value="{{ row.spanish_word }}"></td>

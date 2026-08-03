@@ -238,9 +238,14 @@ def uploaded_units_summary(grade):
 
 def _cards_for_grade(grade, language, unit=None):
     """Build the card dicts for a single grade (see render_card_pdf's
-    docstring for the shape), optionally restricted to entries whose
-    primary_unit matches unit. Shared by render_card_pdf (whole-grade decks)
-    and render_unit_pdfs (one PDF per unit)."""
+    docstring for the shape), optionally restricted to entries that belong
+    to the given unit. A word appearing in several units (e.g. "above" is
+    introduced in unit 3 and comes back in unit 7) matches every one of them
+    -- entry["all_units"] is the hand-verified list of units the word really
+    belongs in, not just the first one, so a card for it is produced for
+    each of those units rather than only its earliest appearance. Shared by
+    render_card_pdf (whole-grade decks, unit=None -- one card per word) and
+    render_unit_pdfs (one PDF per unit)."""
     from bolding import text_html_for
 
     images_dir = REPO_ROOT / "assets" / "images"
@@ -249,7 +254,7 @@ def _cards_for_grade(grade, language, unit=None):
 
     cards = []
     for entry in unit_vocab.get(grade, []):
-        if unit is not None and entry.get("primary_unit") != unit:
+        if unit is not None and unit not in (entry.get("all_units") or []):
             continue
         if language == "es":
             word, text = entry.get("spanish_word") or "", entry.get("spanish_text") or ""
@@ -301,7 +306,9 @@ def units_for_grade(grade):
     """Sorted list of unit numbers that have at least one word mapped to them
     for this grade (i.e. what render_unit_pdfs would produce a file for)."""
     unit_vocab = load_unit_vocab()
-    units = {e["primary_unit"] for e in unit_vocab.get(grade, []) if e.get("primary_unit") is not None}
+    units = set()
+    for e in unit_vocab.get(grade, []):
+        units.update(e.get("all_units") or [])
     return sorted(units)
 
 

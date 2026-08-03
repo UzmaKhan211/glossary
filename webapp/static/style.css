@@ -202,7 +202,7 @@ table.review-table input[type="text"], table.review-table textarea {
   border-radius: 6px;
   resize: vertical;
 }
-table.review-table .unit-input { width: 48px; }
+table.review-table .unit-input { width: 72px; }
 table.review-table .word-input { width: 140px; }
 table.review-table .text-input { width: 100%; min-width: 260px; line-height: 1.35; }
 table.review-table img.thumb { width: 44px; height: 44px; object-fit: contain; border-radius: 4px; border: 1px solid var(--border); }

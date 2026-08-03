@@ -321,14 +321,22 @@ def build_workbook(unit_vocab):
         ws = wb.create_sheet(title=f"Grade {grade}")
         add_sheet_header(ws)
 
-        mapped = [e for e in entries if e["primary_unit"] is not None]
-        mapped.sort(key=lambda e: (e["primary_unit"], e["word"].lower()))
+        # A word that legitimately appears in several units (e.g. "above" is
+        # introduced in unit 3 and comes back in unit 7) gets one row PER
+        # unit here, not just its earliest one -- a teacher working unit 7
+        # would otherwise never see "above" on that unit's sheet just
+        # because it happened to appear earlier too. all_units is already
+        # the hand-verified list of units this word really belongs in (see
+        # VERIFIED_UNIT_CORRECTIONS above), so it's the right thing to
+        # expand against.
+        mapped = [(unit, e) for e in entries for unit in e["all_units"]]
+        mapped.sort(key=lambda pair: (pair[0], pair[1]["word"].lower()))
 
         row = 2
         current_unit = None
-        for entry in mapped:
-            if entry["primary_unit"] != current_unit:
-                current_unit = entry["primary_unit"]
+        for unit, entry in mapped:
+            if unit != current_unit:
+                current_unit = unit
             ws.row_dimensions[row].height = ROW_HEIGHT_PX * 0.75
             ws.cell(row=row, column=1, value=grade)
             unit_cell = ws.cell(row=row, column=2, value=current_unit)
@@ -342,7 +350,7 @@ def build_workbook(unit_vocab):
             row += 1
 
         for entry in entries:
-            if entry["primary_unit"] is None:
+            if not entry["all_units"]:
                 unmapped_rows.append((grade, entry))
 
     if unmapped_rows:
@@ -377,8 +385,8 @@ def main():
     unit_vocab = build_unit_vocab()
     out_path = build_workbook(unit_vocab)
     for grade, entries in unit_vocab.items():
-        mapped = sum(1 for e in entries if e["primary_unit"] is not None)
-        spanish = sum(1 for e in entries if e["primary_unit"] is not None and e["spanish_word"])
+        mapped = sum(1 for e in entries if e["all_units"])
+        spanish = sum(1 for e in entries if e["all_units"] and e["spanish_word"])
         print(f"grade {grade}: {mapped}/{len(entries)} words mapped to a unit, {spanish}/{mapped} have a Spanish translation")
     print(f"Wrote {out_path}")
 

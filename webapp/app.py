@@ -188,8 +188,15 @@ def review_grade(grade):
     if request.method == "POST":
         for i, entry in enumerate(entries):
             prefix = f"row{i}_"
-            unit_raw = request.form.get(prefix + "primary_unit", "").strip()
-            entry["primary_unit"] = int(unit_raw) if unit_raw.isdigit() else None
+            units_raw = request.form.get(prefix + "units", "").strip()
+            # A word can legitimately belong to more than one unit (e.g.
+            # "above" is introduced in unit 3 and comes back in unit 7), so
+            # this field accepts a comma/space-separated list, not just a
+            # single number -- entry["all_units"] (not primary_unit) is what
+            # actually decides which unit-wise PDFs the word appears in.
+            all_units = sorted({int(tok) for tok in units_raw.replace(",", " ").split() if tok.isdigit()})
+            entry["all_units"] = all_units
+            entry["primary_unit"] = all_units[0] if all_units else None
             entry["word"] = request.form.get(prefix + "word", entry["word"]).strip()
             entry["text"] = request.form.get(prefix + "text", entry["text"]).strip()
             entry["spanish_word"] = request.form.get(prefix + "spanish_word", entry["spanish_word"]).strip()
@@ -201,7 +208,7 @@ def review_grade(grade):
 
     rows = sorted(
         enumerate(entries),
-        key=lambda pair: (pair[1]["primary_unit"] is None, pair[1]["primary_unit"] or 0, pair[1]["word"].lower()),
+        key=lambda pair: (not pair[1].get("all_units"), min(pair[1].get("all_units") or [0]), pair[1]["word"].lower()),
     )
     return render_template(
         "review_grade.html",
