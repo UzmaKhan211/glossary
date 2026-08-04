@@ -81,6 +81,24 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
   const report = [];
   const pxToPt = (px) => px * 72 / 96;
   const ptToPx = (pt) => pt * 96 / 72;
+  const HEADER_FIT_MARGIN_PX = 4;
+
+  // .card-header is a flex item stretched (default align-items: stretch) to
+  // the card's full content width, so its clientWidth is always that fixed
+  // stretched width, and el.scrollWidth clamps to max(content, clientWidth)
+  // -- it correctly reveals *overflow* (content wider than the box) but
+  // clamps to clientWidth whenever content already fits, so it can't tell
+  // us how much slack there is. Measuring the actual text run width via
+  // canvas sidesteps that: it reflects the true content width regardless of
+  // the stretched box, so a header can be required to land with real margin
+  // to spare instead of just barely not overflowing.
+  const measureCanvas = document.createElement('canvas');
+  const measureCtx = measureCanvas.getContext('2d');
+  function headerTextWidthPx(el) {
+    const cs = getComputedStyle(el);
+    measureCtx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    return measureCtx.measureText(el.textContent).width;
+  }
 
   // floorBasisPx, if given, anchors the shrink floor to that size instead of
   // the element's current size -- needed for the header, which job 1b may
@@ -161,14 +179,18 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
     }
 
     if (header) {
+      // A few px of required slack, not just "not technically overflowing"
+      // -- a header that lands exactly flush against the card's inner edge
+      // (zero px to spare) reads as cut off even though nothing is clipped.
+      const headerFits = () => headerTextWidthPx(header) <= header.clientWidth - HEADER_FIT_MARGIN_PX;
       const { originalSize, finalSize } = shrinkFontUntil(
         header,
-        () => header.scrollWidth <= header.clientWidth + 1,
+        headerFits,
         minRatio,
         nominalHeaderPx,
       );
       let effectiveFinalSize = finalSize;
-      if (header.scrollWidth > header.clientWidth + 1) {
+      if (!headerFits()) {
         // A handful of unusually long compound-word headers still don't fit
         // even at the normal minRatio floor -- a header that spills past
         // the card edge is worse than a smaller one, so keep shrinking past
@@ -176,7 +198,7 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
         // fits on one line.
         const { finalSize: overriddenFinalSize } = shrinkFontUntil(
           header,
-          () => header.scrollWidth <= header.clientWidth + 1,
+          headerFits,
           1,
           ptToPx(12),
         );
