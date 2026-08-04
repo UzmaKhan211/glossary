@@ -231,8 +231,10 @@ def _flash_shrink_report(shrink_report):
     grown = [e for e in shrink_report if e["toPt"] > e["fromPt"]]
     shrunk = [e for e in shrink_report if e["toPt"] < e["fromPt"]]
     if grown:
-        details = "; ".join(f"grade {e['grade']} '{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt)" for e in grown)
-        flash(f"{len(grown)} short no-image definition(s) had their font enlarged to reduce empty space: {details}",
+        details = "; ".join(
+            f"grade {e['grade']} '{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in grown
+        )
+        flash(f"{len(grown)} font(s) enlarged on short no-image cards to reduce empty space: {details}",
               "success")
     if shrunk:
         details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrunk)

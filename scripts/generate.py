@@ -34,7 +34,7 @@ from bolding import text_html_for  # noqa: E402
 # pathologically long word/definition from becoming illegibly tiny.
 MIN_SHRINK_RATIO = 0.62
 
-# Three independent jobs:
+# Four independent jobs:
 #  1. Grow short definitions on no-image cards: a card with no picture and a
 #     definition that's only 1-2 lines at the nominal 20pt leaves a big,
 #     visually awkward empty gap below the text before the footer (the text
@@ -43,19 +43,25 @@ MIN_SHRINK_RATIO = 0.62
 #     text on these specific cards fills the card better without touching
 #     anything else -- recorded in the report so it's easy to tell exactly
 #     which cards changed.
+#  1b. The same no-image + short-definition cards also get their header
+#     (the word) enlarged from the nominal 52pt, for the same reason -- it
+#     was left looking small relative to the extra room the card now has.
+#     Only applies to cards that already qualified for job 1, so the set of
+#     affected cards is identical between the two.
 #  2. The header (word) must never wrap to a second line (CSS already forces
 #     white-space: nowrap + overflow: hidden on it) -- if it's too wide for
-#     the card at its nominal 52pt, shrink it in 0.5pt steps until it fits on
-#     one line, and record exactly which word got shrunk and by how much so
-#     it can be reported back and reviewed by hand.
+#     the card at its nominal (or job-1b-enlarged) size, shrink it in 0.5pt
+#     steps until it fits on one line, and record exactly which word got
+#     shrunk and by how much so it can be reported back and reviewed by hand.
 #  3. The existing behavior: if a long definition still makes the card taller
 #     than its fixed box, shrink the definition (and, as a last resort, the
 #     header again) until it fits -- this also acts as a safety net if
-#     growing a short definition (job 1) ever overflows the card.
+#     growing a short definition/header (jobs 1/1b) ever overflows the card.
 GROWN_DEFINITION_PT = 30  # nominal is 20pt; see job 1 above
+GROWN_HEADER_PT = 66  # nominal is 52pt; see job 1b above
 
 AUTOFIT_JS = """
-async ([minRatio, grownPt]) => {
+async ([minRatio, grownPt, grownHeaderPt]) => {
   // Wait for the custom @font-face fonts (Castledown Pro / Benton Sans) to
   // finish loading before measuring/mutating anything. Forcing a layout
   // read (scrollWidth/scrollHeight) on an element before its own webfont
@@ -71,14 +77,25 @@ async ([minRatio, grownPt]) => {
   const pxToPt = (px) => px * 72 / 96;
   const ptToPx = (pt) => pt * 96 / 72;
 
-  function shrinkFontUntil(el, fitsFn, floorRatio) {
+  // floorBasisPx, if given, anchors the shrink floor to that size instead of
+  // the element's current size -- needed for the header, which job 1b may
+  // have already grown to grownHeaderPt before this ever runs; without this
+  // the floor would be minRatio of the *grown* size (a much narrower shrink
+  // range) instead of minRatio of its true nominal size, and a long
+  // multi-word header could run out of room to shrink down to a fit and
+  // print clipped.
+  function shrinkFontUntil(el, fitsFn, floorRatio, floorBasisPx) {
     const cs = getComputedStyle(el);
     const originalSize = parseFloat(cs.fontSize);
     const ratio = parseFloat(cs.lineHeight) / originalSize;
-    const floor = originalSize * floorRatio;
+    const floor = (floorBasisPx != null ? floorBasisPx : originalSize) * floorRatio;
     let size = originalSize;
     let guard = 0;
-    while (!fitsFn() && size > floor && guard < 80) {
+    // Steps by 0.5px each iteration; the guard just bounds a runaway loop,
+    // so it needs enough headroom to cross the full grown-size-to-floor
+    // range (e.g. grown 66pt header down to its 52pt-nominal floor is ~90
+    // steps) without cutting a shrink off early.
+    while (!fitsFn() && size > floor && guard < 300) {
       size -= 0.5;
       el.style.fontSize = size + 'px';
       el.style.lineHeight = (size * ratio) + 'px';
@@ -91,6 +108,9 @@ async ([minRatio, grownPt]) => {
     const header = card.querySelector('.card-header');
     const gradeMatch = card.className.match(/grade-(\\S+)/);
     const grade = gradeMatch ? gradeMatch[1] : '?';
+    // Captured before jobs 1/1b run, so it's always the true nominal size
+    // (52pt) even on cards whose header gets grown below.
+    const nominalHeaderPx = header ? parseFloat(getComputedStyle(header).fontSize) : null;
 
     const textEl0 = card.querySelector('.card-text');
     if (card.classList.contains('no-image') && textEl0 && textEl0.textContent.trim()) {
@@ -109,6 +129,26 @@ async ([minRatio, grownPt]) => {
           toPt: Math.round(pxToPt(grownPx) * 10) / 10,
           reason: 'short no-image definition enlarged to reduce empty space',
         });
+
+        // Same qualifying card -- enlarge its header (word) too, for the
+        // same reason (job 1b above).
+        if (header) {
+          const csH = getComputedStyle(header);
+          const baseHeaderSize = parseFloat(csH.fontSize);
+          const baseHeaderLineHeight = parseFloat(csH.lineHeight);
+          const grownHeaderPx = ptToPx(grownHeaderPt);
+          if (grownHeaderPx > baseHeaderSize) {
+            const headerRatio = baseHeaderLineHeight / baseHeaderSize;
+            header.style.fontSize = grownHeaderPx + 'px';
+            header.style.lineHeight = (grownHeaderPx * headerRatio) + 'px';
+            report.push({
+              word: header.textContent, grade,
+              fromPt: Math.round(pxToPt(baseHeaderSize) * 10) / 10,
+              toPt: Math.round(pxToPt(grownHeaderPx) * 10) / 10,
+              reason: 'header enlarged on short no-image card to reduce empty space',
+            });
+          }
+        }
       }
     }
 
@@ -117,6 +157,7 @@ async ([minRatio, grownPt]) => {
         header,
         () => header.scrollWidth <= header.clientWidth + 1,
         minRatio,
+        nominalHeaderPx,
       );
       if (finalSize < originalSize) {
         report.push({
@@ -147,7 +188,7 @@ async ([minRatio, grownPt]) => {
 
     // Last resort if it's still overflowing: shrink the header further too.
     if (header && card.scrollHeight > card.clientHeight + 1) {
-      shrinkFontUntil(header, () => card.scrollHeight <= card.clientHeight + 1, minRatio);
+      shrinkFontUntil(header, () => card.scrollHeight <= card.clientHeight + 1, minRatio, nominalHeaderPx);
     }
   });
 
@@ -227,7 +268,7 @@ def render_pdf(cards, out_path, lang="en"):
             browser = p.chromium.launch(executable_path=resolve_chromium_executable())
             page = browser.new_page()
             page.goto(build_html_path.resolve().as_uri())
-            shrink_report = page.evaluate(AUTOFIT_JS, [MIN_SHRINK_RATIO, GROWN_DEFINITION_PT])
+            shrink_report = page.evaluate(AUTOFIT_JS, [MIN_SHRINK_RATIO, GROWN_DEFINITION_PT, GROWN_HEADER_PT])
             page.pdf(
                 path=str(out_path),
                 width="11in",
@@ -263,9 +304,10 @@ def main():
     grown = [e for e in shrink_report if e["toPt"] > e["fromPt"]]
     shrunk = [e for e in shrink_report if e["toPt"] < e["fromPt"]]
     if grown:
-        print(f"\n{len(grown)} card(s) had a short no-image definition enlarged to reduce empty space:")
+        print(f"\n{len(grown)} font(s) enlarged on short no-image cards to reduce empty space:")
         for entry in grown:
-            print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt")
+            print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt "
+                  f"({entry['reason']})")
     if shrunk:
         print(f"\n{len(shrunk)} card(s) had their font auto-shrunk to fit -- please review:")
         for entry in shrunk:
