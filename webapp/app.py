@@ -228,9 +228,15 @@ def serve_image(rel_path):
 
 
 def _flash_shrink_report(shrink_report):
-    if shrink_report:
-        details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrink_report)
-        flash(f"{len(shrink_report)} word(s) had their font auto-shrunk to fit -- please review: {details}",
+    grown = [e for e in shrink_report if e["toPt"] > e["fromPt"]]
+    shrunk = [e for e in shrink_report if e["toPt"] < e["fromPt"]]
+    if grown:
+        details = "; ".join(f"grade {e['grade']} '{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt)" for e in grown)
+        flash(f"{len(grown)} short no-image definition(s) had their font enlarged to reduce empty space: {details}",
+              "success")
+    if shrunk:
+        details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrunk)
+        flash(f"{len(shrunk)} word(s) had their font auto-shrunk to fit -- please review: {details}",
               "warning")
 
 

@@ -34,19 +34,42 @@ from bolding import text_html_for  # noqa: E402
 # pathologically long word/definition from becoming illegibly tiny.
 MIN_SHRINK_RATIO = 0.62
 
-# Two independent jobs:
-#  1. The header (word) must never wrap to a second line (CSS already forces
+# Three independent jobs:
+#  1. Grow short definitions on no-image cards: a card with no picture and a
+#     definition that's only 1-2 lines at the nominal 20pt leaves a big,
+#     visually awkward empty gap below the text before the footer (the text
+#     column runs the full card width, so "short" here means genuinely
+#     short, not just narrow-column wrapping). Enlarging just the definition
+#     text on these specific cards fills the card better without touching
+#     anything else -- recorded in the report so it's easy to tell exactly
+#     which cards changed.
+#  2. The header (word) must never wrap to a second line (CSS already forces
 #     white-space: nowrap + overflow: hidden on it) -- if it's too wide for
 #     the card at its nominal 52pt, shrink it in 0.5pt steps until it fits on
 #     one line, and record exactly which word got shrunk and by how much so
 #     it can be reported back and reviewed by hand.
-#  2. The existing behavior: if a long definition still makes the card taller
+#  3. The existing behavior: if a long definition still makes the card taller
 #     than its fixed box, shrink the definition (and, as a last resort, the
-#     header again) until it fits.
+#     header again) until it fits -- this also acts as a safety net if
+#     growing a short definition (job 1) ever overflows the card.
+GROWN_DEFINITION_PT = 30  # nominal is 20pt; see job 1 above
+
 AUTOFIT_JS = """
-(minRatio) => {
+async ([minRatio, grownPt]) => {
+  // Wait for the custom @font-face fonts (Castledown Pro / Benton Sans) to
+  // finish loading before measuring/mutating anything. Forcing a layout
+  // read (scrollWidth/scrollHeight) on an element before its own webfont
+  // has finished applying can make Chromium lock that element onto the
+  // fallback font for the rest of the render -- harmless for the header
+  // (which was already the first thing measured, apparently after fonts
+  // settle in practice) but the new job-1 measurement below reads
+  // .card-text's scrollHeight even earlier in the page lifecycle, which
+  // was enough to trigger it and print definitions in a fallback serif.
+  await document.fonts.ready;
+
   const report = [];
   const pxToPt = (px) => px * 72 / 96;
+  const ptToPx = (pt) => pt * 96 / 72;
 
   function shrinkFontUntil(el, fitsFn, floorRatio) {
     const cs = getComputedStyle(el);
@@ -68,6 +91,26 @@ AUTOFIT_JS = """
     const header = card.querySelector('.card-header');
     const gradeMatch = card.className.match(/grade-(\\S+)/);
     const grade = gradeMatch ? gradeMatch[1] : '?';
+
+    const textEl0 = card.querySelector('.card-text');
+    if (card.classList.contains('no-image') && textEl0 && textEl0.textContent.trim()) {
+      const cs0 = getComputedStyle(textEl0);
+      const baseSize = parseFloat(cs0.fontSize);
+      const baseLineHeight = parseFloat(cs0.lineHeight);
+      const lineCount = Math.round(textEl0.scrollHeight / baseLineHeight);
+      const grownPx = ptToPx(grownPt);
+      if (lineCount <= 2 && grownPx > baseSize) {
+        const ratio = baseLineHeight / baseSize;
+        textEl0.style.fontSize = grownPx + 'px';
+        textEl0.style.lineHeight = (grownPx * ratio) + 'px';
+        report.push({
+          word: header ? header.textContent : '?', grade,
+          fromPt: Math.round(pxToPt(baseSize) * 10) / 10,
+          toPt: Math.round(pxToPt(grownPx) * 10) / 10,
+          reason: 'short no-image definition enlarged to reduce empty space',
+        });
+      }
+    }
 
     if (header) {
       const { originalSize, finalSize } = shrinkFontUntil(
@@ -184,7 +227,7 @@ def render_pdf(cards, out_path, lang="en"):
             browser = p.chromium.launch(executable_path=resolve_chromium_executable())
             page = browser.new_page()
             page.goto(build_html_path.resolve().as_uri())
-            shrink_report = page.evaluate(AUTOFIT_JS, MIN_SHRINK_RATIO)
+            shrink_report = page.evaluate(AUTOFIT_JS, [MIN_SHRINK_RATIO, GROWN_DEFINITION_PT])
             page.pdf(
                 path=str(out_path),
                 width="11in",
@@ -217,9 +260,15 @@ def main():
     shrink_report = render_pdf(cards, out_path)
 
     print(f"Wrote {len(cards)} cards ({len(cards) // 2 + len(cards) % 2} pages) -> {out_path}")
-    if shrink_report:
-        print(f"\n{len(shrink_report)} card(s) had their font auto-shrunk to fit -- please review:")
-        for entry in shrink_report:
+    grown = [e for e in shrink_report if e["toPt"] > e["fromPt"]]
+    shrunk = [e for e in shrink_report if e["toPt"] < e["fromPt"]]
+    if grown:
+        print(f"\n{len(grown)} card(s) had a short no-image definition enlarged to reduce empty space:")
+        for entry in grown:
+            print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt")
+    if shrunk:
+        print(f"\n{len(shrunk)} card(s) had their font auto-shrunk to fit -- please review:")
+        for entry in shrunk:
             print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt "
                   f"({entry['reason']})")
 
