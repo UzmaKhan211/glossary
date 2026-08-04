@@ -234,7 +234,7 @@ def _flash_shrink_report(shrink_report):
         details = "; ".join(
             f"grade {e['grade']} '{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in grown
         )
-        flash(f"{len(grown)} font(s) enlarged on short no-image cards to reduce empty space: {details}",
+        flash(f"{len(grown)} font(s) enlarged on short cards to reduce empty space: {details}",
               "success")
     if shrunk:
         details = "; ".join(f"'{e['word']}' ({e['fromPt']}pt->{e['toPt']}pt, {e['reason']})" for e in shrunk)

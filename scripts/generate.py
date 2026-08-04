@@ -35,23 +35,29 @@ from bolding import text_html_for  # noqa: E402
 MIN_SHRINK_RATIO = 0.62
 
 # Four independent jobs:
-#  1. Grow short definitions on no-image cards: a card with no picture and a
-#     definition that's only 1-2 lines at the nominal 20pt leaves a big,
-#     visually awkward empty gap below the text before the footer (the text
-#     column runs the full card width, so "short" here means genuinely
-#     short, not just narrow-column wrapping). Enlarging just the definition
-#     text on these specific cards fills the card better without touching
-#     anything else -- recorded in the report so it's easy to tell exactly
-#     which cards changed. Two tiers: a definition that's already only 1
-#     line at nominal size has the most room to fill, so it grows more (to
+#  1. Grow short definitions: a card with a definition that's only 1-2 lines
+#     at the nominal 20pt leaves a big, visually awkward empty gap below the
+#     text before the footer. Enlarging just the definition text on these
+#     specific cards fills the card better without touching anything else --
+#     recorded in the report so it's easy to tell exactly which cards
+#     changed. Two tiers: a definition that's already only 1 line at nominal
+#     size has the most room to fill, so it grows more (to
 #     GROWN_DEFINITION_1LINE_PT); one that already wraps to 2 lines at
 #     nominal size has less spare room and growing it as much would just
 #     push it to wrap further, so it only grows to GROWN_DEFINITION_2LINE_PT.
-#  1b. The same no-image + short-definition cards also get their header
-#     (the word) enlarged from the nominal 52pt, for the same reason -- it
-#     was left looking small relative to the extra room the card now has.
-#     Only applies to cards that already qualified for job 1, so the set of
-#     affected cards is identical between the two.
+#     Applies equally to no-image and image cards -- an image card's
+#     definition column is narrower (max-width: 5.5in vs. the full card
+#     width) so its own live line-wrap is what decides which tier it gets,
+#     but the same criteria and the same shrink-to-fit safety net (job 3)
+#     apply either way, and the image itself is never resized by this (its
+#     own box just gets whatever width is left over from the text column).
+#  1b. The same short-definition cards also get their header (the word)
+#     enlarged from the nominal 52pt, for the same reason -- it was left
+#     looking small relative to the extra room the card now has. A card
+#     with an image and *no* definition text at all also qualifies for this
+#     (nothing to grow in job 1, but the header still gets bigger) since it
+#     has the same leftover-space problem. Definition growth (job 1) and
+#     header growth (job 1b) are otherwise the same qualifying set.
 #  2. The header (word) must never wrap to a second line (CSS already forces
 #     white-space: nowrap + overflow: hidden on it) -- if it's too wide for
 #     the card at its nominal (or job-1b-enlarged) size, shrink it in 0.5pt
@@ -136,7 +142,11 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
     const nominalHeaderPx = header ? parseFloat(getComputedStyle(header).fontSize) : null;
 
     const textEl0 = card.querySelector('.card-text');
-    if (card.classList.contains('no-image') && textEl0 && textEl0.textContent.trim()) {
+    const hasImage = !!card.querySelector('.card-image-wrap');
+    const hasText = !!(textEl0 && textEl0.textContent.trim());
+    let qualifiesForHeaderGrowth = false;
+
+    if (hasText) {
       const cs0 = getComputedStyle(textEl0);
       const baseSize = parseFloat(cs0.fontSize);
       const baseLineHeight = parseFloat(cs0.lineHeight);
@@ -146,6 +156,7 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
       else if (lineCount === 2) targetPt = grownPt2Line;
       const grownPx = targetPt != null ? ptToPx(targetPt) : null;
       if (grownPx != null && grownPx > baseSize) {
+        qualifiesForHeaderGrowth = true;
         const ratio = baseLineHeight / baseSize;
         textEl0.style.fontSize = grownPx + 'px';
         textEl0.style.lineHeight = (grownPx * ratio) + 'px';
@@ -153,28 +164,33 @@ async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
           word: header ? header.textContent : '?', grade,
           fromPt: Math.round(pxToPt(baseSize) * 10) / 10,
           toPt: Math.round(pxToPt(grownPx) * 10) / 10,
-          reason: 'short no-image definition enlarged to reduce empty space',
+          reason: 'short definition enlarged to reduce empty space',
         });
+      }
+    } else if (hasImage) {
+      // "Visual only" card (image, no definition text) -- nothing to grow
+      // here, but it still qualifies for the header growth below, for the
+      // same reason a short-definition card does.
+      qualifiesForHeaderGrowth = true;
+    }
 
-        // Same qualifying card -- enlarge its header (word) too, for the
-        // same reason (job 1b above).
-        if (header) {
-          const csH = getComputedStyle(header);
-          const baseHeaderSize = parseFloat(csH.fontSize);
-          const baseHeaderLineHeight = parseFloat(csH.lineHeight);
-          const grownHeaderPx = ptToPx(grownHeaderPt);
-          if (grownHeaderPx > baseHeaderSize) {
-            const headerRatio = baseHeaderLineHeight / baseHeaderSize;
-            header.style.fontSize = grownHeaderPx + 'px';
-            header.style.lineHeight = (grownHeaderPx * headerRatio) + 'px';
-            report.push({
-              word: header.textContent, grade,
-              fromPt: Math.round(pxToPt(baseHeaderSize) * 10) / 10,
-              toPt: Math.round(pxToPt(grownHeaderPx) * 10) / 10,
-              reason: 'header enlarged on short no-image card to reduce empty space',
-            });
-          }
-        }
+    // Same qualifying card -- enlarge its header (word) too, for the same
+    // reason (job 1b above).
+    if (qualifiesForHeaderGrowth && header) {
+      const csH = getComputedStyle(header);
+      const baseHeaderSize = parseFloat(csH.fontSize);
+      const baseHeaderLineHeight = parseFloat(csH.lineHeight);
+      const grownHeaderPx = ptToPx(grownHeaderPt);
+      if (grownHeaderPx > baseHeaderSize) {
+        const headerRatio = baseHeaderLineHeight / baseHeaderSize;
+        header.style.fontSize = grownHeaderPx + 'px';
+        header.style.lineHeight = (grownHeaderPx * headerRatio) + 'px';
+        report.push({
+          word: header.textContent, grade,
+          fromPt: Math.round(pxToPt(baseHeaderSize) * 10) / 10,
+          toPt: Math.round(pxToPt(grownHeaderPx) * 10) / 10,
+          reason: 'header enlarged on short card to reduce empty space',
+        });
       }
     }
 
@@ -352,7 +368,7 @@ def main():
     grown = [e for e in shrink_report if e["toPt"] > e["fromPt"]]
     shrunk = [e for e in shrink_report if e["toPt"] < e["fromPt"]]
     if grown:
-        print(f"\n{len(grown)} font(s) enlarged on short no-image cards to reduce empty space:")
+        print(f"\n{len(grown)} font(s) enlarged on short cards to reduce empty space:")
         for entry in grown:
             print(f"  - grade {entry['grade']} '{entry['word']}': {entry['fromPt']}pt -> {entry['toPt']}pt "
                   f"({entry['reason']})")
