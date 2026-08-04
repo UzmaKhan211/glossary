@@ -201,6 +201,17 @@ def review_grade(grade):
             entry["text"] = request.form.get(prefix + "text", entry["text"]).strip()
             entry["spanish_word"] = request.form.get(prefix + "spanish_word", entry["spanish_word"]).strip()
             entry["spanish_text"] = request.form.get(prefix + "spanish_text", entry["spanish_text"]).strip()
+            # This form only ever shows one Spanish word/text box per row, so
+            # a saved edit here is the reviewer's final word for every unit
+            # this word appears in -- clear any leftover per-unit overrides
+            # (spanish_by_unit, populated from the original per-unit PDF
+            # extraction) so they can't keep silently overriding the edit
+            # a reviewer just made and can actually see here. Without this,
+            # pipeline._cards_for_grade() prefers spanish_by_unit's stale
+            # text over what was just saved when rendering that unit's own
+            # PDF specifically -- the edit "sticks" for the combined
+            # whole-grade deck but not for a per-unit download.
+            entry["spanish_by_unit"] = {}
         unit_vocab[grade] = entries
         pipeline.save_unit_vocab(unit_vocab)
         flash("Changes saved.", "success")
