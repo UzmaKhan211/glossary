@@ -159,11 +159,26 @@ async ([minRatio, grownPt, grownHeaderPt]) => {
         minRatio,
         nominalHeaderPx,
       );
-      if (finalSize < originalSize) {
+      let effectiveFinalSize = finalSize;
+      if (header.scrollWidth > header.clientWidth + 1) {
+        // A handful of unusually long compound-word headers still don't fit
+        // even at the normal minRatio floor -- a header that spills past
+        // the card edge is worse than a smaller one, so keep shrinking past
+        // that floor (down to an absolute 12pt backstop) until it actually
+        // fits on one line.
+        const { finalSize: overriddenFinalSize } = shrinkFontUntil(
+          header,
+          () => header.scrollWidth <= header.clientWidth + 1,
+          1,
+          ptToPx(12),
+        );
+        effectiveFinalSize = overriddenFinalSize;
+      }
+      if (effectiveFinalSize < originalSize) {
         report.push({
           word: header.textContent, grade,
           fromPt: Math.round(pxToPt(originalSize) * 10) / 10,
-          toPt: Math.round(pxToPt(finalSize) * 10) / 10,
+          toPt: Math.round(pxToPt(effectiveFinalSize) * 10) / 10,
           reason: 'too wide for one line',
         });
       }
