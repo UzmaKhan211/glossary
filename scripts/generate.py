@@ -42,7 +42,11 @@ MIN_SHRINK_RATIO = 0.62
 #     short, not just narrow-column wrapping). Enlarging just the definition
 #     text on these specific cards fills the card better without touching
 #     anything else -- recorded in the report so it's easy to tell exactly
-#     which cards changed.
+#     which cards changed. Two tiers: a definition that's already only 1
+#     line at nominal size has the most room to fill, so it grows more (to
+#     GROWN_DEFINITION_1LINE_PT); one that already wraps to 2 lines at
+#     nominal size has less spare room and growing it as much would just
+#     push it to wrap further, so it only grows to GROWN_DEFINITION_2LINE_PT.
 #  1b. The same no-image + short-definition cards also get their header
 #     (the word) enlarged from the nominal 52pt, for the same reason -- it
 #     was left looking small relative to the extra room the card now has.
@@ -57,11 +61,12 @@ MIN_SHRINK_RATIO = 0.62
 #     than its fixed box, shrink the definition (and, as a last resort, the
 #     header again) until it fits -- this also acts as a safety net if
 #     growing a short definition/header (jobs 1/1b) ever overflows the card.
-GROWN_DEFINITION_PT = 30  # nominal is 20pt; see job 1 above
+GROWN_DEFINITION_1LINE_PT = 30  # nominal is 20pt; for a definition that's <=1 line at nominal size; see job 1
+GROWN_DEFINITION_2LINE_PT = 24  # nominal is 20pt; for a definition that's exactly 2 lines at nominal size; see job 1
 GROWN_HEADER_PT = 66  # nominal is 52pt; see job 1b above
 
 AUTOFIT_JS = """
-async ([minRatio, grownPt, grownHeaderPt]) => {
+async ([minRatio, grownPt1Line, grownPt2Line, grownHeaderPt]) => {
   // Wait for the custom @font-face fonts (Castledown Pro / Benton Sans) to
   // finish loading before measuring/mutating anything. Forcing a layout
   // read (scrollWidth/scrollHeight) on an element before its own webfont
@@ -118,8 +123,11 @@ async ([minRatio, grownPt, grownHeaderPt]) => {
       const baseSize = parseFloat(cs0.fontSize);
       const baseLineHeight = parseFloat(cs0.lineHeight);
       const lineCount = Math.round(textEl0.scrollHeight / baseLineHeight);
-      const grownPx = ptToPx(grownPt);
-      if (lineCount <= 2 && grownPx > baseSize) {
+      let targetPt = null;
+      if (lineCount <= 1) targetPt = grownPt1Line;
+      else if (lineCount === 2) targetPt = grownPt2Line;
+      const grownPx = targetPt != null ? ptToPx(targetPt) : null;
+      if (grownPx != null && grownPx > baseSize) {
         const ratio = baseLineHeight / baseSize;
         textEl0.style.fontSize = grownPx + 'px';
         textEl0.style.lineHeight = (grownPx * ratio) + 'px';
@@ -283,7 +291,10 @@ def render_pdf(cards, out_path, lang="en"):
             browser = p.chromium.launch(executable_path=resolve_chromium_executable())
             page = browser.new_page()
             page.goto(build_html_path.resolve().as_uri())
-            shrink_report = page.evaluate(AUTOFIT_JS, [MIN_SHRINK_RATIO, GROWN_DEFINITION_PT, GROWN_HEADER_PT])
+            shrink_report = page.evaluate(
+                AUTOFIT_JS,
+                [MIN_SHRINK_RATIO, GROWN_DEFINITION_1LINE_PT, GROWN_DEFINITION_2LINE_PT, GROWN_HEADER_PT],
+            )
             page.pdf(
                 path=str(out_path),
                 width="11in",
